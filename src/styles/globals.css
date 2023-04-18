@@ -18,11 +18,19 @@ body {
 }
 
 .button-wrapper {
-  background-color: var(--color-primary);
-  color: var(--color-text-bright);
   font-weight: bold;
   padding: var(--default-padding);
   cursor: pointer;
+}
+
+.button-wrapper.primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-bright);
+}
+
+.button-wrapper.secondary {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-bright);
 }
 
 .button-wrapper:hover {
