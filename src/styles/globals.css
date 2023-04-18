@@ -8,6 +8,8 @@
 
   --color-text-bright: #F5F5F5;
 
+  --color-background-dark: #333333;
+
   --default-padding: 12px;
 }
 
@@ -25,4 +27,11 @@ body {
 
 .button-wrapper:hover {
     background-color: var(--color-primary-hover);
+}
+
+footer {
+  color: var(--color-text-bright);
+  background-color: var(--color-background-dark);
+
+  text-transform: uppercase;
 }
