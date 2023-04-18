@@ -43,7 +43,13 @@ body {
   background-color: var(--color-background-dark-hover);
 }
 
+section {
+  width: 100%;
+  color: var(--color-text-bright);
+}
+
 .section-background {
+  width: 100%;
   background-color: var(--color-background-dark);
 }
 

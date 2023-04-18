@@ -1,5 +1,6 @@
-import { ButtonProps } from "./button";
+import { Button, ButtonProps } from "./button";
 import { Picture } from "./picture";
+import { Text } from "./text";
 
 interface SectionProps {
   title: string;
@@ -14,19 +15,33 @@ export function Section({
   buttons,
   background,
 }: SectionProps): JSX.Element {
-  return <section></section>;
+  return (
+    <section>
+      <SectionBackground background={background}>
+        <Text variant="big">{title}</Text>
+        <Text variant="medium">{text}</Text>
+        <div className="flex">
+          {buttons.map((button) => (
+            <Button key={button.label} {...button} />
+          ))}
+        </div>
+      </SectionBackground>
+    </section>
+  );
 }
 
 function SectionBackground({
   background,
-}: Pick<SectionProps, "background">): JSX.Element {
+  children,
+}: React.PropsWithChildren<Pick<SectionProps, "background">>): JSX.Element {
   if (background) {
     return (
       <div className="section-background">
         <Picture src={background} />
+        {children}
       </div>
     );
   }
 
-  return <div className="section-background" />;
+  return <div className="section-background">{children}</div>;
 }
