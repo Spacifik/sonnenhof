@@ -9,6 +9,7 @@
   --color-text-bright: #F5F5F5;
 
   --color-background-dark: #333333;
+  --color-background-dark-hover: #666666;
 
   --default-padding: 12px;
 }
@@ -31,10 +32,19 @@ body {
 .button-wrapper.secondary {
   background-color: var(--color-background-dark);
   color: var(--color-text-bright);
+  border: 1px solid var(--color-text-bright)
 }
 
-.button-wrapper:hover {
+.button-wrapper.primary:hover {
     background-color: var(--color-primary-hover);
+}
+
+.button-wrapper.secondary:hover {
+  background-color: var(--color-background-dark-hover);
+}
+
+.section-background {
+  background-color: var(--color-background-dark);
 }
 
 footer {

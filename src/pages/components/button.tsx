@@ -1,7 +1,7 @@
 import React from "react";
 import { v4 } from "uuid";
 
-interface ButtonProps {
+export interface ButtonProps {
   label: string;
   variant: "primary" | "secondary";
   id?: string;
