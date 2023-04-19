@@ -39,9 +39,15 @@ function SectionBackground({
   children,
 }: React.PropsWithChildren<Pick<SectionProps, "background">>): JSX.Element {
   return (
-    <div className="section-background w-full p-6">
-      {background && <Picture src={background} />}
-      {children}
+    <div className="section-background relative w-full justify-center align-center">
+      {background && (
+        <div className="w-full">
+          <Picture src={background} />
+        </div>
+      )}
+      <div className={`${background && "absolute top-1/4"} p-6`}>
+        {children}
+      </div>
     </div>
   );
 }

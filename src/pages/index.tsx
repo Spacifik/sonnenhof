@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Inter } from "next/font/google";
 import { Footer } from "../components/footer";
@@ -13,10 +14,9 @@ export default function Home() {
   const [show, setShow] = React.useState(false);
   return (
     <>
-      <header className="sticky w-full h-0 top-0 bg-white h-14">
-        <Image
-          width={85}
-          height={85}
+      <header className="sticky w-full h-0 top-0 bg-white h-14 z-30">
+        <img
+          className="h-14 w-14"
           src="/desktop/Logo_2023_final.png"
           alt="hello"
         />

@@ -15,4 +15,10 @@ export const sections: SectionProps[] = [
       },
     ],
   },
+  {
+    title: "Sauna",
+    text: "Die Sauna im Michelhof Sonnenhof bietet eine entspannende Auszeit mit verschiedenen Saunen und erfrischenden Abkühlungsmöglichkeiten. Im Ruhebereich können Sie sich anschließend entspannen und erholen.",
+    background: "Background_sauna.jpg",
+    buttons: [],
+  },
 ];
