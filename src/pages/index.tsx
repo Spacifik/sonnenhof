@@ -12,17 +12,14 @@ export default function Home() {
   const [show, setShow] = React.useState(false);
   return (
     <>
+      <header className="sticky w-full h-0 top-0 bg-transparent">
+        hello, world
+      </header>
       <main className="flex min-h-screen flex-col items-center ">
         <video autoPlay={true} muted playsInline>
           <source src="Trailer_small.mp4" type="video/mp4" />
           <p>your browser does not support playing videos</p>
         </video>
-        {/* <div className="w-full h-1/2 pointer-events-none">
-          <iframe
-            className="w-full h-full"
-            src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1&controls=0"
-          ></iframe>
-        </div> */}
         {sections.map((section) => (
           <Section key={section.title} {...section} />
         ))}
