@@ -16,6 +16,22 @@ export const sections: SectionProps[] = [
     ],
   },
   {
+    hint: "Zimmer und suiten",
+    title: "171 Zimmer",
+    text: "Das Michelhof Sonnenhof verfügt über 171 Zimmer, darunter 144 Komfortzimmer, 12 Familienzimmer, 12 Suiten und 3 Executive Suiten – perfekt für unterschiedliche Bedürfnisse und Ansprüche.",
+    background: "Background_zimmer.jpg",
+    buttons: [
+      {
+        label: "Anschauen",
+        variant: "secondary",
+      },
+      {
+        label: "Jetzt buchen",
+        variant: "primary",
+      },
+    ],
+  },
+  {
     title: "Sauna",
     text: "Die Sauna im Michelhof Sonnenhof bietet eine entspannende Auszeit mit verschiedenen Saunen und erfrischenden Abkühlungsmöglichkeiten. Im Ruhebereich können Sie sich anschließend entspannen und erholen.",
     background: "Background_sauna.jpg",
