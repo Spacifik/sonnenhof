@@ -5,6 +5,7 @@ import { Section } from "../components/section";
 import { sections } from "@sonnenhof/data/sections/sections-de";
 import { footer } from "@sonnenhof/data/footer/footer";
 import { Button } from "@sonnenhof/components/button";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,8 +13,13 @@ export default function Home() {
   const [show, setShow] = React.useState(false);
   return (
     <>
-      <header className="sticky w-full h-0 top-0 bg-transparent">
-        hello, world
+      <header className="sticky w-full h-0 top-0 bg-white h-14">
+        <Image
+          width={85}
+          height={85}
+          src="/desktop/Logo_2023_final.png"
+          alt="hello"
+        />
       </header>
       <main className="flex min-h-screen flex-col items-center ">
         <video autoPlay={true} muted playsInline>
