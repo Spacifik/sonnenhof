@@ -9,13 +9,13 @@ interface FooterProps {
 
 export function Footer({ phone, email, links }: FooterProps): JSX.Element {
   return (
-    <footer>
-      <Text variant="huge">Contact us</Text>
+    <footer className="font-mono">
+      <Text variant="big">Contact us</Text>
       <a href={`tel:${phone}`}>
-        <Text variant="huge">{phone}</Text>
+        <Text variant="big">{phone}</Text>
       </a>
       <a href={`mailto:${email}`}>
-        <Text variant="huge">{email}</Text>
+        <Text variant="big">{email}</Text>
       </a>
       <div className="footer-links">
         {links.map((link) => (
