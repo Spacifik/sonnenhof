@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <main className="flex min-h-screen flex-col items-center ">
         <video autoPlay={true} muted playsInline>
-          <source src="trailer-gra-2023_rKfPeu6g.mp4" type="video/mp4" />
+          <source src="Trailer_small.mp4" type="video/mp4" />
           <p>your browser does not support playing videos</p>
         </video>
         {/* <div className="w-full h-1/2 pointer-events-none">
