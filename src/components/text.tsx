@@ -1,10 +1,25 @@
 interface TextProps {
   variant: "big" | "medium" | "small";
   children: string;
+  uppercase?: boolean;
+  mono?: boolean;
 }
 
-export function Text({ variant, children }: TextProps): JSX.Element {
-  return <p className={getVariantSize(variant)}>{children}</p>;
+export function Text({
+  variant,
+  children,
+  mono,
+  uppercase,
+}: TextProps): JSX.Element {
+  return (
+    <p
+      className={`${getVariantSize(variant)} ${mono && "mono"} ${
+        uppercase && "uppercase"
+      }`}
+    >
+      {children}
+    </p>
+  );
 }
 
 function getVariantSize(variant: TextProps["variant"]): string {

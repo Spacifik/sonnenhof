@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "./text";
 
-interface FooterProps {
+export interface FooterProps {
   phone: string;
   email: string;
   links: { label: string; onClick: Callback<void> }[];

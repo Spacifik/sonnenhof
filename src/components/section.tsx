@@ -2,7 +2,7 @@ import { Button, ButtonProps } from "./button";
 import { Picture } from "./picture";
 import { Text } from "./text";
 
-interface SectionProps {
+export interface SectionProps {
   title: string;
   text: string;
   buttons: ButtonProps[];
@@ -18,12 +18,16 @@ export function Section({
   return (
     <section className="w-full">
       <SectionBackground background={background}>
-        <Text variant="big">{title}</Text>
-        <Text variant="medium">{text}</Text>
-        <div className="flex">
-          {buttons.map((button) => (
-            <Button key={button.label} {...button} />
-          ))}
+        <div className="flex flex-col gap-6">
+          <Text variant="big" mono uppercase>
+            {title}
+          </Text>
+          <Text variant="medium">{text}</Text>
+          <div className="flex gap-4">
+            {buttons.map((button) => (
+              <Button key={button.label} {...button} />
+            ))}
+          </div>
         </div>
       </SectionBackground>
     </section>
@@ -34,14 +38,10 @@ function SectionBackground({
   background,
   children,
 }: React.PropsWithChildren<Pick<SectionProps, "background">>): JSX.Element {
-  if (background) {
-    return (
-      <div className="section-background w-full">
-        <Picture src={background} />
-        {children}
-      </div>
-    );
-  }
-
-  return <div className="section-background w-full">{children}</div>;
+  return (
+    <div className="section-background w-full p-6">
+      {background && <Picture src={background} />}
+      {children}
+    </div>
+  );
 }
