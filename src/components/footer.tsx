@@ -9,7 +9,7 @@ interface FooterProps {
 
 export function Footer({ phone, email, links }: FooterProps): JSX.Element {
   return (
-    <footer className="font-mono">
+    <footer className="font-mono w-full uppercase">
       <Text variant="big">Contact us</Text>
       <a href={`tel:${phone}`}>
         <Text variant="big">{phone}</Text>

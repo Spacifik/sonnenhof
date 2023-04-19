@@ -16,7 +16,7 @@ export function Section({
   background,
 }: SectionProps): JSX.Element {
   return (
-    <section>
+    <section className="w-full">
       <SectionBackground background={background}>
         <Text variant="big">{title}</Text>
         <Text variant="medium">{text}</Text>
@@ -36,12 +36,12 @@ function SectionBackground({
 }: React.PropsWithChildren<Pick<SectionProps, "background">>): JSX.Element {
   if (background) {
     return (
-      <div className="section-background">
+      <div className="section-background w-full">
         <Picture src={background} />
         {children}
       </div>
     );
   }
 
-  return <div className="section-background">{children}</div>;
+  return <div className="section-background w-full">{children}</div>;
 }

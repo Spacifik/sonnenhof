@@ -10,18 +10,10 @@
 
   --color-background-dark: #333333;
   --color-background-dark-hover: #666666;
-
-  --default-padding: 12px;
 }
 
 body {
-  color: rgb(var(--color-primary));
-}
-
-.button-wrapper {
-  font-weight: bold;
-  padding: var(--default-padding);
-  cursor: pointer;
+  color: var(--color-primary);
 }
 
 .button-wrapper.primary {
@@ -44,18 +36,14 @@ body {
 }
 
 section {
-  width: 100%;
   color: var(--color-text-bright);
 }
 
 .section-background {
-  width: 100%;
   background-color: var(--color-background-dark);
 }
 
 footer {
   color: var(--color-text-bright);
   background-color: var(--color-background-dark);
-
-  text-transform: uppercase;
 }
