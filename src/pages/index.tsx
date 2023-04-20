@@ -26,9 +26,11 @@ export default function Home() {
           <source src="Trailer_small.mp4" type="video/mp4" />
           <p>your browser does not support playing videos</p>
         </video>
-        {sections.map((section) => (
-          <Section key={section.title} {...section} />
-        ))}
+        <div className="md:flex">
+          {sections.map((section) => (
+            <Section key={section.title} {...section} />
+          ))}
+        </div>
       </main>
       <Footer {...footer} />
     </>

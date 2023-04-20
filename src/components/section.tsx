@@ -19,7 +19,7 @@ export function Section({
 }: SectionProps): JSX.Element {
   return (
     <section
-      className={`w-full relative p-6 md:p-9 ${
+      className={`grow relative p-6 md:p-9 md:w-1/2 ${
         background ? "bg-cover bg-no-repeat" : "bg-gray-700"
       }`}
       style={
