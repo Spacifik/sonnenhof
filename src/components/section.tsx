@@ -19,7 +19,9 @@ export function Section({
 }: SectionProps): JSX.Element {
   return (
     <section
-      className={`w-full relative ${background ? "bg-cover bg-no-repeat" : "bg-gray-700"}`}
+      className={`w-full relative p-6 md:p-9 ${
+        background ? "bg-cover bg-no-repeat" : "bg-gray-700"
+      }`}
       style={
         background
           ? { backgroundImage: `url(/desktop/${background})` }

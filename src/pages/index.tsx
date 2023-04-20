@@ -30,11 +30,6 @@ export default function Home() {
           <Section key={section.title} {...section} />
         ))}
       </main>
-      <Button
-        label="show dialog"
-        variant="primary"
-        onClick={() => setShow(() => !show)}
-      />
       <Footer {...footer} />
     </>
   );
