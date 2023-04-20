@@ -1,14 +1,17 @@
-export function LogoNoTextSvg(): JSX.Element {
+export function LogoNoTextSvg({
+  className,
+}: {
+  className: string;
+}): JSX.Element {
   return (
     <svg
+      className={className}
       version="1.1"
       id="Ebene_1"
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="595.275px"
-      height="595.275px"
-      viewBox="0 0 595.275 841.89"
+      viewBox="206.58155822753906 247.96827697753906 182.7455596923828 187.0717315673828"
       enable-background="new 0 0 595.275 841.89"
     >
       <g>

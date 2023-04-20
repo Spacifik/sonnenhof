@@ -15,16 +15,10 @@ export default function Home() {
   const [show, setShow] = React.useState(false);
   return (
     <>
-      <header className="sticky w-full h-0 top-0 bg-white h-14 z-30">
-        <img
-          className="h-14 w-14 hidden md:block"
-          src="/desktop/Logo_2023_final.png"
-          alt="hello"
-        />
-
-        <div className="flex md:hidden max-h-full  max-w-full">
-          <LogoNoTextSvg />
-          <LogoTextSvg />
+      <header className="sticky w-full h-0 top-0 bg-white h-16 z-30 p-3">
+        <div className="flex h-9  max-h-full  max-w-full justify-center">
+          <LogoNoTextSvg className="h-full ml-3 mr-3 " />
+          <LogoTextSvg className="h-full mr-3  " />
         </div>
       </header>
       <main className="flex min-h-screen flex-col items-center ">
