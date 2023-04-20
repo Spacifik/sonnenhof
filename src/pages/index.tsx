@@ -6,7 +6,9 @@ import { Section } from "../components/section";
 import { sections } from "@sonnenhof/data/sections/sections-de";
 import { footer } from "@sonnenhof/data/footer/footer";
 import { Button } from "@sonnenhof/components/button";
+import { LogoSvg } from "@sonnenhof/svg/logo";
 import Image from "next/image";
+import { LogoTextSvg } from "@sonnenhof/svg/logo-text";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,10 +18,19 @@ export default function Home() {
     <>
       <header className="sticky w-full h-0 top-0 bg-white h-14 z-30">
         <img
-          className="h-14 w-14"
+          className="h-14 w-14 hidden md:block"
           src="/desktop/Logo_2023_final.png"
           alt="hello"
         />
+
+        <div className="flex md:hidden">
+          <div className="bg-orange-700">
+            <LogoSvg />
+          </div>
+          <div className="bg-yellow-700">
+            <LogoTextSvg />
+          </div>
+        </div>
       </header>
       <main className="flex min-h-screen flex-col items-center ">
         <video autoPlay={true} muted playsInline>
