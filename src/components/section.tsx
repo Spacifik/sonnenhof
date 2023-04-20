@@ -18,45 +18,32 @@ export function Section({
   background,
 }: SectionProps): JSX.Element {
   return (
-    <section className="w-full">
-      <SectionBackground background={background}>
-        <div className="flex flex-col gap-6">
-          <div>
-            {hint && (
-              <Text variant="small" mono uppercase>
-                {hint}
-              </Text>
-            )}
-            <Text variant="big" mono uppercase>
-              {title}
+    <section
+      className={`w-full relative ${background ? "" : "bg-gray-700"}`}
+      style={
+        background
+          ? { backgroundImage: `url(/desktop/${background})` }
+          : undefined
+      }
+    >
+      <div className="flex flex-col gap-6 z-20">
+        <div>
+          {hint && (
+            <Text variant="small" mono uppercase>
+              {hint}
             </Text>
-          </div>
-          <Text variant="medium">{text}</Text>
-          <div className="flex gap-4">
-            {buttons.map((button) => (
-              <Button key={button.label} {...button} />
-            ))}
-          </div>
+          )}
+          <Text variant="big" mono uppercase>
+            {title}
+          </Text>
         </div>
-      </SectionBackground>
-    </section>
-  );
-}
-
-function SectionBackground({
-  background,
-  children,
-}: React.PropsWithChildren<Pick<SectionProps, "background">>): JSX.Element {
-  return (
-    <div className="section-background relative w-full justify-center align-center">
-      {background && (
-        <div className="w-full">
-          <Picture src={background} />
+        <Text variant="medium">{text}</Text>
+        <div className="flex gap-4">
+          {buttons.map((button) => (
+            <Button key={button.label} {...button} />
+          ))}
         </div>
-      )}
-      <div className={`${background && "absolute top-1/4"} p-6`}>
-        {children}
       </div>
-    </div>
+    </section>
   );
 }
