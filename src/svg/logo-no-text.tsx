@@ -1,4 +1,4 @@
-export function LogoSvg(): JSX.Element {
+export function LogoNoTextSvg(): JSX.Element {
   return (
     <svg
       version="1.1"

@@ -6,8 +6,7 @@ import { Section } from "../components/section";
 import { sections } from "@sonnenhof/data/sections/sections-de";
 import { footer } from "@sonnenhof/data/footer/footer";
 import { Button } from "@sonnenhof/components/button";
-import { LogoSvg } from "@sonnenhof/svg/logo";
-import Image from "next/image";
+import { LogoNoTextSvg } from "@sonnenhof/svg/logo-no-text";
 import { LogoTextSvg } from "@sonnenhof/svg/logo-text";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,13 +22,9 @@ export default function Home() {
           alt="hello"
         />
 
-        <div className="flex md:hidden">
-          <div className="bg-orange-700">
-            <LogoSvg />
-          </div>
-          <div className="bg-yellow-700">
-            <LogoTextSvg />
-          </div>
+        <div className="flex md:hidden max-h-full  max-w-full">
+          <LogoNoTextSvg />
+          <LogoTextSvg />
         </div>
       </header>
       <main className="flex min-h-screen flex-col items-center ">
