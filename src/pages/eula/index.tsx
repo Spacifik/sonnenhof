@@ -2,7 +2,7 @@ import { Layout } from "@sonnenhof/components/layout";
 import { Text } from "@sonnenhof/components/text";
 import { eula } from "@sonnenhof/data/eula/eula";
 
-export default function Eula(): JSX.Element {
+export default function EulaPage(): JSX.Element {
   return (
     <Layout>
       <main className="flex flex-col p-36">
