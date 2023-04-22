@@ -476,7 +476,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M278.46,371.225c-0.831,0.398-1.628,1.287-1.807,2.147c-0.18,0.859-0.443,2.114-1.626,2.075c0,0,1.008-0.657,0.974-1.773
@@ -491,7 +491,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M281.623,358.396c-0.086-2.191-0.291-4.372-0.614-6.523"
@@ -504,7 +504,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           points="
 		281.009,351.873 280.816,350.583 280.623,351.873 	"
@@ -517,7 +517,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M280.623,351.873c-0.322,2.152-0.527,4.332-0.613,6.523c0.264-0.037,0.533-0.057,0.807-0.057s0.542,0.021,0.807,0.057"
@@ -530,7 +530,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M280.615,351.873c-0.322,2.152-0.526,4.332-0.613,6.523c0.264-0.037,0.533-0.057,0.806-0.057c0.274,0,0.543,0.021,0.807,0.057
@@ -544,7 +544,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M271.559,356.064c1.852,1.143,3.65,2.393,5.38,3.74c-0.198,0.178-0.387,0.371-0.564,0.579c-0.177,0.209-0.334,0.428-0.477,0.654
@@ -558,7 +558,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M273.088,362.873c-0.522-0.76-1.522-1.41-2.4-1.454c-0.877-0.044-2.157-0.111-2.3-1.286c0,0,0.805,0.895,1.902,0.688
@@ -573,7 +573,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M281.623,369.521c-0.086,2.191-0.291,4.372-0.614,6.523"
@@ -586,7 +586,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           points="
 		281.009,376.045 280.816,377.335 280.623,376.045 	"
@@ -599,7 +599,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M280.623,376.045c-0.322-2.152-0.527-4.332-0.613-6.523c0.264,0.037,0.533,0.057,0.807,0.057s0.542-0.021,0.807-0.057"
@@ -612,7 +612,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M280.615,376.045c-0.322-2.152-0.526-4.332-0.613-6.523c0.264,0.037,0.533,0.057,0.806,0.057c0.274,0,0.543-0.021,0.807-0.057
@@ -626,7 +626,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M283.092,371.262c0.831,0.398,1.628,1.287,1.807,2.147s0.443,2.115,1.625,2.075c0,0-1.008-0.657-0.974-1.772
@@ -641,7 +641,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M289.358,372.602c-1.749-1.294-3.436-2.691-5.046-4.18c0.212-0.16,0.417-0.336,0.61-0.53c0.194-0.193,0.37-0.398,0.53-0.61
@@ -655,7 +655,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M288.367,365.911c0.433,0.813,1.354,1.571,2.221,1.714c0.867,0.143,2.132,0.353,2.142,1.537c0,0-0.699-0.979-1.812-0.898
@@ -670,7 +670,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M289.358,372.602c-1.749-1.294-3.436-2.691-5.046-4.18c0.212-0.16,0.417-0.336,0.61-0.53c0.194-0.193,0.37-0.398,0.53-0.61
@@ -684,7 +684,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M288.367,365.911c0.433,0.813,1.354,1.571,2.221,1.714c0.867,0.143,2.132,0.353,2.142,1.537c0,0-0.699-0.979-1.812-0.898
@@ -699,7 +699,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M289.358,372.602c-1.749-1.294-3.436-2.691-5.046-4.18c0.212-0.16,0.417-0.336,0.61-0.53c0.194-0.193,0.37-0.398,0.53-0.61
@@ -713,7 +713,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M288.367,365.911c0.433,0.813,1.354,1.571,2.221,1.714c0.867,0.143,2.132,0.353,2.142,1.537c0,0-0.699-0.979-1.812-0.898
@@ -728,7 +728,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M289.358,372.602c-1.749-1.294-3.436-2.691-5.046-4.18c0.212-0.16,0.417-0.336,0.61-0.53c0.194-0.193,0.37-0.398,0.53-0.61
@@ -742,7 +742,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M288.367,365.911c0.433,0.813,1.354,1.571,2.221,1.714c0.867,0.143,2.132,0.353,2.142,1.537c0,0-0.699-0.979-1.812-0.898
@@ -757,7 +757,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M272.268,372.602c1.749-1.294,3.436-2.691,5.046-4.18c-0.212-0.16-0.417-0.336-0.61-0.53c-0.194-0.193-0.37-0.398-0.53-0.61
@@ -771,7 +771,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M273.259,365.911c-0.433,0.813-1.354,1.571-2.221,1.714c-0.867,0.143-2.132,0.353-2.142,1.537c0,0,0.699-0.979,1.812-0.898
@@ -786,7 +786,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M272.268,372.602c1.749-1.294,3.436-2.691,5.046-4.18c-0.212-0.16-0.417-0.336-0.61-0.53c-0.194-0.193-0.37-0.398-0.53-0.61
@@ -800,7 +800,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M273.259,365.911c-0.433,0.813-1.354,1.571-2.221,1.714c-0.867,0.143-2.132,0.353-2.142,1.537c0,0,0.699-0.979,1.812-0.898
@@ -815,7 +815,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M272.268,372.602c1.749-1.294,3.436-2.691,5.046-4.18c-0.212-0.16-0.417-0.336-0.61-0.53c-0.194-0.193-0.37-0.398-0.53-0.61
@@ -829,7 +829,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M273.259,365.911c-0.433,0.813-1.354,1.571-2.221,1.714c-0.867,0.143-2.132,0.353-2.142,1.537c0,0,0.699-0.979,1.812-0.898
@@ -844,7 +844,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M272.268,372.602c1.749-1.294,3.436-2.691,5.046-4.18c-0.212-0.16-0.417-0.336-0.61-0.53c-0.194-0.193-0.37-0.398-0.53-0.61
@@ -858,7 +858,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M273.259,365.911c-0.433,0.813-1.354,1.571-2.221,1.714c-0.867,0.143-2.132,0.353-2.142,1.537c0,0,0.699-0.979,1.812-0.898
@@ -873,7 +873,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M288.42,362.873c0.522-0.76,1.523-1.41,2.4-1.454s2.158-0.111,2.3-1.286c0,0-0.804,0.895-1.901,0.688
@@ -888,7 +888,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M289.936,356.064c-1.852,1.143-3.65,2.393-5.38,3.74c0.198,0.178,0.387,0.371,0.563,0.579c0.177,0.209,0.335,0.428,0.478,0.654
@@ -902,7 +902,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M278.248,356.685c-0.841-0.376-1.662-1.242-1.865-2.097c-0.203-0.854-0.501-2.102-1.682-2.029c0,0,1.026,0.629,1.022,1.745
@@ -917,7 +917,7 @@ export function LogoNoTextSvg({
           stroke="#836844"
           stroke-width="0.7087"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokelinejoin="round"
           stroke-miterlimit="10"
           d="
 		M283.399,356.715c0.842-0.376,1.663-1.242,1.865-2.097c0.203-0.854,0.501-2.102,1.682-2.029c0,0-1.026,0.629-1.021,1.745
