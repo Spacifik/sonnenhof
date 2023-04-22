@@ -1,9 +1,18 @@
 import { LogoNoTextSvg } from "@sonnenhof/svg/logo-no-text";
 import { LogoTextSvg } from "@sonnenhof/svg/logo-text";
+import { ArrowLeft } from "iconoir-react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export function Header(): JSX.Element {
+  const router = useRouter();
   return (
-    <header className="sticky w-full h-0 top-0 bg-white h-16 z-30 p-3">
+    <header className="sticky w-full h-0 top-0 bg-white h-16 z-30 p-3 relative">
+      {router.route !== "/" ? (
+        <Link className="cursor-pointer absolute top-1/4 h-1/2" href={"/"}>
+          <ArrowLeft />
+        </Link>
+      ) : null}
       <div className="flex h-9  max-h-full  max-w-full justify-center">
         <LogoNoTextSvg className="h-full ml-3 mr-3 " />
         <LogoTextSvg className="h-full mr-3  " />

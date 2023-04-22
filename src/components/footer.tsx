@@ -5,7 +5,7 @@ import Link from "next/link";
 export interface FooterProps {
   phone: string;
   email: string;
-  links: { label: string; href: string; }[];
+  links: { label: string; href: string }[];
 }
 
 export function Footer({ phone, email, links }: FooterProps): JSX.Element {
@@ -20,7 +20,7 @@ export function Footer({ phone, email, links }: FooterProps): JSX.Element {
       </a>
       <div className="footer-links flex md:justify-around gap-3 md:gap-0">
         {links.map((link) => (
-          <Link key={link.label} href={link.href}>
+          <Link key={link.label} href={link.href} className="cursor-pointer">
             <Text variant="small">{link.label}</Text>
           </Link>
         ))}
