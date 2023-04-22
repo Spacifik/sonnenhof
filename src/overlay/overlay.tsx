@@ -18,7 +18,7 @@ export function Overlay({
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50"
+      className=" overlay absolute w-full h-full top-0 bg-[rgba(0,0,0,.7)] flex justify-center items-center z-50"
       onClick={onClose}
     >
       <div

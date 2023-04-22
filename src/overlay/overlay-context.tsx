@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { Overlay } from "./overlay";
+import { Cancel } from "iconoir-react";
 
 interface OverlayContextValue {
   showOverlay: (content: React.ReactNode) => void;
@@ -25,10 +26,16 @@ export function OverlayProvider({
 
   return (
     <OverlayContext.Provider value={{ showOverlay, hideOverlay }}>
-      {children}
       <Overlay show={overlayContent !== null} onClose={hideOverlay}>
+        <div
+          className="absolute top-3 right-3 cursor-pointer"
+          onClick={hideOverlay}
+        >
+          <Cancel />
+        </div>
         {overlayContent}
       </Overlay>
+      {children}
     </OverlayContext.Provider>
   );
 }
