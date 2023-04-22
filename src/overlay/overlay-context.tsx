@@ -1,4 +1,5 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Overlay } from "./overlay";
 import { Cancel } from "iconoir-react";
 
@@ -12,30 +13,47 @@ const OverlayContext = createContext<OverlayContextValue>({
   hideOverlay: () => {},
 });
 
-export const useOverlay = () => useContext(OverlayContext);
+export function useOverlay(): OverlayContextValue {
+  return useContext(OverlayContext);
+}
 
-export function OverlayProvider({
-  children,
-}: React.PropsWithChildren<{}>): JSX.Element {
+export const OverlayProvider = ({ children }: React.PropsWithChildren<{}>) => {
   const [overlayContent, setOverlayContent] = useState<React.ReactNode>(null);
+  const [overlayRoot, setOverlayRoot] = useState<Element | null>(null);
+
+  useEffect(() => {
+    setOverlayRoot(document.getElementById("overlay-root"));
+  }, []);
+
+  useEffect(() => {
+    if (overlayContent === null) {
+      overlayRoot?.classList.remove("z-40");
+    } else {
+      overlayRoot?.classList.add("z-40");
+    }
+  }, [overlayContent, overlayRoot?.classList]);
 
   const showOverlay = (content: React.ReactNode) => {
     setOverlayContent(content);
   };
   const hideOverlay = () => setOverlayContent(null);
 
+  const overlay = (
+    <Overlay show={overlayContent !== null} onClose={hideOverlay}>
+      <div
+        className="absolute top-3 right-3 cursor-pointer"
+        onClick={hideOverlay}
+      >
+        <Cancel />
+      </div>
+      {overlayContent}
+    </Overlay>
+  );
+
   return (
     <OverlayContext.Provider value={{ showOverlay, hideOverlay }}>
-      <Overlay show={overlayContent !== null} onClose={hideOverlay}>
-        <div
-          className="absolute top-3 right-3 cursor-pointer"
-          onClick={hideOverlay}
-        >
-          <Cancel />
-        </div>
-        {overlayContent}
-      </Overlay>
+      {overlayRoot && createPortal(overlay, overlayRoot)}
       {children}
     </OverlayContext.Provider>
   );
-}
+};

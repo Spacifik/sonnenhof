@@ -6,11 +6,9 @@ import { OverlayProvider } from "@sonnenhof/overlay/overlay-context";
 export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
   return (
     <OverlayProvider>
-      <main className="scrollbar-hide">
-        <Header />
-        {children}
-        <Footer {...footer} />
-      </main>
+      <Header />
+      {children}
+      <Footer {...footer} />
     </OverlayProvider>
   );
 }
