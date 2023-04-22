@@ -4,7 +4,7 @@ import { Header } from "./header";
 
 export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
   return (
-    <main>
+    <main className="scrollbar-hide">
       <Header />
       {children}
       <Footer {...footer} />

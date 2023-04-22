@@ -16,7 +16,7 @@ export default function Home() {
   const [show, setShow] = React.useState(false);
   return (
     <Layout>
-      <main className="flex min-h-screen flex-col items-center ">
+      <main className="flex min-h-screen flex-col items-center scrollbar-hide">
         <video autoPlay={true} muted playsInline>
           <source src="Trailer_small.mp4" type="video/mp4" />
           <p>your browser does not support playing videos</p>
