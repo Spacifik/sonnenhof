@@ -1,3 +1,7 @@
+import { Layout } from "@sonnenhof/components/layout";
+
 export default function Imprint() {
-  return <div>hello, imprint</div>;
+  return <Layout>
+    
+  </Layout>
 }

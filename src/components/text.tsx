@@ -3,6 +3,7 @@ interface TextProps {
   children: string;
   uppercase?: boolean;
   mono?: boolean;
+  dark?: boolean;
 }
 
 export function Text({
@@ -13,8 +14,8 @@ export function Text({
 }: TextProps): JSX.Element {
   return (
     <p
-      className={`${getVariantSize(variant)} ${mono && "mono"} ${
-        uppercase && "uppercase"
+      className={`${getVariantSize(variant)} ${mono ? "mono" : ""} ${
+        uppercase ? "uppercase" : ""
       }`}
     >
       {children}

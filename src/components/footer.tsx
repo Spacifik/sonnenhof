@@ -1,10 +1,11 @@
 import React from "react";
 import { Text } from "./text";
+import Link from "next/link";
 
 export interface FooterProps {
   phone: string;
   email: string;
-  links: { label: string; onClick: Callback<void> }[];
+  links: { label: string; href: string; }[];
 }
 
 export function Footer({ phone, email, links }: FooterProps): JSX.Element {
@@ -19,9 +20,9 @@ export function Footer({ phone, email, links }: FooterProps): JSX.Element {
       </a>
       <div className="footer-links flex md:justify-around gap-3 md:gap-0">
         {links.map((link) => (
-          <a key={link.label} onClick={() => link.onClick?.()}>
+          <Link key={link.label} href={link.href}>
             <Text variant="small">{link.label}</Text>
-          </a>
+          </Link>
         ))}
       </div>
     </footer>

@@ -3,8 +3,17 @@ import { FooterProps } from "@sonnenhof/components/footer";
 export const footer: FooterProps = {
   phone: "+123456789",
   email: "info@sonnenhof.de",
-  links: ["career", "press", "agb", "impressum"].map((label) => ({
-    label,
-    onClick: () => alert(`clicked ${label}`),
-  })),
+  links: [{
+    label: "career",
+    href: "career"
+  },{
+    label: "press",
+    href: "press"
+  },{
+    label: "agb",
+    href: "eula"
+  },{
+    label: "impressum",
+    href: "imprint"
+  }]
 };
