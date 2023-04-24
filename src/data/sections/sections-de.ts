@@ -24,6 +24,7 @@ export const sections: SectionProps[] = [
       {
         label: "Anschauen",
         variant: "secondary",
+        href: "/rooms",
       },
       {
         label: "Jetzt buchen",

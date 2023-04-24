@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button, ButtonProps } from "./button";
 import { Picture } from "./picture";
 import { Text } from "./text";
@@ -6,7 +7,7 @@ export interface SectionProps {
   hint?: string;
   title: string;
   text: string;
-  buttons: ButtonProps[];
+  buttons: (ButtonProps & { href?: string })[];
   background?: string; // image url
 }
 
@@ -42,9 +43,15 @@ export function Section({
         </div>
         <Text variant={`medium-${textColorVariant}`}>{text}</Text>
         <div className="flex gap-4">
-          {buttons.map((button) => (
-            <Button key={button.label} {...button} />
-          ))}
+          {buttons.map(({ href, ...button }) =>
+            href ? (
+              <Link href={href}>
+                <Button key={button.label} {...button} />
+              </Link>
+            ) : (
+              <Button key={button.label} {...button} />
+            )
+          )}
         </div>
       </div>
     </section>
