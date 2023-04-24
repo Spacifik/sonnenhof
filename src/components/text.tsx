@@ -1,8 +1,9 @@
+import { ThemeColor, getThemeColor } from "./theme-color";
+
+type TextSize = "big" | "medium" | "small" | "tiny";
+
 interface TextProps {
-  variant: UnionString<
-    "big" | "medium" | "small" | "tiny",
-    "primary" | "dark" | "bright"
-  >;
+  variant: UnionString<TextSize, ThemeColor>;
   children: string;
   uppercase?: boolean;
   mono?: boolean;
@@ -15,19 +16,20 @@ export function Text({
   mono,
   uppercase,
 }: TextProps): JSX.Element {
+  const [size, color] = variant.split("-") as [TextSize, ThemeColor];
   return (
     <p
-      className={`${getVariantSize(variant)} ${mono ? "mono" : ""} ${
-        uppercase ? "uppercase" : ""
-      }`}
+      className={`${getVariantSize(size)} ${getThemeColor(color)}  ${
+        mono ? "mono" : ""
+      } ${uppercase ? "uppercase" : ""}`}
     >
       {children}
     </p>
   );
 }
 
-function getVariantSize(variant: TextProps["variant"]): string {
-  switch (variant) {
+function getVariantSize(size: TextSize): string {
+  switch (size) {
     case "tiny":
       return "text-xs";
     case "small":
