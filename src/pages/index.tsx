@@ -1,15 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Inter } from "next/font/google";
-import { Footer } from "../components/footer";
-import { Section } from "../components/section";
-import { sections } from "@sonnenhof/data/sections/sections-de";
-import { footer } from "@sonnenhof/data/footer/footer";
-import { Button } from "@sonnenhof/components/button";
-import { LogoNoTextSvg } from "@sonnenhof/svg/logo-no-text";
-import { LogoTextSvg } from "@sonnenhof/svg/logo-text";
+import { Section } from "@sonnenhof/components/section";
 import { Layout } from "@sonnenhof/components/layout";
-import { Image } from "@sonnenhof/components/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -56,6 +49,46 @@ export default function Home() {
               title="rubin | saphir | diamond"
               text="147 Zimmer und Suiten mit wundervoller Aussicht und Balkon in einem ausgefallenen Design"
               background="rooms"
+              buttons={[]}
+            />
+
+            <Section
+              hint="Events & Konferenzen"
+              title="business | events"
+              text="270m² Eventfläche mit modernster Technik"
+              background="events"
+              buttons={[]}
+            />
+
+            <Section
+              hint="Pool und Thermalbad"
+              title="indoor | outdoor"
+              text="Exklusiver Innen- und Außenpool mit Massagebereich"
+              background="pool"
+              buttons={[]}
+            />
+
+            <Section
+              hint="Wellness & Spa"
+              title="Face | Body"
+              text="Luxoriöser SPA Bereich mit Sauna, Eis-Lounge, Dampfbad und Massagezentrum"
+              background="wellness"
+              buttons={[]}
+            />
+
+            <Section
+              hint="Ausflüge & Incentives"
+              title="wald | natur | historie"
+              text="25.000 Hektar Wald-Nationalpark & staatlich anerkannter Kurort"
+              background="activities"
+              buttons={[]}
+            />
+
+            <Section
+              hint="Breakfast/Lunch & Fine dining"
+              title="Wildbachklamm | the fine"
+              text="Lichtdurchflutetes Restaurant mit exklusiver Fine Dining Area"
+              background="dining"
               buttons={[]}
             />
           </div>

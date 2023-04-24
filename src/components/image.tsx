@@ -14,6 +14,7 @@ export interface ImageProps {
     | "pool"
     | "rooms"
     | "contact"
+    | "wellness"
     | "career";
   className?: string;
 }
@@ -62,6 +63,8 @@ function getImageHashFor(name: ImageProps["name"]): string {
       return "0972ead8-3b64-4fa7-7668-86cc3722b500";
     case "career":
       return "9bc14109-f98f-455f-89d4-79aad5597200";
+    case "wellness":
+      return "90a31e90-e41c-4ceb-76a9-99a85cb76000";
       default:
           exhaustiveCheck(name);
           return "";
