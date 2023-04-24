@@ -16,10 +16,18 @@ export default function Home() {
   const [show, setShow] = React.useState(false);
   return (
     <>
-      <div id="overlay-root"className="absolute top-0 left-0 h-screen w-full"></div>
+      <div
+        id="overlay-root"
+        className="absolute top-0 left-0 h-screen w-full"
+      ></div>
       <Layout>
         <main className="flex min-h-screen flex-col items-center scrollbar-hide">
-          <video autoPlay={true} muted playsInline>
+          <video
+            className="object-cover max-h-90vh w-screen"
+            autoPlay={true}
+            muted
+            playsInline
+          >
             <source src="Trailer_small.mp4" type="video/mp4" />
             <p>your browser does not support playing videos</p>
           </video>

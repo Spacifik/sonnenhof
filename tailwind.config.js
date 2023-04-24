@@ -18,6 +18,9 @@ module.exports = {
           regular: "#B8860B",
           light: "#DAA520"
         }
+      },
+      maxHeight: {
+        '90vh': '90vh'
       }
     },
   },
