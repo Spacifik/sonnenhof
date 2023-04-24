@@ -21,7 +21,7 @@ export function Section({
   const textColorVariant = background ? "primary" : "light";
   return (
     <section
-      className={`grow relative p-6 md:p-9 md:basis-1/2 ${
+      className={`grow relative p-6 md:p-16 md:basis-1/2 md:min-h-60vh ${
         background ? "bg-cover bg-no-repeat" : "bg-gray-700"
       }`}
       style={
@@ -30,7 +30,7 @@ export function Section({
           : undefined
       }
     >
-      <div className="flex flex-col gap-6 z-20">
+      <div className="flex flex-col gap-6 z-20 align-middle md:mt-14">
         <div>
           {hint && (
             <Text variant={`tiny-${textColorVariant}`} mono uppercase>
