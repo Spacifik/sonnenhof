@@ -22,7 +22,7 @@ export function Section({
   return (
     <section
       className={`grow relative p-6 min-h-40vh md:p-16 md:basis-1/2 md:min-h-60vh ${
-        background ? "bg-cover bg-no-repeat" : "bg-gray-700"
+        background ? "bg-cover bg-no-repeat" : "bg-black"
       }`}
       style={
         background

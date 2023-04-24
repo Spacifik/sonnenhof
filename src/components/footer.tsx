@@ -10,18 +10,24 @@ export interface FooterProps {
 
 export function Footer({ phone, email, links }: FooterProps): JSX.Element {
   return (
-    <footer className="font-mono w-full uppercase px-3 pt-3 pb-2 md:px-9 md:pt-9 flex flex-col gap-3 bg-gray-700">
-      <Text variant="big-light">Contact us</Text>
-      <a href={`tel:${phone}`}>
-        <Text variant="big-light">{phone}</Text>
-      </a>
-      <a href={`mailto:${email}`}>
-        <Text variant="big-light">{email}</Text>
-      </a>
+    <footer className="font-mono w-full px-3 pt-3 pb-2 md:px-9 md:pt-9 flex flex-col gap-10 bg-black">
+      <div>
+        <div className="flex flex-row gap-3">
+          <Text variant="medium-primary">Contact us</Text>
+          <a href={`tel:${phone}`}>
+            <Text variant="medium-primary">{phone}</Text>
+          </a>
+        </div>
+        <a href={`mailto:${email}`}>
+          <Text variant="medium-primary">{email}</Text>
+        </a>
+      </div>
       <div className="flex md:justify-around gap-3 md:gap-0">
         {links.map((link) => (
           <Link key={link.label} href={link.href} className="cursor-pointer">
-            <Text variant="small-light">{link.label}</Text>
+            <Text variant="small-primary" uppercase mono>
+              {link.label}
+            </Text>
           </Link>
         ))}
       </div>
