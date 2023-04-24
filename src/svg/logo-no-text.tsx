@@ -16,22 +16,22 @@ export function LogoNoTextSvg({
     >
       <g>
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M251.491,406.874c-1.148,0.709-0.757,2.637,0.515,2.945
 		c1.121,0.444,2.556-0.666,2.226-1.878C254.177,406.695,252.379,406.062,251.491,406.874z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M245.183,406.062c-1.321,0.075-1.776,2.111-0.558,2.674
 		c0.747,0.417,2.111,0.157,2.154-0.855C247.137,406.884,246.19,405.872,245.183,406.062z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M292.248,403.424c1.841,4.159,2.312,8.875,1.121,13.283
 		l-0.06-0.011c-0.671,1.786-1.424,3.579-2.68,5.041c-1.938,2.475-5.042,3.563-8.079,3.828c1.906,3.043,6.184,3.108,8.886,1.121
@@ -40,22 +40,22 @@ export function LogoNoTextSvg({
 		c-1.651,1.001-3.352,1.912-5.096,2.74C295.61,405.384,293.894,404.464,292.248,403.424z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M245.67,401.832c1.121,0.375,1.706-0.79,2.279-1.489
 		c-0.569-0.699-1.332-1.981-2.42-1.402C244.138,399.314,244.252,401.594,245.67,401.832z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M253.776,398.529c-1.018,0.509-1.457,1.933-0.845,2.918
 		c0.84,1.565,3.612,1.261,3.948-0.552C257.35,399.141,255.33,397.69,253.776,398.529z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M220.01,376.492c-4.64,0.866-9.692,2.512-12.449,6.632l-0.07-0.01
 		c-1.392,2.789-1.273,6.465,0.964,8.788c1.592,1.646,3.953,2.025,6.146,2.014c-3.103-2.29-3.444-6.757-1.57-9.936
@@ -63,15 +63,15 @@ export function LogoNoTextSvg({
 		c3.254-1.505,6.877-1.727,10.407-1.787C232.664,375.793,226.178,375.425,220.01,376.492z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M214.763,368.05c-1.803,0.736-2.188,3.487-0.52,4.592
 		c1.614,1.44,4.511,0.086,4.478-2.063C218.824,368.64,216.485,367.102,214.763,368.05z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M246.553,353.658c-1.733-0.201-3.736,0.46-4.223,2.317
 		c-0.742,3.194,0.996,6.308,2.577,8.972c-1.337,0.114-2.951,0-3.796,1.278c-1.673,1.938-0.73,4.597,0.325,6.584
@@ -89,8 +89,8 @@ export function LogoNoTextSvg({
 		c-1.224-2.69-2.41-5.404-3.249-8.241c-2.665-8.479-3.011-17.446-2.914-26.267C246.769,341.973,245.47,348.21,246.553,353.658z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M230.163,294.085c-4.96,1.57-9.259,6.931-7.358,12.275
 		c1.472-2.734,4.283-4.824,7.488-4.694c3.574-0.125,6.779,2.367,7.852,5.713c0.016,1.104,0.027,2.204,0.021,3.308
@@ -111,8 +111,8 @@ export function LogoNoTextSvg({
 		c-2.041-0.038-3.574,1.445-4.808,2.881C242.946,294.805,236,292.033,230.163,294.085z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M290.525,291.188c-8.051,2.101-16.141,4.104-24.003,6.844
 		c-2.94,1.191-6.173,0.563-9.253,0.688c0.038,4.153-0.195,8.333,0.092,12.475c-0.244,4.684-0.054,9.373-0.119,14.062
@@ -131,21 +131,21 @@ export function LogoNoTextSvg({
 		c2.263-0.06,4.608,0.179,6.779-0.623c7.559-2.626,15.313-4.629,23.066-6.595C292.637,293.598,295.166,292.082,297.63,290.577z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M226.167,284.718c-2.117,0.503-2.734,3.596-1.028,4.911
 		c1.619,1.576,4.716,0.369,4.802-1.89C230.254,285.73,228.035,284.057,226.167,284.718z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M226.167,284.718L226.167,284.718
 		c1.868-0.661,4.088,1.013,3.774,3.021c-0.086,2.258-3.184,3.466-4.802,1.89C223.432,288.313,224.049,285.221,226.167,284.718z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M253.186,266.005c2.209,2.085,2.09,5.561,0.791,8.106
 		c-1.505-1.706-4.006-2.578-6.113-1.44c-2.009,0.882-2.664,3.151-2.686,5.166c0.412,3.634,2.068,7.207,5.106,9.362
@@ -157,36 +157,36 @@ export function LogoNoTextSvg({
 		c-1.814-2.621-3.584-5.317-4.424-8.436c-0.969-4.142-0.65-8.982,2.372-12.237C247.257,264.608,250.928,263.98,253.186,266.005z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M344.419,406.874c1.148,0.709,0.759,2.637-0.514,2.945
 		c-1.121,0.444-2.556-0.666-2.226-1.878C341.733,406.695,343.531,406.062,344.419,406.874z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M350.728,406.062c1.321,0.075,1.776,2.111,0.558,2.674
 		c-0.747,0.417-2.111,0.157-2.155-0.855C348.772,406.884,349.72,405.872,350.728,406.062z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M350.24,401.832c-1.121,0.375-1.706-0.79-2.28-1.489
 		c0.569-0.699,1.332-1.981,2.421-1.402C351.772,399.314,351.658,401.594,350.24,401.832z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M342.135,398.529c1.018,0.509,1.456,1.933,0.845,2.918
 		c-0.84,1.565-3.612,1.261-3.947-0.552C338.561,399.141,340.58,397.69,342.135,398.529z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M375.9,376.492c4.641,0.866,9.692,2.512,12.448,6.632l0.07-0.01
 		c1.392,2.789,1.272,6.465-0.964,8.788c-1.592,1.646-3.952,2.025-6.146,2.014c3.103-2.29,3.444-6.757,1.57-9.936
@@ -194,15 +194,15 @@ export function LogoNoTextSvg({
 		c-3.254-1.505-6.877-1.727-10.407-1.787C363.246,375.793,369.733,375.425,375.9,376.492z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M381.147,368.05c1.803,0.736,2.188,3.487,0.52,4.592
 		c-1.613,1.44-4.511,0.086-4.478-2.063C377.086,368.64,379.426,367.102,381.147,368.05z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M349.357,353.658c1.733-0.201,3.736,0.46,4.224,2.317
 		c0.742,3.194-0.996,6.308-2.578,8.972c1.338,0.114,2.952,0,3.796,1.278c1.674,1.938,0.731,4.597-0.324,6.584
@@ -220,8 +220,8 @@ export function LogoNoTextSvg({
 		c2.665-8.479,3.011-17.446,2.913-26.267C349.141,341.973,350.44,348.21,349.357,353.658z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M365.748,294.085c4.96,1.57,9.259,6.931,7.358,12.275
 		c-1.473-2.734-4.283-4.824-7.489-4.694c-3.573-0.125-6.778,2.367-7.851,5.713c-0.017,1.104-0.027,2.204-0.021,3.308
@@ -242,85 +242,85 @@ export function LogoNoTextSvg({
 		c2.042-0.038,3.574,1.445,4.809,2.881C352.964,294.805,359.911,292.033,365.748,294.085z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M369.744,284.718c2.117,0.503,2.734,3.596,1.028,4.911
 		c-1.619,1.576-4.716,0.369-4.803-1.89C365.655,285.73,367.876,284.057,369.744,284.718z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M369.744,284.718L369.744,284.718
 		c-1.868-0.661-4.089,1.013-3.774,3.021c0.087,2.258,3.184,3.466,4.803,1.89C372.479,288.313,371.861,285.221,369.744,284.718z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           d="M294.305,297.624c0.529-0.279,1.057-0.553,1.591-0.822
 		c0.116,14.496,0.047,28.996,0.032,43.492c-10.537-0.011-21.073-0.005-31.609,0.01c-0.053-11.601-0.127-23.207,0.005-34.812
 		c3.535-0.093,6.695-1.769,10.056-2.616C280.932,300.793,287.721,299.558,294.305,297.624z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           d="M295.153,296.511c0.56-0.292,1.12-0.579,1.686-0.861
 		c0.123,15.183,0.05,30.371,0.034,45.554c-11.166-0.011-22.332-0.005-33.497,0.011c-0.056-12.15-0.134-24.306,0.005-36.462
 		c3.747-0.098,7.095-1.852,10.656-2.74C280.981,299.831,288.176,298.537,295.153,296.511z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           d="M295.84,344.344c-10.448-0.043-20.897-0.017-31.345-0.017
 		c0.21,4.722-0.403,9.513,0.624,14.17c1.696,8.24,6.684,16.123,12.665,21.841c5.494,5.455,11.249,9.569,18.036,13.126
 		C295.851,377.091,295.814,360.718,295.84,344.344z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M296.925,343.288c-11.171-0.045-22.343-0.017-33.514-0.017
 		c0.224,4.961-0.431,9.996,0.667,14.888c1.814,8.659,6.467,16.604,12.862,22.612c5.874,5.731,12.705,10.393,19.962,14.13
 		C296.936,377.697,296.897,360.493,296.925,343.288z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           d="M300.211,344.344c10.448-0.043,20.896-0.017,31.345-0.017
 		c-0.209,4.722,0.403,9.513-0.623,14.17c-1.696,8.24-6.684,16.123-12.665,21.841c-5.494,5.455-11.248,9.569-18.036,13.126
 		C300.2,377.091,300.237,360.718,300.211,344.344z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           d="M299.127,343.288c11.171-0.045,22.342-0.017,33.514-0.017
 		c-0.225,4.961,0.431,9.996-0.667,14.888c-1.813,8.659-6.468,16.604-12.862,22.612c-5.874,5.731-12.705,10.393-19.962,14.13
 		C299.115,377.697,299.154,360.493,299.127,343.288z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           d="M301.584,297.624c-0.528-0.279-1.057-0.553-1.591-0.822
 		c-0.116,14.496-0.047,28.996-0.031,43.492c10.536-0.011,21.073-0.005,31.609,0.01c0.053-11.601,0.127-23.207-0.006-34.812
 		c-3.534-0.093-6.694-1.769-10.055-2.616C314.958,300.793,308.168,299.558,301.584,297.624z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M300.736,296.511c-0.561-0.292-1.12-0.579-1.686-0.861
 		c-0.123,15.183-0.051,30.371-0.033,45.554c11.165-0.011,22.331-0.005,33.496,0.011c0.056-12.15,0.135-24.306-0.006-36.462
 		c-3.746-0.098-7.094-1.852-10.655-2.74C314.908,299.831,307.714,298.537,300.736,296.511z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           d="M312.021,303.087c0.4,0.033,0.865,0.02,1.097,0.29
 		c-0.165,0.066-0.469,0.042-0.663,0.102c-0.254,0.078-0.311,0.189-0.565,0.246c-0.187-0.119-0.188-0.161-0.442-0.234
@@ -351,8 +351,8 @@ export function LogoNoTextSvg({
 		c-0.319-0.555-0.896-0.494-1.512-0.154c-0.855,0.47-0.613,0.07-1.399-0.257C313.23,302.832,312.595,302.866,312.021,303.087z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           d="M315.196,327.615c0.014-0.011,0.033-0.047,0.039-0.036
 		c0.007,0.012,0.031-0.027,0.039-0.036c0.039-0.04,0.062-0.061,0.103-0.107c0.214-0.25,0.159-0.268,0.527-0.596
@@ -369,8 +369,8 @@ export function LogoNoTextSvg({
 		C317.69,324.814,315.677,325.588,315.196,327.615z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           d="M318.291,321.674c0.548-0.487,0.675-1.601,0.538-2.559
 		c-0.488,1.22-0.523,1.678-1.478,2.334c-0.814,0.561-1.883,0.796-3.029,0.589c0.188-0.572,1.597-1.072,1.838-1.282
@@ -384,8 +384,8 @@ export function LogoNoTextSvg({
 		c0.237-1.475,0.017-3.726-0.524-4.968c-0.175,0.308-0.239,0.738-0.379,1.066C319.982,320.059,319.11,321.487,318.291,321.674z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           d="M313.822,332.843c0.053-0.361-0.02-0.581,0.184-0.864
 		c-0.028,0.815,0.175,0.589,0.208,0.684c0.105,0.299-0.143-0.054,0.477-0.335c0.291-0.132,0.427-0.146,0.527-0.479
@@ -396,8 +396,8 @@ export function LogoNoTextSvg({
 		c1.012-0.343,1.121-0.655,1.305-1.757c0.07-0.421,0.196-1.554,0.403-1.915C313.46,332.855,313.703,332.897,313.822,332.843z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           d="M307.31,323.583l0.026-0.083c0.002-0.008,0.009-0.032,0.012-0.042
 		c0.016-0.062-0.016-0.037,0.038-0.164c0.212,0.051,0.245,0.084,0.436-0.009l-0.259-0.312l0.393-0.109
@@ -408,8 +408,8 @@ export function LogoNoTextSvg({
 		C306.479,323.529,306.637,323.587,307.31,323.583z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           d="M313.017,316.609c-0.436-0.292-0.54-0.905-0.413-1.57
 		c0.118-0.617,0.429-1.087,0.532-1.562c-1.024,1.136-2.368,2.857-2.243,5.163c0.748-0.112,1.658-0.496,2.368-0.752
@@ -420,8 +420,8 @@ export function LogoNoTextSvg({
 		c-1.3-0.003-3.5,1.421-4.178,2.522c-0.053,0.086-0.116,0.208-0.16,0.307c-0.027,0.06-0.053,0.13-0.079,0.188L313.017,316.609z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           d="M310.943,319.503c0.203,0.119,0.277,0.069,0.58,0.233
 		c0.227,0.122,0.319,0.194,0.456,0.405c0.255,0.395,0.319,0.736,0.511,1.146c0.307-0.021,1.211-0.742,1.56-0.95
@@ -429,8 +429,8 @@ export function LogoNoTextSvg({
 		C312.602,319.279,311.514,319.108,310.943,319.503z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           d="M309.164,315.549c-0.104,1.039-1.266,1.426-1.393,2.292
 		c0.705-0.608,1.05-1.077,2.27-1.127c-0.013-0.556,0.149-0.813,0.274-1.27C309.865,315.608,309.729,315.719,309.164,315.549z"
@@ -470,14 +470,14 @@ export function LogoNoTextSvg({
         </g>
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M278.46,371.225c-0.831,0.398-1.628,1.287-1.807,2.147c-0.18,0.859-0.443,2.114-1.626,2.075c0,0,1.008-0.657,0.974-1.773
 		c-0.024-0.776-0.364-1.732,0.254-2.389c0.617-0.657,1.192-1.271,1.192-1.991c0-0.637-0.248-1.023-0.246-1.023
@@ -485,81 +485,81 @@ export function LogoNoTextSvg({
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="none"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M281.623,358.396c-0.086-2.191-0.291-4.372-0.614-6.523"
         />
 
         <polyline
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="none"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           points="
 		281.009,351.873 280.816,350.583 280.623,351.873 	"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="none"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M280.623,351.873c-0.322,2.152-0.527,4.332-0.613,6.523c0.264-0.037,0.533-0.057,0.807-0.057s0.542,0.021,0.807,0.057"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M280.615,351.873c-0.322,2.152-0.526,4.332-0.613,6.523c0.264-0.037,0.533-0.057,0.806-0.057c0.274,0,0.543,0.021,0.807,0.057
 		c-0.086-2.191-0.291-4.372-0.613-6.523l-0.193-1.29L280.615,351.873z"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M271.559,356.064c1.852,1.143,3.65,2.393,5.38,3.74c-0.198,0.178-0.387,0.371-0.564,0.579c-0.177,0.209-0.334,0.428-0.477,0.654
 		c-1.619-1.48-3.152-3.043-4.588-4.677l-0.861-0.98L271.559,356.064z"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M273.088,362.873c-0.522-0.76-1.522-1.41-2.4-1.454c-0.877-0.044-2.157-0.111-2.3-1.286c0,0,0.805,0.895,1.902,0.688
 		c0.763-0.144,1.655-0.626,2.399-0.118s1.44,0.982,2.151,0.871c0.629-0.099,0.973-0.404,0.972-0.401
@@ -567,67 +567,67 @@ export function LogoNoTextSvg({
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="none"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M281.623,369.521c-0.086,2.191-0.291,4.372-0.614,6.523"
         />
 
         <polyline
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="none"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           points="
 		281.009,376.045 280.816,377.335 280.623,376.045 	"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="none"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M280.623,376.045c-0.322-2.152-0.527-4.332-0.613-6.523c0.264,0.037,0.533,0.057,0.807,0.057s0.542-0.021,0.807-0.057"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M280.615,376.045c-0.322-2.152-0.526-4.332-0.613-6.523c0.264,0.037,0.533,0.057,0.806,0.057c0.274,0,0.543-0.021,0.807-0.057
 		c-0.086,2.191-0.291,4.372-0.613,6.523l-0.193,1.29L280.615,376.045z"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M283.092,371.262c0.831,0.398,1.628,1.287,1.807,2.147s0.443,2.115,1.625,2.075c0,0-1.008-0.657-0.974-1.772
 		c0.024-0.777,0.363-1.732-0.253-2.389c-0.618-0.658-1.192-1.271-1.192-1.992c0-0.637,0.248-1.023,0.246-1.022
@@ -635,28 +635,28 @@ export function LogoNoTextSvg({
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M289.358,372.602c-1.749-1.294-3.436-2.691-5.046-4.18c0.212-0.16,0.417-0.336,0.61-0.53c0.194-0.193,0.37-0.398,0.53-0.61
 		c1.488,1.611,2.885,3.297,4.179,5.046l0.775,1.049L289.358,372.602z"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M288.367,365.911c0.433,0.813,1.354,1.571,2.221,1.714c0.867,0.143,2.132,0.353,2.142,1.537c0,0-0.699-0.979-1.812-0.898
 		c-0.775,0.057-1.715,0.437-2.398-0.152c-0.683-0.589-1.32-1.138-2.04-1.107c-0.637,0.027-1.012,0.291-1.011,0.289
@@ -664,28 +664,28 @@ export function LogoNoTextSvg({
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M289.358,372.602c-1.749-1.294-3.436-2.691-5.046-4.18c0.212-0.16,0.417-0.336,0.61-0.53c0.194-0.193,0.37-0.398,0.53-0.61
 		c1.488,1.611,2.885,3.297,4.179,5.046l0.775,1.049L289.358,372.602z"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M288.367,365.911c0.433,0.813,1.354,1.571,2.221,1.714c0.867,0.143,2.132,0.353,2.142,1.537c0,0-0.699-0.979-1.812-0.898
 		c-0.775,0.057-1.715,0.437-2.398-0.152c-0.683-0.589-1.32-1.138-2.04-1.107c-0.637,0.027-1.012,0.291-1.011,0.289
@@ -693,28 +693,28 @@ export function LogoNoTextSvg({
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M289.358,372.602c-1.749-1.294-3.436-2.691-5.046-4.18c0.212-0.16,0.417-0.336,0.61-0.53c0.194-0.193,0.37-0.398,0.53-0.61
 		c1.488,1.611,2.885,3.297,4.179,5.046l0.775,1.049L289.358,372.602z"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M288.367,365.911c0.433,0.813,1.354,1.571,2.221,1.714c0.867,0.143,2.132,0.353,2.142,1.537c0,0-0.699-0.979-1.812-0.898
 		c-0.775,0.057-1.715,0.437-2.398-0.152c-0.683-0.589-1.32-1.138-2.04-1.107c-0.637,0.027-1.012,0.291-1.011,0.289
@@ -722,28 +722,28 @@ export function LogoNoTextSvg({
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M289.358,372.602c-1.749-1.294-3.436-2.691-5.046-4.18c0.212-0.16,0.417-0.336,0.61-0.53c0.194-0.193,0.37-0.398,0.53-0.61
 		c1.488,1.611,2.885,3.297,4.179,5.046l0.775,1.049L289.358,372.602z"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M288.367,365.911c0.433,0.813,1.354,1.571,2.221,1.714c0.867,0.143,2.132,0.353,2.142,1.537c0,0-0.699-0.979-1.812-0.898
 		c-0.775,0.057-1.715,0.437-2.398-0.152c-0.683-0.589-1.32-1.138-2.04-1.107c-0.637,0.027-1.012,0.291-1.011,0.289
@@ -751,28 +751,28 @@ export function LogoNoTextSvg({
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M272.268,372.602c1.749-1.294,3.436-2.691,5.046-4.18c-0.212-0.16-0.417-0.336-0.61-0.53c-0.194-0.193-0.37-0.398-0.53-0.61
 		c-1.488,1.611-2.885,3.297-4.179,5.046l-0.776,1.049L272.268,372.602z"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M273.259,365.911c-0.433,0.813-1.354,1.571-2.221,1.714c-0.867,0.143-2.132,0.353-2.142,1.537c0,0,0.699-0.979,1.812-0.898
 		c0.775,0.057,1.715,0.437,2.398-0.152c0.683-0.589,1.32-1.138,2.04-1.107c0.637,0.027,1.012,0.291,1.011,0.289
@@ -780,28 +780,28 @@ export function LogoNoTextSvg({
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M272.268,372.602c1.749-1.294,3.436-2.691,5.046-4.18c-0.212-0.16-0.417-0.336-0.61-0.53c-0.194-0.193-0.37-0.398-0.53-0.61
 		c-1.488,1.611-2.885,3.297-4.179,5.046l-0.776,1.049L272.268,372.602z"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M273.259,365.911c-0.433,0.813-1.354,1.571-2.221,1.714c-0.867,0.143-2.132,0.353-2.142,1.537c0,0,0.699-0.979,1.812-0.898
 		c0.775,0.057,1.715,0.437,2.398-0.152c0.683-0.589,1.32-1.138,2.04-1.107c0.637,0.027,1.012,0.291,1.011,0.289
@@ -809,28 +809,28 @@ export function LogoNoTextSvg({
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M272.268,372.602c1.749-1.294,3.436-2.691,5.046-4.18c-0.212-0.16-0.417-0.336-0.61-0.53c-0.194-0.193-0.37-0.398-0.53-0.61
 		c-1.488,1.611-2.885,3.297-4.179,5.046l-0.776,1.049L272.268,372.602z"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M273.259,365.911c-0.433,0.813-1.354,1.571-2.221,1.714c-0.867,0.143-2.132,0.353-2.142,1.537c0,0,0.699-0.979,1.812-0.898
 		c0.775,0.057,1.715,0.437,2.398-0.152c0.683-0.589,1.32-1.138,2.04-1.107c0.637,0.027,1.012,0.291,1.011,0.289
@@ -838,28 +838,28 @@ export function LogoNoTextSvg({
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M272.268,372.602c1.749-1.294,3.436-2.691,5.046-4.18c-0.212-0.16-0.417-0.336-0.61-0.53c-0.194-0.193-0.37-0.398-0.53-0.61
 		c-1.488,1.611-2.885,3.297-4.179,5.046l-0.776,1.049L272.268,372.602z"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M273.259,365.911c-0.433,0.813-1.354,1.571-2.221,1.714c-0.867,0.143-2.132,0.353-2.142,1.537c0,0,0.699-0.979,1.812-0.898
 		c0.775,0.057,1.715,0.437,2.398-0.152c0.683-0.589,1.32-1.138,2.04-1.107c0.637,0.027,1.012,0.291,1.011,0.289
@@ -867,14 +867,14 @@ export function LogoNoTextSvg({
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M288.42,362.873c0.522-0.76,1.523-1.41,2.4-1.454s2.158-0.111,2.3-1.286c0,0-0.804,0.895-1.901,0.688
 		c-0.763-0.144-1.655-0.626-2.399-0.118c-0.745,0.508-1.44,0.982-2.151,0.871c-0.63-0.099-0.973-0.404-0.973-0.401
@@ -882,28 +882,28 @@ export function LogoNoTextSvg({
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M289.936,356.064c-1.852,1.143-3.65,2.393-5.38,3.74c0.198,0.178,0.387,0.371,0.563,0.579c0.177,0.209,0.335,0.428,0.478,0.654
 		c1.618-1.48,3.152-3.043,4.588-4.677l0.861-0.98L289.936,356.064z"
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M278.248,356.685c-0.841-0.376-1.662-1.242-1.865-2.097c-0.203-0.854-0.501-2.102-1.682-2.029c0,0,1.026,0.629,1.022,1.745
 		c-0.003,0.777-0.316,1.741,0.319,2.381c0.635,0.64,1.227,1.238,1.246,1.958c0.018,0.637-0.22,1.03-0.218,1.029
@@ -911,22 +911,22 @@ export function LogoNoTextSvg({
         />
 
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           stroke="#836844"
           stroke-width="0.7087"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
           d="
 		M283.399,356.715c0.842-0.376,1.663-1.242,1.865-2.097c0.203-0.854,0.501-2.102,1.682-2.029c0,0-1.026,0.629-1.021,1.745
 		c0.003,0.777,0.315,1.742-0.319,2.381c-0.635,0.641-1.227,1.238-1.247,1.958c-0.017,0.636,0.22,1.029,0.218,1.028
 		c-0.778-0.647-1.725-1.097-2.77-1.271C281.807,358.432,282.333,357.19,283.399,356.715z"
         />
         <circle
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#836844"
           cx="280.929"
           cy="364.032"
@@ -934,19 +934,19 @@ export function LogoNoTextSvg({
         />
 
         <circle
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           stroke="#CDC9B4"
           stroke-width="0.5669"
-          stroke-miterlimit="22.9256"
+          strokeMiterlimit="22.9256"
           cx="280.754"
           cy="363.958"
           r="4.85"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M324.549,265.528c-2.585,1.282-5.912,0.466-8.034-1.073
 		c2.037-0.814,3.526-2.577,2.974-4.45c-0.333-1.746-2.354-2.727-4.294-3.163c-3.617-0.436-7.497,0.107-10.365,2.019
@@ -958,8 +958,8 @@ export function LogoNoTextSvg({
 		c3.001-0.864,6.063-1.678,9.293-1.681c4.252,0.109,8.846,1.365,11.207,4.391C327.433,261.212,327.089,264.195,324.549,265.528z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M270.339,265.528c2.585,1.282,5.913,0.466,8.034-1.073
 		c-2.037-0.814-3.526-2.577-2.973-4.45c0.333-1.746,2.354-2.727,4.294-3.163c3.616-0.436,7.497,0.107,10.365,2.019
@@ -971,8 +971,8 @@ export function LogoNoTextSvg({
 		c-3-0.864-6.064-1.678-9.293-1.681c-4.252,0.109-8.845,1.365-11.207,4.391C267.455,261.212,267.799,264.195,270.339,265.528z"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#CDC9B4"
           d="M341.137,266.005c-2.21,2.085-2.091,5.561-0.791,8.106
 		c1.505-1.706,4.007-2.578,6.112-1.44c2.01,0.882,2.665,3.151,2.687,5.166c-0.412,3.634-2.068,7.207-5.106,9.362

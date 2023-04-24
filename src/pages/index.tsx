@@ -30,7 +30,10 @@ export default function Home() {
             playsInline
             loop
           >
-            <source src="Trailer_small.mp4" type="video/mp4" />
+            <source
+              src="https://customer-mpt8p3umq4r630uj.cloudflarestream.com/e2c0d8fe33b9c367e67c0e6a713c9539/manifest/video.m3u8"
+              type="video/mp4"
+            />
             <p>your browser does not support playing videos</p>
           </video>
           <div className="md:flex md:flex-wrap">
