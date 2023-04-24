@@ -8,6 +8,7 @@ interface TextProps {
   uppercase?: boolean;
   mono?: boolean;
   dark?: boolean;
+  bold?: boolean;
 }
 
 export function Text({
@@ -15,13 +16,14 @@ export function Text({
   children,
   mono,
   uppercase,
+  bold,
 }: TextProps): JSX.Element {
   const [size, color] = variant.split("-") as [TextSize, ThemeColor];
   return (
     <p
       className={`${getVariantSize(size)} ${getThemeColor(color)}  ${
         mono ? "mono" : ""
-      } ${uppercase ? "uppercase" : ""}`}
+      } ${uppercase ? "uppercase" : ""} ${bold ? "font-bold" : ""}`}
     >
       {children}
     </p>

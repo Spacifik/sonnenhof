@@ -1,8 +1,12 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Inter } from "next/font/google";
 import { Section } from "@sonnenhof/components/section";
 import { Layout } from "@sonnenhof/components/layout";
+import { Text } from "@sonnenhof/components/text";
+import { Image } from "@sonnenhof/components/image";
+import { Special } from "@sonnenhof/components/special";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +19,7 @@ export default function Home() {
         className="absolute top-0 left-0 h-screen w-full"
       ></div>
       <Layout>
-        <main className="flex min-h-screen flex-col items-center scrollbar-hide">
+        <main className="flex min-h-screen flex-col items-center scrollbar-hide bg-black">
           <div style={{ position: "relative", paddingTop: "56.25%" }}>
             <iframe
               src="https://customer-mpt8p3umq4r630uj.cloudflarestream.com/e2c0d8fe33b9c367e67c0e6a713c9539/iframe?muted=true&preload=true&loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-mpt8p3umq4r630uj.cloudflarestream.com%2Fe2c0d8fe33b9c367e67c0e6a713c9539%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600&controls=false"
@@ -90,6 +94,30 @@ export default function Home() {
               text="Lichtdurchflutetes Restaurant mit exklusiver Fine Dining Area"
               background="dining"
               buttons={[]}
+            />
+          </div>
+          <br />
+          <div className="flex flex-col p-10 gap-8 md:flex-row md:p-16 md:gap-12">
+            <Text variant="medium-primary" mono uppercase>
+              Specials
+            </Text>
+            <Special
+              title="wedding package"
+              text="Erleben Sie einen unvergesslichen Tag"
+              background="event1"
+              href="/wedding"
+            />
+            <Special
+              title="sport package"
+              text="Gehen Sie mit uns ans Limit"
+              background="sport"
+              href="/sport"
+            />
+            <Special
+              title="city cruise"
+              text="Städtetrip mit Führung"
+              background="city"
+              href="/city-cruise"
             />
           </div>
         </main>

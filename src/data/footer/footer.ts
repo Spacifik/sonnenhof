@@ -2,7 +2,7 @@ import { FooterProps } from "@sonnenhof/components/footer";
 
 export const footer: FooterProps = {
   phone: "+49 xxxxxx",
-  email: "info@sonnenhof.de",
+  email: "info@michelhotel-sonnenhof.de",
   links: [
     {
       label: "career",
