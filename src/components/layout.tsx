@@ -8,8 +8,18 @@ export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
     <OverlayProvider>
       <div className="font-saver invisible">
         <span className="text-gray-50" />
+        <span className="text-gray-100" />
+        <span className="text-gray-400" />
         <span className="text-gray-500" />
         <span className="text-primary-regular" />
+        <span className="text-primary-light" />
+
+        <span className="bg-gray-50" />
+        <span className="bg-gray-100" />
+        <span className="bg-gray-400" />
+        <span className="bg-gray-500" />
+        <span className="bg-primary-regular" />
+        <span className="bg-primary-light" />
       </div>
       <Header />
       {children}
