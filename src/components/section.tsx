@@ -33,7 +33,7 @@ export function Section({
       <div className="flex flex-col gap-6 z-20">
         <div>
           {hint && (
-            <Text variant={`small-${textColorVariant}`} mono uppercase>
+            <Text variant={`tiny-${textColorVariant}`} mono uppercase>
               {hint}
             </Text>
           )}
@@ -41,7 +41,7 @@ export function Section({
             {title}
           </Text>
         </div>
-        <Text variant={`medium-${textColorVariant}`}>{text}</Text>
+        <Text variant={`small-${textColorVariant}`}>{text}</Text>
         <div className="flex gap-4">
           {buttons.map(({ href, ...button }) =>
             href ? (
