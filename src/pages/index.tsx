@@ -9,6 +9,7 @@ import { Button } from "@sonnenhof/components/button";
 import { LogoNoTextSvg } from "@sonnenhof/svg/logo-no-text";
 import { LogoTextSvg } from "@sonnenhof/svg/logo-text";
 import { Layout } from "@sonnenhof/components/layout";
+import { Image } from "@sonnenhof/components/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
