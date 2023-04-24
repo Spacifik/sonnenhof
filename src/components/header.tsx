@@ -5,6 +5,7 @@ import { ArrowLeft, Menu } from "iconoir-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { HamburgerOverlay } from "./hamburger-overlay";
+import { getThemeColor } from "./theme-color";
 
 export function Header(): JSX.Element {
   const router = useRouter();
@@ -17,7 +18,9 @@ export function Header(): JSX.Element {
         </Link>
       ) : null}
       <div
-        className="cursor-pointer absolute top-1/4 h-1/2 right-3"
+        className={`cursor-pointer absolute top-1/4 h-1/2 right-3 ${getThemeColor(
+          "primary"
+        )}`}
         onClick={() => showOverlay(<HamburgerOverlay />)}
       >
         <Menu />

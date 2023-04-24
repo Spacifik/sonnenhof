@@ -17,7 +17,7 @@ export function Button({
 }: ButtonProps): JSX.Element {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const buttonId = React.useMemo(() => id ?? v4(), []);
-  const textColor = getThemeColor("bright");
+  const textColor = getThemeColor("light");
   const bgColors =
     variant === "primary"
       ? [getThemeColor("primary", true), getHoverThemeColor("primary", true)]

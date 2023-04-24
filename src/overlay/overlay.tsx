@@ -12,14 +12,23 @@ export function Overlay({
   children,
   onClose,
 }: React.PropsWithChildren<OverlayProps>): JSX.Element | null {
+  const [scrollPosition, setScrollPosition] = React.useState(0);
+
+  React.useEffect(() => {
+    if (show) {
+      setScrollPosition(() => window.scrollY);
+    }
+  }, [show]);
+
   if (!show) {
     return null;
   }
 
   return (
     <div
-      className=" overlay relative w-full h-screen top-0 bg-[rgba(0,0,0,.7)] flex justify-center items-center z-50"
+      className=" overlay relative w-full h-screen top-0 bg-black bg-opacity-80 flex justify-center items-center z-50 text-primary"
       onClick={onClose}
+      style={{ top: `${scrollPosition}px` }}
     >
       {children}
     </div>

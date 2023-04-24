@@ -17,6 +17,7 @@ export function Section({
   buttons,
   background,
 }: SectionProps): JSX.Element {
+  const textColorVariant = background ? "primary" : "light";
   return (
     <section
       className={`grow relative p-6 md:p-9 md:basis-1/3 ${
@@ -31,15 +32,15 @@ export function Section({
       <div className="flex flex-col gap-6 z-20">
         <div>
           {hint && (
-            <Text variant="small-primary" mono uppercase>
+            <Text variant={`small-${textColorVariant}`} mono uppercase>
               {hint}
             </Text>
           )}
-          <Text variant="big-primary" mono uppercase>
+          <Text variant={`big-${textColorVariant}`} mono uppercase>
             {title}
           </Text>
         </div>
-        <Text variant="medium-primary">{text}</Text>
+        <Text variant={`medium-${textColorVariant}`}>{text}</Text>
         <div className="flex gap-4">
           {buttons.map((button) => (
             <Button key={button.label} {...button} />

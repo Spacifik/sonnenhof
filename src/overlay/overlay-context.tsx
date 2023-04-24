@@ -28,9 +28,14 @@ export const OverlayProvider = ({ children }: React.PropsWithChildren<{}>) => {
   useEffect(() => {
     if (overlayContent === null) {
       overlayRoot?.classList.remove("z-40");
+      document.body.style.overflow = "unset";
     } else {
       overlayRoot?.classList.add("z-40");
+      document.body.style.overflow = "hidden";
     }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
   }, [overlayContent, overlayRoot?.classList]);
 
   const showOverlay = (content: React.ReactNode) => {
@@ -41,7 +46,7 @@ export const OverlayProvider = ({ children }: React.PropsWithChildren<{}>) => {
   const overlay = (
     <Overlay show={overlayContent !== null} onClose={hideOverlay}>
       <div
-        className="absolute top-3 right-3 cursor-pointer"
+        className="absolute top-3 right-3 cursor-pointer text-primary-regular"
         onClick={hideOverlay}
       >
         <Cancel />

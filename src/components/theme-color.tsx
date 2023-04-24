@@ -1,4 +1,4 @@
-export type ThemeColor = "primary" | "dark" | "bright";
+export type ThemeColor = "primary" | "dark" | "light";
 
 export function getThemeColor(color: ThemeColor, bg = false): string {
   const prefix = bg ? "bg-" : "text-";
@@ -7,7 +7,7 @@ export function getThemeColor(color: ThemeColor, bg = false): string {
       return `${prefix}primary-regular`;
     case "dark":
       return `${prefix}gray-500`;
-    case "bright":
+    case "light":
       return `${prefix}gray-100`;
   }
 }
@@ -19,7 +19,7 @@ export function getHoverThemeColor(color: ThemeColor, bg = false): string {
       return `${prefix}primary-light`;
     case "dark":
       return `${prefix}gray-400`;
-    case "bright":
+    case "light":
       return `${prefix}gray-50`;
   }
 }
