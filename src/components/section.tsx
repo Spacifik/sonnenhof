@@ -21,7 +21,7 @@ export function Section({
   const textColorVariant = background ? "primary" : "light";
   return (
     <section
-      className={`grow relative p-6 md:p-16 md:basis-1/2 md:min-h-60vh ${
+      className={`grow relative p-6 min-h-40vh md:p-16 md:basis-1/2 md:min-h-60vh ${
         background ? "bg-cover bg-no-repeat" : "bg-gray-700"
       }`}
       style={
