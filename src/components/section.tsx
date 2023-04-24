@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Button, ButtonProps } from "./button";
-import { Picture } from "./picture";
 import { Text } from "./text";
 
 export interface SectionProps {
@@ -45,7 +44,7 @@ export function Section({
         <div className="flex gap-4">
           {buttons.map(({ href, ...button }) =>
             href ? (
-              <Link href={href}>
+              <Link key={href} href={href}>
                 <Button key={button.label} {...button} />
               </Link>
             ) : (
