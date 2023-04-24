@@ -35,7 +35,7 @@ export default function ImprintPage() {
  
   return (
     <Layout>
-      <main className="flex flex-col p-36">
+      <main className="flex flex-col p-6 md:p-36">
         <p>
           <Text variant="big-dark">{title}</Text>
         </p>

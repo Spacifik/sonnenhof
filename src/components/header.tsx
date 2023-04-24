@@ -13,7 +13,12 @@ export function Header(): JSX.Element {
   return (
     <header className="sticky w-full h-0 top-0 bg-white h-16 z-30 p-3 relative">
       {router.route !== "/" ? (
-        <Link className="cursor-pointer absolute top-1/4 h-1/2" href={"/"}>
+        <Link
+          className={`cursor-pointer absolute top-1/4 h-1/2 ${getThemeColor(
+            "primary"
+          )}`}
+          href={"/"}
+        >
           <ArrowLeft />
         </Link>
       ) : null}

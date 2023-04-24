@@ -5,7 +5,7 @@ import { eula } from "@sonnenhof/data/eula/eula";
 export default function EulaPage(): JSX.Element {
   return (
     <Layout>
-      <main className="flex flex-col p-36">
+      <main className="flex flex-col p-6 md:p-36">
         <Text variant="big-dark">AGB</Text>
         <ol className="list-decimal list-inside">
           {eula.paragraphs.map((paragraph, index) => (

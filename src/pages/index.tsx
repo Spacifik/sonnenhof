@@ -24,9 +24,10 @@ export default function Home() {
         <main className="flex min-h-screen flex-col items-center scrollbar-hide">
           <video
             className="object-cover max-h-90vh w-screen"
-            autoPlay={true}
+            autoPlay
             muted
             playsInline
+            loop
           >
             <source src="Trailer_small.mp4" type="video/mp4" />
             <p>your browser does not support playing videos</p>
