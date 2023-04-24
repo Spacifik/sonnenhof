@@ -1,4 +1,4 @@
-import { ImprintProps } from "@sonnenhof/components/imprint";
+import { ImprintProps } from "@sonnenhof/pages/imprint";
 
 export const imprint: ImprintProps = {
   title: "Impressum:",
