@@ -11,17 +11,17 @@ export interface FooterProps {
 export function Footer({ phone, email, links }: FooterProps): JSX.Element {
   return (
     <footer className="font-mono w-full uppercase px-3 pt-3 pb-2 md:px-9 md:pt-9 flex flex-col gap-3">
-      <Text variant="big">Contact us</Text>
+      <Text variant="big-bright">Contact us</Text>
       <a href={`tel:${phone}`}>
-        <Text variant="big">{phone}</Text>
+        <Text variant="big-bright">{phone}</Text>
       </a>
       <a href={`mailto:${email}`}>
-        <Text variant="big">{email}</Text>
+        <Text variant="big-bright">{email}</Text>
       </a>
-      <div className="footer-links flex md:justify-around gap-3 md:gap-0">
+      <div className="flex md:justify-around gap-3 md:gap-0">
         {links.map((link) => (
           <Link key={link.label} href={link.href} className="cursor-pointer">
-            <Text variant="small">{link.label}</Text>
+            <Text variant="small-bright">{link.label}</Text>
           </Link>
         ))}
       </div>

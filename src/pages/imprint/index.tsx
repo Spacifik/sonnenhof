@@ -37,35 +37,35 @@ export default function ImprintPage() {
     <Layout>
       <main className="flex flex-col p-36">
         <p>
-          <Text variant="big">{title}</Text>
+          <Text variant="big-dark">{title}</Text>
         </p>
         <br />
         <p>
-          <Text variant="medium">Anbieter:</Text>
+          <Text variant="medium-dark">Anbieter:</Text>
           <br />
-          <Text variant="medium">{provider.name}</Text>
-          <Text variant="medium">{provider.street}</Text>
-          <Text variant="medium">{provider.zip}</Text>
+          <Text variant="medium-dark">{provider.name}</Text>
+          <Text variant="medium-dark">{provider.street}</Text>
+          <Text variant="medium-dark">{provider.zip}</Text>
         </p>
         <br />
         <p>
-          <Text variant="medium">Kontakt:</Text>
+          <Text variant="medium-dark">Kontakt:</Text>
           <br />
-          <Text variant="medium">{`Telefon: ${providerContact.phone}`}</Text>
-          <Text variant="medium">{`Telefax: ${providerContact.fax}`}</Text>
-          <Text variant="medium">{`E-Mail: ${providerContact.email}`}</Text>
-          <Text variant="medium">{`Website: ${providerContact.website}`}</Text>
+          <Text variant="medium-dark">{`Telefon: ${providerContact.phone}`}</Text>
+          <Text variant="medium-dark">{`Telefax: ${providerContact.fax}`}</Text>
+          <Text variant="medium-dark">{`E-Mail: ${providerContact.email}`}</Text>
+          <Text variant="medium-dark">{`Website: ${providerContact.website}`}</Text>
         </p>
         <p />
         <br />
-        <Text variant="medium">Bei redaktionellen Inhalten:</Text>
+        <Text variant="medium-dark">Bei redaktionellen Inhalten:</Text>
         <br />
         <p>
-          <Text variant="medium">Verantwortlich nach § 55 Abs.2 RStV</Text>
+          <Text variant="medium-dark">Verantwortlich nach § 55 Abs.2 RStV</Text>
           <br />
-          <Text variant="medium">{editorial.name}</Text>
-          <Text variant="medium">{editorial.street}</Text>
-          <Text variant="medium">{editorial.zip}</Text>
+          <Text variant="medium-dark">{editorial.name}</Text>
+          <Text variant="medium-dark">{editorial.street}</Text>
+          <Text variant="medium-dark">{editorial.zip}</Text>
         </p>
       </main>
     </Layout>

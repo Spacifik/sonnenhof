@@ -1,5 +1,8 @@
 interface TextProps {
-  variant: "big" | "medium" | "small";
+  variant: UnionString<
+    "big" | "medium" | "small" | "tiny",
+    "primary" | "dark" | "bright"
+  >;
   children: string;
   uppercase?: boolean;
   mono?: boolean;
@@ -25,6 +28,8 @@ export function Text({
 
 function getVariantSize(variant: TextProps["variant"]): string {
   switch (variant) {
+    case "tiny":
+      return "text-xs";
     case "small":
       return "text-sm";
     case "medium":

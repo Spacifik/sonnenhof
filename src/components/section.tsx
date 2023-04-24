@@ -31,15 +31,15 @@ export function Section({
       <div className="flex flex-col gap-6 z-20">
         <div>
           {hint && (
-            <Text variant="small" mono uppercase>
+            <Text variant="small-primary" mono uppercase>
               {hint}
             </Text>
           )}
-          <Text variant="big" mono uppercase>
+          <Text variant="big-primary" mono uppercase>
             {title}
           </Text>
         </div>
-        <Text variant="medium">{text}</Text>
+        <Text variant="medium-primary">{text}</Text>
         <div className="flex gap-4">
           {buttons.map((button) => (
             <Button key={button.label} {...button} />

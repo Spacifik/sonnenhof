@@ -4,6 +4,7 @@ import { LogoTextSvg } from "@sonnenhof/svg/logo-text";
 import { ArrowLeft, Menu } from "iconoir-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { HamburgerOverlay } from "./hamburger-overlay";
 
 export function Header(): JSX.Element {
   const router = useRouter();
@@ -17,7 +18,7 @@ export function Header(): JSX.Element {
       ) : null}
       <div
         className="cursor-pointer absolute top-1/4 h-1/2 right-3"
-        onClick={() => showOverlay(<div>hello overlay!</div>)}
+        onClick={() => showOverlay(<HamburgerOverlay />)}
       >
         <Menu />
       </div>

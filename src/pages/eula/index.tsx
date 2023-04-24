@@ -6,11 +6,11 @@ export default function EulaPage(): JSX.Element {
   return (
     <Layout>
       <main className="flex flex-col p-36">
-        <Text variant="big">AGB</Text>
+        <Text variant="big-dark">AGB</Text>
         <ol className="list-decimal list-inside">
           {eula.paragraphs.map((paragraph, index) => (
             <li key={index} className="py-4">
-              <Text variant="medium">{paragraph}</Text>
+              <Text variant="medium-dark">{paragraph}</Text>
             </li>
           ))}
         </ol>
