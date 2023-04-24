@@ -8,7 +8,7 @@ export function LogoTextSvg({ className }: { className: string }): JSX.Element {
       x="0px"
       y="0px"
       viewBox="59.801002502441406 455.952880859375 476.3108825683594 83.70806884765625"
-      enable-background="new 0 0 595.275 841.891"
+      enableBackground="new 0 0 595.275 841.891"
     >
       <path
         d="M102.458,498.98c1.733,0,3.921-0.941,6.546-2.832c3.04-2.179,4.822-3.357,5.367-3.535l0.229,0.257

@@ -23,6 +23,20 @@ export default function Home() {
       ></div>
       <Layout>
         <main className="flex min-h-screen flex-col items-center scrollbar-hide">
+          <div style={{ position: "relative", paddingTop: "56.25%" }}>
+            <iframe
+              src="https://customer-mpt8p3umq4r630uj.cloudflarestream.com/e2c0d8fe33b9c367e67c0e6a713c9539/iframe?muted=true&preload=true&loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-mpt8p3umq4r630uj.cloudflarestream.com%2Fe2c0d8fe33b9c367e67c0e6a713c9539%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600&controls=false"
+              style={{
+                border: "none",
+                position: "absolute",
+                top: 0,
+                left: 0,
+                height: "100%",
+                width: "100%",
+              }}
+              allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+            ></iframe>
+          </div>
           <video
             className="object-cover max-h-90vh w-screen"
             autoPlay
@@ -31,15 +45,13 @@ export default function Home() {
             loop
           >
             <source
-              src="https://customer-mpt8p3umq4r630uj.cloudflarestream.com/e2c0d8fe33b9c367e67c0e6a713c9539/manifest/video.m3u8"
+              src="https://customer-mpt8p3umq4r630uj.cloudflarestream.com/e2c0d8fe33b9c367e67c0e6a713c9539/iframe?muted=true&preload=true&loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-mpt8p3umq4r630uj.cloudflarestream.com%2Fe2c0d8fe33b9c367e67c0e6a713c9539%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600&controls=false"
               type="video/mp4"
             />
             <p>your browser does not support playing videos</p>
           </video>
           <div className="md:flex md:flex-wrap">
-            {sections.map((section) => (
-              <Section key={section.title} {...section} />
-            ))}
+            
           </div>
         </main>
       </Layout>
