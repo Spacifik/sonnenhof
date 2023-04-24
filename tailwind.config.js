@@ -15,8 +15,8 @@ module.exports = {
       },
       colors: {
         primary: {
-          regular: "#B8860B",
-          light: "#DAA520"
+          regular: "#d0af31",
+          light: "#e5c245"
         }
       },
       maxHeight: {

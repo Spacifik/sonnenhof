@@ -1,7 +1,7 @@
 import { exhaustiveCheck } from "@sonnenhof/utils/exhaustive-check";
 
 /* eslint-disable @next/next/no-img-element */
-interface ImageProps {
+export interface ImageProps {
   name:
     | "events"
     | "location"
@@ -26,10 +26,14 @@ export function Image({ name, className }: ImageProps): JSX.Element {
   return (
     <img
       className={className}
-      src={`${baseUrl}/${accountHash}/${getImageHashFor(name)}/${variant}`}
+      src={getImageSrc(name)}
       alt={name}
     />
   );
+}
+
+export function getImageSrc(name: ImageProps['name']): string {
+    return `${baseUrl}/${accountHash}/${getImageHashFor(name)}/${variant}`;
 }
 
 function getImageHashFor(name: ImageProps["name"]): string {

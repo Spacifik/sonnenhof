@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { Button, ButtonProps } from "./button";
 import { Text } from "./text";
+import { ImageProps, getImageSrc } from "./image";
 
 export interface SectionProps {
   hint?: string;
   title: string;
   text: string;
   buttons: (ButtonProps & { href?: string })[];
-  background?: string; // image url
+  background?: ImageProps["name"];
 }
 
 export function Section({
@@ -25,7 +26,7 @@ export function Section({
       }`}
       style={
         background
-          ? { backgroundImage: `url(/desktop/${background})` }
+          ? { backgroundImage: `url(${getImageSrc(background)})` }
           : undefined
       }
     >

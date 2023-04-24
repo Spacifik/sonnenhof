@@ -51,7 +51,13 @@ export default function Home() {
             <p>your browser does not support playing videos</p>
           </video>
           <div className="md:flex md:flex-wrap">
-            
+            <Section
+              hint="zimmer & suiten"
+              title="rubin | saphir | diamond"
+              text="147 Zimmer und Suiten mit wundervoller Aussicht und Balkon in einem ausgefallenen Design"
+              background="rooms"
+              buttons={[]}
+            />
           </div>
         </main>
       </Layout>
