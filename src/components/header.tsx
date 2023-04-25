@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useOverlay } from "@sonnenhof/overlay/overlay-context";
 import { LogoNoTextSvg } from "@sonnenhof/svg/logo-no-text";
 import { LogoTextSvg } from "@sonnenhof/svg/logo-text";
@@ -6,6 +7,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { HamburgerOverlay } from "./hamburger-overlay";
 import { getThemeColor } from "./theme-color";
+import Image from "next/image";
+import { Logo } from "./logo";
 
 export function Header(): JSX.Element {
   const router = useRouter();
@@ -31,8 +34,7 @@ export function Header(): JSX.Element {
         <Menu />
       </div>
       <div className="flex h-9  max-h-full  max-w-full justify-center">
-        <LogoNoTextSvg className="h-full ml-3 mr-3 " />
-        <LogoTextSvg className="h-full mr-3  " />
+        <Logo className="h-full ml-3 mr-3 " />
       </div>
     </header>
   );

@@ -24,3 +24,84 @@
   scrollbar-width: none;
   /* Firefox */
 }
+
+
+/* logo font styles */
+
+@font-face {
+  font-family: "Engravers MT";
+  font-variant: normal;
+  font-style: normal;
+  font-weight: 500;
+  src: url("#FontID1") format(svg)
+}
+
+@font-face {
+  font-family: "Wingdings";
+  font-variant: normal;
+  font-style: normal;
+  font-weight: normal;
+  src: url("#FontID0") format(svg)
+}
+
+.str1 {
+  stroke: #CDC8B4;
+  stroke-width: 20;
+  stroke-miterlimit: 22.9256
+}
+
+.str0 {
+  stroke: #866C4B;
+  stroke-width: 25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10
+}
+
+.fil6 {
+  fill: none
+}
+
+.fil1 {
+  fill: #D4B231
+}
+
+.fil4 {
+  fill: #866C4B
+}
+
+.fil5 {
+  fill: #CCC7B3
+}
+
+.fil2 {
+  fill: #CDC8B4
+}
+
+.fil3 {
+  fill: #2B2A29;
+  fill-rule: nonzero
+}
+
+.fil0 {
+  fill: #D4B231;
+  fill-rule: nonzero
+}
+
+.fnt0 {
+  font-weight: normal;
+  font-size: 368.92px;
+  font-family: 'Wingdings'
+}
+
+.fnt2 {
+  font-weight: 500;
+  font-size: 987.37px;
+  font-family: 'Engravers MT'
+}
+
+.fnt1 {
+  font-weight: 500;
+  font-size: 1152.61px;
+  font-family: 'Engravers MT'
+}
