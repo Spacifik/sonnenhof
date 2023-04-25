@@ -22,7 +22,7 @@ export default function Home() {
         <main className="flex min-h-screen flex-col items-center scrollbar-hide bg-black">
           <iframe
             src="https://customer-mpt8p3umq4r630uj.cloudflarestream.com/e2c0d8fe33b9c367e67c0e6a713c9539/iframe?muted=true&preload=true&loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-mpt8p3umq4r630uj.cloudflarestream.com%2Fe2c0d8fe33b9c367e67c0e6a713c9539%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600&controls=false"
-            className="z-10 object-cover max-h-90vh h-full w-full inset-0 absolute border-none"
+            className="z-10 object-cover h-screen w-full inset-0 border-none"
             allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
           ></iframe>
           <div className="md:flex md:flex-wrap">
@@ -39,6 +39,7 @@ export default function Home() {
               hint="Events & Konferenzen"
               title="business | events"
               text="270m² Eventfläche mit modernster Technik"
+              details="Unser Hotel bietet auf einer großzügigen Eventfläche von 270m² den idealen Rahmen für Veranstaltungen jeglicher Art. Die modernste Technik, die in diesen Räumlichkeiten zur Verfügung steht, ermöglicht einwandfreie Präsentationen, Konferenzen oder private Feierlichkeiten. Unsere erfahrenen Veranstaltungsplaner unterstützen Sie dabei, Ihre Events individuell und professionell zu gestalten. Die stilvolle Atmosphäre und das ansprechende Design sorgen für ein angenehmes Ambiente, während unser aufmerksames Servicepersonal dafür sorgt, dass Ihre Gäste rundum zufrieden sind."
               background="events"
               buttons={[]}
             />
@@ -47,6 +48,7 @@ export default function Home() {
               hint="Pool und Thermalbad"
               title="indoor | outdoor"
               text="Exklusiver Innen- und Außenpool mit Massagebereich"
+              details="Unser Hotel verfügt über exklusive Innen- und Außenpools, die Entspannung und Erholung bieten. Der angrenzende Massagebereich lädt zum Verwöhnen ein und trägt zum Wohlbefinden unserer Gäste bei. Genießen Sie das stilvolle Ambiente, die wohltuenden Wasserlandschaften und die professionellen Massagen für ein unvergessliches Erlebnis."
               background="pool"
               buttons={[]}
             />
@@ -55,6 +57,7 @@ export default function Home() {
               hint="Wellness & Spa"
               title="Face | Body"
               text="Luxoriöser SPA Bereich mit Sauna, Eis-Lounge, Dampfbad und Massagezentrum"
+              details="Unser luxuriöser SPA-Bereich bietet eine Vielfalt an Entspannungsmöglichkeiten: Genießen Sie die wohltuende Wärme der Sauna, erfrischen Sie sich in der Eis-Lounge, entspannen Sie im Dampfbad und lassen Sie sich im Massagezentrum verwöhnen. Diese Kombination sorgt für ein unvergleichliches Wellness-Erlebnis in stilvollem Ambiente."
               background="wellness"
               buttons={[]}
             />
