@@ -66,6 +66,7 @@ export default function Home() {
               hint="Ausflüge & Incentives"
               title="wald | natur | historie"
               text="25.000 Hektar Wald-Nationalpark & staatlich anerkannter Kurort"
+              details="Unser Hotel liegt inmitten eines 25.000 Hektar großen Wald-Nationalparks und eines staatlich anerkannten Kurorts. Genießen Sie die unberührte Natur, atemberaubende Landschaften und zahlreiche Freizeitmöglichkeiten in dieser idyllischen Umgebung. Erleben Sie Erholung pur und lassen Sie den Alltag hinter sich in dieser malerischen Oase."
               background="activities"
               buttons={[]}
             />
@@ -74,6 +75,7 @@ export default function Home() {
               hint="Breakfast/Lunch & Fine dining"
               title="Wildbachklamm | the fine"
               text="Lichtdurchflutetes Restaurant mit exklusiver Fine Dining Area"
+              details="Unser lichtdurchflutetes Restaurant verzaubert Gäste mit einer exklusiven Fine Dining Area, in der exquisite Speisen und erlesene Weine serviert werden. Das stilvolle Ambiente und die raffinierte Küche bieten ein unvergessliches kulinarisches Erlebnis, während unser aufmerksames Personal dafür sorgt, dass Ihre Wünsche erfüllt werden."
               background="dining"
               buttons={[]}
             />
