@@ -30,6 +30,7 @@ export default function Home() {
               hint="zimmer & suiten"
               title="rubin | saphir | diamond"
               text="147 Zimmer und Suiten mit wundervoller Aussicht und Balkon in einem ausgefallenen Design"
+              details="In unserem Luxushotel erwarten Sie 147 stilvolle Zimmer und Suiten mit atemberaubender Aussicht und privaten Balkonen. Unser ausgefallenes Design vereint modernen Komfort mit zeitgenössischer Ästhetik. Bei uns genießen Sie erstklassige Annehmlichkeiten wie ein Gourmet-Restaurant, einen Wellnessbereich und spannende Outdoor-Aktivitäten, die Ihren Aufenthalt unvergesslich machen."
               background="rooms"
               buttons={[]}
             />

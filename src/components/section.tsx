@@ -5,6 +5,7 @@ import { ImageProps, getImageSrc } from "./image";
 
 export interface SectionProps {
   hint?: string;
+  details?: string;
   title: string;
   text: string;
   buttons: (ButtonProps & { href?: string })[];
@@ -53,6 +54,9 @@ export function Section({
             )
           )}
         </div>
+      </div>
+      <div className="absolute inset-0 items-center justify-center z-30 align-middle bg-black opacity-0 w-full h-full hover:md:opacity-80">
+        hello, world
       </div>
     </section>
   );
