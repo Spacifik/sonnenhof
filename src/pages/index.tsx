@@ -112,6 +112,18 @@ export default function Home() {
                 Gallerie
               </Text>
             </BackgroundImage>
+
+            <BackgroundImage name="career">
+              <Text variant="medium-primary" mono uppercase>
+                Karriere
+              </Text>
+            </BackgroundImage>
+
+            <BackgroundImage name="contact">
+              <Text variant="medium-primary" mono uppercase>
+                Kontakt
+              </Text>
+            </BackgroundImage>
           </div>
         </main>
       </Layout>

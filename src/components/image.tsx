@@ -34,7 +34,7 @@ export function BackgroundImage({
 }: React.PropsWithChildren<ImageProps>): JSX.Element {
   return (
     <div
-      className={`${className} w-full min-h-40vh bg-cover bg-center flex items-center justify-center`}
+      className={`${className} w-full min-h-40vh bg-cover bg-center flex items-center justify-center md:min-h-30vh`}
       style={{ backgroundImage: `url(${getImageSrc(name)})` }}
     >
       {children}
