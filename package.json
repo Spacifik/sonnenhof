@@ -16,6 +16,7 @@
     "typescript": "5.0.4"
   },
   "dependencies": {
+    "@cloudflare/stream-react": "^1.8.0",
     "autoprefixer": "10.4.14",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",

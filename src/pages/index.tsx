@@ -7,6 +7,7 @@ import { Layout } from "@sonnenhof/components/layout";
 import { Text } from "@sonnenhof/components/text";
 import { BackgroundImage, Image } from "@sonnenhof/components/image";
 import { Special } from "@sonnenhof/components/special";
+import { Stream } from "@cloudflare/stream-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,11 +21,17 @@ export default function Home() {
       ></div>
       <Layout>
         <main className="flex min-h-screen flex-col items-center scrollbar-hide bg-black">
-          <iframe
-            src="https://customer-mpt8p3umq4r630uj.cloudflarestream.com/e2c0d8fe33b9c367e67c0e6a713c9539/iframe?muted=true&preload=true&loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-mpt8p3umq4r630uj.cloudflarestream.com%2Fe2c0d8fe33b9c367e67c0e6a713c9539%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600&controls=false"
-            className="z-10 object-cover h-screen w-full inset-0 border-none"
-            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-          ></iframe>
+          <div className="relative w-full h-full">
+            <div className="inset-0 flex items-center justify-center max-h-screen max-w-screen">
+              <Stream
+                src="e2c0d8fe33b9c367e67c0e6a713c9539"
+                loop
+                autoplay
+                muted
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
           <div className="md:flex md:flex-wrap">
             <Section
               hint="zimmer & suiten"
