@@ -14,7 +14,7 @@ export function Header(): JSX.Element {
   const router = useRouter();
   const { showOverlay } = useOverlay();
   return (
-    <header className="sticky w-full top-0 z-30 p-3 relative">
+    <header className="sticky w-full top-0 z-30 relative">
       {router.route !== "/" ? (
         <Link
           className={`cursor-pointer absolute top-3 left-3 h-1/2 ${getThemeColor(
@@ -33,7 +33,7 @@ export function Header(): JSX.Element {
       >
         <Menu />
       </div>
-      <div className="flex w-44 md:w-56 mx-3 md:mx-8">
+      <div className="flex w-44 md:w-56 mx-3 md:mx-8 absolute">
         <Logo className="h-full w-auto" />
       </div>
     </header>
