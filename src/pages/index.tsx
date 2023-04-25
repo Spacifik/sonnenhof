@@ -75,10 +75,12 @@ export default function Home() {
             />
           </div>
           <br />
-          <div className="flex flex-col p-10 gap-8 md:flex-row md:p-16 md:gap-12">
-            <Text variant="medium-primary" mono uppercase>
+          <div className="flex px-10 pt-10 pb-5 md:px-16 md:pt-16 md:pb-10 w-full">
+            <Text variant="medium-primary" mono uppercase bold>
               Specials
             </Text>
+          </div>
+          <div className="flex flex-col px-10 pb-5 gap-8 md:flex-row md:px-16 md:pb-10  md:gap-12">
             <Special
               title="wedding package"
               text="Erleben Sie einen unvergesslichen Tag"

@@ -33,7 +33,7 @@ export function Header(): JSX.Element {
       >
         <Menu />
       </div>
-      <div className="flex w-44 md:w-56 max-w-full mx-3 md:mx-8 w-auto">
+      <div className="flex w-44 md:w-56 mx-3 md:mx-8">
         <Logo className="h-full w-auto" />
       </div>
     </header>
