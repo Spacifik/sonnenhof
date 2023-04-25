@@ -33,12 +33,12 @@ export function Text({
 function getVariantSize(size: TextSize): string {
   switch (size) {
     case "tiny":
-      return "text-xs";
+      return "text-xs md:text-sm lg:text-base";
     case "small":
-      return "text-sm";
+      return "text-sm md:text-base lg:text-lg";
     case "medium":
-      return "text-lg";
+      return "text-lg md:text-xl lg:text-2xl";
     case "big":
-      return "text-2xl";
+      return "text-2xl md:text-2xl lg:text-3xl";
   }
 }
