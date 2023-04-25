@@ -4,7 +4,7 @@ export function Logo({ className }: { className: string }): JSX.Element {
       className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="210mm"
-      height="297mm"
+      height="190mm"
       version="1.1"
       viewBox="2109.59033203125 8747.82421875 16803.21484375 10070.234375"
       xmlnsXlink="http://www.w3.org/1999/xlink"

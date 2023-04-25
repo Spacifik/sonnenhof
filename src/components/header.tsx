@@ -17,7 +17,7 @@ export function Header(): JSX.Element {
     <header className="sticky w-full top-0 z-30 p-3 relative">
       {router.route !== "/" ? (
         <Link
-          className={`cursor-pointer absolute top-1/4 h-1/2 ${getThemeColor(
+          className={`cursor-pointer absolute top-3 left-3 h-1/2 ${getThemeColor(
             "primary"
           )}`}
           href={"/"}
@@ -26,14 +26,14 @@ export function Header(): JSX.Element {
         </Link>
       ) : null}
       <div
-        className={`cursor-pointer absolute top-1/4 h-1/2 right-3 ${getThemeColor(
+        className={`cursor-pointer absolute top-3 right-3 h-1/2 ${getThemeColor(
           "primary"
         )}`}
         onClick={() => showOverlay(<HamburgerOverlay />)}
       >
         <Menu />
       </div>
-      <div className="flex h-56 max-w-full left-0 w-auto">
+      <div className="flex w-44 md:w-56 max-w-full mx-3 md:mx-8 w-auto">
         <Logo className="h-full w-auto" />
       </div>
     </header>
