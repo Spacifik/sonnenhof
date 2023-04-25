@@ -24,17 +24,26 @@ const accountHash: string = "gV_YLJoGO2jaxKnnl4mKxg";
 const variant: string = "public";
 
 export function Image({ name, className }: ImageProps): JSX.Element {
+  return <img className={className} src={getImageSrc(name)} alt={name} />;
+}
+
+export function BackgroundImage({
+  name,
+  className,
+  children,
+}: React.PropsWithChildren<ImageProps>): JSX.Element {
   return (
-    <img
-      className={className}
-      src={getImageSrc(name)}
-      alt={name}
-    />
+    <div
+      className={`${className} w-full min-h-40vh bg-cover bg-center flex items-center justify-center`}
+      style={{ backgroundImage: `url(${getImageSrc(name)})` }}
+    >
+      {children}
+    </div>
   );
 }
 
-export function getImageSrc(name: ImageProps['name']): string {
-    return `${baseUrl}/${accountHash}/${getImageHashFor(name)}/${variant}`;
+export function getImageSrc(name: ImageProps["name"]): string {
+  return `${baseUrl}/${accountHash}/${getImageHashFor(name)}/${variant}`;
 }
 
 function getImageHashFor(name: ImageProps["name"]): string {
@@ -65,8 +74,8 @@ function getImageHashFor(name: ImageProps["name"]): string {
       return "9bc14109-f98f-455f-89d4-79aad5597200";
     case "wellness":
       return "90a31e90-e41c-4ceb-76a9-99a85cb76000";
-      default:
-          exhaustiveCheck(name);
-          return "";
+    default:
+      exhaustiveCheck(name);
+      return "";
   }
 }

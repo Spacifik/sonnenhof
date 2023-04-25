@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import { Section } from "@sonnenhof/components/section";
 import { Layout } from "@sonnenhof/components/layout";
 import { Text } from "@sonnenhof/components/text";
-import { Image } from "@sonnenhof/components/image";
+import { BackgroundImage, Image } from "@sonnenhof/components/image";
 import { Special } from "@sonnenhof/components/special";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -99,6 +99,19 @@ export default function Home() {
               background="city"
               href="/city-cruise"
             />
+          </div>
+          <div className="flex flex-col px-10 pb-5 gap-8 md:flex-row md:px-16 md:pb-10  md:gap-12 w-full h-auto">
+            <BackgroundImage name="location">
+              <Text variant="medium-primary" mono uppercase>
+                Standort
+              </Text>
+            </BackgroundImage>
+
+            <BackgroundImage name="gallery">
+              <Text variant="medium-primary" mono uppercase>
+                Gallerie
+              </Text>
+            </BackgroundImage>
           </div>
         </main>
       </Layout>
