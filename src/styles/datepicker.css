@@ -2,7 +2,7 @@
 
 /* Style the input field */
 .react-datepicker__input-container input {
-  @apply invisible max-w-full p-0 md:p-2 md:visible bg-transparent text-white border border-primary-regular hover:border-primary-light  py-2 px-4;
+  @apply invisible max-w-full p-0 md:p-2 md:visible bg-transparent text-primary-regular border border-primary-regular hover:border-primary-light  py-2 px-4;
 }
 
 /* Style the date picker pop-up */
