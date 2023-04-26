@@ -9,6 +9,21 @@ import { Logo } from "./logo";
 import DatePicker from "react-datepicker";
 import React from "react";
 import { useImmer } from "use-immer";
+import { Text } from "./text";
+
+function TextWithValue({
+  value,
+  onClick,
+}: {
+  value?: string;
+  onClick?: Callback<void>;
+}): JSX.Element {
+  return (
+    <div onClick={() => onClick?.()}>
+      <Text variant="tiny-primary">{value as string}</Text>
+    </div>
+  );
+}
 
 export function Header(): JSX.Element {
   const router = useRouter();
@@ -57,6 +72,7 @@ export function Header(): JSX.Element {
             }}
             dateFormat="dd.MM.yyyy"
             locale="de"
+            customInput={<TextWithValue />}
           />
         </div>
         <div className="max-w-[15%]">
@@ -75,6 +91,7 @@ export function Header(): JSX.Element {
             }}
             dateFormat="dd.MM.yyyy"
             locale="de"
+            customInput={<TextWithValue />}
           />
         </div>
 
