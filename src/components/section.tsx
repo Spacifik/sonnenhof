@@ -32,7 +32,7 @@ export function Section({
           : undefined
       }
     >
-      <div className="flex flex-col gap-6 z-20 align-middle md:mt-14">
+      <div className="flex flex-col gap-6 z-10 align-middle md:mt-14">
         <div>
           {hint && (
             <Text variant={`tiny-${textColorVariant}`} mono uppercase>
@@ -56,7 +56,7 @@ export function Section({
           )}
         </div>
       </div>
-      <div className="absolute inset-0 items-center justify-center z-30 align-middle bg-black opacity-0 w-full h-full p-6 md:p-16 hover:md:opacity-80">
+      <div className="absolute inset-0 items-center justify-center z-20 align-middle bg-black opacity-0 w-full h-full p-6 md:p-16 hover:md:opacity-80">
         <Text variant="small-primary">{details}</Text>
       </div>
     </section>

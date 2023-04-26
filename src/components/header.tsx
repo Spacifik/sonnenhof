@@ -38,7 +38,7 @@ export function Header(): JSX.Element {
     to: new Date(),
   });
   return (
-    <header className="w-full z-20 sticky bg-black top-0">
+    <header className="w-full z-30 sticky bg-black top-0">
       <div className="flex flex-row">
         {router.route !== "/" ? (
           <Link
@@ -54,11 +54,11 @@ export function Header(): JSX.Element {
             <ArrowLeft className="invisible" />
           </div>
         )}
-        <div className="flex w-44 md:w-56 mx-3 md:mx-8">
+        <div className="flex w-44 md:w-56 mx-3 md:mx-6">
           <Logo className="h-full w-auto" />
         </div>
 
-        <div className="flex gap-3 pt-3">
+        <div className="hidden md:flex md:gap-3 md:pt-3">
           <DatePicker
             selected={dates.from}
             onChange={(newDate) => {
@@ -102,7 +102,7 @@ export function Header(): JSX.Element {
         <div
           className={`cursor-pointer h-1/2 ${getThemeColor(
             "primary"
-          )} flex-grow justify-end flex p-3 md:p-5 md:justify-start`}
+          )} flex-grow justify-end flex p-3 md:p-5 `}
           onClick={() => showOverlay(<HamburgerOverlay />)}
         >
           <Menu />
