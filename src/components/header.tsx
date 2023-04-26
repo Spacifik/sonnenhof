@@ -6,10 +6,17 @@ import { useRouter } from "next/router";
 import { HamburgerOverlay } from "./hamburger-overlay";
 import { getThemeColor } from "./theme-color";
 import { Logo } from "./logo";
+import DatePicker from "react-datepicker";
+import React from "react";
+import { useImmer } from "use-immer";
 
 export function Header(): JSX.Element {
   const router = useRouter();
   const { showOverlay } = useOverlay();
+  const [dates, setDates] = useImmer({
+    from: new Date(),
+    to: new Date(),
+  });
   return (
     <header className="w-full z-20 sticky bg-black top-0">
       <div className="flex flex-row">
@@ -30,6 +37,37 @@ export function Header(): JSX.Element {
         <div className="flex w-44 md:w-56 mx-3 md:mx-8">
           <Logo className="h-full w-auto" />
         </div>
+
+        <DatePicker
+          key="from"
+          onChange={(newDate) => {
+            if (newDate) {
+              setDates((currentDates) => {
+                currentDates.from = newDate;
+
+                if (+newDate > +currentDates.to) {
+                  currentDates.to = newDate;
+                }
+              });
+            }
+          }}
+        />
+
+        <DatePicker
+          key="to"
+          onChange={(newDate) => {
+            if (newDate) {
+              setDates((currentDates) => {
+                currentDates.to = newDate;
+
+                if (+newDate < +currentDates.from) {
+                  currentDates.from = newDate;
+                }
+              });
+            }
+          }}
+        />
+
         <div
           className={`cursor-pointer h-1/2 ${getThemeColor(
             "primary"

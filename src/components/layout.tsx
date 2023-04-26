@@ -2,6 +2,7 @@ import { footer } from "@sonnenhof/data/footer/footer";
 import { Footer } from "./footer";
 import { Header } from "./header";
 import { OverlayProvider } from "@sonnenhof/overlay/overlay-context";
+import "react-datepicker/dist/react-datepicker.css";
 
 export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
   return (
