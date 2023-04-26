@@ -13,7 +13,10 @@ import { useImmer } from "use-immer";
 export function Header(): JSX.Element {
   const router = useRouter();
   const { showOverlay } = useOverlay();
-  const [dates, setDates] = useImmer({
+  const [dates, setDates] = useImmer<{
+    from: Date;
+    to: Date;
+  }>({
     from: new Date(),
     to: new Date(),
   });
@@ -38,35 +41,42 @@ export function Header(): JSX.Element {
           <Logo className="h-full w-auto" />
         </div>
 
-        <DatePicker
-          key="from"
-          onChange={(newDate) => {
-            if (newDate) {
-              setDates((currentDates) => {
-                currentDates.from = newDate;
-
-                if (+newDate > +currentDates.to) {
-                  currentDates.to = newDate;
-                }
-              });
-            }
-          }}
-        />
-
-        <DatePicker
-          key="to"
-          onChange={(newDate) => {
-            if (newDate) {
-              setDates((currentDates) => {
-                currentDates.to = newDate;
-
-                if (+newDate < +currentDates.from) {
+        <div className="max-w-[15%]">
+          <DatePicker
+            selected={dates.from}
+            onChange={(newDate) => {
+              if (newDate) {
+                setDates((currentDates) => {
                   currentDates.from = newDate;
-                }
-              });
-            }
-          }}
-        />
+
+                  if (currentDates.to && +newDate > +currentDates.to) {
+                    currentDates.to = newDate;
+                  }
+                });
+              }
+            }}
+            dateFormat="dd.MM.yyyy"
+            locale="de"
+          />
+        </div>
+        <div className="max-w-[15%]">
+          <DatePicker
+            selected={dates.to}
+            onChange={(newDate) => {
+              if (newDate) {
+                setDates((currentDates) => {
+                  currentDates.to = newDate;
+
+                  if (currentDates.from && +newDate < +currentDates.from) {
+                    currentDates.from = newDate;
+                  }
+                });
+              }
+            }}
+            dateFormat="dd.MM.yyyy"
+            locale="de"
+          />
+        </div>
 
         <div
           className={`cursor-pointer h-1/2 ${getThemeColor(
