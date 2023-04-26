@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useOverlay } from "@sonnenhof/overlay/overlay-context";
-import { ArrowLeft, Menu } from "iconoir-react";
+import { ArrowLeft, Calendar, Menu } from "iconoir-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { HamburgerOverlay } from "./hamburger-overlay";
@@ -10,6 +10,7 @@ import DatePicker from "react-datepicker";
 import React from "react";
 import { useImmer } from "use-immer";
 import { Text } from "./text";
+import { Button } from "./button";
 
 function TextWithValue({
   value,
@@ -19,8 +20,9 @@ function TextWithValue({
   onClick?: Callback<void>;
 }): JSX.Element {
   return (
-    <div onClick={() => onClick?.()}>
+    <div onClick={() => onClick?.()} className="flex gap-2">
       <Text variant="tiny-primary">{value as string}</Text>
+      <Calendar className="h-4 m-auto" />
     </div>
   );
 }
@@ -56,7 +58,7 @@ export function Header(): JSX.Element {
           <Logo className="h-full w-auto" />
         </div>
 
-        <div className="max-w-[15%]">
+        <div className="flex gap-3 pt-3">
           <DatePicker
             selected={dates.from}
             onChange={(newDate) => {
@@ -74,8 +76,6 @@ export function Header(): JSX.Element {
             locale="de"
             customInput={<TextWithValue />}
           />
-        </div>
-        <div className="max-w-[15%]">
           <DatePicker
             selected={dates.to}
             onChange={(newDate) => {
@@ -93,12 +93,16 @@ export function Header(): JSX.Element {
             locale="de"
             customInput={<TextWithValue />}
           />
+
+          <div className="w-full">
+            <Button label="Book now" variant="primary" />
+          </div>
         </div>
 
         <div
           className={`cursor-pointer h-1/2 ${getThemeColor(
             "primary"
-          )} flex-grow justify-end flex p-3 md:p-5`}
+          )} flex-grow justify-end flex p-3 md:p-5 md:justify-start`}
           onClick={() => showOverlay(<HamburgerOverlay />)}
         >
           <Menu />
