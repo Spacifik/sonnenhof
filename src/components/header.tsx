@@ -11,7 +11,7 @@ export function Header(): JSX.Element {
   const router = useRouter();
   const { showOverlay } = useOverlay();
   return (
-    <header className="w-full z-20 sticky bg-black">
+    <header className="w-full z-20 sticky bg-black top-0">
       <div className="flex flex-row">
         {router.route !== "/" ? (
           <Link
