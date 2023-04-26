@@ -23,7 +23,7 @@ export function Header(): JSX.Element {
             <ArrowLeft />
           </Link>
         ) : (
-          <div className="h-1/2 ">
+          <div className="h-1/2  p-3 md:p-5">
             <ArrowLeft className="invisible" />
           </div>
         )}
