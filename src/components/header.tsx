@@ -58,7 +58,8 @@ export function Header(): JSX.Element {
           <Logo className="h-full w-auto" />
         </div>
 
-        <div className="hidden md:flex md:gap-3 md:pt-3">
+        <div className="hidden md:flex flex-grow" />
+        <div className="hidden md:flex md:gap-3 md:pt-3 justify-end">
           <DatePicker
             selected={dates.from}
             onChange={(newDate) => {
@@ -102,7 +103,7 @@ export function Header(): JSX.Element {
         <div
           className={`cursor-pointer h-1/2 ${getThemeColor(
             "primary"
-          )} flex-grow justify-end flex p-3 md:p-5 `}
+          )} flex-grow justify-end flex p-3 md:p-5 md:grow-0`}
           onClick={() => showOverlay(<HamburgerOverlay />)}
         >
           <Menu />
