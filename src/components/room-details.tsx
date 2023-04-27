@@ -22,18 +22,16 @@ export function RoomDetails({
   buttons,
 }: RoomDetailsProps): JSX.Element {
   const [open, setOpen] = React.useState(false);
+
   return (
-    <details
-      className={`grow relative p-6 md:p-16 md:basis-1/2 md:min-h-60vh bg-black marker:hidden ${
-        open ? `mb-3` : ""
-      }`}
-      open={open}
+    <div
+      className={`grow relative p-6 md:p-16 md:basis-1/2 md:min-h-60vh bg-black marker:hidden `}
       onClick={(evt) => {
-        setOpen((currentOpen) => !currentOpen);
+        setOpen((current) => !current);
         evt.stopPropagation();
       }}
     >
-      <summary className="flex">
+      <div className={`flex ${open ? `pb-3` : ""}`}>
         <Text variant="medium-light">{summary}</Text>
         <span className="grow" />
         {open ? (
@@ -41,24 +39,28 @@ export function RoomDetails({
         ) : (
           <Plus className="text-white" />
         )}
-      </summary>
-      <Image name={image} />
-      <Text variant="tiny-light">{details}</Text>
-      <ul>
-        {items.map((item, index) => (
-          <li key={index}>
-            <Text variant="tiny-light">{`- ${item}`}</Text>
-          </li>
-        ))}
-      </ul>
-
-      <div className="flex w-full gap-3 md:gap-6">
-        {buttons.map((button, index) => (
-          <div key={index} className="grow">
-            <Button {...button} />
-          </div>
-        ))}
       </div>
-    </details>
+      {open && (
+        <>
+          <Image name={image} />
+          <Text variant="tiny-light">{details}</Text>
+          <ul>
+            {items.map((item, index) => (
+              <li key={index}>
+                <Text variant="tiny-light">{`- ${item}`}</Text>
+              </li>
+            ))}
+          </ul>
+
+          <div className="flex w-full gap-3 md:gap-6">
+            {buttons.map((button, index) => (
+              <div key={index} className="grow">
+                <Button {...button} />
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
   );
 }
