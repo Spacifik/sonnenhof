@@ -6,17 +6,17 @@ export function HamburgerOverlay(): JSX.Element {
     <div>
       <div className="flex">
         <div className="border-r-2 pe-2 me-2">
-          <Text variant="tiny-primary-regular" mono uppercase>
+          <Text variant="tiny-primary" mono uppercase>
             Zimmer buchen
           </Text>
         </div>
         <div className="border-r-2  pe-2 me-2">
-          <Text variant="tiny-primary-regular" mono uppercase>
+          <Text variant="tiny-primary" mono uppercase>
             Tisch reservieren
           </Text>
         </div>
         <div>
-          <Text variant="tiny-primary-regular" mono uppercase>
+          <Text variant="tiny-primary" mono uppercase>
             Gutscheine
           </Text>
         </div>
@@ -24,33 +24,33 @@ export function HamburgerOverlay(): JSX.Element {
       <br />
       <ul className="">
         <li>
-          <Text variant="medium-primary-regular" mono uppercase>
+          <Text variant="medium-primary" mono uppercase>
             Blog
           </Text>
         </li>
         <li>
           <Link href={"/rooms"}>
-            <Text variant="medium-primary-regular" mono uppercase>
+            <Text variant="medium-primary" mono uppercase>
               Zimmer & suiten
             </Text>
           </Link>
         </li>
         <li>
-          <Text variant="medium-primary-regular" mono uppercase>
+          <Text variant="medium-primary" mono uppercase>
             Bar
           </Text>
           <li>
-            <Text variant="medium-primary-regular" mono uppercase>
+            <Text variant="medium-primary" mono uppercase>
               Spa & Gesundheit
             </Text>
           </li>
           <li>
-            <Text variant="medium-primary-regular" mono uppercase>
+            <Text variant="medium-primary" mono uppercase>
               Meetings & Events
             </Text>
           </li>
           <li>
-            <Text variant="medium-primary-regular" mono uppercase>
+            <Text variant="medium-primary" mono uppercase>
               Gym & Outdoor
             </Text>
           </li>
