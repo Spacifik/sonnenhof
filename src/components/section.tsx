@@ -22,7 +22,7 @@ export function Section({
 }:
   | SectionProps
   | React.PropsWithChildren<Omit<SectionProps, "text">>): JSX.Element {
-  const textColorVariant = background ? "primary" : "light";
+  const textColorVariant = "primary";
   return (
     <section
       className={`grow relative p-6 min-h-40vh md:p-16 md:basis-1/2 md:min-h-60vh ${

@@ -29,21 +29,21 @@ export default function Rooms(): JSX.Element {
           buttons={[]}
         />
         <Section title="Room essentials" buttons={[]}>
-          <Text variant="small-light">
+          <Text variant="small-primary">
             Unsere Zimmer und Suiten sind standardmäßig ausgestattet mit:
           </Text>
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4">
             <ul className="space-y-2">
               {firstHalf.map((item, index) => (
                 <li key={index}>
-                  <Text variant="small-light">{item.content}</Text>
+                  <Text variant="small-primary">{item.content}</Text>
                 </li>
               ))}
             </ul>
             <ul className="space-y-2 mt-2 md:mt-0">
               {secondHalf.map((item, index) => (
                 <li key={index}>
-                  <Text variant="small-light">{item.content}</Text>
+                  <Text variant="small-primary">{item.content}</Text>
                 </li>
               ))}
             </ul>

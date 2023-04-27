@@ -32,7 +32,7 @@ export function RoomDetails({
       }}
     >
       <div className={`flex ${open ? `pb-3` : ""}`}>
-        <Text variant="medium-light">{summary}</Text>
+        <Text variant="medium-primary">{summary}</Text>
         <span className="grow" />
         {open ? (
           <Minus className="text-white" />
@@ -41,13 +41,13 @@ export function RoomDetails({
         )}
       </div>
       {open && (
-        <>
+        <div className="flex flex-col gap-3 md:gap-6">
           <Image name={image} />
-          <Text variant="tiny-light">{details}</Text>
+          <Text variant="small-primary">{details}</Text>
           <ul>
             {items.map((item, index) => (
               <li key={index}>
-                <Text variant="tiny-light">{`- ${item}`}</Text>
+                <Text variant="tiny-primary">{`- ${item}`}</Text>
               </li>
             ))}
           </ul>
@@ -59,7 +59,7 @@ export function RoomDetails({
               </div>
             ))}
           </div>
-        </>
+        </div>
       )}
     </div>
   );
