@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Text } from "./text";
 
 export function HamburgerOverlay(): JSX.Element {
@@ -28,9 +29,11 @@ export function HamburgerOverlay(): JSX.Element {
           </Text>
         </li>
         <li>
-          <Text variant="medium-primary-regular" mono uppercase>
-            Zimmer & suiten
-          </Text>
+          <Link href={"/rooms"}>
+            <Text variant="medium-primary-regular" mono uppercase>
+              Zimmer & suiten
+            </Text>
+          </Link>
         </li>
         <li>
           <Text variant="medium-primary-regular" mono uppercase>

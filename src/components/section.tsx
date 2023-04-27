@@ -5,7 +5,7 @@ import { ImageProps, getImageSrc } from "./image";
 
 export interface SectionProps {
   hint?: string;
-  details: string;
+  details?: string;
   title: string;
   text: string;
   buttons: (ButtonProps & { href?: string })[];
@@ -16,10 +16,12 @@ export function Section({
   hint,
   title,
   details,
-  text,
   buttons,
   background,
-}: SectionProps): JSX.Element {
+  ...props
+}:
+  | SectionProps
+  | React.PropsWithChildren<Omit<SectionProps, "text">>): JSX.Element {
   const textColorVariant = background ? "primary" : "light";
   return (
     <section
@@ -43,7 +45,18 @@ export function Section({
             {title}
           </Text>
         </div>
-        <Text variant={`small-${textColorVariant}`}>{text}</Text>
+        {(props as SectionProps).text ? (
+          <Text variant={`small-${textColorVariant}`}>
+            {(props as SectionProps).text}
+          </Text>
+        ) : (
+          <>
+            {
+              (props as React.PropsWithChildren<Omit<SectionProps, "text">>)
+                .children
+            }
+          </>
+        )}
         <div className="flex gap-4">
           {buttons.map(({ href, ...button }) =>
             href ? (
@@ -56,9 +69,11 @@ export function Section({
           )}
         </div>
       </div>
-      <div className="absolute inset-0 items-center justify-center z-20 align-middle bg-black opacity-0 w-full h-full p-6 md:p-16 hover:md:opacity-80">
-        <Text variant="small-primary">{details}</Text>
-      </div>
+      {details ? (
+        <div className="absolute inset-0 items-center justify-center z-20 align-middle bg-black opacity-0 w-full h-full p-6 md:p-16 hover:md:opacity-80">
+          <Text variant="small-primary">{details}</Text>
+        </div>
+      ) : null}
     </section>
   );
 }
