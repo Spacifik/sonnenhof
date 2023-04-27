@@ -54,7 +54,7 @@ export function Header(): JSX.Element {
             <ArrowLeft className="invisible" />
           </div>
         )}
-        <div className="flex w-44 md:w-56 mx-3 md:mx-6">
+        <div className="flex w-44 md:w-56 mx-3 lg:mx-6">
           <Logo className="h-full w-auto" />
         </div>
 
@@ -95,7 +95,7 @@ export function Header(): JSX.Element {
             customInput={<TextWithValue />}
           />
 
-          <div className="w-full">
+          <div className="grow-0 shrink-0 basis-[100px]">
             <Button label="Book now" variant="primary" />
           </div>
         </div>
