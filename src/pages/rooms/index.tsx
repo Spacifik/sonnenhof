@@ -1,4 +1,5 @@
 import { Layout } from "@sonnenhof/components/layout";
+import { RoomDetails } from "@sonnenhof/components/room-details";
 import { Section } from "@sonnenhof/components/section";
 import { Text } from "@sonnenhof/components/text";
 
@@ -27,7 +28,6 @@ export default function Rooms(): JSX.Element {
           text="Some text"
           buttons={[]}
         />
-
         <Section title="Room essentials" buttons={[]}>
           <Text variant="small-light">
             Unsere Zimmer und Suiten sind standardmäßig ausgestattet mit:
@@ -49,6 +49,43 @@ export default function Rooms(): JSX.Element {
             </ul>
           </div>
         </Section>
+        <Section
+          title="Room categories"
+          text="Sollten Sie unter Allergien leiden, bieten wir Ihnen gerne nach Verfügbarkeit ein Allergikerzimmer mit spezieller Ausstattung und auf Wunsch sogar mit Luftreinigungsgerät an – einfach bei der Hotelbuchung angeben."
+          buttons={[]}
+        />
+        <RoomDetails
+          buttons={[
+            { label: "peek inside", variant: "secondary" },
+            { label: "book", variant: "primary" },
+          ]}
+          items={["hello", "room", "details"]}
+          summary="Rubin"
+          details="Lorem ipsum dolor sit amet"
+          image="rooms"
+        />
+
+        <RoomDetails
+          buttons={[
+            { label: "peek inside", variant: "secondary" },
+            { label: "book", variant: "primary" },
+          ]}
+          items={["hello", "room", "details"]}
+          summary="Saphir"
+          details="Lorem ipsum dolor sit amet"
+          image="rooms"
+        />
+
+        <RoomDetails
+          buttons={[
+            { label: "peek inside", variant: "secondary" },
+            { label: "book", variant: "primary" },
+          ]}
+          items={["hello", "room", "details"]}
+          summary="Diamond"
+          details="Lorem ipsum dolor sit amet"
+          image="rooms"
+        />
       </main>
     </Layout>
   );

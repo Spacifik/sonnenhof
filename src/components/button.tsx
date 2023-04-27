@@ -24,7 +24,9 @@ export function Button({
       : [getThemeColor("dark", true), getHoverThemeColor("dark", true)];
   return (
     <div
-      className={` ${textColor} ${bgColors.join(" ")} p-2 bold cursor-pointer`}
+      className={` ${textColor} ${bgColors.join(
+        " "
+      )} p-2 bold cursor-pointer text-center`}
     >
       <label htmlFor={buttonId}>{label}</label>
       <button id={buttonId} onClick={() => onClick?.()} />
