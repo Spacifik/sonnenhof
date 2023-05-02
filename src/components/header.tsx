@@ -38,7 +38,7 @@ export function Header(): JSX.Element {
     to: new Date(),
   });
   return (
-    <header className="w-full z-30 sticky bg-black top-0">
+    <header className="w-full z-30 sticky bg-black top-0 h-25vh">
       <div className="flex flex-row">
         {router.route !== "/" ? (
           <Link
@@ -54,7 +54,7 @@ export function Header(): JSX.Element {
             <ArrowLeft className="invisible" />
           </div>
         )}
-        <div className="flex w-44 md:w-56 mx-3 lg:mx-6">
+        <div className="flex w-44 md:w-50 mx-3 lg:mx-6">
           <Logo className="h-full w-auto" />
         </div>
 

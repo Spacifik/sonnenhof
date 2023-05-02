@@ -22,7 +22,7 @@ export default function Home() {
       <Layout>
         <main className="flex min-h-screen flex-col items-center scrollbar-hide bg-black">
           <div className="relative w-full h-full">
-            <div className="inset-0 flex items-center justify-center max-h-screen max-w-screen">
+            <div className="inset-0 flex items-center justify-center max-h-75vh max-w-screen">
               <Stream
                 src="e2c0d8fe33b9c367e67c0e6a713c9539"
                 loop

@@ -19,7 +19,11 @@ module.exports = {
           light: "#e5c245"
         }
       },
+      height: {
+        "25vh": "25vh"
+      },
       maxHeight: {
+        '75vh': '75vh',
         '90vh': '90vh'
       },
       minHeight: {
