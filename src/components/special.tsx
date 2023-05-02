@@ -24,7 +24,7 @@ export function Special({
         {title}
       </Text>
       <Text variant="small-primary">{text}</Text>
-      <Link href={href}>
+      <Link className="cursor-pointer" href={href}>
         <Text variant="tiny-primary">{`> weiterlesen`}</Text>
       </Link>
     </div>
