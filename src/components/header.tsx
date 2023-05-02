@@ -50,7 +50,7 @@ export function Header(): JSX.Element {
             <ArrowLeft />
           </Link>
         ) : (
-          <div className="h-1/2  p-3 md:p-5">
+          <div className="h-1/2  p-3 grow md:grow-0 md:p-5">
             <ArrowLeft className="invisible" />
           </div>
         )}
@@ -58,7 +58,7 @@ export function Header(): JSX.Element {
           <Logo className="h-full w-auto" />
         </div>
 
-        <div className="hidden md:flex flex-grow" />
+        <div className="hidden md:flex grow" />
         <div className="hidden md:flex md:gap-3 md:pt-3 justify-end">
           <DatePicker
             selected={dates.from}
