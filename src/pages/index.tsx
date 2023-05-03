@@ -8,6 +8,7 @@ import { Text } from "@sonnenhof/components/text";
 import { BackgroundImage, Image } from "@sonnenhof/components/image";
 import { Special } from "@sonnenhof/components/special";
 import { Stream } from "@cloudflare/stream-react";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -149,29 +150,37 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-col px-10 pb-5 gap-8 md:flex-row md:px-16 md:pb-10  md:gap-12 w-full h-auto">
-            <BackgroundImage name="location">
-              <Text variant="medium-primary" mono uppercase>
-                Standort
-              </Text>
-            </BackgroundImage>
+            <Link className="cursor-pointer" href={"/gallery"}>
+              <BackgroundImage name="location">
+                <Text variant="medium-primary" mono uppercase>
+                  Standort
+                </Text>
+              </BackgroundImage>
+            </Link>
 
-            <BackgroundImage name="gallery">
-              <Text variant="medium-primary" mono uppercase>
-                Gallerie
-              </Text>
-            </BackgroundImage>
+            <Link className="cursor-pointer" href={"/gallery"}>
+              <BackgroundImage name="gallery">
+                <Text variant="medium-primary" mono uppercase>
+                  Gallerie
+                </Text>
+              </BackgroundImage>
+            </Link>
 
-            <BackgroundImage name="career">
-              <Text variant="medium-primary" mono uppercase>
-                Karriere
-              </Text>
-            </BackgroundImage>
+            <Link className="cursor-pointer" href={"/career"}>
+              <BackgroundImage name="career">
+                <Text variant="medium-primary" mono uppercase>
+                  Karriere
+                </Text>
+              </BackgroundImage>
+            </Link>
 
-            <BackgroundImage name="contact">
-              <Text variant="medium-primary" mono uppercase>
-                Kontakt
-              </Text>
-            </BackgroundImage>
+            <Link className="cursor-pointer" href={"/contact"}>
+              <BackgroundImage name="contact">
+                <Text variant="medium-primary" mono uppercase>
+                  Kontakt
+                </Text>
+              </BackgroundImage>
+            </Link>
           </div>
         </main>
       </Layout>
