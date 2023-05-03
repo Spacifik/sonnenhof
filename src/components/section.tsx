@@ -59,17 +59,6 @@ export function Section({
             }
           </>
         )}
-        <div className="flex gap-4">
-          {buttons.map(({ href, ...button }) =>
-            href ? (
-              <Link key={href} href={href}>
-                <Button key={button.label} {...button} />
-              </Link>
-            ) : (
-              <Button key={button.label} {...button} />
-            )
-          )}
-        </div>
       </div>
       {details ? (
         <div className="absolute inset-0 items-center justify-center z-20 align-middle bg-black opacity-0 w-full h-full p-6 md:p-16 transition-all group-hover:md:opacity-80 group-hover:pointer-events:none">
@@ -81,6 +70,17 @@ export function Section({
             </div>
           )}
           <Text variant="small-primary">{details}</Text>
+          <div className="flex gap-4 pt-3 md:pt-5">
+            {buttons.map(({ href, ...button }) =>
+              href ? (
+                <Link className="cursor-pointer" key={href} href={href}>
+                  <Button key={button.label} {...button} />
+                </Link>
+              ) : (
+                <Button key={button.label} {...button} />
+              )
+            )}
+          </div>
         </div>
       ) : null}
     </section>

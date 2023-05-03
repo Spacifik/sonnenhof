@@ -28,8 +28,14 @@ export function Button({
         " "
       )} p-2 bold cursor-pointer text-center`}
     >
-      <label htmlFor={buttonId}>{label}</label>
-      <button id={buttonId} onClick={() => onClick?.()} />
+      <label className="cursor-pointer" htmlFor={buttonId}>
+        {label}
+      </label>
+      <button
+        className="cursor-pointer"
+        id={buttonId}
+        onClick={() => onClick?.()}
+      />
     </div>
   );
 }

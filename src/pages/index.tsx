@@ -39,7 +39,13 @@ export default function Home() {
               text="147 Zimmer und Suiten mit wundervoller Aussicht und Balkon in einem ausgefallenen Design"
               details="In unserem Luxushotel bieten wir 147 stilvolle Zimmer und Suiten mit Aussicht und Balkonen. Moderner Komfort trifft auf Ästhetik. Genießen Sie user Gourmet-Restaurant, den Wellnessbereich und Outdoor-Aktivitäten."
               background="rooms"
-              buttons={[]}
+              buttons={[
+                {
+                  label: "Peek inside",
+                  variant: "secondary",
+                  href: "/rooms",
+                },
+              ]}
             />
 
             <Section
