@@ -1,7 +1,10 @@
 import Link from "next/link";
+import React from "react";
 import { Button, ButtonProps } from "./button";
 import { Text } from "./text";
 import { ImageProps, getImageSrc } from "./image";
+import { isTouchDevice } from "./is-touch-device";
+import { useRouter } from "next/router";
 
 export interface SectionProps {
   hint?: string;
@@ -23,6 +26,8 @@ export function Section({
   | SectionProps
   | React.PropsWithChildren<Omit<SectionProps, "text">>): JSX.Element {
   const textColorVariant = "primary";
+  const router = useRouter();
+
   return (
     <section
       className={`grow relative p-6 min-h-40vh group  md:p-16 md:basis-1/2 md:min-h-60vh ${
@@ -33,6 +38,12 @@ export function Section({
           ? { backgroundImage: `url(${getImageSrc(background)})` }
           : undefined
       }
+      onClick={React.useCallback(() => {
+        const href = buttons.at(0)?.href;
+        if (isTouchDevice() && href) {
+          router.push(href);
+        }
+      }, [buttons, router])}
     >
       <div className="flex flex-col gap-6 z-10 align-middle  md:mt-14">
         <div>
