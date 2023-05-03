@@ -12,7 +12,6 @@ import { Stream } from "@cloudflare/stream-react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [show, setShow] = React.useState(false);
   return (
     <>
       <div
