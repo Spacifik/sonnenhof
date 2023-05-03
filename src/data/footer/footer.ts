@@ -13,6 +13,10 @@ export const footer: FooterProps = {
       href: "press",
     },
     {
+      label: "downloads",
+      href: "downloads",
+    },
+    {
       label: "agb",
       href: "eula",
     },
