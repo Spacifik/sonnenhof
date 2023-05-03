@@ -37,7 +37,7 @@ export default function Home() {
               hint="zimmer & suiten"
               title="rubin | saphir | diamond"
               text="147 Zimmer und Suiten mit wundervoller Aussicht und Balkon in einem ausgefallenen Design"
-              details="In unserem Luxushotel erwarten Sie 147 stilvolle Zimmer und Suiten mit atemberaubender Aussicht und privaten Balkonen. Unser ausgefallenes Design vereint modernen Komfort mit zeitgenössischer Ästhetik. Bei uns genießen Sie erstklassige Annehmlichkeiten wie ein Gourmet-Restaurant, einen Wellnessbereich und spannende Outdoor-Aktivitäten, die Ihren Aufenthalt unvergesslich machen."
+              details="In unserem Luxushotel bieten wir 147 stilvolle Zimmer und Suiten mit Aussicht und Balkonen. Moderner Komfort trifft auf Ästhetik. Genießen Sie user Gourmet-Restaurant, den Wellnessbereich und Outdoor-Aktivitäten."
               background="rooms"
               buttons={[]}
             />
@@ -46,7 +46,7 @@ export default function Home() {
               hint="Events & Konferenzen"
               title="business | events"
               text="270m² Eventfläche mit modernster Technik"
-              details="Unser Hotel bietet auf einer großzügigen Eventfläche von 270m² den idealen Rahmen für Veranstaltungen jeglicher Art. Die modernste Technik, die in diesen Räumlichkeiten zur Verfügung steht, ermöglicht einwandfreie Präsentationen, Konferenzen oder private Feierlichkeiten. Unsere erfahrenen Veranstaltungsplaner unterstützen Sie dabei, Ihre Events individuell und professionell zu gestalten. Die stilvolle Atmosphäre und das ansprechende Design sorgen für ein angenehmes Ambiente, während unser aufmerksames Servicepersonal dafür sorgt, dass Ihre Gäste rundum zufrieden sind."
+              details="Unser Hotel hat 270m² Eventfläche für Veranstaltungen. Modernste Technik ermöglicht Präsentationen und Feiern. Erfahrene Planer gestalten Events individuell, ansprechendes Design und aufmerksames Personal inklusive."
               background="events"
               buttons={[]}
             />
@@ -55,7 +55,7 @@ export default function Home() {
               hint="Pool und Thermalbad"
               title="indoor | outdoor"
               text="Exklusiver Innen- und Außenpool mit Massagebereich"
-              details="Unser Hotel verfügt über exklusive Innen- und Außenpools, die Entspannung und Erholung bieten. Der angrenzende Massagebereich lädt zum Verwöhnen ein und trägt zum Wohlbefinden unserer Gäste bei. Genießen Sie das stilvolle Ambiente, die wohltuenden Wasserlandschaften und die professionellen Massagen für ein unvergessliches Erlebnis."
+              details="Exklusive Innen- und Außenpools bieten Entspannung. Der qngrenzende Massagebereich verwöhnt und fördert das Wohlbefinden. Stilvolles Ambiente, wohltuende Wasserlandschaften und professionelle Massagen für unvergessliche Erlebnisse."
               background="pool"
               buttons={[]}
             />
@@ -64,7 +64,7 @@ export default function Home() {
               hint="Wellness & Spa"
               title="Face | Body"
               text="Luxoriöser SPA Bereich mit Sauna, Eis-Lounge, Dampfbad und Massagezentrum"
-              details="Unser luxuriöser SPA-Bereich bietet eine Vielfalt an Entspannungsmöglichkeiten: Genießen Sie die wohltuende Wärme der Sauna, erfrischen Sie sich in der Eis-Lounge, entspannen Sie im Dampfbad und lassen Sie sich im Massagezentrum verwöhnen. Diese Kombination sorgt für ein unvergleichliches Wellness-Erlebnis in stilvollem Ambiente."
+              details="Luxuriöser SPA-Bereich mit Entspannungsvielfalt: Wohltuende Sauna, erfrischende Eis-Lounge, entspannendes Dampfbad, verwöhnendes Massagezentrum. Unvergleichliches Wellness-Erlebnis in stilvollem Ambiente."
               background="wellness"
               buttons={[]}
             />
@@ -73,7 +73,7 @@ export default function Home() {
               hint="Ausflüge & Incentives"
               title="wald | natur | historie"
               text="25.000 Hektar Wald-Nationalpark & staatlich anerkannter Kurort"
-              details="Unser Hotel liegt inmitten eines 25.000 Hektar großen Wald-Nationalparks und eines staatlich anerkannten Kurorts. Genießen Sie die unberührte Natur, atemberaubende Landschaften und zahlreiche Freizeitmöglichkeiten in dieser idyllischen Umgebung. Erleben Sie Erholung pur und lassen Sie den Alltag hinter sich in dieser malerischen Oase."
+              details="Hotel im 25.000 Hektar Wald-Nationalpark und Kurort. Unberührte Natur, atemberaubende Landschaften, zahlreiche Freizeitmöglichkeiten. Erholung pur in malerischer Oase."
               background="activities"
               buttons={[]}
             />
@@ -82,7 +82,7 @@ export default function Home() {
               hint="Breakfast/Lunch & Fine dining"
               title="Wildbachklamm | the fine"
               text="Lichtdurchflutetes Restaurant mit exklusiver Fine Dining Area"
-              details="Unser lichtdurchflutetes Restaurant verzaubert Gäste mit einer exklusiven Fine Dining Area, in der exquisite Speisen und erlesene Weine serviert werden. Das stilvolle Ambiente und die raffinierte Küche bieten ein unvergessliches kulinarisches Erlebnis, während unser aufmerksames Personal dafür sorgt, dass Ihre Wünsche erfüllt werden."
+              details="Lichtdurchflutetes Restaurant mit Fine Dining Area. Exquisite Speisen, erlesene Weine, stilvolles Ambiente, raffinierte Küche. Unvergessliches Erlebnis und aufmerksames Personal."
               background="dining"
               buttons={[]}
             />

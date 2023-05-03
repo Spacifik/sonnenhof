@@ -25,7 +25,7 @@ export function Section({
   const textColorVariant = "primary";
   return (
     <section
-      className={`grow relative p-6 min-h-40vh md:p-16 md:basis-1/2 md:min-h-60vh ${
+      className={`grow relative p-6 min-h-40vh group  md:p-16 md:basis-1/2 md:min-h-60vh ${
         background ? "bg-cover bg-no-repeat" : "bg-black"
       }`}
       style={
@@ -34,12 +34,14 @@ export function Section({
           : undefined
       }
     >
-      <div className="flex flex-col gap-6 z-10 align-middle md:mt-14">
+      <div className="flex flex-col gap-6 z-10 align-middle  md:mt-14">
         <div>
           {hint && (
-            <Text variant={`tiny-${textColorVariant}`} mono uppercase>
-              {hint}
-            </Text>
+            <div className="opacity-100 group-hover:opacity-0 transition-all">
+              <Text variant={`tiny-${textColorVariant}`} mono uppercase>
+                {hint}
+              </Text>
+            </div>
           )}
           <Text variant={`big-${textColorVariant}`} mono uppercase>
             {title}
@@ -70,7 +72,14 @@ export function Section({
         </div>
       </div>
       {details ? (
-        <div className="absolute inset-0 items-center justify-center z-20 align-middle bg-black opacity-0 w-full h-full p-6 md:p-16 hover:md:opacity-80">
+        <div className="absolute inset-0 items-center justify-center z-20 align-middle bg-black opacity-0 w-full h-full p-6 md:p-16 transition-all group-hover:md:opacity-80 group-hover:pointer-events:none">
+          {hint && (
+            <div className="pb-5 md:pb-8 lg:pb-12">
+              <Text variant={`medium-${textColorVariant}`} mono uppercase>
+                {hint}
+              </Text>
+            </div>
+          )}
           <Text variant="small-primary">{details}</Text>
         </div>
       ) : null}
