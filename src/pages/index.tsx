@@ -54,7 +54,13 @@ export default function Home() {
               text="270m² Eventfläche mit modernster Technik"
               details="Unser Hotel hat 270m² Eventfläche für Veranstaltungen. Modernste Technik ermöglicht Präsentationen und Feiern. Erfahrene Planer gestalten Events individuell, ansprechendes Design und aufmerksames Personal inklusive."
               background="events"
-              buttons={[]}
+              buttons={[
+                {
+                  label: "Peek inside",
+                  variant: "tertiary",
+                  href: "/events",
+                },
+              ]}
             />
 
             <Section
@@ -63,7 +69,13 @@ export default function Home() {
               text="Exklusiver Innen- und Außenpool mit Massagebereich"
               details="Exklusive Innen- und Außenpools bieten Entspannung. Der qngrenzende Massagebereich verwöhnt und fördert das Wohlbefinden. Stilvolles Ambiente, wohltuende Wasserlandschaften und professionelle Massagen für unvergessliche Erlebnisse."
               background="pool"
-              buttons={[]}
+              buttons={[
+                {
+                  label: "Peek inside",
+                  variant: "tertiary",
+                  href: "/pool",
+                },
+              ]}
             />
 
             <Section
@@ -72,7 +84,13 @@ export default function Home() {
               text="Luxoriöser SPA Bereich mit Sauna, Eis-Lounge, Dampfbad und Massagezentrum"
               details="Luxuriöser SPA-Bereich mit Entspannungsvielfalt: Wohltuende Sauna, erfrischende Eis-Lounge, entspannendes Dampfbad, verwöhnendes Massagezentrum. Unvergleichliches Wellness-Erlebnis in stilvollem Ambiente."
               background="wellness"
-              buttons={[]}
+              buttons={[
+                {
+                  label: "Peek inside",
+                  variant: "tertiary",
+                  href: "/wellness",
+                },
+              ]}
             />
 
             <Section
@@ -81,7 +99,13 @@ export default function Home() {
               text="25.000 Hektar Wald-Nationalpark & staatlich anerkannter Kurort"
               details="Hotel im 25.000 Hektar Wald-Nationalpark und Kurort. Unberührte Natur, atemberaubende Landschaften, zahlreiche Freizeitmöglichkeiten. Erholung pur in malerischer Oase."
               background="activities"
-              buttons={[]}
+              buttons={[
+                {
+                  label: "Peek inside",
+                  variant: "tertiary",
+                  href: "/activities",
+                },
+              ]}
             />
 
             <Section
@@ -90,7 +114,13 @@ export default function Home() {
               text="Lichtdurchflutetes Restaurant mit exklusiver Fine Dining Area"
               details="Lichtdurchflutetes Restaurant mit Fine Dining Area. Exquisite Speisen, erlesene Weine, stilvolles Ambiente, raffinierte Küche. Unvergessliches Erlebnis und aufmerksames Personal."
               background="dining"
-              buttons={[]}
+              buttons={[
+                {
+                  label: "Peek inside",
+                  variant: "tertiary",
+                  href: "/dining",
+                },
+              ]}
             />
           </div>
           <br />
