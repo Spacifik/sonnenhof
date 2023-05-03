@@ -42,7 +42,7 @@ export default function Home() {
               buttons={[
                 {
                   label: "Peek inside",
-                  variant: "secondary",
+                  variant: "tertiary",
                   href: "/rooms",
                 },
               ]}

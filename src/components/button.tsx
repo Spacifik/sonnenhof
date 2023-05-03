@@ -4,7 +4,7 @@ import { getHoverThemeColor, getThemeColor } from "./theme-color";
 
 export interface ButtonProps {
   label: string;
-  variant: "primary" | "secondary";
+  variant: "primary" | "secondary" | "tertiary";
   id?: string;
   onClick?: Callback<void>;
 }
@@ -17,11 +17,13 @@ export function Button({
 }: ButtonProps): JSX.Element {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const buttonId = React.useMemo(() => id ?? v4(), []);
-  const textColor = getThemeColor("light");
+  const textColor = getThemeColor(variant === "tertiary" ? "primary" : "light");
   const bgColors =
     variant === "primary"
       ? [getThemeColor("primary", true), getHoverThemeColor("primary", true)]
-      : [getThemeColor("dark", true), getHoverThemeColor("dark", true)];
+      : variant === "tertiary"
+      ? ["bg-transparent", "border", "border-solid", "border-primary-regular"]
+      : [(getThemeColor("dark", true), getHoverThemeColor("dark", true))];
   return (
     <div
       className={` ${textColor} ${bgColors.join(
