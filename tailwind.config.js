@@ -30,9 +30,6 @@ module.exports = {
         '30vh': '30vh',
         '40vh': '40vh',
         '60vh': '60vh'
-      },
-      boxShadow: {
-        "full": "0 0 100px 100px rgba(255, 255, 255, 0.2);"
       }
     },
   },

@@ -32,7 +32,7 @@ export function Section({
     <section
       className={`grow relative p-6 min-h-40vh group  md:p-16 md:basis-1/2 md:min-h-60vh ${
         background ? "bg-cover bg-no-repeat" : "bg-black"
-      } md:hover:shadow-full`}
+      } md:hover:brightness-150`}
       style={
         background
           ? { backgroundImage: `url(${getImageSrc(background)})` }
