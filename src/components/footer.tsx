@@ -23,13 +23,21 @@ export function Footer({ phone, email, links }: FooterProps): JSX.Element {
         </a>
       </div>
       <div className="flex justify-around gap-3 md:gap-0">
-        {links.map((link) => (
-          <Link key={link.label} href={link.href} className="cursor-pointer">
-            <Text variant="small-primary" uppercase mono>
-              {link.label}
-            </Text>
-          </Link>
-        ))}
+        {links.map((link) =>
+          link.href.startsWith(`https://`) ? (
+            <a key={link.label} href={link.href} className="cursor-pointer">
+              <Text variant="small-primary" uppercase mono>
+                {link.label}
+              </Text>
+            </a>
+          ) : (
+            <Link key={link.label} href={link.href} className="cursor-pointer">
+              <Text variant="small-primary" uppercase mono>
+                {link.label}
+              </Text>
+            </Link>
+          )
+        )}
       </div>
     </footer>
   );

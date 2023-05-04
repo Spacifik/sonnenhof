@@ -13,6 +13,10 @@ export const footer: FooterProps = {
       href: "press",
     },
     {
+      label: "blog",
+      href: "https://blog.michelhotel-sonnenhof.de/",
+    },
+    {
       label: "downloads",
       href: "downloads",
     },
