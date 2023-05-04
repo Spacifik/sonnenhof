@@ -46,9 +46,9 @@ export function Section({
       }, [buttons, router])}
     >
       <div className="flex flex-col gap-6 z-10 align-middle  md:mt-14">
-        <div>
+        <div className="opacity-100 group-hover:opacity-0 transition-all">
           {hint && (
-            <div className="opacity-100 group-hover:opacity-0 transition-all">
+            <div>
               <Text variant={`tiny-${textColorVariant}`} mono uppercase>
                 {hint}
               </Text>
@@ -57,22 +57,22 @@ export function Section({
           <Text variant={`big-${textColorVariant}`} mono uppercase>
             {title}
           </Text>
+          {(props as SectionProps).text ? (
+            <Text variant={`small-${textColorVariant}`}>
+              {(props as SectionProps).text}
+            </Text>
+          ) : (
+            <>
+              {
+                (props as React.PropsWithChildren<Omit<SectionProps, "text">>)
+                  .children
+              }
+            </>
+          )}
         </div>
-        {(props as SectionProps).text ? (
-          <Text variant={`small-${textColorVariant}`}>
-            {(props as SectionProps).text}
-          </Text>
-        ) : (
-          <>
-            {
-              (props as React.PropsWithChildren<Omit<SectionProps, "text">>)
-                .children
-            }
-          </>
-        )}
       </div>
       {details ? (
-        <div className="absolute inset-0 items-center justify-center z-20 align-middle bg-black opacity-0 w-full h-full p-6 md:p-16 transition-all group-hover:md:opacity-80 group-hover:pointer-events:none">
+        <div className="absolute inset-0 items-center justify-center z-20 align-middle bg-white opacity-0 w-full h-full p-6 md:p-16 transition-all group-hover:md:opacity-20 group-hover:pointer-events:none">
           {hint && (
             <div className="pb-5 md:pb-8 lg:pb-12">
               <Text variant={`medium-${textColorVariant}`} mono uppercase>
