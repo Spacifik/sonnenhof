@@ -24,9 +24,11 @@ export function HamburgerOverlay(): JSX.Element {
       <br />
       <ul className="">
         <li>
-          <Text variant="medium-primary" mono uppercase>
-            Blog
-          </Text>
+          <a href="https://blog.michelhotel-sonnenhof.de/">
+            <Text variant="medium-primary" mono uppercase>
+              Blog
+            </Text>
+          </a>
         </li>
         <li>
           <Link href={"/rooms"}>
