@@ -24,7 +24,7 @@ export default function Home() {
           <div className="relative w-full h-full">
             <div className="inset-0 flex items-center justify-center max-h-75vh max-w-screen">
               <Stream
-                src="e2c0d8fe33b9c367e67c0e6a713c9539"
+                src="61c703f87842eae49b847d53c6b37a89"
                 loop
                 autoplay
                 muted
