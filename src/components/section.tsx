@@ -32,7 +32,7 @@ export function Section({
     <section
       className={`grow relative p-6 min-h-40vh group  md:p-16 md:basis-1/2 md:min-h-60vh ${
         background ? "bg-cover bg-no-repeat" : "bg-black"
-      }`}
+      } md:hover:shadow-full`}
       style={
         background
           ? { backgroundImage: `url(${getImageSrc(background)})` }
@@ -72,7 +72,7 @@ export function Section({
         </div>
       </div>
       {details ? (
-        <div className="absolute inset-0 items-center justify-center z-20 align-middle bg-white opacity-0 w-full h-full p-6 md:p-16 transition-all group-hover:md:opacity-20 group-hover:pointer-events:none">
+        <div className="absolute inset-0 items-center justify-center z-20 align-middle bg-transparent opacity-0 w-full h-full p-6 md:p-16 transition-all group-hover:md:opacity-100 group-hover:pointer-events:none">
           {hint && (
             <div className="pb-5 md:pb-8 lg:pb-12">
               <Text variant={`medium-${textColorVariant}`} mono uppercase>
