@@ -33,7 +33,7 @@ export const EmptyPage: React.FC = () => {
 
   const { title, description, content } = textData;
   return (
-    <div className="flex flex-col gap-5 md:gap-8 lg:gap-12 bg-black p-3 md:p-5 lg:p-10">
+    <div className="flex flex-col min-h-60vh gap-5 md:gap-8 lg:gap-12 bg-black p-3 md:p-5 lg:p-10">
       <div className="flex flex-col gap-1">
         <Text variant="tiny-primary" mono uppercase>
           {description}
