@@ -15,7 +15,7 @@ export function Button({
   id,
   onClick,
 }: ButtonProps): JSX.Element {
-  const [buttonId, setButtonId] = React.useState<string | null>(null);
+  const [buttonId, setButtonId] = React.useState<string | null>(id ?? v4());
 
   React.useEffect(() => {
     setButtonId(id ?? v4());
