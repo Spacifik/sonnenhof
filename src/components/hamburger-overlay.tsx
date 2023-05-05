@@ -16,9 +16,11 @@ export function HamburgerOverlay(): JSX.Element {
           </Text>
         </div>
         <div>
-          <Text variant="tiny-primary" mono uppercase>
-            Gutscheine
-          </Text>
+          <Link href={"/rooms"}>
+            <Text variant="tiny-primary" mono uppercase>
+              Gutscheine
+            </Text>
+          </Link>
         </div>
       </div>
       <br />
@@ -38,23 +40,31 @@ export function HamburgerOverlay(): JSX.Element {
           </Link>
         </li>
         <li>
-          <Text variant="medium-primary" mono uppercase>
-            Bar
-          </Text>
-          <li>
+          <Link href={"/bar"}>
             <Text variant="medium-primary" mono uppercase>
-              Spa & Gesundheit
+              Bar
             </Text>
+          </Link>
+          <li>
+            <Link href={"/spa"}>
+              <Text variant="medium-primary" mono uppercase>
+                Spa & Gesundheit
+              </Text>
+            </Link>
           </li>
           <li>
-            <Text variant="medium-primary" mono uppercase>
-              Meetings & Events
-            </Text>
+            <Link href={"/events"}>
+              <Text variant="medium-primary" mono uppercase>
+                Meetings & Events
+              </Text>
+            </Link>
           </li>
           <li>
-            <Text variant="medium-primary" mono uppercase>
-              Gym & Outdoor
-            </Text>
+            <Link href={"/gym"}>
+              <Text variant="medium-primary" mono uppercase>
+                Gym & Outdoor
+              </Text>
+            </Link>
           </li>
         </li>
       </ul>
