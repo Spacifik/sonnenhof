@@ -45,27 +45,27 @@ export function HamburgerOverlay(): JSX.Element {
               Bar
             </Text>
           </Link>
-          <li>
-            <Link href={"/spa"}>
-              <Text variant="medium-primary" mono uppercase>
-                Spa & Gesundheit
-              </Text>
-            </Link>
-          </li>
-          <li>
-            <Link href={"/events"}>
-              <Text variant="medium-primary" mono uppercase>
-                Meetings & Events
-              </Text>
-            </Link>
-          </li>
-          <li>
-            <Link href={"/gym"}>
-              <Text variant="medium-primary" mono uppercase>
-                Gym & Outdoor
-              </Text>
-            </Link>
-          </li>
+        </li>
+        <li>
+          <Link href={"/spa"}>
+            <Text variant="medium-primary" mono uppercase>
+              Spa & Gesundheit
+            </Text>
+          </Link>
+        </li>
+        <li>
+          <Link href={"/events"}>
+            <Text variant="medium-primary" mono uppercase>
+              Meetings & Events
+            </Text>
+          </Link>
+        </li>
+        <li>
+          <Link href={"/gym"}>
+            <Text variant="medium-primary" mono uppercase>
+              Gym & Outdoor
+            </Text>
+          </Link>
         </li>
       </ul>
     </div>
