@@ -22,7 +22,14 @@ export function Button({
     variant === "primary"
       ? [getThemeColor("primary", true), getHoverThemeColor("primary", true)]
       : variant === "tertiary"
-      ? ["bg-transparent", "border", "border-solid", "border-primary-regular"]
+      ? [
+          "bg-transparent",
+          "border",
+          "border-solid",
+          "border-primary-regular",
+          "hover:text-primary-light",
+          "hover:border-primary-light",
+        ]
       : [(getThemeColor("dark", true), getHoverThemeColor("dark", true))];
   return (
     <div
