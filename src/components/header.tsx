@@ -11,6 +11,7 @@ import React from "react";
 import { useImmer } from "use-immer";
 import { Text } from "./text";
 import { Button } from "./button";
+import { de } from "date-fns/locale";
 
 function TextWithValue({
   value,
@@ -74,7 +75,7 @@ export function Header(): JSX.Element {
               }
             }}
             dateFormat="dd.MM.yyyy"
-            locale="de"
+            locale={de}
             customInput={<TextWithValue />}
           />
           <DatePicker
@@ -91,7 +92,7 @@ export function Header(): JSX.Element {
               }
             }}
             dateFormat="dd.MM.yyyy"
-            locale="de"
+            locale={de}
             customInput={<TextWithValue />}
           />
 
