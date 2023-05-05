@@ -15,10 +15,6 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
-      <div
-        id="overlay-root"
-        className="absolute top-0 left-0 h-screen w-full"
-      ></div>
       <Layout>
         <main className="flex min-h-screen flex-col items-center scrollbar-hide bg-black">
           <div className="relative w-full h-full">
