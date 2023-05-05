@@ -54,9 +54,9 @@ export function Header(): JSX.Element {
             <ArrowLeft className="invisible" />
           </div>
         )}
-        <div className="flex w-44 md:w-50 mx-3 lg:mx-6">
+        <Link className="flex w-44 md:w-50 mx-3 lg:mx-6" href={`/`}>
           <Logo className="h-full w-auto" />
-        </div>
+        </Link>
 
         <div className="hidden md:flex grow" />
         <div className="hidden md:flex md:gap-3 md:pt-3 justify-end">
