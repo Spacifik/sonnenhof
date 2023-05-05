@@ -19,16 +19,16 @@ export function Special({
 }: SpecialProps): JSX.Element {
   return (
     <div>
-      <Image name={background} />
-      <div className="flex flex-col pt-2 gap-2 md:gap-3 lg:gap-5">
-        <Text variant="small-primary" mono uppercase bold>
-          {title}
-        </Text>
-        <Text variant="small-primary">{text}</Text>
-        <Link className="cursor-pointer" href={href}>
+      <Link className="cursor-pointer" href={href}>
+        <Image name={background} />
+        <div className="flex flex-col pt-2 gap-2 md:gap-3 lg:gap-5">
+          <Text variant="small-primary" mono uppercase bold>
+            {title}
+          </Text>
+          <Text variant="small-primary">{text}</Text>
           <Button variant="tertiary" label="> weiterlesen" />
-        </Link>
-      </div>
+        </div>
+      </Link>
     </div>
   );
 }
