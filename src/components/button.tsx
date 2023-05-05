@@ -28,7 +28,7 @@ export function Button({
     <div
       className={` ${textColor} ${bgColors.join(
         " "
-      )} p-2 bold cursor-pointer text-center`}
+      )} p-2 bold cursor-pointer text-center w-fit`}
     >
       <label className="cursor-pointer" htmlFor={buttonId}>
         {label}
