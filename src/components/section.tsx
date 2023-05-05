@@ -40,7 +40,7 @@ export function Section({
       }
       onClick={React.useCallback(() => {
         const href = buttons.at(0)?.href;
-        if (isTouchDevice() && href) {
+        if (href) {
           router.push(href);
         }
       }, [buttons, router])}
