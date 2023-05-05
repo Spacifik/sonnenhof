@@ -15,8 +15,12 @@ export function Button({
   id,
   onClick,
 }: ButtonProps): JSX.Element {
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const buttonId = React.useMemo(() => id ?? v4(), []);
+  const [buttonId, setButtonId] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    setButtonId(id ?? v4());
+  }, [id]);
+
   const textColor = getThemeColor(variant === "tertiary" ? "primary" : "light");
   const bgColors =
     variant === "primary"
