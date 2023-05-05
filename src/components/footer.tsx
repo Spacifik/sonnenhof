@@ -22,7 +22,7 @@ export function Footer({ phone, email, links }: FooterProps): JSX.Element {
           <Text variant="small-primary">{email}</Text>
         </a>
       </div>
-      <div className="flex justify-around gap-3 md:gap-0">
+      <div className="flex justify-around flex-col md:flex-row gap-3 md:gap-0">
         {links.map((link) =>
           link.href.startsWith(`https://`) ? (
             <a key={link.label} href={link.href} className="cursor-pointer">
