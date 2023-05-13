@@ -9,27 +9,12 @@ import { BackgroundImage, Image } from "@sonnenhof/components/image";
 import { Special } from "@sonnenhof/components/special";
 import { Stream } from "@cloudflare/stream-react";
 import Link from "next/link";
+import { useAspectRatioBox } from "@sonnenhof/utils/use-aspect-ratio-box";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [paddingBottom, setPaddingBottom] = React.useState("56.25%");
-
-  React.useEffect(() => {
-    const calcPadding = () => {
-      const vh = Math.max(
-        document.documentElement.clientHeight || 0,
-        window.innerHeight || 0
-      );
-      const maxWidth = vh * 0.75; // 75vh
-      const aspectRatio = 9 / 16;
-      const width = Math.min(maxWidth / aspectRatio, window.innerWidth);
-      setPaddingBottom(`${width * aspectRatio}px`);
-    };
-    calcPadding();
-    window.addEventListener("resize", calcPadding);
-    return () => window.removeEventListener("resize", calcPadding);
-  }, []);
+  const paddingBottom = useAspectRatioBox();
   return (
     <>
       <Layout>
