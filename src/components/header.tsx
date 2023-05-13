@@ -91,6 +91,7 @@ export function Header(): JSX.Element {
             className="hidden"
             name="mewsCityId"
             value="c4d8e6d4-da08-40f5-b95e-affe006ea0ef"
+            readOnly
           />
           <div>
             <DatePicker
