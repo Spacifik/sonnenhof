@@ -13,20 +13,35 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [paddingBottom, setPaddingBottom] = React.useState("56.25%");
+
+  React.useEffect(() => {
+    const calcPadding = () => {
+      const vh = Math.max(
+        document.documentElement.clientHeight || 0,
+        window.innerHeight || 0
+      );
+      const maxWidth = vh * 0.75; // 75vh
+      const aspectRatio = 9 / 16;
+      const width = Math.min(maxWidth / aspectRatio, window.innerWidth);
+      setPaddingBottom(`${width * aspectRatio}px`);
+    };
+    calcPadding();
+    window.addEventListener("resize", calcPadding);
+    return () => window.removeEventListener("resize", calcPadding);
+  }, []);
   return (
     <>
       <Layout>
-        <main className="flex min-h-screen flex-col items-center scrollbar-hide bg-black">
-          <div className="relative w-full h-full">
-            <div className="inset-0 flex items-center justify-center max-h-75vh max-w-screen">
-              <Stream
-                src="61c703f87842eae49b847d53c6b37a89"
-                loop
-                autoplay
-                muted
-                className="w-full h-full object-cover"
-              />
-            </div>
+        <main className="flex min-h-[75vh] flex-col items-center scrollbar-hide bg-black w-full  max-h-75vh">
+          <div className={`relative w-full h-0`} style={{ paddingBottom }}>
+            <Stream
+              src="61c703f87842eae49b847d53c6b37a89"
+              loop
+              autoplay
+              muted
+              className="absolute w-full h-full object-cover  m-h-70vh"
+            />
           </div>
           <div className="md:flex md:flex-wrap">
             <Section
