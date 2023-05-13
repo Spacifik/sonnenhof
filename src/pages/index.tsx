@@ -146,7 +146,10 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-col px-10 pb-5 gap-8 md:flex-row md:px-16 md:pb-10  md:gap-12 w-full h-auto">
-            <Link className="cursor-pointer grow" href={"/gallery"}>
+            <Link
+              className="cursor-pointer grow  md:hover:brightness-150"
+              href={"/gallery"}
+            >
               <BackgroundImage name="location">
                 <Text variant="medium-primary" mono uppercase>
                   Standort
@@ -154,7 +157,10 @@ export default function Home() {
               </BackgroundImage>
             </Link>
 
-            <Link className="cursor-pointer grow" href={"/gallery"}>
+            <Link
+              className="cursor-pointer grow md:hover:brightness-150"
+              href={"/gallery"}
+            >
               <BackgroundImage name="gallery">
                 <Text variant="medium-primary" mono uppercase>
                   Gallerie
@@ -162,7 +168,10 @@ export default function Home() {
               </BackgroundImage>
             </Link>
 
-            <Link className="cursor-pointer grow" href={"/career"}>
+            <Link
+              className="cursor-pointer grow md:hover:brightness-150"
+              href={"/career"}
+            >
               <BackgroundImage name="career">
                 <Text variant="medium-primary" mono uppercase>
                   Karriere
@@ -170,7 +179,10 @@ export default function Home() {
               </BackgroundImage>
             </Link>
 
-            <Link className="cursor-pointer grow" href={"/contact"}>
+            <Link
+              className="cursor-pointer grow md:hover:brightness-150"
+              href={"/contact"}
+            >
               <BackgroundImage name="contact">
                 <Text variant="medium-primary" mono uppercase>
                   Kontakt
