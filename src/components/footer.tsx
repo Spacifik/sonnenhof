@@ -24,18 +24,30 @@ export function Footer({ phone, email, links }: FooterProps): JSX.Element {
       </div>
       <div className="flex gap-3 md:gap-5">
         <MediaIconWrapper className={"instagram-icon"}>
-          <a href="" className="fab fa-instagram" />
+          <a
+            href="https://www.instagram.com/michelhotel/"
+            className="fab fa-instagram"
+          />
         </MediaIconWrapper>
         <MediaIconWrapper className={"bg-[#55ACEE]"}>
-          <a href="" className="fab fa-twitter" />
+          <a
+            href="https://twitter.com/michelhotels"
+            className="fab fa-twitter"
+          />
         </MediaIconWrapper>
 
         <MediaIconWrapper className={"bg-[#3B5998]"}>
-          <a href="" className="fab fa-facebook-f" />
+          <a
+            href="https://www.facebook.com/michelhotel"
+            className="fab fa-facebook-f"
+          />
         </MediaIconWrapper>
 
         <MediaIconWrapper className="bg-white bg-opacity-20">
-          <a href="" className="fab fa-tiktok " />
+          <a
+            href="https://www.tiktok.com/@michelhotel"
+            className="fab fa-tiktok "
+          />
         </MediaIconWrapper>
       </div>
       <div className="flex justify-around flex-col md:flex-row gap-3 md:gap-0">
