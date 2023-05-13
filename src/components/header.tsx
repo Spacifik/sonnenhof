@@ -43,6 +43,7 @@ function TextWithValue({
         className="hidden"
         name={name}
         value={parseDate(value as string)}
+        readOnly
       />
       <Calendar className="h-4 m-auto" />
     </div>
