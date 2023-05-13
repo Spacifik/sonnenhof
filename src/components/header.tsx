@@ -13,16 +13,37 @@ import { Text } from "./text";
 import { Button } from "./button";
 import { de } from "date-fns/locale";
 
+/**
+ * Transforms date from dd.MM.yyyy  to YYYY-MM-DD
+ */
+function parseDate(inputDate: string): string {
+  let parts = inputDate.split(".");
+  let date = new Date(Number(parts[2]), Number(parts[1]) - 1, Number(parts[0])); // note: months are 0-based in JavaScript
+
+  let year = date.getFullYear();
+  let month = ("0" + (date.getMonth() + 1)).slice(-2); // add leading zero if needed
+  let day = ("0" + date.getDate()).slice(-2); // add leading zero if needed
+
+  return `${year}-${month}-${day}`;
+}
+
 function TextWithValue({
   value,
   onClick,
+  name,
 }: {
   value?: string;
   onClick?: Callback<void>;
+  name?: string;
 }): JSX.Element {
   return (
-    <div onClick={() => onClick?.()} className="flex gap-2">
+    <div onClick={() => onClick?.()} className="flex gap-2 cursor-pointer">
       <Text variant="tiny-primary">{value as string}</Text>
+      <input
+        className="hidden"
+        name={name}
+        value={parseDate(value as string)}
+      />
       <Calendar className="h-4 m-auto" />
     </div>
   );
@@ -60,7 +81,11 @@ export function Header(): JSX.Element {
         </Link>
 
         <div className="hidden md:flex grow" />
-        <div className="hidden md:flex md:gap-3 md:pt-3 justify-end">
+        <form
+          className="hidden md:flex md:gap-3 md:pt-3 justify-end"
+          method="GET"
+          action="https://app.mews.com/distributor/9c4dca19-3942-46a3-8f37-affe006f4062"
+        >
           <DatePicker
             selected={dates.from}
             onChange={(newDate) => {
@@ -75,6 +100,7 @@ export function Header(): JSX.Element {
               }
             }}
             dateFormat="dd.MM.yyyy"
+            name="mewsStart"
             locale={de}
             customInput={<TextWithValue />}
           />
@@ -92,14 +118,15 @@ export function Header(): JSX.Element {
               }
             }}
             dateFormat="dd.MM.yyyy"
+            name="mewsEnd"
             locale={de}
             customInput={<TextWithValue />}
           />
 
           <div className="grow-0 shrink-0 basis-[100px]">
-            <Button label="Book now" variant="primary" />
+            <Button label="Book now" variant="primary" submit />
           </div>
-        </div>
+        </form>
 
         <div
           className={`cursor-pointer h-1/2 ${getThemeColor(

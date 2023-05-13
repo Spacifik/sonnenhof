@@ -7,12 +7,14 @@ export interface ButtonProps {
   variant: "primary" | "secondary" | "tertiary";
   id?: string;
   onClick?: Callback<void>;
+  submit?: boolean;
 }
 
 export function Button({
   label,
   variant,
   id,
+  submit,
   onClick,
 }: ButtonProps): JSX.Element {
   const [buttonId, setButtonId] = React.useState<string>(id ?? v4());
@@ -48,6 +50,7 @@ export function Button({
         className="cursor-pointer"
         id={buttonId}
         onClick={() => onClick?.()}
+        type={submit ? "submit" : "button"}
       />
     </div>
   );
