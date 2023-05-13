@@ -22,6 +22,22 @@ export function Footer({ phone, email, links }: FooterProps): JSX.Element {
           <Text variant="small-primary">{email}</Text>
         </a>
       </div>
+      <div className="flex gap-3 md:gap-5">
+        <MediaIconWrapper className={"instagram-icon"}>
+          <a href="" className="fab fa-instagram" />
+        </MediaIconWrapper>
+        <MediaIconWrapper className={"bg-[#55ACEE]"}>
+          <a href="" className="fab fa-twitter" />
+        </MediaIconWrapper>
+
+        <MediaIconWrapper className={"bg-[#3B5998]"}>
+          <a href="" className="fab fa-facebook-f" />
+        </MediaIconWrapper>
+
+        <MediaIconWrapper className="bg-white bg-opacity-20">
+          <a href="" className="fab fa-tiktok " />
+        </MediaIconWrapper>
+      </div>
       <div className="flex justify-around flex-col md:flex-row gap-3 md:gap-0">
         {links.map((link) =>
           link.href.startsWith(`https://`) ? (
@@ -40,5 +56,18 @@ export function Footer({ phone, email, links }: FooterProps): JSX.Element {
         )}
       </div>
     </footer>
+  );
+}
+
+function MediaIconWrapper({
+  className,
+  children,
+}: React.PropsWithChildren<{ className: string }>): JSX.Element {
+  return (
+    <div
+      className={`${className} cursor-pointer w-12 h-12 text-2xl md:w-16 md:h-16 md:text-4xl rounded-full flex items-center justify-center text-white`}
+    >
+      {children}
+    </div>
   );
 }
