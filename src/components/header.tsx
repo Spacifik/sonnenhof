@@ -87,44 +87,51 @@ export function Header(): JSX.Element {
           action="https://app.mews.com/distributor/9c4dca19-3942-46a3-8f37-affe006f4062"
           target="_blank"
         >
-          <input className="hidden" name="mewsCityId" value="c4d8e6d4-da08-40f5-b95e-affe006ea0ef" />
-          <DatePicker
-            selected={dates.from}
-            onChange={(newDate) => {
-              if (newDate) {
-                setDates((currentDates) => {
-                  currentDates.from = newDate;
-
-                  if (currentDates.to && +newDate > +currentDates.to) {
-                    currentDates.to = newDate;
-                  }
-                });
-              }
-            }}
-            dateFormat="dd.MM.yyyy"
-            name="mewsStart"
-            locale={de}
-            customInput={<TextWithValue />}
+          <input
+            className="hidden"
+            name="mewsCityId"
+            value="c4d8e6d4-da08-40f5-b95e-affe006ea0ef"
           />
-          <DatePicker
-            selected={dates.to}
-            onChange={(newDate) => {
-              if (newDate) {
-                setDates((currentDates) => {
-                  currentDates.to = newDate;
-
-                  if (currentDates.from && +newDate < +currentDates.from) {
+          <div>
+            <DatePicker
+              selected={dates.from}
+              onChange={(newDate) => {
+                if (newDate) {
+                  setDates((currentDates) => {
                     currentDates.from = newDate;
-                  }
-                });
-              }
-            }}
-            dateFormat="dd.MM.yyyy"
-            name="mewsEnd"
-            locale={de}
-            customInput={<TextWithValue />}
-          />
 
+                    if (currentDates.to && +newDate > +currentDates.to) {
+                      currentDates.to = newDate;
+                    }
+                  });
+                }
+              }}
+              dateFormat="dd.MM.yyyy"
+              name="mewsStart"
+              locale={de}
+              customInput={<TextWithValue />}
+            />
+          </div>
+          <div>
+            <DatePicker
+              selected={dates.to}
+              onChange={(newDate) => {
+                if (newDate) {
+                  setDates((currentDates) => {
+                    currentDates.to = newDate;
+
+                    if (currentDates.from && +newDate < +currentDates.from) {
+                      currentDates.from = newDate;
+                    }
+                  });
+                }
+              }}
+              dateFormat="dd.MM.yyyy"
+              name="mewsEnd"
+              locale={de}
+              customInput={<TextWithValue />}
+            />
+          </div>
           <div className="grow-0 shrink-0 basis-[100px]">
             <Button label="Book now" variant="primary" submit />
           </div>
