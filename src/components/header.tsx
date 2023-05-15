@@ -182,7 +182,6 @@ export function Header(): JSX.Element {
           <input
             className="hidden"
             name="mewsRoute"
-            defaultValue=""
             value={personInputDirty.current ? "rooms" : ""}
             readOnly
           />
