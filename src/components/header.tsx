@@ -223,7 +223,7 @@ export function Header(): JSX.Element {
           </div>
           <div>
             <div
-              className="flex gap-2 cursor-pointer border p-2 border-primary-regular text-primary-regular relative whitespace-nowrap"
+              className="gap-2 cursor-pointer border p-2 border-primary-regular text-primary-regular relative whitespace-nowrap hidden lg:flex"
               onClick={() => setShowPersonInput((shown) => !shown)}
             >
               <Text variant="tiny-primary">{guestLabel}</Text>
