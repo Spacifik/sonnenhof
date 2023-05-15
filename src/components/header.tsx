@@ -128,9 +128,15 @@ export function Header(): JSX.Element {
   const [showPersonInput, setShowPersonInput] = React.useState(false);
   const [adults, setAdults] = useImmer(2);
   const [children, setChildren] = useImmer(0);
+  // track if the user explicitly set how many people they want to
+  // book. If they did, then the label was recomputed at least once
+  // as such, the value will be truthy (> 0) and we can go to page 2
+  // of the mews
+  const personInputDirty = React.useRef(-1);
   const guestLabel = React.useMemo(() => {
     const label =
       adults > 1 ? `${adults} Erwachsene` : `${adults} Erwachsene*r`;
+    personInputDirty.current++;
     if (children === 0) {
       return label;
     } else if (children === 1) {
@@ -171,6 +177,13 @@ export function Header(): JSX.Element {
             className="hidden"
             name="mewsCityId"
             value="c4d8e6d4-da08-40f5-b95e-affe006ea0ef"
+            readOnly
+          />
+          <input
+            className="hidden"
+            name="mewsRoute"
+            defaultValue=""
+            value={personInputDirty.current ? "rooms" : ""}
             readOnly
           />
           <div>
