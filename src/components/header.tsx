@@ -37,7 +37,8 @@ const TextWithValue = React.forwardRef(
       value?: string;
       onClick?: Callback<void>;
       name?: string;
-    }, ref
+    },
+    ref
   ) => {
     return (
       <div onClick={() => onClick?.()} className="flex gap-2 cursor-pointer">
@@ -54,7 +55,7 @@ const TextWithValue = React.forwardRef(
     );
   }
 );
-TextWithValue.displayName = "TextWithValue"
+TextWithValue.displayName = "TextWithValue";
 
 export function Header(): JSX.Element {
   const router = useRouter();
@@ -64,7 +65,11 @@ export function Header(): JSX.Element {
     to: Date;
   }>({
     from: new Date(),
-    to: new Date(),
+    to: (() => {
+      const today = new Date();
+      today.setDate(new Date().getDate() + 7);
+      return today;
+    })(),
   });
   return (
     <header className="w-full z-30 sticky bg-black top-0 h-25vh">
@@ -109,7 +114,9 @@ export function Header(): JSX.Element {
                     currentDates.from = newDate;
 
                     if (currentDates.to && +newDate > +currentDates.to) {
-                      currentDates.to = newDate;
+                      const copy = new Date(newDate);
+                      copy.setDate(copy.getDate() + 1);
+                      currentDates.to = copy;
                     }
                   });
                 }
@@ -118,6 +125,7 @@ export function Header(): JSX.Element {
               name="mewsStart"
               locale={de}
               customInput={<TextWithValue />}
+              minDate={React.useMemo(() => new Date(), [])}
             />
           </div>
           <div>
@@ -138,6 +146,11 @@ export function Header(): JSX.Element {
               name="mewsEnd"
               locale={de}
               customInput={<TextWithValue />}
+              minDate={React.useCallback(() => {
+                const today = new Date();
+                today.setDate(dates.from.getDate() + 1);
+                return today;
+              }, [dates.from])()}
             />
           </div>
           <div className="grow-0 shrink-0 basis-[100px]">
