@@ -27,28 +27,34 @@ function parseDate(inputDate: string): string {
   return `${year}-${month}-${day}`;
 }
 
-function TextWithValue({
-  value,
-  onClick,
-  name,
-}: {
-  value?: string;
-  onClick?: Callback<void>;
-  name?: string;
-}): JSX.Element {
-  return (
-    <div onClick={() => onClick?.()} className="flex gap-2 cursor-pointer">
-      <Text variant="tiny-primary">{value as string}</Text>
-      <input
-        className="hidden"
-        name={name}
-        value={parseDate(value as string)}
-        readOnly
-      />
-      <Calendar className="h-4 m-auto" />
-    </div>
-  );
-}
+const TextWithValue = React.forwardRef(
+  (
+    {
+      value,
+      onClick,
+      name,
+    }: {
+      value?: string;
+      onClick?: Callback<void>;
+      name?: string;
+    }, ref
+  ) => {
+    return (
+      <div onClick={() => onClick?.()} className="flex gap-2 cursor-pointer">
+        <Text variant="tiny-primary">{value as string}</Text>
+        <input
+          ref={ref as any}
+          className="hidden"
+          name={name}
+          value={parseDate(value as string)}
+          readOnly
+        />
+        <Calendar className="h-4 m-auto" />
+      </div>
+    );
+  }
+);
+TextWithValue.displayName = "TextWithValue"
 
 export function Header(): JSX.Element {
   const router = useRouter();
