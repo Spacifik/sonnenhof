@@ -23,27 +23,27 @@ export function Footer({ phone, email, links }: FooterProps): JSX.Element {
         </a>
       </div>
       <div className="flex gap-3 md:gap-5">
-        <MediaIconWrapper className={"instagram-icon"}>
+        <MediaIconWrapper>
           <a
             href="https://www.instagram.com/michelhotel/"
             className="fab fa-instagram"
           />
         </MediaIconWrapper>
-        <MediaIconWrapper className={"bg-[#55ACEE]"}>
+        <MediaIconWrapper>
           <a
             href="https://twitter.com/michelhotels"
             className="fab fa-twitter"
           />
         </MediaIconWrapper>
 
-        <MediaIconWrapper className={"bg-[#3B5998]"}>
+        <MediaIconWrapper>
           <a
             href="https://www.facebook.com/michelhotel"
             className="fab fa-facebook-f"
           />
         </MediaIconWrapper>
 
-        <MediaIconWrapper className="bg-white bg-opacity-20">
+        <MediaIconWrapper>
           <a
             href="https://www.tiktok.com/@michelhotel"
             className="fab fa-tiktok "
@@ -74,10 +74,10 @@ export function Footer({ phone, email, links }: FooterProps): JSX.Element {
 function MediaIconWrapper({
   className,
   children,
-}: React.PropsWithChildren<{ className: string }>): JSX.Element {
+}: React.PropsWithChildren<{ className?: string }>): JSX.Element {
   return (
     <div
-      className={`${className} cursor-pointer w-12 h-12 text-2xl md:w-16 md:h-16 md:text-4xl rounded-full flex items-center justify-center text-white`}
+      className={`${className} cursor-pointer w-12 h-12 text-2xl rounded-full flex items-center justify-center text-primary-regular`}
     >
       {children}
     </div>
