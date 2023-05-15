@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useOverlay } from "@sonnenhof/overlay/overlay-context";
-import { ArrowLeft, Calendar, Menu } from "iconoir-react";
+import { ArrowLeft, Calendar, Menu, Minus, Plus, User } from "iconoir-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { HamburgerOverlay } from "./hamburger-overlay";
@@ -12,6 +12,7 @@ import { useImmer } from "use-immer";
 import { Text } from "./text";
 import { Button } from "./button";
 import { de } from "date-fns/locale";
+import { v4 } from "uuid";
 
 /**
  * Transforms date from dd.MM.yyyy  to YYYY-MM-DD
@@ -57,6 +58,59 @@ const TextWithValue = React.forwardRef(
 );
 TextWithValue.displayName = "TextWithValue";
 
+const adultInputId = v4();
+const childrenInputId = v4();
+
+function PersonInput({
+  name,
+  value,
+  onChange,
+}: {
+  value: number;
+  name: "mewsAdultCount" | "mewsChildCount";
+  onChange: Callback<number>;
+}): JSX.Element {
+  const id = name === "mewsAdultCount" ? adultInputId : childrenInputId;
+  const min = name === "mewsAdultCount" ? 1 : 0;
+  const label = name === "mewsAdultCount" ? "Erwachsene" : "Kinder";
+  return (
+    <div
+      className="flex flex-row gap-4 items-center"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <label htmlFor={id}>
+        <Text variant="tiny-primary">{label}</Text>
+      </label>
+      <div className="grow" />
+      <div className="flex items-center justify-center">
+        <button
+          className="text-primary-regular p-2"
+          onClick={() => onChange(value - 1)}
+          type="button"
+        >
+          <Minus />
+        </button>
+        <input
+          className="max-w-[40px] text-center bg-transparent"
+          id={id}
+          type="number"
+          name={name}
+          min={min}
+          value={value}
+          readOnly
+        />
+        <button
+          className="text-primary-regular p-2"
+          onClick={() => onChange(value + 1)}
+          type="button"
+        >
+          <Plus />
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export function Header(): JSX.Element {
   const router = useRouter();
   const { showOverlay } = useOverlay();
@@ -71,6 +125,20 @@ export function Header(): JSX.Element {
       return today;
     })(),
   });
+  const [showPersonInput, setShowPersonInput] = React.useState(false);
+  const [adults, setAdults] = useImmer(2);
+  const [children, setChildren] = useImmer(0);
+  const guestLabel = React.useMemo(() => {
+    const label =
+      adults > 1 ? `${adults} Erwachsene` : `${adults} Erwachsene*r`;
+    if (children === 0) {
+      return label;
+    } else if (children === 1) {
+      return `${label}, ${children} Kind`;
+    } else {
+      return `${label}, ${children} Kinder`;
+    }
+  }, [adults, children]);
   return (
     <header className="w-full z-30 sticky bg-black top-0 h-25vh">
       <div className="flex flex-row">
@@ -153,6 +221,31 @@ export function Header(): JSX.Element {
               }, [dates.from])()}
             />
           </div>
+          <div>
+            <div
+              className="flex gap-2 cursor-pointer border p-2 border-primary-regular text-primary-regular relative whitespace-nowrap"
+              onClick={() => setShowPersonInput((shown) => !shown)}
+            >
+              <Text variant="tiny-primary">{guestLabel}</Text>
+              <input className="hidden" readOnly />
+              <User className="h-4 m-auto" />
+              {showPersonInput ? (
+                <div className="absolute top-[50px] left-0 border border-primary-regular p-4 flex gap-4 flex-col bg-black">
+                  <PersonInput
+                    name="mewsAdultCount"
+                    value={adults}
+                    onChange={(newAdults) => setAdults(newAdults)}
+                  />
+                  <PersonInput
+                    name="mewsChildCount"
+                    value={children}
+                    onChange={(newChildren) => setChildren(newChildren)}
+                  />
+                </div>
+              ) : null}
+            </div>
+          </div>
+
           <div className="grow-0 shrink-0 basis-[100px]">
             <Button label="Book now" variant="primary" submit />
           </div>
