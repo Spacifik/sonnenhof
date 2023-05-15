@@ -77,7 +77,7 @@ function MediaIconWrapper({
 }: React.PropsWithChildren<{ className?: string }>): JSX.Element {
   return (
     <div
-      className={`${className} cursor-pointer w-12 h-12 text-2xl rounded-full flex items-center justify-center text-primary-regular`}
+      className={`${className} md:hover:brightness-150 cursor-pointer w-12 h-12 text-2xl rounded-full flex items-center justify-center text-primary-regular`}
     >
       {children}
     </div>
