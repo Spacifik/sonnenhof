@@ -162,7 +162,10 @@ export function Header(): JSX.Element {
             <ArrowLeft className="invisible" />
           </div>
         )}
-        <Link className="flex w-44 md:w-50 mx-3 lg:mx-6" href={`/`}>
+        <Link
+          className="flex w-44 md:w-50 mx-3 lg:mx-6 max-h-[25vh]"
+          href={`/`}
+        >
           <Logo className="h-full w-auto" />
         </Link>
 
