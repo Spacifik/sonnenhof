@@ -1,10 +1,34 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { EmptyPage } from "@sonnenhof/components/empty-page";
-import { Image } from "@sonnenhof/components/image";
+import { Image, ImageProps } from "@sonnenhof/components/image";
 import { Layout } from "@sonnenhof/components/layout";
 import { Text } from "@sonnenhof/components/text";
 import { useIsMediumOrBigger } from "@sonnenhof/utils/use-is-medium-or-bigger";
+
+function TextAsideMediumOrLarger({
+  imageName,
+  text,
+}: {
+  imageName: ImageProps["name"];
+  text: string;
+}): JSX.Element {
+  const mediumOrBigger = useIsMediumOrBigger();
+  const WrapperElement = mediumOrBigger
+    ? ({ children }) => (
+        <aside className="flex flex-row-reverse">{children}</aside>
+      )
+    : ({ children }) => <>{children}</>;
+  return (
+    <WrapperElement>
+      <Image
+        name={imageName}
+        className="md:max-h-[50vh] md:max-w-[50vw] m-auto md:m-4 float-right "
+      />
+      <Text variant="small-primary">{text}</Text>
+    </WrapperElement>
+  );
+}
 
 export default function Page(): JSX.Element {
   return (
@@ -20,19 +44,10 @@ export default function Page(): JSX.Element {
           <Text variant="small-primary">
             270m² Eventfläche mit modernster Technik
           </Text>
-
-          <Image
-            name="events"
-            className="md:max-h-[50vh] md:max-w-[50vw] m-auto"
+          <TextAsideMediumOrLarger
+            imageName="events"
+            text="Herzlich willkommen zu unseren Events und Konferenzen im bayrischen Wald, in unserem exquisiten Edelhotel. Mit einer großzügigen Eventfläche von 270m² und modernster Technik bieten wir Ihnen den idealen Ort für Veranstaltungen aller Art."
           />
-
-          <Text variant="small-primary">
-            Herzlich willkommen zu unseren Events und Konferenzen im bayrischen
-            Wald, in unserem exquisiten Edelhotel. Mit einer großzügigen
-            Eventfläche von 270m² und modernster Technik bieten wir Ihnen den
-            idealen Ort für Veranstaltungen aller Art.
-          </Text>
-
           <Text variant="small-primary">
             Unser Hotel ist stolz darauf, eine perfekte Kulisse für Ihre
             geschäftlichen oder privaten Anlässe zu bieten. Die Eventfläche
@@ -42,7 +57,6 @@ export default function Page(): JSX.Element {
             Verfügung. Wir stellen sicher, dass Sie über alle erforderlichen
             Ressourcen verfügen, um Ihr Event reibungslos ablaufen zu lassen.
           </Text>
-
           <Text variant="small-primary">
             Unsere erfahrenen Eventplaner stehen Ihnen zur Seite und helfen
             Ihnen bei der individuellen Gestaltung Ihrer Veranstaltung. Von der
@@ -51,7 +65,6 @@ export default function Page(): JSX.Element {
             Erfolg wird. Unser aufmerksames Personal kümmert sich um jeden
             einzelnen Gast und sorgt für einen reibungslosen Ablauf.
           </Text>
-
           <Text variant="small-primary">
             Neben der erstklassigen Eventfläche bietet unser Edelhotel im
             bayrischen Wald eine einzigartige Umgebung für Ihre Teilnehmer. Der
@@ -60,7 +73,6 @@ export default function Page(): JSX.Element {
             Veranstaltung. In den Pausen können Ihre Gäste die frische Luft
             genießen und die natürliche Schönheit der Umgebung erkunden.
           </Text>
-
           <Text variant="small-primary">
             Nach einem erfolgreichen Tag voller Meetings und Konferenzen bietet
             unser Hotel luxuriöse Zimmer und erstklassige Annehmlichkeiten für
@@ -68,7 +80,6 @@ export default function Page(): JSX.Element {
             Sie kulinarische Köstlichkeiten in unserem Restaurant und lassen Sie
             den Tag in stilvollem Ambiente ausklingen.
           </Text>
-
           <Text variant="small-primary">
             Ganz gleich, ob Sie eine Konferenz, ein Seminar oder eine festliche
             Veranstaltung planen - unser Edelhotel im bayrischen Wald bietet
