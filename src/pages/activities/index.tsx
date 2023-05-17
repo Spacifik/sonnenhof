@@ -5,6 +5,7 @@ import { Image } from "@sonnenhof/components/image";
 import { Layout } from "@sonnenhof/components/layout";
 import { Text } from "@sonnenhof/components/text";
 import { useIsMediumOrBigger } from "@sonnenhof/utils/use-is-medium-or-bigger";
+import { TextAsideMediumOrLarger } from "@sonnenhof/components/text-aside-medium-or-larger";
 
 export default function Page(): JSX.Element {
   return (
@@ -21,20 +22,11 @@ export default function Page(): JSX.Element {
             25.000 Hektar Wald-Nationalpark & staatlich anerkannter Kurort
           </Text>
 
-          <Image
-            name="activities"
-            className="md:max-h-[50vh] md:max-w-[50vw] m-auto"
+          <TextAsideMediumOrLarger
+            imageName="activities"
+            text="
+            Willkommen im Michelhotel im bayrischen Wald, einem 25.000 Hektar großen Wald-Nationalpark und staatlich anerkannten Kurort. Hier erleben Sie unberührte Natur, atemberaubende Landschaften und eine Vielzahl an Freizeitmöglichkeiten. Das Hotel selbst ist eine wahre Perle inmitten dieser malerischen Oase. Eingebettet in den Wald-Nationalpark, bietet das Hotel eine einzigartige Erfahrung für Naturfreunde und Erholungssuchende."
           />
-
-          <Text variant="small-primary">
-            Willkommen im Michelhotel im bayrischen Wald, einem 25.000 Hektar
-            großen Wald-Nationalpark und staatlich anerkannten Kurort. Hier
-            erleben Sie unberührte Natur, atemberaubende Landschaften und eine
-            Vielzahl an Freizeitmöglichkeiten. Das Hotel selbst ist eine wahre
-            Perle inmitten dieser malerischen Oase. Eingebettet in den
-            Wald-Nationalpark, bietet das Hotel eine einzigartige Erfahrung für
-            Naturfreunde und Erholungssuchende.
-          </Text>
 
           <Text variant="small-primary">
             Der Wald erstreckt sich über eine Fläche von 25.000 Hektar und lädt
