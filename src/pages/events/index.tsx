@@ -15,10 +15,10 @@ function TextAsideMediumOrLarger({
 }): JSX.Element {
   const mediumOrBigger = useIsMediumOrBigger();
   const WrapperElement = mediumOrBigger
-    ? ({ children }) => (
+    ? ({ children }: React.PropsWithChildren<{}>) => (
         <aside className="flex flex-row-reverse">{children}</aside>
       )
-    : ({ children }) => <>{children}</>;
+    : ({ children }: React.PropsWithChildren<{}>) => <>{children}</>;
   return (
     <WrapperElement>
       <Image
