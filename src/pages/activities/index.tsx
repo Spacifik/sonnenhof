@@ -7,8 +7,6 @@ import { Text } from "@sonnenhof/components/text";
 import { useIsMediumOrBigger } from "@sonnenhof/utils/use-is-medium-or-bigger";
 
 export default function Page(): JSX.Element {
-  const mediumOrBigger = useIsMediumOrBigger();
-
   return (
     <Layout>
       <main>
