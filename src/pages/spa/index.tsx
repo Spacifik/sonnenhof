@@ -20,6 +20,7 @@ export default function Page(): JSX.Element {
           </Text>
 
           <TextAsideMediumOrLarger
+            reverse
             imageName="wellness"
             text="Unser luxuriöser Spa-Bereich erwartet Sie mit einer Vielzahl von erstklassigen Einrichtungen. Beginnen Sie Ihre Wellnessreise mit einem Besuch unserer Sauna, wo Sie die wohltuende Wärme genießen und Ihre Sinne beleben können. Nach einem erholsamen Saunagang können Sie sich in unserer erfrischenden Eis-Lounge abkühlen und Ihre Haut revitalisieren."
           />
@@ -41,12 +42,10 @@ export default function Page(): JSX.Element {
             kommt.
           </Text>
 
-          <Text variant="small-primary">
-            Ob Sie ein strahlendes Gesicht wünschen oder Ihrem Körper eine
-            Auszeit gönnen möchten, unser Wellness- und Spa-Bereich bietet Ihnen
-            die besten Voraussetzungen für Ihr Wohlbefinden. Tauchen Sie ein in
-            eine Welt der Entspannung und lassen Sie den Alltag hinter sich.
-          </Text>
+          <TextAsideMediumOrLarger
+            imageName="wellness"
+            text="Ob Sie ein strahlendes Gesicht wünschen oder Ihrem Körper eine Auszeit gönnen möchten, unser Wellness- und Spa-Bereich bietet Ihnen die besten Voraussetzungen für Ihr Wohlbefinden. Tauchen Sie ein in eine Welt der Entspannung und lassen Sie den Alltag hinter sich."
+          />
 
           <Text variant="small-primary">
             Gönnen Sie sich das Beste und erleben Sie unvergessliche Momente im

@@ -23,9 +23,9 @@ export default function Page(): JSX.Element {
           </Text>
 
           <TextAsideMediumOrLarger
+            reverse
             imageName="activities"
-            text="
-            Willkommen im Michelhotel im bayrischen Wald, einem 25.000 Hektar großen Wald-Nationalpark und staatlich anerkannten Kurort. Hier erleben Sie unberührte Natur, atemberaubende Landschaften und eine Vielzahl an Freizeitmöglichkeiten. Das Hotel selbst ist eine wahre Perle inmitten dieser malerischen Oase. Eingebettet in den Wald-Nationalpark, bietet das Hotel eine einzigartige Erfahrung für Naturfreunde und Erholungssuchende."
+            text="Willkommen im Michelhotel im bayrischen Wald, einem 25.000 Hektar großen Wald-Nationalpark und staatlich anerkannten Kurort. Hier erleben Sie unberührte Natur, atemberaubende Landschaften und eine Vielzahl an Freizeitmöglichkeiten. Das Hotel selbst ist eine wahre Perle inmitten dieser malerischen Oase. Eingebettet in den Wald-Nationalpark, bietet das Hotel eine einzigartige Erfahrung für Naturfreunde und Erholungssuchende."
           />
 
           <Text variant="small-primary">
@@ -43,13 +43,10 @@ export default function Page(): JSX.Element {
             luxuriöses Erlebnis.
           </Text>
 
-          <Text variant="small-primary">
-            Die Zimmer bieten einen Rückzugsort voller Komfort und Eleganz. Von
-            einigen Zimmern aus genießen Sie einen spektakulären Ausblick auf
-            die umliegende Landschaft. Lassen Sie sich von erstklassigem Service
-            verwöhnen und entspannen Sie im Wellnessbereich des Hotels, der
-            Ihnen eine Vielzahl von wohltuenden Anwendungen bietet.
-          </Text>
+          <TextAsideMediumOrLarger
+            imageName="activities"
+            text="Die Zimmer bieten einen Rückzugsort voller Komfort und Eleganz. Von einigen Zimmern aus genießen Sie einen spektakulären Ausblick auf die umliegende Landschaft. Lassen Sie sich von erstklassigem Service verwöhnen und entspannen Sie im Wellnessbereich des Hotels, der Ihnen eine Vielzahl von wohltuenden Anwendungen bietet."
+          />
 
           <Text variant="small-primary">
             Ob Sie Ruhe und Entspannung suchen oder aktive Outdoor-Aktivitäten

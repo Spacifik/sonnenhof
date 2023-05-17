@@ -9,14 +9,18 @@ import { useIsMediumOrBigger } from "@sonnenhof/utils/use-is-medium-or-bigger";
 export function TextAsideMediumOrLarger({
   imageName,
   text,
+  reverse,
 }: {
   imageName: ImageProps["name"];
   text: string;
+  reverse?: boolean;
 }): JSX.Element {
   const mediumOrBigger = useIsMediumOrBigger();
   const WrapperElement = mediumOrBigger
     ? ({ children }: React.PropsWithChildren<{}>) => (
-        <aside className="flex flex-row-reverse">{children}</aside>
+        <aside className={`flex flex-row${reverse ? "-reverse" : ""}`}>
+          {children}
+        </aside>
       )
     : ({ children }: React.PropsWithChildren<{}>) => <>{children}</>;
   return (

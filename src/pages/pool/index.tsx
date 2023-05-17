@@ -19,6 +19,7 @@ export default function Page(): JSX.Element {
           </Text>
 
           <TextAsideMediumOrLarger
+            reverse
             imageName="pool"
             text="Unser Hotel verfügt über einen beeindruckenden Innen- und Außenpool, die exklusiv für unsere Gäste zugänglich sind. Im Innenbereich erwartet Sie ein stilvoll gestalteter Poolbereich, der zum Schwimmen und Entspannen einlädt. Tauchen Sie ein in das klare, erfrischende Wasser und lassen Sie den Alltagsstress hinter sich."
           />
@@ -40,13 +41,10 @@ export default function Page(): JSX.Element {
             eintauchen.
           </Text>
 
-          <Text variant="small-primary">
-            Unser Edelhotel im bayrischen Wald bietet Ihnen somit nicht nur
-            luxuriöse Unterkünfte und erstklassigen Service, sondern auch ein
-            exquisites Pool- und Thermalbaderlebnis. Genießen Sie die perfekte
-            Kombination aus Wellness, Erholung und der natürlichen Schönheit der
-            Umgebung.
-          </Text>
+          <TextAsideMediumOrLarger
+            imageName="pool"
+            text="Unser Edelhotel im bayrischen Wald bietet Ihnen somit nicht nur luxuriöse Unterkünfte und erstklassigen Service, sondern auch ein exquisites Pool- und Thermalbaderlebnis. Genießen Sie die perfekte Kombination aus Wellness, Erholung und der natürlichen Schönheit der Umgebung."
+          />
 
           <Text variant="small-primary">
             Ob Sie einen aktiven Tag im bayrischen Wald verbracht haben oder

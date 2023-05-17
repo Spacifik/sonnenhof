@@ -7,8 +7,6 @@ import { Text } from "@sonnenhof/components/text";
 import { useIsMediumOrBigger } from "@sonnenhof/utils/use-is-medium-or-bigger";
 import { TextAsideMediumOrLarger } from "@sonnenhof/components/text-aside-medium-or-larger";
 
-
-
 export default function Page(): JSX.Element {
   return (
     <Layout>
@@ -24,6 +22,7 @@ export default function Page(): JSX.Element {
             270m² Eventfläche mit modernster Technik
           </Text>
           <TextAsideMediumOrLarger
+            reverse
             imageName="events"
             text="Herzlich willkommen zu unseren Events und Konferenzen im bayrischen Wald, in unserem exquisiten Edelhotel. Mit einer großzügigen Eventfläche von 270m² und modernster Technik bieten wir Ihnen den idealen Ort für Veranstaltungen aller Art."
           />
@@ -44,14 +43,11 @@ export default function Page(): JSX.Element {
             Erfolg wird. Unser aufmerksames Personal kümmert sich um jeden
             einzelnen Gast und sorgt für einen reibungslosen Ablauf.
           </Text>
-          <Text variant="small-primary">
-            Neben der erstklassigen Eventfläche bietet unser Edelhotel im
-            bayrischen Wald eine einzigartige Umgebung für Ihre Teilnehmer. Der
-            malerische bayrische Wald mit seinen majestätischen Bergen und
-            idyllischen Tälern schafft eine inspirierende Atmosphäre für Ihre
-            Veranstaltung. In den Pausen können Ihre Gäste die frische Luft
-            genießen und die natürliche Schönheit der Umgebung erkunden.
-          </Text>
+
+          <TextAsideMediumOrLarger
+            imageName="events"
+            text="Neben der erstklassigen Eventfläche bietet unser Edelhotel im bayrischen Wald eine einzigartige Umgebung für Ihre Teilnehmer. Der malerische bayrische Wald mit seinen majestätischen Bergen und idyllischen Tälern schafft eine inspirierende Atmosphäre für Ihre Veranstaltung. In den Pausen können Ihre Gäste die frische Luft genießen und die natürliche Schönheit der Umgebung erkunden."
+          />
           <Text variant="small-primary">
             Nach einem erfolgreichen Tag voller Meetings und Konferenzen bietet
             unser Hotel luxuriöse Zimmer und erstklassige Annehmlichkeiten für
