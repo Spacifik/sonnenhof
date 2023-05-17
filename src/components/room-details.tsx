@@ -5,6 +5,7 @@ import { Text } from "./text";
 import { Image, ImageProps, getImageSrc } from "./image";
 import { Minus, Plus } from "iconoir-react";
 import React from "react";
+import { useIsMediumOrBigger } from "@sonnenhof/utils/use-is-medium-or-bigger";
 
 export interface RoomDetailsProps {
   summary: string;
@@ -21,16 +22,7 @@ export function RoomDetails({
   image,
   buttons,
 }: RoomDetailsProps): JSX.Element {
-  const [mediumOrBigger, setMediumOrBigger] = React.useState(
-    window.matchMedia(`(min-width: 768px)`).matches
-  );
-  React.useEffect(() => {
-    const subscriber = () =>
-      setMediumOrBigger(() => window.matchMedia(`(min-width: 768px)`).matches);
-    window.addEventListener("resize", subscriber);
-    return () => window.removeEventListener("resize", subscriber);
-  }, []);
-
+  const mediumOrBigger = useIsMediumOrBigger();
   const [open, setOpen] = React.useState(mediumOrBigger);
 
   return (
