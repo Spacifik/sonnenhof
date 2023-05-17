@@ -21,24 +21,38 @@ export function RoomDetails({
   image,
   buttons,
 }: RoomDetailsProps): JSX.Element {
-  const [open, setOpen] = React.useState(false);
+  const [mediumOrBigger, setMediumOrBigger] = React.useState(
+    window.matchMedia(`(min-width: 768px)`).matches
+  );
+  React.useEffect(() => {
+    const subscriber = () =>
+      setMediumOrBigger(() => window.matchMedia(`(min-width: 768px)`).matches);
+    window.addEventListener("resize", subscriber);
+    return () => window.removeEventListener("resize", subscriber);
+  }, []);
+
+  const [open, setOpen] = React.useState(mediumOrBigger);
 
   return (
     <div
       className={`grow relative p-6 md:p-16 md:basis-1/2 md:min-h-60vh bg-black marker:hidden `}
       onClick={(evt) => {
-        setOpen((current) => !current);
+        setOpen((current) => !current || mediumOrBigger);
         evt.stopPropagation();
       }}
     >
       <div className={`flex ${open ? `pb-3` : ""}`}>
         <Text variant="medium-primary">{summary}</Text>
-        <span className="grow" />
-        {open ? (
-          <Minus className="text-white" />
-        ) : (
-          <Plus className="text-white" />
-        )}
+        {!mediumOrBigger ? (
+          <>
+            <span className="grow" />
+            {open ? (
+              <Minus className="text-white" />
+            ) : (
+              <Plus className="text-white" />
+            )}
+          </>
+        ) : null}
       </div>
       {open && (
         <div className="flex flex-col gap-3 md:gap-6">
