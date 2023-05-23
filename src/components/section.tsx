@@ -31,7 +31,7 @@ export function Section({
   return (
     <section
       className={`
-      grow relative p-4 min-h-40vh  md:p-8 md:basis-1/2 md:min-h-60vh 
+      grow relative min-h-40vh p-4  md:p-8 md:basis-1/2 md:min-h-60vh justify-center flex
       ${details ? "group md:hover:brightness-150" : ""}
       ${background ? "bg-cover bg-no-repeat" : "bg-black"} 
       `}
@@ -47,8 +47,8 @@ export function Section({
         }
       }, [buttons, router])}
     >
-      <div className="flex flex-col gap-6 z-10 align-middle  md:mt-14">
-        <div className="opacity-100 group-hover:opacity-0 transition-all">
+      <div className="flex z-10 align-middle items-center justify-center ">
+        <div className="opacity-100 group-hover:opacity-0 transition-all flex flex-col gap-6">
           {hint && (
             <div>
               <Text variant={`tiny-${textColorVariant}`} mono uppercase>
@@ -74,7 +74,7 @@ export function Section({
         </div>
       </div>
       {details ? (
-        <div className="absolute inset-0 items-center justify-center z-20 align-middle bg-transparent opacity-0 w-full h-full p-6 md:p-16 transition-all group-hover:md:opacity-100 group-hover:pointer-events:none">
+        <div className="absolute inset-0 items-center justify-center z-20 align-middle bg-transparent opacity-0 w-full h-full p-4  md:p-8 transition-all group-hover:md:opacity-100 group-hover:pointer-events:none">
           {hint && (
             <div className="pb-2 md:pb-5 lg:pb-8">
               <Text variant={`small-${textColorVariant}`} mono uppercase>
