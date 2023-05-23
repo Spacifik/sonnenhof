@@ -146,10 +146,14 @@ export function Header(): JSX.Element {
       return `${label}, ${children} Kinder`;
     }
   }, [adults, children]);
-  const paddingBottom = useAspectRatioBox();
   return (
-    <header className=" bg-transparent">
-      <div className="z-30 sticky flex flex-row justify-center top-0 items-center">
+    <header
+      className="bg-transparent sticky top-0 z-30 "
+      style={{
+        background: "linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.01))",
+      }}
+    >
+      <div className="flex flex-row justify-center top-0 items-center">
         {router.route !== "/" ? (
           <Link
             className={`cursor-pointer h-1/2 ${getThemeColor(
@@ -276,15 +280,6 @@ export function Header(): JSX.Element {
         >
           <Menu />
         </div>
-      </div>
-      <div className={`relative w-full h-0`} style={{ paddingBottom }}>
-        <Stream
-          src="61c703f87842eae49b847d53c6b37a89"
-          loop
-          autoplay
-          muted
-          className="absolute w-full h-full object-cover top-[-25vh]"
-        />
       </div>
     </header>
   );
