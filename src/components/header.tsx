@@ -13,6 +13,8 @@ import { Text } from "./text";
 import { Button } from "./button";
 import { de } from "date-fns/locale";
 import { v4 } from "uuid";
+import { Stream } from "@cloudflare/stream-react";
+import { useAspectRatioBox } from "@sonnenhof/utils/use-aspect-ratio-box";
 
 /**
  * Transforms date from dd.MM.yyyy  to YYYY-MM-DD
@@ -144,9 +146,10 @@ export function Header(): JSX.Element {
       return `${label}, ${children} Kinder`;
     }
   }, [adults, children]);
+  const paddingBottom = useAspectRatioBox();
   return (
-    <header className="w-full z-30 sticky bg-black top-0 h-25vh">
-      <div className="flex flex-row justify-center items-center">
+    <header className=" bg-transparent">
+      <div className="z-30 sticky flex flex-row justify-center top-0 items-center">
         {router.route !== "/" ? (
           <Link
             className={`cursor-pointer h-1/2 ${getThemeColor(
@@ -273,6 +276,15 @@ export function Header(): JSX.Element {
         >
           <Menu />
         </div>
+      </div>
+      <div className={`relative w-full h-0`} style={{ paddingBottom }}>
+        <Stream
+          src="61c703f87842eae49b847d53c6b37a89"
+          loop
+          autoplay
+          muted
+          className="absolute w-full h-full object-cover top-[-25vh]"
+        />
       </div>
     </header>
   );
