@@ -19,7 +19,7 @@ export default function Page(): JSX.Element {
           </Text>
 
           <TextAsideMediumOrLarger
-            reverse
+            right
             imageName="pool"
             text="Unser Hotel verfügt über einen beeindruckenden Innen- und Außenpool, die exklusiv für unsere Gäste zugänglich sind. Im Innenbereich erwartet Sie ein stilvoll gestalteter Poolbereich, der zum Schwimmen und Entspannen einlädt. Tauchen Sie ein in das klare, erfrischende Wasser und lassen Sie den Alltagsstress hinter sich."
           />

@@ -22,7 +22,7 @@ export default function Page(): JSX.Element {
             270m² Eventfläche mit modernster Technik
           </Text>
           <TextAsideMediumOrLarger
-            reverse
+            right
             imageName="events"
             text="Herzlich willkommen zu unseren Events und Konferenzen im bayrischen Wald, in unserem exquisiten Edelhotel. Mit einer großzügigen Eventfläche von 270m² und modernster Technik bieten wir Ihnen den idealen Ort für Veranstaltungen aller Art."
           />

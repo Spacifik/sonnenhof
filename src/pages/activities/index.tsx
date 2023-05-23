@@ -22,40 +22,54 @@ export default function Page(): JSX.Element {
             25.000 Hektar Wald-Nationalpark & staatlich anerkannter Kurort
           </Text>
 
-          <TextAsideMediumOrLarger
-            reverse
-            imageName="activities"
-            text="Willkommen im Michelhotel im bayrischen Wald, einem 25.000 Hektar großen Wald-Nationalpark und staatlich anerkannten Kurort. Hier erleben Sie unberührte Natur, atemberaubende Landschaften und eine Vielzahl an Freizeitmöglichkeiten. Das Hotel selbst ist eine wahre Perle inmitten dieser malerischen Oase. Eingebettet in den Wald-Nationalpark, bietet das Hotel eine einzigartige Erfahrung für Naturfreunde und Erholungssuchende."
-          />
+          <TextAsideMediumOrLarger right imageName="activities">
+            <Text variant="small-primary">
+              Willkommen im Michelhotel im bayrischen Wald, einem 25.000 Hektar
+              großen Wald-Nationalpark und staatlich anerkannten Kurort. Hier
+              erleben Sie unberührte Natur, atemberaubende Landschaften und eine
+              Vielzahl an Freizeitmöglichkeiten. Das Hotel selbst ist eine wahre
+              Perle inmitten dieser malerischen Oase. Eingebettet in den
+              Wald-Nationalpark, bietet das Hotel eine einzigartige Erfahrung
+              für Naturfreunde und Erholungssuchende.
+            </Text>
+            <br />
+            <Text variant="small-primary">
+              Der Wald erstreckt sich über eine Fläche von 25.000 Hektar und
+              lädt zu ausgiebigen Spaziergängen, Wanderungen und Fahrradtouren
+              ein. Genießen Sie die frische Waldluft, lauschen Sie dem
+              Zwitschern der Vögel und lassen Sie den Alltagsstress hinter sich.
+              Die Landschaft des bayrischen Waldes ist von einer beeindruckenden
+              Schönheit geprägt. Majestätische Berge, klare Seen und idyllische
+              Täler erstrecken sich vor Ihren Augen. Ob bei einer Wanderung
+              durch dichte Wälder, einem Ausflug zu den glitzernden Wasserfällen
+              oder einer Bootsfahrt auf einem der Seen - hier werden Sie von der
+              Vielfalt der Natur fasziniert sein. Das Hotel selbst ist ein
+              wahres Juwel. Das edle Ambiente und die stilvolle Einrichtung
+              sorgen für ein luxuriöses Erlebnis.
+            </Text>
+          </TextAsideMediumOrLarger>
 
-          <Text variant="small-primary">
-            Der Wald erstreckt sich über eine Fläche von 25.000 Hektar und lädt
-            zu ausgiebigen Spaziergängen, Wanderungen und Fahrradtouren ein.
-            Genießen Sie die frische Waldluft, lauschen Sie dem Zwitschern der
-            Vögel und lassen Sie den Alltagsstress hinter sich. Die Landschaft
-            des bayrischen Waldes ist von einer beeindruckenden Schönheit
-            geprägt. Majestätische Berge, klare Seen und idyllische Täler
-            erstrecken sich vor Ihren Augen. Ob bei einer Wanderung durch dichte
-            Wälder, einem Ausflug zu den glitzernden Wasserfällen oder einer
-            Bootsfahrt auf einem der Seen - hier werden Sie von der Vielfalt der
-            Natur fasziniert sein. Das Hotel selbst ist ein wahres Juwel. Das
-            edle Ambiente und die stilvolle Einrichtung sorgen für ein
-            luxuriöses Erlebnis.
-          </Text>
+          <TextAsideMediumOrLarger imageName="activities">
+            <Text variant="small-primary">
+              Die Zimmer bieten einen Rückzugsort voller Komfort und Eleganz.
+              Von einigen Zimmern aus genießen Sie einen spektakulären Ausblick
+              auf die umliegende Landschaft. Lassen Sie sich von erstklassigem
+              Service verwöhnen und entspannen Sie im Wellnessbereich des
+              Hotels, der Ihnen eine Vielzahl von wohltuenden Anwendungen
+              bietet.
+            </Text>
 
-          <TextAsideMediumOrLarger
-            imageName="activities"
-            text="Die Zimmer bieten einen Rückzugsort voller Komfort und Eleganz. Von einigen Zimmern aus genießen Sie einen spektakulären Ausblick auf die umliegende Landschaft. Lassen Sie sich von erstklassigem Service verwöhnen und entspannen Sie im Wellnessbereich des Hotels, der Ihnen eine Vielzahl von wohltuenden Anwendungen bietet."
-          />
+            <br />
 
-          <Text variant="small-primary">
-            Ob Sie Ruhe und Entspannung suchen oder aktive Outdoor-Aktivitäten
-            bevorzugen, im Hotel im bayrischen Wald werden Sie fündig. Erkunden
-            Sie die Umgebung, entdecken Sie die Schönheit der Natur und tanken
-            Sie neue Energie. Dieser 25.000 Hektar große Wald-Nationalpark und
-            Kurort verspricht Ihnen eine unvergessliche Auszeit inmitten
-            unberührter Natur und malerischer Landschaften.
-          </Text>
+            <Text variant="small-primary">
+              Ob Sie Ruhe und Entspannung suchen oder aktive Outdoor-Aktivitäten
+              bevorzugen, im Hotel im bayrischen Wald werden Sie fündig.
+              Erkunden Sie die Umgebung, entdecken Sie die Schönheit der Natur
+              und tanken Sie neue Energie. Dieser 25.000 Hektar große
+              Wald-Nationalpark und Kurort verspricht Ihnen eine unvergessliche
+              Auszeit inmitten unberührter Natur und malerischer Landschaften.
+            </Text>
+          </TextAsideMediumOrLarger>
         </div>
       </main>
     </Layout>
