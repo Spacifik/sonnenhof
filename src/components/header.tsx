@@ -170,7 +170,7 @@ export function Header(): JSX.Element {
 
         <div className="hidden md:flex grow" />
         <form
-          className="hidden md:flex md:gap-3 md:pt-3 justify-end items-center"
+          className="hidden md:flex md:gap-3 justify-end items-center"
           method="GET"
           action="https://app.mews.com/distributor/9c4dca19-3942-46a3-8f37-affe006f4062"
           target="_blank"
