@@ -26,7 +26,7 @@ export function Special({
             {title}
           </Text>
           <Text variant="small-primary">{text}</Text>
-          <Button variant="tertiary" label="> weiterlesen" />
+          <Button variant="tertiary" label="weiterlesen" />
         </div>
       </Link>
     </div>
