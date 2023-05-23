@@ -63,7 +63,7 @@ export default function Home() {
               hint="Pool und Thermalbad"
               title="indoor | outdoor"
               text="Exklusiver Innen- und Außenpool mit Massagebereich"
-              details="Exklusive Innen- und Außenpools bieten Entspannung. Der qngrenzende Massagebereich verwöhnt und fördert das Wohlbefinden. Stilvolles Ambiente, wohltuende Wasserlandschaften und professionelle Massagen für unvergessliche Erlebnisse."
+              details="Exklusive Innen- und Außenpools bieten Entspannung. Der angrenzende Massagebereich verwöhnt und fördert das Wohlbefinden. Stilvolles Ambiente, wohltuende Wasserlandschaften und professionelle Massagen für unvergessliche Erlebnisse."
               background="pool"
               buttons={[
                 {
