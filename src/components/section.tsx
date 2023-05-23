@@ -31,7 +31,7 @@ export function Section({
   return (
     <section
       className={`
-      grow relative p-6 min-h-40vh  md:p-16 md:basis-1/2 md:min-h-60vh 
+      grow relative p-4 min-h-40vh  md:p-8 md:basis-1/2 md:min-h-60vh 
       ${details ? "group md:hover:brightness-150" : ""}
       ${background ? "bg-cover bg-no-repeat" : "bg-black"} 
       `}
@@ -76,8 +76,8 @@ export function Section({
       {details ? (
         <div className="absolute inset-0 items-center justify-center z-20 align-middle bg-transparent opacity-0 w-full h-full p-6 md:p-16 transition-all group-hover:md:opacity-100 group-hover:pointer-events:none">
           {hint && (
-            <div className="pb-5 md:pb-8 lg:pb-12">
-              <Text variant={`medium-${textColorVariant}`} mono uppercase>
+            <div className="pb-2 md:pb-5 lg:pb-8">
+              <Text variant={`small-${textColorVariant}`} mono uppercase>
                 {hint}
               </Text>
             </div>
