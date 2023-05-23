@@ -5,27 +5,27 @@ export const footer: FooterProps = {
   email: "info@michelhotel-sonnenhof.de",
   links: [
     {
-      label: "career",
+      label: "Karriere",
       href: "career",
     },
     {
-      label: "press",
+      label: "Presse",
       href: "press",
     },
     {
-      label: "blog",
+      label: "Blog",
       href: "https://blog.michelhotel-sonnenhof.de/",
     },
     {
-      label: "downloads",
+      label: "Downloads",
       href: "downloads",
     },
     {
-      label: "agb",
+      label: "AGB",
       href: "eula",
     },
     {
-      label: "impressum",
+      label: "Impressum",
       href: "imprint",
     },
   ],

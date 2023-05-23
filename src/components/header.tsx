@@ -262,7 +262,7 @@ export function Header(): JSX.Element {
           </div>
 
           <div className="grow-0 shrink-0 basis-[100px]">
-            <Button label="Book now" variant="primary" submit />
+            <Button label="Jetzt buchen" variant="primary" submit />
           </div>
         </form>
 
