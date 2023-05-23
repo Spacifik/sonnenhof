@@ -31,7 +31,7 @@ export function Section({
   return (
     <section
       className={`
-      grow relative min-h-40vh p-4  md:p-8 md:basis-1/2 md:min-h-60vh justify-center flex
+      grow relative min-h-40vh p-12 md:p-8 md:basis-1/2 md:min-h-60vh flex
       ${details ? "group md:hover:brightness-150" : ""}
       ${background ? "bg-cover bg-no-repeat" : "bg-black"} 
       `}
