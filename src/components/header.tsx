@@ -7,7 +7,7 @@ import { HamburgerOverlay } from "./hamburger-overlay";
 import { getThemeColor } from "./theme-color";
 import { Logo } from "./logo";
 import DatePicker from "react-datepicker";
-import React from "react";
+import React, { useId } from "react";
 import { useImmer } from "use-immer";
 import { Text } from "./text";
 import { Button } from "./button";
@@ -58,9 +58,6 @@ const TextWithValue = React.forwardRef(
 );
 TextWithValue.displayName = "TextWithValue";
 
-const adultInputId = v4();
-const childrenInputId = v4();
-
 function PersonInput({
   name,
   value,
@@ -70,6 +67,8 @@ function PersonInput({
   name: "mewsAdultCount" | "mewsChildCount";
   onChange: Callback<number>;
 }): JSX.Element {
+  const adultInputId = useId();
+  const childrenInputId = useId();
   const id = name === "mewsAdultCount" ? adultInputId : childrenInputId;
   const min = name === "mewsAdultCount" ? 1 : 0;
   const label = name === "mewsAdultCount" ? "Erwachsene" : "Kinder";

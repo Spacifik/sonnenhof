@@ -56,7 +56,7 @@ export default function Rooms(): JSX.Element {
         />
         <RoomDetails
           buttons={[
-            { label: "peek inside", variant: "secondary" },
+            { label: "hineinschauen", variant: "secondary" },
             { label: "book", variant: "primary" },
           ]}
           items={["hello", "room", "details"]}
@@ -67,7 +67,7 @@ export default function Rooms(): JSX.Element {
 
         <RoomDetails
           buttons={[
-            { label: "peek inside", variant: "secondary" },
+            { label: "hineinschauen", variant: "secondary" },
             { label: "book", variant: "primary" },
           ]}
           items={["hello", "room", "details"]}
@@ -78,7 +78,7 @@ export default function Rooms(): JSX.Element {
 
         <RoomDetails
           buttons={[
-            { label: "peek inside", variant: "secondary" },
+            { label: "hineinschauen", variant: "secondary" },
             { label: "book", variant: "primary" },
           ]}
           items={["hello", "room", "details"]}

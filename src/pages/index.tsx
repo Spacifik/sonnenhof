@@ -37,7 +37,7 @@ export default function Home() {
               background="rooms"
               buttons={[
                 {
-                  label: "Peek inside",
+                  label: "Hineinschauen",
                   variant: "tertiary",
                   href: "/rooms",
                 },
@@ -52,7 +52,7 @@ export default function Home() {
               background="events"
               buttons={[
                 {
-                  label: "Peek inside",
+                  label: "Hineinschauen",
                   variant: "tertiary",
                   href: "/events",
                 },
@@ -67,7 +67,7 @@ export default function Home() {
               background="pool"
               buttons={[
                 {
-                  label: "Peek inside",
+                  label: "Hineinschauen",
                   variant: "tertiary",
                   href: "/pool",
                 },
@@ -82,7 +82,7 @@ export default function Home() {
               background="wellness"
               buttons={[
                 {
-                  label: "Peek inside",
+                  label: "Hineinschauen",
                   variant: "tertiary",
                   href: "/wellness",
                 },
@@ -97,7 +97,7 @@ export default function Home() {
               background="activities"
               buttons={[
                 {
-                  label: "Peek inside",
+                  label: "Hineinschauen",
                   variant: "tertiary",
                   href: "/activities",
                 },
@@ -112,7 +112,7 @@ export default function Home() {
               background="dining"
               buttons={[
                 {
-                  label: "Peek inside",
+                  label: "Hineinschauen",
                   variant: "tertiary",
                   href: "/dining",
                 },

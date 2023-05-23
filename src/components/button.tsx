@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 import { v4 } from "uuid";
 import { getHoverThemeColor, getThemeColor } from "./theme-color";
 
@@ -17,10 +17,11 @@ export function Button({
   submit,
   onClick,
 }: ButtonProps): JSX.Element {
-  const [buttonId, setButtonId] = React.useState<string>(id ?? v4());
+  const generatedId =  useId();
+  const [buttonId, setButtonId] = React.useState<string>(id ??generatedId);
 
   React.useEffect(() => {
-    setButtonId(id ?? v4());
+    setButtonId(id ?? generatedId);
   }, [id]);
 
   const textColor = getThemeColor(variant === "tertiary" ? "primary" : "light");
