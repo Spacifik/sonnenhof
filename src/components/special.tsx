@@ -18,17 +18,18 @@ export function Special({
   background,
 }: SpecialProps): JSX.Element {
   return (
-    <div>
-      <Link className="cursor-pointer md:hover:brightness-150" href={href}>
-        <Image name={background} />
-        <div className="flex flex-col pt-2 gap-2 md:gap-3 lg:gap-5">
-          <Text variant="small-primary" mono uppercase bold>
-            {title}
-          </Text>
-          <Text variant="small-primary">{text}</Text>
-          <Button variant="tertiary" label="weiterlesen" />
-        </div>
-      </Link>
-    </div>
+    <Link
+      className="cursor-pointer md:hover:brightness-150 flex flex-between flex-col grow box-border h-full"
+      href={href}
+    >
+      <Image name={background} />
+      <div className="grow flex flex-col pt-2 gap-2 md:gap-3 lg:gap-5">
+        <Text variant="small-primary" mono uppercase bold>
+          {title}
+        </Text>
+        <Text variant="small-primary">{text}</Text>
+        <Button variant="tertiary" label="weiterlesen" />
+      </div>
+    </Link>
   );
 }

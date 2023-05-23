@@ -127,19 +127,19 @@ export default function Home() {
           </div>
           <div className="flex flex-col px-10 pb-5 gap-8 md:flex-row md:px-16 md:pb-10  md:gap-12">
             <Special
-              title="wedding package"
+              title="Hochzeitspaket"
               text="Erleben Sie einen unvergesslichen Tag"
               background="event1"
               href="/wedding"
             />
             <Special
-              title="sport package"
+              title="Sportpaket"
               text="Gehen Sie mit uns ans Limit"
               background="sport"
               href="/sport"
             />
             <Special
-              title="city cruise"
+              title="Stadtführung"
               text="Städtetrip mit Führung"
               background="city"
               href="/city-cruise"
