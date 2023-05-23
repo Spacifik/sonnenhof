@@ -77,7 +77,7 @@ export function Section({
         <div className="absolute inset-0 items-center justify-center z-20 align-middle bg-transparent opacity-0 w-full h-full p-4  md:p-8 transition-all group-hover:md:opacity-100 group-hover:pointer-events:none">
           {hint && (
             <div className="pb-2 md:pb-5 lg:pb-8">
-              <Text variant={`small-${textColorVariant}`} mono uppercase>
+              <Text variant={`medium-${textColorVariant}`} mono uppercase>
                 {hint}
               </Text>
             </div>
