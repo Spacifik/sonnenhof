@@ -146,7 +146,7 @@ export function Header(): JSX.Element {
   }, [adults, children]);
   return (
     <header className="w-full z-30 sticky bg-black top-0 h-25vh">
-      <div className="flex flex-row">
+      <div className="flex flex-row justify-center items-center">
         {router.route !== "/" ? (
           <Link
             className={`cursor-pointer h-1/2 ${getThemeColor(
