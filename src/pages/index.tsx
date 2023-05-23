@@ -125,7 +125,7 @@ export default function Home() {
               Specials
             </Text>
           </div>
-          <div className="flex flex-col px-10 pb-5 gap-8 md:flex-row md:px-16 md:pb-10  md:gap-12">
+          <div className="grid grid-cols-1 grid-rows-1 md:grid-cols-3 gap-y-20 px-10 pb-5 gap-8 md:px-16 md:pb-10  md:gap-12 lg:gap-20">
             <Special
               title="Hochzeitspaket"
               text="Erleben Sie einen unvergesslichen Tag"
