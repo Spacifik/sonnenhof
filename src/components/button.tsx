@@ -17,12 +17,12 @@ export function Button({
   submit,
   onClick,
 }: ButtonProps): JSX.Element {
-  const generatedId =  useId();
-  const [buttonId, setButtonId] = React.useState<string>(id ??generatedId);
+  const generatedId = useId();
+  const [buttonId, setButtonId] = React.useState<string>(id ?? generatedId);
 
   React.useEffect(() => {
     setButtonId(id ?? generatedId);
-  }, [id]);
+  }, [generatedId, id]);
 
   const textColor = getThemeColor(variant === "tertiary" ? "primary" : "light");
   const bgColors =
@@ -36,6 +36,7 @@ export function Button({
           "border-primary-regular",
           "hover:text-primary-light",
           "hover:border-primary-light",
+          "hover:brightness-150",
         ]
       : [(getThemeColor("dark", true), getHoverThemeColor("dark", true))];
   return (
