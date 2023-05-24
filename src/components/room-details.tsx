@@ -66,7 +66,7 @@ export function RoomDetails({
             <Text variant="medium-primary">{details}</Text>
             <ul>
               {items.map((item, index) => (
-                <li key={index} className="mb-2 md:mb-4 lg:mb-6">
+                <li key={index} className="mb-2 ">
                   <Text variant="small-primary">{`- ${item}`}</Text>
                 </li>
               ))}
