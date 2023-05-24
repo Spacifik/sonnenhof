@@ -19,7 +19,7 @@ export function useAspectRatioBox(): PaddingBottom {
         document.documentElement.clientHeight || 0,
         window.innerHeight || 0
       );
-      const maxWidth = vh * 0.75; // 75vh
+      const maxWidth = vh * 1; // 100vh
       const aspectRatio = 9 / 16;
       const width = Math.min(maxWidth / aspectRatio, window.innerWidth);
       setPaddingBottom(`${width * aspectRatio}px`);

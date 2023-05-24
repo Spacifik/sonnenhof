@@ -152,7 +152,7 @@ export function Header(): JSX.Element {
   return (
     <header
       className={`sticky top-0 z-30 bg-black ${
-        router.route === "/" ? "h-0" : ""
+        router.route === "/" ? "md:h-0" : ""
       }`}
     >
       <div
