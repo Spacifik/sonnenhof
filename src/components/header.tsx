@@ -15,6 +15,7 @@ import { de } from "date-fns/locale";
 import { v4 } from "uuid";
 import { Stream } from "@cloudflare/stream-react";
 import { useAspectRatioBox } from "@sonnenhof/utils/use-aspect-ratio-box";
+import { MewsForm } from "./mews-form";
 
 /**
  * Transforms date from dd.MM.yyyy  to YYYY-MM-DD
@@ -184,18 +185,7 @@ export function Header(): JSX.Element {
         </Link>
 
         <div className="hidden md:flex grow" />
-        <form
-          className="hidden md:flex md:gap-3 justify-end items-center max-h-[200px]"
-          method="GET"
-          action="https://app.mews.com/distributor/9c4dca19-3942-46a3-8f37-affe006f4062"
-          target="_blank"
-        >
-          <input
-            className="hidden"
-            name="mewsCityId"
-            value="c4d8e6d4-da08-40f5-b95e-affe006ea0ef"
-            readOnly
-          />
+        <MewsForm className="hidden md:flex md:gap-3 justify-end items-center max-h-[200px]">
           <input
             className="hidden"
             name="mewsRoute"
@@ -278,7 +268,7 @@ export function Header(): JSX.Element {
           <div className="grow-0 shrink-0 basis-[100px] max-h-1/2 h-1/2">
             <Button label="Jetzt buchen" variant="primary" submit />
           </div>
-        </form>
+        </MewsForm>
 
         <div
           className={`cursor-pointer h-1/2 ${getThemeColor(

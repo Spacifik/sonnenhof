@@ -39,9 +39,9 @@ export function RoomDetails({
           <>
             <span className="grow" />
             {open ? (
-              <Minus className="text-white" />
+              <Minus className="text-primary-regular" />
             ) : (
-              <Plus className="text-white" />
+              <Plus className="text-primary-regular" />
             )}
           </>
         ) : null}
