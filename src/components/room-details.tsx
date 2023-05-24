@@ -61,18 +61,18 @@ export function RoomDetails({
         {open && (
           <div className="flex flex-col gap-3 md:gap-6">
             <Image name={image} />
-            <Text variant="small-primary">{details}</Text>
+            <Text variant="medium-primary">{details}</Text>
             <ul>
               {items.map((item, index) => (
-                <li key={index}>
-                  <Text variant="tiny-primary">{`- ${item}`}</Text>
+                <li key={index} className="mb-2 md:mb-4 lg:mb-6">
+                  <Text variant="small-primary">{`- ${item}`}</Text>
                 </li>
               ))}
             </ul>
 
             <div className="flex w-full gap-3 md:gap-6">
               {buttons.map((button, index) => (
-                <div key={index} className="grow">
+                <div key={index} className="">
                   <Button {...button} submit />
                 </div>
               ))}

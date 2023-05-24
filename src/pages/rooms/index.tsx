@@ -56,34 +56,34 @@ export default function Rooms(): JSX.Element {
         />
         <RoomDetails
           buttons={[
-            { label: "hineinschauen", variant: "secondary" },
-            { label: "book", variant: "primary" },
+            { label: "Jetzt buchen", variant: "primary" },
+            { label: "Hineinschauen", variant: "tertiary" },
           ]}
           items={["hello", "room", "details"]}
           summary="Rubin"
-          details="Lorem ipsum dolor sit amet"
+          details="Details"
           image="rooms"
         />
 
         <RoomDetails
           buttons={[
-            { label: "hineinschauen", variant: "secondary" },
-            { label: "book", variant: "primary" },
+            { label: "Jetzt buchen", variant: "primary" },
+            { label: "Hineinschauen", variant: "tertiary" },
           ]}
           items={["hello", "room", "details"]}
           summary="Saphir"
-          details="Lorem ipsum dolor sit amet"
+          details="Details"
           image="rooms"
         />
 
         <RoomDetails
           buttons={[
-            { label: "hineinschauen", variant: "secondary" },
-            { label: "book", variant: "primary" },
+            { label: "Jetzt buchen", variant: "primary" },
+            { label: "Hineinschauen", variant: "tertiary" },
           ]}
           items={["hello", "room", "details"]}
           summary="Diamond"
-          details="Lorem ipsum dolor sit amet"
+          details="Details"
           image="rooms"
         />
       </main>

@@ -13,6 +13,7 @@ export interface SectionProps {
   text: string;
   buttons: (ButtonProps & { href?: string })[];
   background?: ImageProps["name"];
+  applyMinHeight?: boolean;
 }
 
 export function Section({
@@ -21,6 +22,7 @@ export function Section({
   details,
   buttons,
   background,
+  applyMinHeight,
   ...props
 }:
   | SectionProps
@@ -31,7 +33,8 @@ export function Section({
   return (
     <section
       className={`
-      grow relative min-h-40vh md:basis-1/2 md:min-h-60vh flex
+      grow relative md:basis-1/2 flex
+      ${applyMinHeight ? "min-h-40vh md:min-h-60vh" : ""}
       ${details ? "group md:hover:brightness-150" : ""}
       ${background ? "bg-cover bg-no-repeat" : "bg-black"} 
       `}

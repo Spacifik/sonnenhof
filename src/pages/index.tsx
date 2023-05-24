@@ -30,6 +30,7 @@ export default function Home() {
           </div>
           <div className="md:flex md:flex-wrap">
             <Section
+              applyMinHeight
               hint="zimmer & suiten"
               title="rubin | saphir | diamond"
               text="147 Zimmer und Suiten mit wundervoller Aussicht und Balkon in einem ausgefallenen Design"
@@ -45,6 +46,7 @@ export default function Home() {
             />
 
             <Section
+              applyMinHeight
               hint="Events & Konferenzen"
               title="business | events"
               text="270m² Eventfläche mit modernster Technik"
@@ -60,6 +62,7 @@ export default function Home() {
             />
 
             <Section
+              applyMinHeight
               hint="Pool und Thermalbad"
               title="indoor | outdoor"
               text="Exklusiver Innen- und Außenpool mit Massagebereich"
@@ -75,6 +78,7 @@ export default function Home() {
             />
 
             <Section
+              applyMinHeight
               hint="Wellness & Spa"
               title="Face | Body"
               text="Luxoriöser SPA Bereich mit Sauna, Eis-Lounge, Dampfbad und Massagezentrum"
@@ -90,6 +94,7 @@ export default function Home() {
             />
 
             <Section
+              applyMinHeight
               hint="Ausflüge & Incentives"
               title="wald | natur | historie"
               text="25.000 Hektar Wald-Nationalpark & staatlich anerkannter Kurort"
