@@ -9,6 +9,7 @@ interface TextProps {
   mono?: boolean;
   dark?: boolean;
   bold?: boolean;
+  light?: boolean;
 }
 
 export function Text({
@@ -17,6 +18,7 @@ export function Text({
   mono,
   uppercase,
   bold,
+  light,
 }: TextProps): JSX.Element {
   const [size, color] = variant.split("-") as [TextSize, ThemeColor];
   return (
@@ -27,7 +29,8 @@ export function Text({
       ${mono ? "mono" : ""} 
       ${uppercase ? "uppercase" : ""} 
       ${bold ? "font-bold" : ""}
-      hover:brightness-150`}
+      ${light ? "font-light" : ""}
+      `}
     >
       {children}
     </p>

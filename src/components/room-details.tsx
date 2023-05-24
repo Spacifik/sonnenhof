@@ -32,11 +32,13 @@ export function RoomDetails({
 
   return (
     <div
-      className={`grow relative p-6 md:p-16 md:basis-1/2 md:min-h-60vh bg-black marker:hidden `}
+      className={`grow relative p-6 md:p-16 lg:px-60 md:basis-1/2 md:min-h-60vh bg-black marker:hidden `}
     >
       <MewsForm addDefaultDates>
         <div className={`flex ${open ? `pb-3 md:pb-5 lg:pb-8` : ""}`}>
-          <Text variant="big-primary">{summary}</Text>
+          <Text light variant="big-primary">
+            {summary}
+          </Text>
           {!mediumOrBigger ? (
             <>
               <span className="grow" />
@@ -60,7 +62,7 @@ export function RoomDetails({
         </div>
         {open && (
           <div className="flex flex-col gap-3 md:gap-6">
-            <Image name={image} />
+            <Image className="max-h-40vh" name={image} />
             <Text variant="medium-primary">{details}</Text>
             <ul>
               {items.map((item, index) => (
