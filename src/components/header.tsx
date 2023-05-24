@@ -15,6 +15,7 @@ import { de } from "date-fns/locale";
 import { MewsForm } from "./mews-form";
 import { useDefaultBookingDates } from "@sonnenhof/utils/use-default-booking-dates";
 import { parseDateToIso } from "@sonnenhof/utils/parse-date-to-iso";
+import { useIsMediumOrBigger } from "@sonnenhof/utils/use-is-medium-or-bigger";
 
 const TextWithValue = React.forwardRef(
   (
@@ -132,6 +133,7 @@ export function Header(): JSX.Element {
       return `${label}, ${children} Kinder`;
     }
   }, [adults, children]);
+  const isMediumOrBigger = useIsMediumOrBigger();
   const headerRef = React.useRef<HTMLElement | null>(null);
   const [headerHeight, setHeaderHeight] = React.useState("");
   React.useEffect(() => {
@@ -141,7 +143,6 @@ export function Header(): JSX.Element {
       );
     }
   }, []);
-  console.log(router.route);
   return (
     <>
       <header
@@ -273,10 +274,12 @@ export function Header(): JSX.Element {
           </div>
         </div>
       </header>
-      {router.route !== "/" && headerHeight !== "" ? (
+      {!isMediumOrBigger || (router.route !== "/" && headerHeight !== "") ? (
         <div
           className="w-full bg-black z-0 inset-0"
-          style={{ height: headerHeight }}
+          style={{
+            height: headerHeight,
+          }}
         />
       ) : null}
     </>
