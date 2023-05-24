@@ -31,6 +31,9 @@ module.exports = {
         '30vh': '30vh',
         '40vh': '40vh',
         '60vh': '60vh'
+      },
+      screens: {
+        "3xl": "1900px"
       }
     },
   },
