@@ -12,24 +12,10 @@ import { useImmer } from "use-immer";
 import { Text } from "./text";
 import { Button } from "./button";
 import { de } from "date-fns/locale";
-import { v4 } from "uuid";
-import { Stream } from "@cloudflare/stream-react";
-import { useAspectRatioBox } from "@sonnenhof/utils/use-aspect-ratio-box";
 import { MewsForm } from "./mews-form";
+import { useDefaultBookingDates } from "@sonnenhof/utils/use-default-booking-dates";
+import { parseDateToIso } from "@sonnenhof/utils/parse-date-to-iso";
 
-/**
- * Transforms date from dd.MM.yyyy  to YYYY-MM-DD
- */
-function parseDate(inputDate: string): string {
-  let parts = inputDate.split(".");
-  let date = new Date(Number(parts[2]), Number(parts[1]) - 1, Number(parts[0])); // note: months are 0-based in JavaScript
-
-  let year = date.getFullYear();
-  let month = ("0" + (date.getMonth() + 1)).slice(-2); // add leading zero if needed
-  let day = ("0" + date.getDate()).slice(-2); // add leading zero if needed
-
-  return `${year}-${month}-${day}`;
-}
 
 const TextWithValue = React.forwardRef(
   (
@@ -54,7 +40,7 @@ const TextWithValue = React.forwardRef(
           ref={ref as any}
           className="hidden"
           name={name}
-          value={parseDate(value as string)}
+          value={parseDateToIso(value as string)}
           readOnly
         />
         <Calendar className="h-4 m-auto" />
@@ -119,16 +105,13 @@ function PersonInput({
 export function Header(): JSX.Element {
   const router = useRouter();
   const { showOverlay } = useOverlay();
+  const { from, to } = useDefaultBookingDates();
   const [dates, setDates] = useImmer<{
     from: Date;
     to: Date;
   }>({
-    from: new Date(),
-    to: (() => {
-      const today = new Date();
-      today.setDate(new Date().getDate() + 7);
-      return today;
-    })(),
+    from,
+    to,
   });
   const [showPersonInput, setShowPersonInput] = React.useState(false);
   const [adults, setAdults] = useImmer(2);

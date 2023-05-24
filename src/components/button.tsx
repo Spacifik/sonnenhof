@@ -1,11 +1,11 @@
-import React, { useId } from "react";
+import React, { DOMAttributes, useId } from "react";
 import { getThemeColor } from "./theme-color";
 
 export interface ButtonProps {
   label: string;
   variant: "primary" | "secondary" | "tertiary";
   id?: string;
-  onClick?: Callback<void>;
+  onClick?: Callback<React.MouseEvent<HTMLButtonElement, MouseEvent>>;
   submit?: boolean;
 }
 
@@ -49,7 +49,7 @@ export function Button({
       <button
         className="cursor-pointer"
         id={buttonId}
-        onClick={() => onClick?.()}
+        onClick={(evt) => onClick?.(evt)}
         type={submit ? "submit" : "button"}
       />
     </div>
