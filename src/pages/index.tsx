@@ -19,10 +19,7 @@ export default function Home() {
     <>
       <Layout>
         <main className="flex min-h-[75vh] flex-col items-center scrollbar-hide bg-black w-full">
-          <div
-            className={`relative w-full h-0 top-[-25vh] z-0`}
-            style={{ paddingBottom }}
-          >
+          <div className={`relative w-full h-0 z-0`} style={{ paddingBottom }}>
             <Stream
               src="61c703f87842eae49b847d53c6b37a89"
               loop
