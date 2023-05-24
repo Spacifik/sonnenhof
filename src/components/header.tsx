@@ -16,7 +16,6 @@ import { MewsForm } from "./mews-form";
 import { useDefaultBookingDates } from "@sonnenhof/utils/use-default-booking-dates";
 import { parseDateToIso } from "@sonnenhof/utils/parse-date-to-iso";
 
-
 const TextWithValue = React.forwardRef(
   (
     {
@@ -133,135 +132,153 @@ export function Header(): JSX.Element {
       return `${label}, ${children} Kinder`;
     }
   }, [adults, children]);
+  const headerRef = React.useRef<HTMLElement | null>(null);
+  const [headerHeight, setHeaderHeight] = React.useState("");
+  React.useEffect(() => {
+    if (headerRef.current !== null) {
+      setHeaderHeight(
+        () => window.getComputedStyle(headerRef.current as HTMLElement).height
+      );
+    }
+  }, []);
+  console.log(router.route);
   return (
-    <header
-      className={`sticky top-0 z-30 bg-black ${
-        router.route === "/" ? "md:h-0" : ""
-      }`}
-    >
-      <div
-        className="flex flex-row justify-center top-0 items-center bg-black"
-        style={{
-          background:
-            "linear-gradient(rgba(0, 0, 0, 1), 80%, rgba(0, 0, 0, 0.01))",
-        }}
+    <>
+      <header
+        ref={headerRef}
+        className={`sticky top-0 z-30 bg-black`}
+        style={{ height: headerHeight !== "" ? 0 : undefined }}
       >
-        {router.route !== "/" ? (
+        <div
+          className="flex flex-row justify-center top-0 items-center bg-black"
+          style={{
+            background:
+              "linear-gradient(rgba(0, 0, 0, 1), 80%, rgba(0, 0, 0, 0.01))",
+          }}
+        >
+          {router.route !== "/" ? (
+            <Link
+              className={`cursor-pointer h-1/2 ${getThemeColor(
+                "primary"
+              )} p-3 md:p-5`}
+              href={"/"}
+            >
+              <ArrowLeft />
+            </Link>
+          ) : (
+            <div className="h-1/2  p-3 grow md:grow-0 md:p-5">
+              <ArrowLeft className="invisible" />
+            </div>
+          )}
           <Link
+            className="flex w-44 md:w-50 mx-3 lg:mx-6 max-h-[25vh]"
+            href={`/`}
+          >
+            <Logo className="h-full w-auto" />
+          </Link>
+
+          <div className="hidden md:flex grow" />
+          <MewsForm className="hidden md:flex md:gap-3 justify-end items-center max-h-[200px]">
+            <input
+              className="hidden"
+              name="mewsRoute"
+              value={personInputDirty.current ? "rooms" : ""}
+              readOnly
+            />
+            <div className="max-h-1/2">
+              <DatePicker
+                selected={dates.from}
+                onChange={(newDate) => {
+                  if (newDate) {
+                    setDates((currentDates) => {
+                      currentDates.from = newDate;
+
+                      if (currentDates.to && +newDate > +currentDates.to) {
+                        const copy = new Date(newDate);
+                        copy.setDate(copy.getDate() + 1);
+                        currentDates.to = copy;
+                      }
+                    });
+                  }
+                }}
+                dateFormat="dd.MM.yyyy"
+                name="mewsStart"
+                locale={de}
+                customInput={<TextWithValue />}
+                minDate={React.useMemo(() => new Date(), [])}
+              />
+            </div>
+            <div className="max-h-1/2">
+              <DatePicker
+                selected={dates.to}
+                onChange={(newDate) => {
+                  if (newDate) {
+                    setDates((currentDates) => {
+                      currentDates.to = newDate;
+
+                      if (currentDates.from && +newDate < +currentDates.from) {
+                        currentDates.from = newDate;
+                      }
+                    });
+                  }
+                }}
+                dateFormat="dd.MM.yyyy"
+                name="mewsEnd"
+                locale={de}
+                customInput={<TextWithValue />}
+                minDate={React.useCallback(() => {
+                  const today = new Date();
+                  today.setDate(dates.from.getDate() + 1);
+                  return today;
+                }, [dates.from])()}
+              />
+            </div>
+            <div className="max-h-1/2">
+              <div
+                className="gap-2 cursor-pointer border p-2 border-primary-regular text-primary-regular relative whitespace-nowrap hidden lg:flex  hover:brightness-150"
+                onClick={() => setShowPersonInput((shown) => !shown)}
+              >
+                <Text variant="tiny-primary">{guestLabel}</Text>
+                <input className="hidden" readOnly />
+                <User className="h-4 m-auto" />
+                {showPersonInput ? (
+                  <div className="absolute top-[50px] left-0 border border-primary-regular p-4 flex gap-4 flex-col bg-black">
+                    <PersonInput
+                      name="mewsAdultCount"
+                      value={adults}
+                      onChange={(newAdults) => setAdults(newAdults)}
+                    />
+                    <PersonInput
+                      name="mewsChildCount"
+                      value={children}
+                      onChange={(newChildren) => setChildren(newChildren)}
+                    />
+                  </div>
+                ) : null}
+              </div>
+            </div>
+
+            <div className="grow-0 shrink-0 basis-[100px] max-h-1/2 h-1/2">
+              <Button label="Jetzt buchen" variant="primary" submit />
+            </div>
+          </MewsForm>
+
+          <div
             className={`cursor-pointer h-1/2 ${getThemeColor(
               "primary"
-            )} p-3 md:p-5`}
-            href={"/"}
+            )} flex-grow justify-end flex p-3 md:p-5 md:grow-0`}
+            onClick={() => showOverlay(<HamburgerOverlay />)}
           >
-            <ArrowLeft />
-          </Link>
-        ) : (
-          <div className="h-1/2  p-3 grow md:grow-0 md:p-5">
-            <ArrowLeft className="invisible" />
+            <Menu />
           </div>
-        )}
-        <Link
-          className="flex w-44 md:w-50 mx-3 lg:mx-6 max-h-[25vh]"
-          href={`/`}
-        >
-          <Logo className="h-full w-auto" />
-        </Link>
-
-        <div className="hidden md:flex grow" />
-        <MewsForm className="hidden md:flex md:gap-3 justify-end items-center max-h-[200px]">
-          <input
-            className="hidden"
-            name="mewsRoute"
-            value={personInputDirty.current ? "rooms" : ""}
-            readOnly
-          />
-          <div className="max-h-1/2">
-            <DatePicker
-              selected={dates.from}
-              onChange={(newDate) => {
-                if (newDate) {
-                  setDates((currentDates) => {
-                    currentDates.from = newDate;
-
-                    if (currentDates.to && +newDate > +currentDates.to) {
-                      const copy = new Date(newDate);
-                      copy.setDate(copy.getDate() + 1);
-                      currentDates.to = copy;
-                    }
-                  });
-                }
-              }}
-              dateFormat="dd.MM.yyyy"
-              name="mewsStart"
-              locale={de}
-              customInput={<TextWithValue />}
-              minDate={React.useMemo(() => new Date(), [])}
-            />
-          </div>
-          <div className="max-h-1/2">
-            <DatePicker
-              selected={dates.to}
-              onChange={(newDate) => {
-                if (newDate) {
-                  setDates((currentDates) => {
-                    currentDates.to = newDate;
-
-                    if (currentDates.from && +newDate < +currentDates.from) {
-                      currentDates.from = newDate;
-                    }
-                  });
-                }
-              }}
-              dateFormat="dd.MM.yyyy"
-              name="mewsEnd"
-              locale={de}
-              customInput={<TextWithValue />}
-              minDate={React.useCallback(() => {
-                const today = new Date();
-                today.setDate(dates.from.getDate() + 1);
-                return today;
-              }, [dates.from])()}
-            />
-          </div>
-          <div className="max-h-1/2">
-            <div
-              className="gap-2 cursor-pointer border p-2 border-primary-regular text-primary-regular relative whitespace-nowrap hidden lg:flex  hover:brightness-150"
-              onClick={() => setShowPersonInput((shown) => !shown)}
-            >
-              <Text variant="tiny-primary">{guestLabel}</Text>
-              <input className="hidden" readOnly />
-              <User className="h-4 m-auto" />
-              {showPersonInput ? (
-                <div className="absolute top-[50px] left-0 border border-primary-regular p-4 flex gap-4 flex-col bg-black">
-                  <PersonInput
-                    name="mewsAdultCount"
-                    value={adults}
-                    onChange={(newAdults) => setAdults(newAdults)}
-                  />
-                  <PersonInput
-                    name="mewsChildCount"
-                    value={children}
-                    onChange={(newChildren) => setChildren(newChildren)}
-                  />
-                </div>
-              ) : null}
-            </div>
-          </div>
-
-          <div className="grow-0 shrink-0 basis-[100px] max-h-1/2 h-1/2">
-            <Button label="Jetzt buchen" variant="primary" submit />
-          </div>
-        </MewsForm>
-
-        <div
-          className={`cursor-pointer h-1/2 ${getThemeColor(
-            "primary"
-          )} flex-grow justify-end flex p-3 md:p-5 md:grow-0`}
-          onClick={() => showOverlay(<HamburgerOverlay />)}
-        >
-          <Menu />
         </div>
-      </div>
-    </header>
+      </header>
+      {router.route !== "/" && headerHeight !== "" ? (
+        <div
+          className="w-full bg-black z-0 inset-0"
+          style={{ height: headerHeight }}
+        />
+      ) : null}
+    </>
   );
 }
