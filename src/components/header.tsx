@@ -181,7 +181,7 @@ export function Header(): JSX.Element {
 
         <div className="hidden md:flex grow" />
         <form
-          className="hidden md:flex md:gap-3 justify-end items-center"
+          className="hidden md:flex md:gap-3 justify-end items-center max-h-[200px]"
           method="GET"
           action="https://app.mews.com/distributor/9c4dca19-3942-46a3-8f37-affe006f4062"
           target="_blank"
@@ -198,7 +198,7 @@ export function Header(): JSX.Element {
             value={personInputDirty.current ? "rooms" : ""}
             readOnly
           />
-          <div>
+          <div className="max-h-1/2">
             <DatePicker
               selected={dates.from}
               onChange={(newDate) => {
@@ -221,7 +221,7 @@ export function Header(): JSX.Element {
               minDate={React.useMemo(() => new Date(), [])}
             />
           </div>
-          <div>
+          <div className="max-h-1/2">
             <DatePicker
               selected={dates.to}
               onChange={(newDate) => {
@@ -246,7 +246,7 @@ export function Header(): JSX.Element {
               }, [dates.from])()}
             />
           </div>
-          <div>
+          <div className="max-h-1/2">
             <div
               className="gap-2 cursor-pointer border p-2 border-primary-regular text-primary-regular relative whitespace-nowrap hidden lg:flex  hover:brightness-150"
               onClick={() => setShowPersonInput((shown) => !shown)}
@@ -271,7 +271,7 @@ export function Header(): JSX.Element {
             </div>
           </div>
 
-          <div className="grow-0 shrink-0 basis-[100px]">
+          <div className="grow-0 shrink-0 basis-[100px] max-h-1/2 h-1/2">
             <Button label="Jetzt buchen" variant="primary" submit />
           </div>
         </form>
