@@ -1,6 +1,5 @@
 import React, { useId } from "react";
-import { v4 } from "uuid";
-import { getHoverThemeColor, getThemeColor } from "./theme-color";
+import { getThemeColor } from "./theme-color";
 
 export interface ButtonProps {
   label: string;
@@ -27,7 +26,7 @@ export function Button({
   const textColor = getThemeColor(variant === "tertiary" ? "primary" : "light");
   const bgColors =
     variant === "primary"
-      ? [getThemeColor("primary", true), getHoverThemeColor("primary", true)]
+      ? [getThemeColor("primary", true)]
       : variant === "tertiary"
       ? [
           "bg-transparent",
@@ -36,14 +35,13 @@ export function Button({
           "border-primary-regular",
           "hover:text-primary-light",
           "hover:border-primary-light",
-          "hover:brightness-150",
         ]
-      : [(getThemeColor("dark", true), getHoverThemeColor("dark", true))];
+      : [getThemeColor("dark", true)];
   return (
     <div
       className={` ${textColor} ${bgColors.join(
         " "
-      )} p-2 bold cursor-pointer text-center w-fit whitespace-nowrap`}
+      )} p-2 hover:brightness-125 bold cursor-pointer text-center w-fit whitespace-nowrap`}
     >
       <label className="cursor-pointer" htmlFor={buttonId}>
         {label}

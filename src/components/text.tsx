@@ -21,9 +21,13 @@ export function Text({
   const [size, color] = variant.split("-") as [TextSize, ThemeColor];
   return (
     <p
-      className={`${getVariantSize(size)} ${getThemeColor(color)}  ${
-        mono ? "mono" : ""
-      } ${uppercase ? "uppercase" : ""} ${bold ? "font-bold" : ""}`}
+      className={`
+      ${getVariantSize(size)} 
+      ${getThemeColor(color)}  
+      ${mono ? "mono" : ""} 
+      ${uppercase ? "uppercase" : ""} 
+      ${bold ? "font-bold" : ""}
+      hover:brightness-150`}
     >
       {children}
     </p>
