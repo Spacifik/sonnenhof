@@ -150,7 +150,8 @@ export function Header(): JSX.Element {
     <header
       className="bg-transparent sticky top-0 z-30 "
       style={{
-        background: "linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.01))",
+        background:
+          "linear-gradient(rgba(0, 0, 0, 1), 80%, rgba(0, 0, 0, 0.01))",
       }}
     >
       <div className="flex flex-row justify-center top-0 items-center">

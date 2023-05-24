@@ -21,11 +21,12 @@ export default function Page(): JSX.Element {
           <Text variant="small-primary">
             270m² Eventfläche mit modernster Technik
           </Text>
-          <TextAsideMediumOrLarger
-            right
-            imageName="events"
-            text="Herzlich willkommen zu unseren Events und Konferenzen im bayrischen Wald, in unserem exquisiten Edelhotel. Mit einer großzügigen Eventfläche von 270m² und modernster Technik bieten wir Ihnen den idealen Ort für Veranstaltungen aller Art."
-          />
+          <TextAsideMediumOrLarger right imageName="events">
+            Herzlich willkommen zu unseren Events und Konferenzen im bayrischen
+            Wald, in unserem exquisiten Edelhotel. Mit einer großzügigen
+            Eventfläche von 270m² und modernster Technik bieten wir Ihnen den
+            idealen Ort für Veranstaltungen aller Art.
+          </TextAsideMediumOrLarger>
           <Text variant="small-primary">
             Unser Hotel ist stolz darauf, eine perfekte Kulisse für Ihre
             geschäftlichen oder privaten Anlässe zu bieten. Die Eventfläche
@@ -44,10 +45,14 @@ export default function Page(): JSX.Element {
             einzelnen Gast und sorgt für einen reibungslosen Ablauf.
           </Text>
 
-          <TextAsideMediumOrLarger
-            imageName="events"
-            text="Neben der erstklassigen Eventfläche bietet unser Edelhotel im bayrischen Wald eine einzigartige Umgebung für Ihre Teilnehmer. Der malerische bayrische Wald mit seinen majestätischen Bergen und idyllischen Tälern schafft eine inspirierende Atmosphäre für Ihre Veranstaltung. In den Pausen können Ihre Gäste die frische Luft genießen und die natürliche Schönheit der Umgebung erkunden."
-          />
+          <TextAsideMediumOrLarger imageName="events">
+            Neben der erstklassigen Eventfläche bietet unser Edelhotel im
+            bayrischen Wald eine einzigartige Umgebung für Ihre Teilnehmer. Der
+            malerische bayrische Wald mit seinen majestätischen Bergen und
+            idyllischen Tälern schafft eine inspirierende Atmosphäre für Ihre
+            Veranstaltung. In den Pausen können Ihre Gäste die frische Luft
+            genießen und die natürliche Schönheit der Umgebung erkunden.
+          </TextAsideMediumOrLarger>
           <Text variant="small-primary">
             Nach einem erfolgreichen Tag voller Meetings und Konferenzen bietet
             unser Hotel luxuriöse Zimmer und erstklassige Annehmlichkeiten für

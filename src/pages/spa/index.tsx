@@ -19,11 +19,14 @@ export default function Page(): JSX.Element {
             Massagezentrum
           </Text>
 
-          <TextAsideMediumOrLarger
-            right
-            imageName="wellness"
-            text="Unser luxuriöser Spa-Bereich erwartet Sie mit einer Vielzahl von erstklassigen Einrichtungen. Beginnen Sie Ihre Wellnessreise mit einem Besuch unserer Sauna, wo Sie die wohltuende Wärme genießen und Ihre Sinne beleben können. Nach einem erholsamen Saunagang können Sie sich in unserer erfrischenden Eis-Lounge abkühlen und Ihre Haut revitalisieren."
-          />
+          <TextAsideMediumOrLarger right imageName="wellness">
+            Unser luxuriöser Spa-Bereich erwartet Sie mit einer Vielzahl von
+            erstklassigen Einrichtungen. Beginnen Sie Ihre Wellnessreise mit
+            einem Besuch unserer Sauna, wo Sie die wohltuende Wärme genießen und
+            Ihre Sinne beleben können. Nach einem erholsamen Saunagang können
+            Sie sich in unserer erfrischenden Eis-Lounge abkühlen und Ihre Haut
+            revitalisieren.
+          </TextAsideMediumOrLarger>
 
           <Text variant="small-primary">
             Im Dampfbad können Sie in eine Welt der Entspannung eintauchen und
@@ -42,10 +45,12 @@ export default function Page(): JSX.Element {
             kommt.
           </Text>
 
-          <TextAsideMediumOrLarger
-            imageName="wellness"
-            text="Ob Sie ein strahlendes Gesicht wünschen oder Ihrem Körper eine Auszeit gönnen möchten, unser Wellness- und Spa-Bereich bietet Ihnen die besten Voraussetzungen für Ihr Wohlbefinden. Tauchen Sie ein in eine Welt der Entspannung und lassen Sie den Alltag hinter sich."
-          />
+          <TextAsideMediumOrLarger imageName="wellness">
+            Ob Sie ein strahlendes Gesicht wünschen oder Ihrem Körper eine
+            Auszeit gönnen möchten, unser Wellness- und Spa-Bereich bietet Ihnen
+            die besten Voraussetzungen für Ihr Wohlbefinden. Tauchen Sie ein in
+            eine Welt der Entspannung und lassen Sie den Alltag hinter sich.
+          </TextAsideMediumOrLarger>
 
           <Text variant="small-primary">
             Gönnen Sie sich das Beste und erleben Sie unvergessliche Momente im

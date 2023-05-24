@@ -18,11 +18,13 @@ export default function Page(): JSX.Element {
             Exclusiver Innen- und Außenpool mit Massagebereich
           </Text>
 
-          <TextAsideMediumOrLarger
-            right
-            imageName="pool"
-            text="Unser Hotel verfügt über einen beeindruckenden Innen- und Außenpool, die exklusiv für unsere Gäste zugänglich sind. Im Innenbereich erwartet Sie ein stilvoll gestalteter Poolbereich, der zum Schwimmen und Entspannen einlädt. Tauchen Sie ein in das klare, erfrischende Wasser und lassen Sie den Alltagsstress hinter sich."
-          />
+          <TextAsideMediumOrLarger right imageName="pool">
+            Unser Hotel verfügt über einen beeindruckenden Innen- und Außenpool,
+            die exklusiv für unsere Gäste zugänglich sind. Im Innenbereich
+            erwartet Sie ein stilvoll gestalteter Poolbereich, der zum Schwimmen
+            und Entspannen einlädt. Tauchen Sie ein in das klare, erfrischende
+            Wasser und lassen Sie den Alltagsstress hinter sich.
+          </TextAsideMediumOrLarger>
 
           <Text variant="small-primary">
             Für diejenigen, die die frische Luft und die natürliche Umgebung
@@ -41,10 +43,13 @@ export default function Page(): JSX.Element {
             eintauchen.
           </Text>
 
-          <TextAsideMediumOrLarger
-            imageName="pool"
-            text="Unser Edelhotel im bayrischen Wald bietet Ihnen somit nicht nur luxuriöse Unterkünfte und erstklassigen Service, sondern auch ein exquisites Pool- und Thermalbaderlebnis. Genießen Sie die perfekte Kombination aus Wellness, Erholung und der natürlichen Schönheit der Umgebung."
-          />
+          <TextAsideMediumOrLarger imageName="pool">
+            Unser Edelhotel im bayrischen Wald bietet Ihnen somit nicht nur
+            luxuriöse Unterkünfte und erstklassigen Service, sondern auch ein
+            exquisites Pool- und Thermalbaderlebnis. Genießen Sie die perfekte
+            Kombination aus Wellness, Erholung und der natürlichen Schönheit der
+            Umgebung.
+          </TextAsideMediumOrLarger>
 
           <Text variant="small-primary">
             Ob Sie einen aktiven Tag im bayrischen Wald verbracht haben oder
