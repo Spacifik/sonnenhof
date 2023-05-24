@@ -24,7 +24,6 @@ export function RoomDetails({
   buttons,
 }: RoomDetailsProps): JSX.Element {
   const mediumOrBigger = useIsMediumOrBigger();
-  console.log(mediumOrBigger);
   const [open, setOpen] = React.useState(mediumOrBigger);
   React.useEffect(() => {
     setOpen(() => mediumOrBigger);
