@@ -44,7 +44,10 @@ const TextWithValue = React.forwardRef(
     ref
   ) => {
     return (
-      <div onClick={() => onClick?.()} className="flex gap-2 cursor-pointer">
+      <div
+        onClick={() => onClick?.()}
+        className="flex gap-2 cursor-pointer hover:brightness-150"
+      >
         <Text variant="tiny-primary">{value as string}</Text>
         <input
           ref={ref as any}
@@ -245,7 +248,7 @@ export function Header(): JSX.Element {
           </div>
           <div>
             <div
-              className="gap-2 cursor-pointer border p-2 border-primary-regular text-primary-regular relative whitespace-nowrap hidden lg:flex"
+              className="gap-2 cursor-pointer border p-2 border-primary-regular text-primary-regular relative whitespace-nowrap hidden lg:flex  hover:brightness-150"
               onClick={() => setShowPersonInput((shown) => !shown)}
             >
               <Text variant="tiny-primary">{guestLabel}</Text>
