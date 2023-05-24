@@ -151,13 +151,17 @@ export function Header(): JSX.Element {
   }, [adults, children]);
   return (
     <header
-      className="bg-transparent sticky top-0 z-30 "
-      style={{
-        background:
-          "linear-gradient(rgba(0, 0, 0, 1), 80%, rgba(0, 0, 0, 0.01))",
-      }}
+      className={`sticky top-0 z-30 bg-black ${
+        router.route === "/" ? "h-0" : ""
+      }`}
     >
-      <div className="flex flex-row justify-center top-0 items-center">
+      <div
+        className="flex flex-row justify-center top-0 items-center bg-black"
+        style={{
+          background:
+            "linear-gradient(rgba(0, 0, 0, 1), 80%, rgba(0, 0, 0, 0.01))",
+        }}
+      >
         {router.route !== "/" ? (
           <Link
             className={`cursor-pointer h-1/2 ${getThemeColor(
