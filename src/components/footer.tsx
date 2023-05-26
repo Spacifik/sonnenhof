@@ -1,6 +1,8 @@
 import React from "react";
 import { Text } from "./text";
 import Link from "next/link";
+import { MediaIconWrapper } from "./media-icon-wrapper";
+import { FacebookIcon, InstagramIcon, TikTokIcon, TwitterIcon } from "./media-icons";
 
 export interface FooterProps {
   phone: string;
@@ -23,32 +25,10 @@ export function Footer({ phone, email, links }: FooterProps): JSX.Element {
         </a>
       </div>
       <div className="flex gap-3 md:gap-5">
-        <MediaIconWrapper>
-          <a
-            href="https://www.instagram.com/michelhotel/"
-            className="fab fa-instagram"
-          />
-        </MediaIconWrapper>
-        <MediaIconWrapper>
-          <a
-            href="https://twitter.com/michelhotels"
-            className="fab fa-twitter"
-          />
-        </MediaIconWrapper>
-
-        <MediaIconWrapper>
-          <a
-            href="https://www.facebook.com/michelhotel"
-            className="fab fa-facebook-f"
-          />
-        </MediaIconWrapper>
-
-        <MediaIconWrapper>
-          <a
-            href="https://www.tiktok.com/@michelhotel"
-            className="fab fa-tiktok "
-          />
-        </MediaIconWrapper>
+        <InstagramIcon />
+        <TwitterIcon />
+        <FacebookIcon />
+        <TikTokIcon />
       </div>
       <div className="flex justify-around flex-col md:flex-row gap-3 md:gap-0">
         {links.map((link) =>
@@ -68,22 +48,5 @@ export function Footer({ phone, email, links }: FooterProps): JSX.Element {
         )}
       </div>
     </footer>
-  );
-}
-
-function MediaIconWrapper({
-  className,
-  children,
-}: React.PropsWithChildren<{ className?: string }>): JSX.Element {
-  return (
-    <div
-      className={`${className} md:hover:brightness-150 cursor-pointer rounded-full flex items-center justify-center text-primary-regular
-      text-2xl w-12 h-12 
-      xl:text-3xl w-14 h-14
-      2xl:text-4xl  w-20 h-16
-      `}
-    >
-      {children}
-    </div>
   );
 }

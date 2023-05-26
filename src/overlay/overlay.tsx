@@ -26,7 +26,7 @@ export function Overlay({
 
   return (
     <div
-      className=" overlay relative w-full h-screen top-0 bg-black bg-opacity-80 flex justify-center items-center z-50 text-primary"
+      className=" overlay relative w-full h-screen top-0 bg-black bg-opacity-80 flex justify-center z-50 text-primary"
       onClick={onClose}
       style={{ top: `${scrollPosition}px` }}
     >
