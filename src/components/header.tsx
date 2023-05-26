@@ -43,7 +43,7 @@ const TextWithValue = React.forwardRef(
           value={parseDateToIso(value as string)}
           readOnly
         />
-        <Calendar className="h-4 m-auto" />
+        <Calendar className="h-4 m-auto hidden lg:block" />
       </div>
     );
   }

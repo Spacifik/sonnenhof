@@ -1,8 +1,12 @@
 import { MediaIconWrapper } from "./media-icon-wrapper";
 
-export function InstagramIcon(): JSX.Element {
+interface IconProps {
+  className?: string;
+}
+
+export function InstagramIcon({ className }: IconProps): JSX.Element {
   return (
-    <MediaIconWrapper>
+    <MediaIconWrapper className={className}>
       <a
         href="https://www.instagram.com/michelhotel/"
         className="fab fa-instagram"
@@ -11,17 +15,17 @@ export function InstagramIcon(): JSX.Element {
   );
 }
 
-export function TwitterIcon(): JSX.Element {
+export function TwitterIcon({ className }: IconProps): JSX.Element {
   return (
-    <MediaIconWrapper>
+    <MediaIconWrapper className={className}>
       <a href="https://twitter.com/michelhotels" className="fab fa-twitter" />
     </MediaIconWrapper>
   );
 }
 
-export function FacebookIcon(): JSX.Element {
+export function FacebookIcon({ className }: IconProps): JSX.Element {
   return (
-    <MediaIconWrapper>
+    <MediaIconWrapper className={className}>
       <a
         href="https://www.facebook.com/michelhotel"
         className="fab fa-facebook-f"
@@ -30,9 +34,9 @@ export function FacebookIcon(): JSX.Element {
   );
 }
 
-export function TikTokIcon(): JSX.Element {
+export function TikTokIcon({ className }: IconProps): JSX.Element {
   return (
-    <MediaIconWrapper>
+    <MediaIconWrapper className={className}>
       <a
         href="https://www.tiktok.com/@michelhotel"
         className="fab fa-tiktok "

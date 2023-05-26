@@ -1,8 +1,12 @@
 import React from "react";
 import { Text } from "./text";
 import Link from "next/link";
-import { MediaIconWrapper } from "./media-icon-wrapper";
-import { FacebookIcon, InstagramIcon, TikTokIcon, TwitterIcon } from "./media-icons";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  TikTokIcon,
+  TwitterIcon,
+} from "./media-icons";
 
 export interface FooterProps {
   phone: string;
@@ -25,10 +29,10 @@ export function Footer({ phone, email, links }: FooterProps): JSX.Element {
         </a>
       </div>
       <div className="flex gap-3 md:gap-5">
-        <InstagramIcon />
-        <TwitterIcon />
-        <FacebookIcon />
-        <TikTokIcon />
+        <InstagramIcon className="align-center justify-center" />
+        <TwitterIcon className="align-center justify-center" />
+        <FacebookIcon className="align-center justify-center" />
+        <TikTokIcon className="align-center justify-center" />
       </div>
       <div className="flex justify-around flex-col md:flex-row gap-3 md:gap-0">
         {links.map((link) =>

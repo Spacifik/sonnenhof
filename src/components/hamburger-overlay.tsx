@@ -10,7 +10,7 @@ import {
 
 export function HamburgerOverlay(): JSX.Element {
   return (
-    <div className="w-full flex flex-col-reverse md:flex-row justify-space-around mt-20 md:mt-0">
+    <div className="w-full flex flex-col-reverse md:flex-row justify-center lg:justify-space-around">
       <div className="basis-[40%] shrink flex justify-between flex-col pl-10 xl:pl-20">
         <div className="hidden md:flex" />
         <div className="flex flex-col gap-3">
@@ -37,14 +37,14 @@ export function HamburgerOverlay(): JSX.Element {
           <TikTokIcon />
         </div>
       </div>
-      <div className="basis-[50%] grow justify-center flex flex-col  pl-10 md:pl-0">
-        <div className="flex flex-col gap-2 md:flex-row md:gap-0">
-          <div className="md:border-r-2 pe-2 me-2 border-primary-regular xl:pe-4 xl:me-4">
+      <div className="basis-[50%] grow justify-center flex flex-col pl-10 md:pl-0">
+        <div className="flex flex-col gap-2 lg:flex-row lg:gap-0">
+          <div className="lg:border-r-2 pe-2 me-2 border-primary-regular xl:pe-4 xl:me-4">
             <Text variant="tiny-primary" mono uppercase bold noWrap>
               Zimmer buchen
             </Text>
           </div>
-          <div className="md:border-r-2  pe-2 me-2 border-primary-regular xl:pe-4 xl:me-4">
+          <div className="lg:border-r-2  pe-2 me-2 border-primary-regular xl:pe-4 xl:me-4">
             <Text variant="tiny-primary" mono uppercase bold noWrap>
               Tisch reservieren
             </Text>
