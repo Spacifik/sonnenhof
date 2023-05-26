@@ -125,12 +125,28 @@ export default function Home() {
             />
           </div>
           <br />
-          <div className="flex px-10 pt-10 pb-5 md:px-16 md:pt-16 md:pb-10 w-full">
+          <div
+            className={`
+          flex px-10 pt-10 pb-5 w-full
+           md:px-16 md:pt-16 md:pb-10
+           xl:px-32 xl:pt-16 xl:pb-10
+          2xl:px-40 2xl:pb-20
+          `}
+          >
             <Text variant="medium-primary" mono uppercase bold>
               Specials
             </Text>
           </div>
-          <div className="grid grid-cols-1 grid-rows-1 md:grid-cols-3 gap-y-20 px-10 pb-5 gap-8 md:px-16 md:pb-10  md:gap-12 lg:gap-20">
+          <div
+            className={`
+          grid grid-cols-1 grid-rows-1
+          gap-y-20 px-10 pb-5 gap-8
+          md:grid-cols-3  md:px-16 md:pb-10  md:gap-12
+           lg:gap-20
+           xl:gap-24  xl:px-32  xl:pb-20
+          2xl:gap-28 2xl:px-40 2xl:pb-24
+          3xl:gap-32`}
+          >
             <Special
               title="Hochzeitspaket"
               text="Erleben Sie einen unvergesslichen Tag"

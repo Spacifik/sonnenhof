@@ -34,7 +34,7 @@ export function Section({
     <section
       className={`
       grow relative md:basis-1/2 flex
-      ${applyMinHeight ? "min-h-40vh md:min-h-60vh 2xl:min-h-40vh" : ""}
+      ${applyMinHeight ? "min-h-40vh md:min-h-60vh xl:min-h-40vh" : ""}
       ${details ? "group md:hover:brightness-150" : ""}
       ${background ? "bg-cover bg-no-repeat" : "bg-black"} 
       `}
