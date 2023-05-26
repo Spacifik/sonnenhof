@@ -7,12 +7,13 @@ export default function Rooms(): JSX.Element {
   const items = [
     { content: "- Kingsize bed" },
     { content: "- Flatscreen inklusive Pay TV" },
-    { content: "- Apple TV" },
+    { content: "- Safe" },
+    { content: "- Kühlschrank" },
     { content: "- Highspeed WLAN" },
     { content: "- Bluetooth sound system" },
     { content: "- Nespresso machine" },
     { content: "- Flasche Wasser inklusive" },
-    { content: "- Bath amenities" },
+    { content: "- Begehbare Dusche und Badezubehör" },
     { content: "- Wake up service" },
     { content: "- Pillow service" },
     { content: "- Bügeleisen und -brett auf Anfrage" },
@@ -28,7 +29,7 @@ export default function Rooms(): JSX.Element {
           text="Some text"
           buttons={[]}
         />
-        <Section title="Room essentials" buttons={[]}>
+        <Section title="Grundausstattung" buttons={[]}>
           <Text variant="small-primary">
             Unsere Zimmer und Suiten sind standardmäßig ausgestattet mit:
           </Text>
@@ -50,7 +51,7 @@ export default function Rooms(): JSX.Element {
           </div>
         </Section>
         <Section
-          title="Room categories"
+          title="Zimmerkategorien"
           text="Sollten Sie unter Allergien leiden, bieten wir Ihnen gerne nach Verfügbarkeit ein Allergikerzimmer mit spezieller Ausstattung und auf Wunsch sogar mit Luftreinigungsgerät an – einfach bei der Hotelbuchung angeben."
           buttons={[]}
         />
@@ -62,17 +63,7 @@ export default function Rooms(): JSX.Element {
             ]}
             summary="Comfort King - 22m²"
             details="Komfortables 22m² Nichtraucherzimmer mit Balkon und allergikerfreundlichem Holzboden"
-            items={[
-              "Kingsize Bett",
-              "Klimaanlage",
-              "Begehbare Dusche",
-              "Safe",
-              "Wifi",
-              "Lan",
-              "Smart TV",
-              "Kühlschrank",
-              "Haartrockner",
-            ]}
+            items={["22m²", "Begehbare Dusche", "Kühlschrank"]}
             image="rooms"
           />
 
@@ -83,17 +74,7 @@ export default function Rooms(): JSX.Element {
             ]}
             summary="Superior King - 25,5m²"
             details="Premium 25,5m² Nichtraucherzimmer mit Balkon und allergikerfreundlichem Holzboden"
-            items={[
-              "Kingsize Bett",
-              "Klimaanlage",
-              "Begehbare Dusche",
-              "Safe",
-              "Wifi",
-              "Lan",
-              "Smart TV",
-              "Kühlschrank",
-              "Haartrockner",
-            ]}
+            items={["25,5m²", "Begehbare Dusche", "Kühlschrank"]}
             image="rooms"
           />
         </div>
