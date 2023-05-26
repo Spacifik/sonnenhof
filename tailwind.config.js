@@ -33,6 +33,7 @@ module.exports = {
         '60vh': '60vh'
       },
       screens: {
+        "2xl": "1700px",
         "3xl": "1900px"
       }
     },

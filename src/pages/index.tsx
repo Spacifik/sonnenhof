@@ -28,7 +28,7 @@ export default function Home() {
               className="absolute w-full h-full object-cover"
             />
           </div>
-          <div className="md:flex md:flex-wrap">
+          <div className="md:flex md:flex-wrap 3xl:max-w-[75vw]">
             <Section
               applyMinHeight
               hint="zimmer & suiten"
