@@ -19,6 +19,11 @@ module.exports = {
           light: "#e5c245"
         }
       },
+      fontSize: {
+        '6xl': '4rem',
+        '7xl': '5rem',
+        '8xl': '6rem',
+      },
       height: {
         "25vh": "25vh"
       },

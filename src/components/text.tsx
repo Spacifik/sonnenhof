@@ -1,6 +1,6 @@
 import { ThemeColor, getThemeColor } from "./theme-color";
 
-type TextSize = "big" | "medium" | "small" | "tiny";
+type TextSize = "huge" | "big" | "medium" | "small" | "tiny" | "tiniest";
 
 interface TextProps {
   variant: UnionString<TextSize, ThemeColor>;
@@ -10,6 +10,7 @@ interface TextProps {
   dark?: boolean;
   bold?: boolean;
   light?: boolean;
+  noWrap?: boolean;
 }
 
 export function Text({
@@ -19,6 +20,7 @@ export function Text({
   uppercase,
   bold,
   light,
+  noWrap
 }: TextProps): JSX.Element {
   const [size, color] = variant.split("-") as [TextSize, ThemeColor];
   return (
@@ -30,6 +32,7 @@ export function Text({
       ${uppercase ? "uppercase" : ""} 
       ${bold ? "font-bold" : ""}
       ${light ? "font-light" : ""}
+      ${noWrap ? "whitespace-nowrap" : ""}
       `}
     >
       {children}
@@ -39,6 +42,8 @@ export function Text({
 
 function getVariantSize(size: TextSize): string {
   switch (size) {
+    case "tiniest":
+      return "text-xs md:text-xs lg:text-sm xl:text-base 2xl:text-lg";
     case "tiny":
       return "text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl";
     case "small":
@@ -46,6 +51,8 @@ function getVariantSize(size: TextSize): string {
     case "medium":
       return "text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl";
     case "big":
-      return "text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl";
+      return "text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl";
+    case "huge":
+      return "text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl";
   }
 }

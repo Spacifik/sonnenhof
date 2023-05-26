@@ -28,13 +28,13 @@ export default function Home() {
               className="absolute w-full h-full object-cover"
             />
           </div>
-          <div className="md:flex md:flex-wrap 3xl:max-w-[75vw]">
+          <div className="md:flex md:flex-wrap 3xl:max-w-[75vw] w-full">
             <Section
               applyMinHeight
               hint="zimmer & suiten"
-              title="rubin | saphir | diamond"
-              text="147 Zimmer und Suiten mit wundervoller Aussicht und Balkon in einem ausgefallenen Design"
-              details="In unserem Luxushotel bieten wir 147 stilvolle Zimmer und Suiten mit Aussicht und Balkonen. Moderner Komfort trifft auf Ästhetik. Genießen Sie user Gourmet-Restaurant, den Wellnessbereich und Outdoor-Aktivitäten."
+              title="Royals"
+              text="147"
+              details="147 stilvolle Zimmer und Suiten mit Aussicht und Balkonen. Moderner Komfort trifft auf Ästhetik."
               background="rooms"
               buttons={[
                 {
@@ -48,9 +48,9 @@ export default function Home() {
             <Section
               applyMinHeight
               hint="Events & Konferenzen"
-              title="business | events"
-              text="270m² Eventfläche mit modernster Technik"
-              details="Unser Hotel hat 270m² Eventfläche für Veranstaltungen. Modernste Technik ermöglicht Präsentationen und Feiern. Erfahrene Planer gestalten Events individuell, ansprechendes Design und aufmerksames Personal inklusive."
+              title="business"
+              text="270"
+              details="270m² Eventfläche. Modernste Technik ermöglicht Präsentationen und Feiern. Erfahrene Planer gestalten Events individuell."
               background="events"
               buttons={[
                 {
@@ -63,10 +63,10 @@ export default function Home() {
 
             <Section
               applyMinHeight
-              hint="Pool und Thermalbad"
-              title="indoor | outdoor"
-              text="Exklusiver Innen- und Außenpool mit Massagebereich"
-              details="Exklusive Innen- und Außenpools bieten Entspannung. Der angrenzende Massagebereich verwöhnt und fördert das Wohlbefinden. Stilvolles Ambiente, wohltuende Wasserlandschaften und professionelle Massagen für unvergessliche Erlebnisse."
+              hint="indoor & outdoor"
+              title="Pool"
+              text="28"
+              details="Pool und angrenzender Massagebereich verwöhnen und fördern das Wohlbefinden. Ein stilvolles Ambiente für unvergessliche Erlebnisse."
               background="pool"
               buttons={[
                 {
@@ -79,10 +79,10 @@ export default function Home() {
 
             <Section
               applyMinHeight
-              hint="Wellness & Spa"
-              title="Face | Body"
-              text="Luxoriöser SPA Bereich mit Sauna, Eis-Lounge, Dampfbad und Massagezentrum"
-              details="Luxuriöser SPA-Bereich mit Entspannungsvielfalt: Wohltuende Sauna, erfrischende Eis-Lounge, entspannendes Dampfbad, verwöhnendes Massagezentrum. Unvergleichliches Wellness-Erlebnis in stilvollem Ambiente."
+              hint="Wellness"
+              title="Spa"
+              text="90"
+              details="Wohltuende Sauna, erfrischende Eis-Lounge, verwöhnendes Massagezentrum. Eine unvergleichliche Kombination."
               background="wellness"
               buttons={[
                 {
@@ -96,9 +96,9 @@ export default function Home() {
             <Section
               applyMinHeight
               hint="Ausflüge & Incentives"
-              title="wald | natur | historie"
-              text="25.000 Hektar Wald-Nationalpark & staatlich anerkannter Kurort"
-              details="Hotel im 25.000 Hektar Wald-Nationalpark und Kurort. Unberührte Natur, atemberaubende Landschaften, zahlreiche Freizeitmöglichkeiten. Erholung pur in malerischer Oase."
+              title="Natur"
+              text="25.000"
+              details="25.000 Hektar Wald-Nationalpark und Kurort. Unberührte Natur, atemberaubende Landschaften, zahlreiche Freizeitmöglichkeiten."
               background="activities"
               buttons={[
                 {
@@ -111,9 +111,9 @@ export default function Home() {
 
             <Section
               hint="Breakfast/Lunch & Fine dining"
-              title="Wildbachklamm | the fine"
-              text="Lichtdurchflutetes Restaurant mit exklusiver Fine Dining Area"
-              details="Lichtdurchflutetes Restaurant mit Fine Dining Area. Exquisite Speisen, erlesene Weine, stilvolles Ambiente, raffinierte Küche. Unvergessliches Erlebnis und aufmerksames Personal."
+              title="Plates"
+              text="200"
+              details="Exquisite Speisen, erlesene Weine, stilvolles Ambiente, raffinierte Küche. Unvergessliches Erlebnis und aufmerksames Personal."
               background="dining"
               buttons={[
                 {

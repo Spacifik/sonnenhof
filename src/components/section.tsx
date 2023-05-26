@@ -35,7 +35,7 @@ export function Section({
       className={`
       grow relative md:basis-1/2 flex
       ${applyMinHeight ? "min-h-40vh md:min-h-60vh 2xl:min-h-40vh" : ""}
-      ${details ? "group md:hover:brightness-150" : ""}
+      ${details ? "group" : ""}
       ${background ? "bg-cover bg-no-repeat" : "bg-black"} 
       `}
       style={
@@ -50,21 +50,25 @@ export function Section({
         }
       }, [buttons, router])}
     >
-      <div className=" backdrop-brightness-200  p-12 md:p-8  w-full">
-        <div className="flex z-10 align-middle items-center justify-center">
-          <div className="opacity-100 group-hover:opacity-0 transition-all flex flex-col gap-6">
+      <div className="w-full flex items-center justify-center group-hover:bg-black/50 transition-all">
+        <div className="flex z-10 align-middle items-center justify-center max-w-[50%]">
+          <div className="opacity-100 group-hover:opacity-0 transition-all flex flex-col">
             {hint && (
-              <div>
-                <Text variant={`tiny-${textColorVariant}`} mono uppercase>
-                  {hint}
-                </Text>
-              </div>
+              <Text
+                variant={`tiniest-${textColorVariant}`}
+                mono
+                uppercase
+                light
+                noWrap
+              >
+                {hint}
+              </Text>
             )}
-            <Text variant={`big-${textColorVariant}`} mono uppercase>
+            <Text variant={`huge-${textColorVariant}`} mono uppercase bold>
               {title}
             </Text>
             {(props as SectionProps).text ? (
-              <Text variant={`small-${textColorVariant}`}>
+              <Text variant={`big-${textColorVariant}`}>
                 {(props as SectionProps).text}
               </Text>
             ) : (
@@ -78,25 +82,31 @@ export function Section({
           </div>
         </div>
         {details ? (
-          <div className="absolute inset-0 items-center justify-center z-20 align-middle bg-transparent opacity-0 w-full h-full p-4  md:p-8 transition-all group-hover:md:opacity-100 group-hover:pointer-events:none">
-            {hint && (
-              <div className="pb-2 md:pb-5 lg:pb-8">
-                <Text variant={`medium-${textColorVariant}`} mono uppercase>
+          <div className="absolute inset-0 items-center justify-center max-w-[50%] m-auto opacity-0 group-hover:opacity-100 group-hover:flex flex-col">
+            <div className="m-auto gap-5 flex flex-col">
+              {hint && (
+                <Text
+                  variant={`medium-${textColorVariant}`}
+                  mono
+                  uppercase
+                  light
+                  noWrap
+                >
                   {hint}
                 </Text>
-              </div>
-            )}
-            <Text variant="small-primary">{details}</Text>
-            <div className="flex gap-4 pt-3 md:pt-5">
-              {buttons.map(({ href, ...button }) =>
-                href ? (
-                  <Link className="cursor-pointer" key={href} href={href}>
-                    <Button key={button.label} {...button} />
-                  </Link>
-                ) : (
-                  <Button key={button.label} {...button} />
-                )
               )}
+              <Text variant="tiniest-primary">{details}</Text>
+              <div className="flex gap-4 pt-3 md:pt-5">
+                {buttons.map(({ href, ...button }) =>
+                  href ? (
+                    <Link className="cursor-pointer" key={href} href={href}>
+                      <Button key={button.label} {...button} />
+                    </Link>
+                  ) : (
+                    <Button key={button.label} {...button} />
+                  )
+                )}
+              </div>
             </div>
           </div>
         ) : null}
