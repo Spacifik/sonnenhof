@@ -1,23 +1,24 @@
 import Link from "next/link";
 import { Text } from "./text";
+import React from "react";
 
 export function HamburgerOverlay(): JSX.Element {
   return (
     <div>
       <div className="flex">
-        <div className="border-r-2 pe-2 me-2">
-          <Text variant="tiny-primary" mono uppercase>
+        <div className="border-r-2 pe-2 me-2 border-primary-regular xl:pe-4 xl:me-4">
+          <Text variant="tiny-primary" mono uppercase bold>
             Zimmer buchen
           </Text>
         </div>
-        <div className="border-r-2  pe-2 me-2">
-          <Text variant="tiny-primary" mono uppercase>
+        <div className="border-r-2  pe-2 me-2 border-primary-regular xl:pe-4 xl:me-4">
+          <Text variant="tiny-primary" mono uppercase bold>
             Tisch reservieren
           </Text>
         </div>
         <div>
           <Link href={"/rooms"}>
-            <Text variant="tiny-primary" mono uppercase>
+            <Text variant="tiny-primary" mono uppercase bold>
               Gutscheine
             </Text>
           </Link>
@@ -25,49 +26,53 @@ export function HamburgerOverlay(): JSX.Element {
       </div>
       <br />
       <ul className="">
-        <li>
+        <OverlayListItem>
           <a href="https://blog.michelhotel-sonnenhof.de/">
-            <Text variant="medium-primary" mono uppercase>
+            <Text variant="big-primary" mono uppercase light>
               Blog
             </Text>
           </a>
-        </li>
-        <li>
+        </OverlayListItem>
+        <OverlayListItem>
           <Link href={"/rooms"}>
-            <Text variant="medium-primary" mono uppercase>
+            <Text variant="big-primary" mono uppercase light>
               Zimmer & suiten
             </Text>
           </Link>
-        </li>
-        <li>
+        </OverlayListItem>
+        <OverlayListItem>
           <Link href={"/bar"}>
-            <Text variant="medium-primary" mono uppercase>
+            <Text variant="big-primary" mono uppercase light>
               Bar
             </Text>
           </Link>
-        </li>
-        <li>
+        </OverlayListItem>
+        <OverlayListItem>
           <Link href={"/spa"}>
-            <Text variant="medium-primary" mono uppercase>
+            <Text variant="big-primary" mono uppercase light>
               Spa & Gesundheit
             </Text>
           </Link>
-        </li>
-        <li>
+        </OverlayListItem>
+        <OverlayListItem>
           <Link href={"/events"}>
-            <Text variant="medium-primary" mono uppercase>
+            <Text variant="big-primary" mono uppercase light>
               Meetings & Events
             </Text>
           </Link>
-        </li>
-        <li>
+        </OverlayListItem>
+        <OverlayListItem>
           <Link href={"/gym"}>
-            <Text variant="medium-primary" mono uppercase>
+            <Text variant="big-primary" mono uppercase light>
               Gym & Outdoor
             </Text>
           </Link>
-        </li>
+        </OverlayListItem>
       </ul>
     </div>
   );
+}
+
+function OverlayListItem({ children }: React.PropsWithChildren<{}>): JSX.Element {
+  return <li className="py-2 xl:py-3">{children}</li>
 }
