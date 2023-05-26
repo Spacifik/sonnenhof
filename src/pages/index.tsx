@@ -166,7 +166,16 @@ export default function Home() {
               href="/city-cruise"
             />
           </div>
-          <div className="flex flex-col px-10 pb-5 gap-8 md:flex-row md:px-16 md:pb-10  md:gap-12 w-full h-auto">
+          <div
+            className={`flex flex-col px-10 pb-5 gap-8  w-full h-auto 
+            md:flex-row md:px-16 md:pb-10  md:gap-12
+         
+            lg:gap-16
+            xl:gap-20  xl:px-32  xl:pb-20
+           2xl:gap-24 2xl:px-40 2xl:pb-24
+           3xl:gap-28
+            `}
+          >
             <Link
               className="cursor-pointer grow  md:hover:brightness-150"
               href={"/gallery"}
