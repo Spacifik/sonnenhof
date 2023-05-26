@@ -172,7 +172,10 @@ export function Header(): JSX.Element {
             </div>
           )}
           <Link
-            className="flex w-44 md:w-50 mx-3 lg:mx-6 max-h-[25vh]"
+            className={`flex w-44 mx-3 max-h-[25vh]  
+            md:w-50 lg:mx-6
+            xl:w-60
+            3xl:w-72  `}
             href={`/`}
           >
             <Logo className="h-full w-auto" />

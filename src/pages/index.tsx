@@ -143,7 +143,7 @@ export default function Home() {
           gap-y-20 px-10 pb-16 gap-8
           md:grid-cols-3  md:px-16 md:pb-10  md:gap-12
            lg:gap-20
-           xl:gap-24  xl:px-32  xl:pb-20
+           xl:gap-24  xl:px-32  xl:pb-20u
           2xl:gap-28 2xl:px-40 2xl:pb-24
           3xl:gap-32`}
           >
