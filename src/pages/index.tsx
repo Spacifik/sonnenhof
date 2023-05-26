@@ -140,7 +140,7 @@ export default function Home() {
           <div
             className={`
           grid grid-cols-1 grid-rows-1
-          gap-y-20 px-10 pb-5 gap-8
+          gap-y-20 px-10 pb-16 gap-8
           md:grid-cols-3  md:px-16 md:pb-10  md:gap-12
            lg:gap-20
            xl:gap-24  xl:px-32  xl:pb-20
