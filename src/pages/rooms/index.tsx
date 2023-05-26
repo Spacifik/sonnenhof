@@ -54,38 +54,49 @@ export default function Rooms(): JSX.Element {
           text="Sollten Sie unter Allergien leiden, bieten wir Ihnen gerne nach Verfügbarkeit ein Allergikerzimmer mit spezieller Ausstattung und auf Wunsch sogar mit Luftreinigungsgerät an – einfach bei der Hotelbuchung angeben."
           buttons={[]}
         />
-        <RoomDetails
-          buttons={[
-            { label: "Jetzt buchen", variant: "primary" },
-            { label: "Hineinschauen", variant: "tertiary" },
-          ]}
-          items={["hello", "room", "details"]}
-          summary="Rubin"
-          details="Details"
-          image="rooms"
-        />
+        <div className={`flex flex-col`}>
+          <RoomDetails
+            buttons={[
+              { label: "Jetzt buchen", variant: "primary" },
+              { label: "Hineinschauen", variant: "tertiary" },
+            ]}
+            summary="Comfort King - 22m²"
+            details="Komfortables 22m² Nichtraucherzimmer mit Balkon und allergikerfreundlichem Holzboden"
+            items={[
+              "Kingsize Bett",
+              "Klimaanlage",
+              "Begehbare Dusche",
+              "Safe",
+              "Wifi",
+              "Lan",
+              "Smart TV",
+              "Kühlschrank",
+              "Haartrockner",
+            ]}
+            image="rooms"
+          />
 
-        <RoomDetails
-          buttons={[
-            { label: "Jetzt buchen", variant: "primary" },
-            { label: "Hineinschauen", variant: "tertiary" },
-          ]}
-          items={["hello", "room", "details"]}
-          summary="Saphir"
-          details="Details"
-          image="rooms"
-        />
-
-        <RoomDetails
-          buttons={[
-            { label: "Jetzt buchen", variant: "primary" },
-            { label: "Hineinschauen", variant: "tertiary" },
-          ]}
-          items={["hello", "room", "details"]}
-          summary="Diamond"
-          details="Details"
-          image="rooms"
-        />
+          <RoomDetails
+            buttons={[
+              { label: "Jetzt buchen", variant: "primary" },
+              { label: "Hineinschauen", variant: "tertiary" },
+            ]}
+            summary="Superior King - 25,5m²"
+            details="Premium 25,5m² Nichtraucherzimmer mit Balkon und allergikerfreundlichem Holzboden"
+            items={[
+              "Kingsize Bett",
+              "Klimaanlage",
+              "Begehbare Dusche",
+              "Safe",
+              "Wifi",
+              "Lan",
+              "Smart TV",
+              "Kühlschrank",
+              "Haartrockner",
+            ]}
+            image="rooms"
+          />
+        </div>
       </main>
     </Layout>
   );
