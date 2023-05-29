@@ -12,6 +12,7 @@ interface TextProps {
   light?: boolean;
   noWrap?: boolean;
   addHover?: boolean;
+  inline?: boolean;
 }
 
 export function Text({
@@ -23,6 +24,7 @@ export function Text({
   light,
   noWrap,
   addHover,
+  inline,
 }: TextProps): JSX.Element {
   const [size, color] = variant.split("-") as [TextSize, ThemeColor];
   return (
@@ -36,6 +38,7 @@ export function Text({
       ${light ? "font-light" : ""}
       ${noWrap ? "whitespace-nowrap" : ""}
       ${addHover ? getHoverThemeColor(color) : ""}
+      ${inline ? "display-inline" : ""}
       `}
     >
       {children}

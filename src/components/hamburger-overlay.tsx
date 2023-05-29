@@ -16,19 +16,27 @@ export function HamburgerOverlay(): JSX.Element {
         <div className="hidden md:flex" />
         <div className="flex flex-col gap-3">
           <Link className="cursor-pointer" href={"/gallery"}>
-            <Text variant="small-primary">Standort</Text>
+            <Text variant="small-primary" addHover>
+              Standort
+            </Text>
           </Link>
 
           <Link className="cursor-pointer" href={"/gallery"}>
-            <Text variant="small-primary">Gallerie</Text>
+            <Text variant="small-primary" addHover>
+              Gallerie
+            </Text>
           </Link>
 
           <Link className="cursor-pointer" href={"/career"}>
-            <Text variant="small-primary">Karriere</Text>
+            <Text variant="small-primary" addHover>
+              Karriere
+            </Text>
           </Link>
 
           <Link className="cursor-pointer" href={"/contact"}>
-            <Text variant="small-primary">Kontakt</Text>
+            <Text variant="small-primary" addHover>
+              Kontakt
+            </Text>
           </Link>
         </div>
         <div className="flex my-10">
