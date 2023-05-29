@@ -312,7 +312,8 @@ export function Header(): JSX.Element {
           </div>
         </div>
       </header>
-      {!isMediumOrBigger || (router.route !== "/" && headerHeight !== "") ? (
+      {!isMediumOrBigger ||
+      (!["/", "/rooms"].includes(router.route) && headerHeight !== "") ? (
         <div
           className="w-full bg-black z-0 inset-0"
           style={{

@@ -1,3 +1,4 @@
+import { Image } from "@sonnenhof/components/image";
 import { Layout } from "@sonnenhof/components/layout";
 import { RoomDetails } from "@sonnenhof/components/room-details";
 import { Section } from "@sonnenhof/components/section";
@@ -24,6 +25,9 @@ export default function Rooms(): JSX.Element {
   return (
     <Layout>
       <main>
+        <div>
+          <Image name="rooms" className="bg-cover bg-no-repeat w-full" />
+        </div>
         <Section
           title="Edelsteine im bayrischen Wald"
           text="Some text"
