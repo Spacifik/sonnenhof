@@ -178,13 +178,13 @@ export function Header(): JSX.Element {
             <Link
               className={`cursor-pointer h-1/2 ${getThemeColor(
                 "primary"
-              )} p-3 md:p-5`}
+              )} p-3 md:p-5 grow md:grow-0`}
               href={"/"}
             >
               <ArrowLeft />
             </Link>
           ) : (
-            <div className="h-1/2  p-3 grow md:grow-0 md:p-5">
+            <div className="h-1/2  p-3 md:p-5 grow md:grow-0">
               <ArrowLeft className="invisible" />
             </div>
           )}
