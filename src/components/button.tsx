@@ -1,5 +1,6 @@
 import React, { DOMAttributes, useId } from "react";
 import { getThemeColor } from "./theme-color";
+import { Text } from "./text";
 
 export interface ButtonProps {
   label: string;
@@ -33,18 +34,19 @@ export function Button({
           "border",
           "border-solid",
           "border-primary-700",
-          "hover:text-primary-50",
           "hover:border-primary-700",
         ]
       : [getThemeColor("dark", true)];
   return (
     <div
-      className={` ${textColor} ${bgColors.join(
+      className={`${textColor} ${bgColors.join(
         " "
-      )} p-2 hover:bg-primary-400 bold cursor-pointer text-center w-fit whitespace-nowrap`}
+      )} p-2 px-4 lg:px-10 hover:bg-primary-400 bold cursor-pointer w-fit whitespace-nowrap flex`}
     >
       <label className="cursor-pointer" htmlFor={buttonId}>
-        {label}
+        <Text variant={`small-${variant === "tertiary" ? "primary" : "light"}`}>
+          {label}
+        </Text>
       </label>
       <button
         className="cursor-pointer"
