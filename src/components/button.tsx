@@ -42,7 +42,7 @@ export function Button({
       className={`
       ${textColor} 
       ${bgColors.join(" ")}
-      p-2 px-4 lg:px-10 hover:bg-primary-400 bold cursor-pointer w-fit whitespace-nowrap flex`}
+      p-2 px-4 lg:px-10 hover:bg-primary-400 bold cursor-pointer w-fit whitespace-nowrap flex group`}
     >
       <label className="cursor-pointer" htmlFor={buttonId}>
         <Text
