@@ -4,7 +4,7 @@ import { ArrowLeft, Calendar, Menu, Minus, Plus, User } from "iconoir-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { HamburgerOverlay } from "./hamburger-overlay";
-import { getThemeColor } from "./theme-color";
+import { getHoverThemeColor, getThemeColor } from "./theme-color";
 import { Logo } from "./logo";
 import DatePicker from "react-datepicker";
 import React, { useId } from "react";
@@ -73,29 +73,25 @@ function PersonInput({
   const label = name === "mewsAdultCount" ? "Erwachsene" : "Kinder";
   return (
     <div
-      className="flex flex-row gap-4 items-center group hover:text-primary-200"
+      className="flex flex-row gap-4 items-center hover:text-primary-200"
       onClick={(e) => e.stopPropagation()}
     >
       <label htmlFor={id}>
-        <p
-          className={`${getVariantSize("tiny")} ${getThemeColor(
-            "primary"
-          )} group-hover:text-primary-200`}
-        >
+        <p className={`${getVariantSize("tiny")} ${getThemeColor("primary")}`}>
           {label}
         </p>
       </label>
       <div className="grow" />
       <div className="flex items-center justify-center">
         <button
-          className="text-primary-500 p-2"
+          className="text-primary-500 hover:text-primary-200 p-2"
           onClick={() => onChange(value - 1)}
           type="button"
         >
           <Minus />
         </button>
         <input
-          className="max-w-[40px] text-center bg-transparent"
+          className="max-w-[40px] text-center bg-transparent group-hover:text-primary-500 hover:text-primary-500"
           id={id}
           type="number"
           name={name}
@@ -104,7 +100,7 @@ function PersonInput({
           readOnly
         />
         <button
-          className="text-primary-500 p-2"
+          className="text-primary-500 hover:text-primary-200 p-2"
           onClick={() => onChange(value + 1)}
           type="button"
         >
@@ -258,13 +254,15 @@ export function Header(): JSX.Element {
                 onClick={() => setShowPersonInput((shown) => !shown)}
               >
                 <div className="grow">
-                  <Text variant="tiny-primary">{guestLabel}</Text>
+                  <Text variant="tiny-primary" addHover>
+                    {guestLabel}
+                  </Text>
                 </div>
                 <User className="h-4 m-auto" />
                 {showPersonInput ? (
                   <div
                     ref={ref}
-                    className="absolute top-[50px] left-0 border border-primary-500 hover:border-primary-200 p-4 flex gap-4 flex-col bg-black"
+                    className="absolute cursor-auto top-[50px] left-0 border border-primary-500 hover:border-primary-200 p-4 flex gap-4 flex-col bg-black"
                   >
                     <PersonInput
                       name="mewsAdultCount"

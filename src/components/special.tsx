@@ -19,7 +19,7 @@ export function Special({
 }: SpecialProps): JSX.Element {
   return (
     <Link
-      className="cursor-pointer md:hover:brightness-150 grid grid-flow-row auto-rows-max gap-y-2"
+      className="cursor-pointer  grid grid-flow-row auto-rows-max gap-y-2"
       href={href}
     >
       <Image name={background} />

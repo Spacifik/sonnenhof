@@ -11,6 +11,7 @@ interface TextProps {
   bold?: boolean;
   light?: boolean;
   noWrap?: boolean;
+  addHover?: boolean;
 }
 
 export function Text({
@@ -21,6 +22,7 @@ export function Text({
   bold,
   light,
   noWrap,
+  addHover,
 }: TextProps): JSX.Element {
   const [size, color] = variant.split("-") as [TextSize, ThemeColor];
   return (
@@ -33,6 +35,7 @@ export function Text({
       ${bold ? "font-bold" : ""}
       ${light ? "font-light" : ""}
       ${noWrap ? "whitespace-nowrap" : ""}
+      ${addHover ? getHoverThemeColor(color) : ""}
       `}
     >
       {children}

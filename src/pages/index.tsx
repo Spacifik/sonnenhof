@@ -178,7 +178,7 @@ export default function Home() {
             `}
           >
             <Link
-              className="cursor-pointer grow  md:hover:brightness-150"
+              className="cursor-pointer grow "
               href={"/gallery"}
             >
               <BackgroundImage name="location">
@@ -189,7 +189,7 @@ export default function Home() {
             </Link>
 
             <Link
-              className="cursor-pointer grow md:hover:brightness-150"
+              className="cursor-pointer grow"
               href={"/gallery"}
             >
               <BackgroundImage name="gallery">
@@ -200,7 +200,7 @@ export default function Home() {
             </Link>
 
             <Link
-              className="cursor-pointer grow md:hover:brightness-150"
+              className="cursor-pointer grow"
               href={"/career"}
             >
               <BackgroundImage name="career">
@@ -211,7 +211,7 @@ export default function Home() {
             </Link>
 
             <Link
-              className="cursor-pointer grow md:hover:brightness-150"
+              className="cursor-pointer grow"
               href={"/contact"}
             >
               <BackgroundImage name="contact">
