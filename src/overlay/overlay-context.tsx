@@ -46,7 +46,7 @@ export const OverlayProvider = ({ children }: React.PropsWithChildren<{}>) => {
   const overlay = (
     <Overlay show={overlayContent !== null} onClose={hideOverlay}>
       <div
-        className="absolute flex right-0 p-5 md:p-8 md:grow-0 cursor-pointer text-primary-regular font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
+        className="absolute flex right-0 p-5 md:p-8 md:grow-0 cursor-pointer text-primary-500 font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl"
         onClick={hideOverlay}
       >
         <Cancel />

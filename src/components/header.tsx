@@ -9,7 +9,7 @@ import { Logo } from "./logo";
 import DatePicker from "react-datepicker";
 import React, { useId } from "react";
 import { useImmer } from "use-immer";
-import { Text } from "./text";
+import { Text, getVariantSize } from "./text";
 import { Button } from "./button";
 import { de } from "date-fns/locale";
 import { MewsForm } from "./mews-form";
@@ -34,9 +34,15 @@ const TextWithValue = React.forwardRef(
     return (
       <div
         onClick={() => onClick?.()}
-        className="flex gap-2 cursor-pointer hover:brightness-150"
+        className="flex gap-2 cursor-pointer hover:text-primary-300 group"
       >
-        <Text variant="tiny-primary">{value as string}</Text>
+        <p
+          className={`${getVariantSize("tiny")} ${getThemeColor(
+            "primary"
+          )} group-hover:text-primary-300`}
+        >
+          {value as string}
+        </p>
         <input
           ref={ref as any}
           className="hidden"
@@ -67,16 +73,22 @@ function PersonInput({
   const label = name === "mewsAdultCount" ? "Erwachsene" : "Kinder";
   return (
     <div
-      className="flex flex-row gap-4 items-center"
+      className="flex flex-row gap-4 items-center group hover:text-primary-300"
       onClick={(e) => e.stopPropagation()}
     >
       <label htmlFor={id}>
-        <Text variant="tiny-primary">{label}</Text>
+        <p
+          className={`${getVariantSize("tiny")} ${getThemeColor(
+            "primary"
+          )} group-hover:text-primary-300`}
+        >
+          {label}
+        </p>
       </label>
       <div className="grow" />
       <div className="flex items-center justify-center">
         <button
-          className="text-primary-regular p-2"
+          className="text-primary-500 p-2"
           onClick={() => onChange(value - 1)}
           type="button"
         >
@@ -92,7 +104,7 @@ function PersonInput({
           readOnly
         />
         <button
-          className="text-primary-regular p-2"
+          className="text-primary-500 p-2"
           onClick={() => onChange(value + 1)}
           type="button"
         >
@@ -242,7 +254,7 @@ export function Header(): JSX.Element {
             </div>
             <div className="max-h-1/2 min-w-[270px] hidden xl:block">
               <div
-                className="gap-2 cursor-pointer border p-2 border-primary-regular text-primary-regular relative whitespace-nowrap flex hover:brightness-150"
+                className="gap-2 cursor-pointer border p-2 border-primary-500 hover:border-primary-300 text-primary-500 hover:text-primary-300 relative group whitespace-nowrap flex"
                 onClick={() => setShowPersonInput((shown) => !shown)}
               >
                 <div className="grow">
@@ -252,7 +264,7 @@ export function Header(): JSX.Element {
                 {showPersonInput ? (
                   <div
                     ref={ref}
-                    className="absolute top-[50px] left-0 border border-primary-regular p-4 flex gap-4 flex-col bg-black"
+                    className="absolute top-[50px] left-0 border border-primary-500 hover:border-primary-300 p-4 flex gap-4 flex-col bg-black"
                   >
                     <PersonInput
                       name="mewsAdultCount"

@@ -32,16 +32,16 @@ export function Button({
           "bg-transparent",
           "border",
           "border-solid",
-          "border-primary-regular",
-          "hover:text-primary-light",
-          "hover:border-primary-light",
+          "border-primary-700",
+          "hover:text-primary-50",
+          "hover:border-primary-700",
         ]
       : [getThemeColor("dark", true)];
   return (
     <div
       className={` ${textColor} ${bgColors.join(
         " "
-      )} p-2 hover:brightness-125 bold cursor-pointer text-center w-fit whitespace-nowrap`}
+      )} p-2 hover:bg-primary-400 bold cursor-pointer text-center w-fit whitespace-nowrap`}
     >
       <label className="cursor-pointer" htmlFor={buttonId}>
         {label}

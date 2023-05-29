@@ -1,4 +1,4 @@
-import { ThemeColor, getThemeColor } from "./theme-color";
+import { ThemeColor, getHoverThemeColor, getThemeColor } from "./theme-color";
 
 type TextSize = "huge" | "big" | "medium" | "small" | "tiny" | "tiniest";
 
@@ -20,7 +20,7 @@ export function Text({
   uppercase,
   bold,
   light,
-  noWrap
+  noWrap,
 }: TextProps): JSX.Element {
   const [size, color] = variant.split("-") as [TextSize, ThemeColor];
   return (
@@ -40,7 +40,7 @@ export function Text({
   );
 }
 
-function getVariantSize(size: TextSize): string {
+export function getVariantSize(size: TextSize): string {
   switch (size) {
     case "tiniest":
       return "text-xs md:text-xs lg:text-sm xl:text-base 2xl:text-lg";

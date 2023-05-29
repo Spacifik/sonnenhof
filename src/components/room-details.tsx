@@ -43,14 +43,14 @@ export function RoomDetails({
               <span className="grow" />
               {open ? (
                 <Minus
-                  className="text-primary-regular"
+                  className="text-primary-500"
                   onClick={() => {
                     setOpen(() => false);
                   }}
                 />
               ) : (
                 <Plus
-                  className="text-primary-regular"
+                  className="text-primary-500"
                   onClick={() => {
                     setOpen(() => true || mediumOrBigger);
                   }}
