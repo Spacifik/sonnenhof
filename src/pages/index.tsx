@@ -150,7 +150,7 @@ export default function Home() {
           >
             <Special
               title="Hochzeitspaket"
-              text="Erleben Sie einen unvergesslichen Tag"
+              text="Ein unvergesslicher Tag"
               background="event1"
               href="/wedding"
             />
@@ -177,45 +177,33 @@ export default function Home() {
            3xl:gap-28
             `}
           >
-            <Link
-              className="cursor-pointer grow "
-              href={"/gallery"}
-            >
+            <Link className="cursor-pointer grow " href={"/gallery"}>
               <BackgroundImage name="location">
-                <Text variant="medium-primary" mono uppercase>
+                <Text variant="medium-primary" mono uppercase addHover>
                   Standort
                 </Text>
               </BackgroundImage>
             </Link>
 
-            <Link
-              className="cursor-pointer grow"
-              href={"/gallery"}
-            >
+            <Link className="cursor-pointer grow" href={"/gallery"}>
               <BackgroundImage name="gallery">
-                <Text variant="medium-primary" mono uppercase>
+                <Text variant="medium-primary" mono uppercase addHover>
                   Gallerie
                 </Text>
               </BackgroundImage>
             </Link>
 
-            <Link
-              className="cursor-pointer grow"
-              href={"/career"}
-            >
+            <Link className="cursor-pointer grow" href={"/career"}>
               <BackgroundImage name="career">
-                <Text variant="medium-primary" mono uppercase>
+                <Text variant="medium-primary" mono uppercase addHover>
                   Karriere
                 </Text>
               </BackgroundImage>
             </Link>
 
-            <Link
-              className="cursor-pointer grow"
-              href={"/contact"}
-            >
+            <Link className="cursor-pointer grow" href={"/contact"}>
               <BackgroundImage name="contact">
-                <Text variant="medium-primary" mono uppercase>
+                <Text variant="medium-primary" mono uppercase addHover>
                   Kontakt
                 </Text>
               </BackgroundImage>
