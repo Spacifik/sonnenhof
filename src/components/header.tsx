@@ -3,7 +3,7 @@ import { ArrowLeft, Calendar, Menu, Minus, Plus, User } from "iconoir-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { HamburgerOverlay } from "./hamburger-overlay";
-import { getThemeColor } from "./theme-color";
+import { getHoverThemeColor, getThemeColor } from "./theme-color";
 import { Logo } from "./logo";
 import React, { useId } from "react";
 import { useImmer } from "use-immer";
@@ -300,7 +300,9 @@ export function Header(): JSX.Element {
           <div
             className={`cursor-pointer h-1/2 ${getThemeColor(
               "primary"
-            )} flex-grow justify-end flex p-3 md:p-5 md:grow-0`}
+            )} ${getHoverThemeColor(
+              "primary"
+            )} flex-grow justify-end flex p-3 md:p-5 mr-4 md:grow-0`}
             onClick={() => {
               dialogRef.current?.showModal();
               document.body.style.overflow = "hidden";
