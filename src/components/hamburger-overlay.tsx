@@ -45,19 +45,19 @@ export function HamburgerOverlay(): JSX.Element {
               className="lg:border-r-2 pe-2 me-2 border-primary-500 xl:pe-4 xl:me-4 cursor-pointer"
               type="submit"
             >
-              <Text variant="tiny-primary" mono uppercase bold noWrap>
+              <Text variant="tiny-primary" mono uppercase bold noWrap addHover>
                 Zimmer buchen
               </Text>
             </button>
           </MewsForm>
           <div className="lg:border-r-2  pe-2 me-2 border-primary-500 xl:pe-4 xl:me-4 cursor-pointer">
-            <Text variant="tiny-primary" mono uppercase bold noWrap>
+            <Text variant="tiny-primary" mono uppercase bold noWrap addHover>
               Tisch reservieren
             </Text>
           </div>
-          <div className=" cursor-pointer">
+          <div className="cursor-pointer">
             <Link href={"/rooms"}>
-              <Text variant="tiny-primary" mono uppercase bold noWrap>
+              <Text variant="tiny-primary" mono uppercase bold noWrap addHover>
                 Gutscheine
               </Text>
             </Link>
@@ -67,42 +67,42 @@ export function HamburgerOverlay(): JSX.Element {
         <ul className="">
           <OverlayListItem>
             <a href="https://blog.michelhotel-sonnenhof.de/">
-              <Text variant="big-primary" mono uppercase light noWrap>
+              <Text variant="big-primary" mono uppercase light noWrap addHover>
                 Blog
               </Text>
             </a>
           </OverlayListItem>
           <OverlayListItem>
             <Link href={"/rooms"}>
-              <Text variant="big-primary" mono uppercase light noWrap>
+              <Text variant="big-primary" mono uppercase light noWrap addHover>
                 Zimmer & suiten
               </Text>
             </Link>
           </OverlayListItem>
           <OverlayListItem>
             <Link href={"/bar"}>
-              <Text variant="big-primary" mono uppercase light noWrap>
+              <Text variant="big-primary" mono uppercase light noWrap addHover>
                 Bar
               </Text>
             </Link>
           </OverlayListItem>
           <OverlayListItem>
             <Link href={"/spa"}>
-              <Text variant="big-primary" mono uppercase light noWrap>
+              <Text variant="big-primary" mono uppercase light noWrap addHover>
                 Spa & Gesundheit
               </Text>
             </Link>
           </OverlayListItem>
           <OverlayListItem>
             <Link href={"/events"}>
-              <Text variant="big-primary" mono uppercase light noWrap>
+              <Text variant="big-primary" mono uppercase light noWrap addHover>
                 Meetings & Events
               </Text>
             </Link>
           </OverlayListItem>
           <OverlayListItem>
             <Link href={"/gym"}>
-              <Text variant="big-primary" mono uppercase light noWrap>
+              <Text variant="big-primary" mono uppercase light noWrap addHover>
                 Gym & Outdoor
               </Text>
             </Link>
