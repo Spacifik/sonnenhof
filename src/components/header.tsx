@@ -158,7 +158,10 @@ export function Header(): JSX.Element {
       <dialog
         ref={dialogRef}
         className="w-full h-full bg-black/50 backdrop:bg-black/75 flex items-center z-[-1]"
-        onClick={() => dialogRef.current?.close()}
+        onClick={() => {
+          dialogRef.current?.close();
+          document.body.style.overflow = "auto";
+        }}
       >
         <HamburgerOverlay />
       </dialog>
@@ -298,7 +301,10 @@ export function Header(): JSX.Element {
             className={`cursor-pointer h-1/2 ${getThemeColor(
               "primary"
             )} flex-grow justify-end flex p-3 md:p-5 md:grow-0`}
-            onClick={() => dialogRef.current?.showModal()}
+            onClick={() => {
+              dialogRef.current?.showModal();
+              document.body.style.overflow = "hidden";
+            }}
           >
             <Menu />
           </div>

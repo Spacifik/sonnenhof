@@ -12,7 +12,7 @@ import { MewsForm } from "./mews-form";
 export function HamburgerOverlay(): JSX.Element {
   return (
     <div className="w-full flex flex-col-reverse md:flex-row justify-center lg:justify-space-around h-full">
-      <div className="basis-[40%] shrink flex justify-around flex-col pl-10 xl:pl-20 min-h-[380px]">
+      <div className="basis-[40%] shrink flex justify-around flex-col pl-10 xl:pl-20">
         <div className="hidden md:flex" />
         <div className="flex flex-col gap-3">
           <Link className="cursor-pointer" href={"/gallery"}>
@@ -46,7 +46,7 @@ export function HamburgerOverlay(): JSX.Element {
           <TikTokIcon />
         </div>
       </div>
-      <div className="basis-[50%] grow justify-center flex flex-col pl-10 md:pl-0 h-full min-h-[425px]">
+      <div className="basis-[50%] grow justify-center flex flex-col pl-10 md:pl-0 h-full">
         <div className="flex flex-col gap-2 lg:flex-row lg:gap-0">
           <MewsForm addDefaultDates>
             <button
