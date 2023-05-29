@@ -35,37 +35,37 @@ export default function ImprintPage() {
  
   return (
     <Layout>
-      <main className="flex flex-col p-6 md:p-36">
+      <main className="flex flex-col p-6 md:p-36 bg-black">
         <p>
-          <Text variant="big-dark">{title}</Text>
+          <Text variant="big-primary">{title}</Text>
         </p>
         <br />
         <p>
-          <Text variant="medium-dark">Anbieter:</Text>
+          <Text variant="medium-primary">Anbieter:</Text>
           <br />
-          <Text variant="medium-dark">{provider.name}</Text>
-          <Text variant="medium-dark">{provider.street}</Text>
-          <Text variant="medium-dark">{provider.zip}</Text>
+          <Text variant="medium-primary">{provider.name}</Text>
+          <Text variant="medium-primary">{provider.street}</Text>
+          <Text variant="medium-primary">{provider.zip}</Text>
         </p>
         <br />
         <p>
-          <Text variant="medium-dark">Kontakt:</Text>
+          <Text variant="medium-primary">Kontakt:</Text>
           <br />
-          <Text variant="medium-dark">{`Telefon: ${providerContact.phone}`}</Text>
-          <Text variant="medium-dark">{`Telefax: ${providerContact.fax}`}</Text>
-          <Text variant="medium-dark">{`E-Mail: ${providerContact.email}`}</Text>
-          <Text variant="medium-dark">{`Website: ${providerContact.website}`}</Text>
+          <Text variant="medium-primary">{`Telefon: ${providerContact.phone}`}</Text>
+          <Text variant="medium-primary">{`Telefax: ${providerContact.fax}`}</Text>
+          <Text variant="medium-primary">{`E-Mail: ${providerContact.email}`}</Text>
+          <Text variant="medium-primary">{`Website: ${providerContact.website}`}</Text>
         </p>
         <p />
         <br />
-        <Text variant="medium-dark">Bei redaktionellen Inhalten:</Text>
+        <Text variant="medium-primary">Bei redaktionellen Inhalten:</Text>
         <br />
         <p>
-          <Text variant="medium-dark">Verantwortlich nach § 55 Abs.2 RStV</Text>
+          <Text variant="medium-primary">Verantwortlich nach § 55 Abs.2 RStV</Text>
           <br />
-          <Text variant="medium-dark">{editorial.name}</Text>
-          <Text variant="medium-dark">{editorial.street}</Text>
-          <Text variant="medium-dark">{editorial.zip}</Text>
+          <Text variant="medium-primary">{editorial.name}</Text>
+          <Text variant="medium-primary">{editorial.street}</Text>
+          <Text variant="medium-primary">{editorial.zip}</Text>
         </p>
       </main>
     </Layout>
