@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect } from "react";
 import { Inter } from "next/font/google";
 import { Section } from "@sonnenhof/components/section";
 import { Layout } from "@sonnenhof/components/layout";
