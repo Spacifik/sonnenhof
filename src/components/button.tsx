@@ -39,12 +39,16 @@ export function Button({
       : [getThemeColor("dark", true)];
   return (
     <div
-      className={`${textColor} ${bgColors.join(
-        " "
-      )} p-2 px-4 lg:px-10 hover:bg-primary-400 bold cursor-pointer w-fit whitespace-nowrap flex`}
+      className={`
+      ${textColor} 
+      ${bgColors.join(" ")}
+      p-2 px-4 lg:px-10 hover:bg-primary-400 bold cursor-pointer w-fit whitespace-nowrap flex`}
     >
       <label className="cursor-pointer" htmlFor={buttonId}>
-        <Text variant={`small-${variant === "tertiary" ? "primary" : "light"}`}>
+        <Text
+          variant={`small-${variant === "tertiary" ? "primary" : "light"}`}
+          addHover
+        >
           {label}
         </Text>
       </label>
