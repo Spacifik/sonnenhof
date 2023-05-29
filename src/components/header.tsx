@@ -16,6 +16,7 @@ import { MewsForm } from "./mews-form";
 import { useDefaultBookingDates } from "@sonnenhof/utils/use-default-booking-dates";
 import { parseDateToIso } from "@sonnenhof/utils/parse-date-to-iso";
 import { useIsMediumOrBigger } from "@sonnenhof/utils/use-is-medium-or-bigger";
+import { useOnClickOutside } from "@sonnenhof/utils/use-on-click-outside";
 
 const TextWithValue = React.forwardRef(
   (
@@ -114,6 +115,8 @@ export function Header(): JSX.Element {
     to,
   });
   const [showPersonInput, setShowPersonInput] = React.useState(false);
+  const ref = React.useRef(null);
+  useOnClickOutside(ref, () => setShowPersonInput(false));
   const [adults, setAdults] = useImmer(2);
   const [children, setChildren] = useImmer(0);
   // track if the user explicitly set how many people they want to
@@ -247,7 +250,10 @@ export function Header(): JSX.Element {
                 </div>
                 <User className="h-4 m-auto" />
                 {showPersonInput ? (
-                  <div className="absolute top-[50px] left-0 border border-primary-regular p-4 flex gap-4 flex-col bg-black">
+                  <div
+                    ref={ref}
+                    className="absolute top-[50px] left-0 border border-primary-regular p-4 flex gap-4 flex-col bg-black"
+                  >
                     <PersonInput
                       name="mewsAdultCount"
                       value={adults}
