@@ -7,6 +7,7 @@ import {
   TikTokIcon,
   TwitterIcon,
 } from "./media-icons";
+import { MewsForm } from "./mews-form";
 
 export function HamburgerOverlay(): JSX.Element {
   return (
@@ -39,17 +40,22 @@ export function HamburgerOverlay(): JSX.Element {
       </div>
       <div className="basis-[50%] grow justify-center flex flex-col pl-10 md:pl-0 h-full">
         <div className="flex flex-col gap-2 lg:flex-row lg:gap-0">
-          <div className="lg:border-r-2 pe-2 me-2 border-primary-500 xl:pe-4 xl:me-4">
-            <Text variant="tiny-primary" mono uppercase bold noWrap>
-              Zimmer buchen
-            </Text>
-          </div>
-          <div className="lg:border-r-2  pe-2 me-2 border-primary-500 xl:pe-4 xl:me-4">
+          <MewsForm addDefaultDates>
+            <button
+              className="lg:border-r-2 pe-2 me-2 border-primary-500 xl:pe-4 xl:me-4 cursor-pointer"
+              type="submit"
+            >
+              <Text variant="tiny-primary" mono uppercase bold noWrap>
+                Zimmer buchen
+              </Text>
+            </button>
+          </MewsForm>
+          <div className="lg:border-r-2  pe-2 me-2 border-primary-500 xl:pe-4 xl:me-4 cursor-pointer">
             <Text variant="tiny-primary" mono uppercase bold noWrap>
               Tisch reservieren
             </Text>
           </div>
-          <div>
+          <div className=" cursor-pointer">
             <Link href={"/rooms"}>
               <Text variant="tiny-primary" mono uppercase bold noWrap>
                 Gutscheine

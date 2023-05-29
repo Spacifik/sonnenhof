@@ -152,13 +152,13 @@ export function Header(): JSX.Element {
       );
     }
   }, []);
-  const dialogRef = React.useRef(null);
+  const dialogRef = React.useRef<null | HTMLDialogElement>(null);
   return (
     <>
       <dialog
         ref={dialogRef}
         className="w-full h-full bg-black/50 backdrop:bg-black/75 flex items-center z-[-1]"
-        onClick={() => (dialogRef.current as any)?.close()}
+        onClick={() => dialogRef.current?.close()}
       >
         <HamburgerOverlay />
       </dialog>
@@ -298,7 +298,7 @@ export function Header(): JSX.Element {
             className={`cursor-pointer h-1/2 ${getThemeColor(
               "primary"
             )} flex-grow justify-end flex p-3 md:p-5 md:grow-0`}
-            onClick={() => (dialogRef.current as any).showModal()}
+            onClick={() => dialogRef.current?.showModal()}
           >
             <Menu />
           </div>
