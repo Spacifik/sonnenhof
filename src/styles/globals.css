@@ -125,3 +125,7 @@ input[type='number']::-webkit-outer-spin-button {
 body {
   min-width: 415px;
 }
+
+:focus {
+  outline: none;
+}

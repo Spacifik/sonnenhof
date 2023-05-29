@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { useOverlay } from "@sonnenhof/overlay/overlay-context";
 import { ArrowLeft, Calendar, Menu, Minus, Plus, User } from "iconoir-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -113,7 +112,6 @@ function PersonInput({
 
 export function Header(): JSX.Element {
   const router = useRouter();
-  const { showOverlay } = useOverlay();
   const { from, to } = useDefaultBookingDates();
   const [dates, setDates] = useImmer<{
     from: Date;
@@ -154,8 +152,15 @@ export function Header(): JSX.Element {
       );
     }
   }, []);
+  const dialogRef = React.useRef(null);
   return (
     <>
+      <dialog
+        ref={dialogRef}
+        className="w-full h-full bg-black/50 backdrop:bg-black/75"
+      >
+        <HamburgerOverlay />
+      </dialog>
       <header
         ref={headerRef}
         className={`sticky top-0 z-30 bg-black`}
@@ -292,7 +297,7 @@ export function Header(): JSX.Element {
             className={`cursor-pointer h-1/2 ${getThemeColor(
               "primary"
             )} flex-grow justify-end flex p-3 md:p-5 md:grow-0`}
-            onClick={() => showOverlay(<HamburgerOverlay />)}
+            onClick={() => (dialogRef.current as any).showModal()}
           >
             <Menu />
           </div>
