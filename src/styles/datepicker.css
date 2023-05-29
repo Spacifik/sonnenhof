@@ -7,29 +7,61 @@
 
 /* Style the date picker pop-up */
 .react-datepicker {
-  @apply invisible md:visible bg-white border border-primary-500 hover:border-primary-200  shadow-lg;
+  @apply invisible md:visible bg-white border  shadow-lg border-primary-500 hover:border-primary-200 !important;
 }
 
 /* Style the date picker header */
 .react-datepicker__header {
-  @apply invisible md:visible bg-blue-500 text-white py-2 px-4;
+  @apply invisible md:visible text-white py-2 px-4 bg-primary-500 !important;
 }
 
 /* Style the selected day */
 .react-datepicker__day--selected {
-  @apply invisible md:visible bg-blue-500 text-white;
+  @apply invisible md:visible text-white ;
 }
 
 /* Style the hovered day */
 .react-datepicker__day:hover {
-  @apply invisible md:visible bg-blue-200 text-white;
+  @apply invisible md:visible text-white bg-primary-200 !important;
 }
 
 /* Style the date picker navigation buttons */
 .react-datepicker__navigation {
-  @apply invisible md:visible text-blue-500;
+  @apply invisible md:visible text-primary-500 !important;
 }
 
 .react-datepicker__navigation:hover {
-  @apply invisible md:visible text-blue-700;
+  @apply invisible md:visible text-primary-700 !important;
+}
+
+.styled-datepicker-calendar {
+  @apply bg-primary-950 !important;
+}
+
+.react-datepicker__day--selected {
+  @apply bg-primary-500 !important;
+}
+
+.react-datepicker__day {
+  @apply text-primary-100 !important; 
+  @apply hover:text-primary-900 !important;
+}
+
+
+.react-datepicker__day--disabled {
+  @apply opacity-[0.5]
+}
+
+.react-datepicker__navigation-icon::before {
+  @apply mt-2 border-primary-950 !important;
+  @apply hover:border-primary-800 !important;
+}
+
+.react-datepicker__triangle::before,
+.react-datepicker__triangle::after {
+  @apply border-b-primary-500 !important;
+}
+
+.react-datepicker__day--keyboard-selected{
+  @apply bg-inherit !important;
 }

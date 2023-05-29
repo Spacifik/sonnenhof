@@ -4,9 +4,8 @@ import { ArrowLeft, Calendar, Menu, Minus, Plus, User } from "iconoir-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { HamburgerOverlay } from "./hamburger-overlay";
-import { getHoverThemeColor, getThemeColor } from "./theme-color";
+import { getThemeColor } from "./theme-color";
 import { Logo } from "./logo";
-import DatePicker from "react-datepicker";
 import React, { useId } from "react";
 import { useImmer } from "use-immer";
 import { Text, getVariantSize } from "./text";
@@ -17,6 +16,7 @@ import { useDefaultBookingDates } from "@sonnenhof/utils/use-default-booking-dat
 import { parseDateToIso } from "@sonnenhof/utils/parse-date-to-iso";
 import { useIsMediumOrBigger } from "@sonnenhof/utils/use-is-medium-or-bigger";
 import { useOnClickOutside } from "@sonnenhof/utils/use-on-click-outside";
+import { StyledDatepicker } from "./styled-datepicker";
 
 const TextWithValue = React.forwardRef(
   (
@@ -201,7 +201,7 @@ export function Header(): JSX.Element {
               readOnly
             />
             <div className="max-h-1/2">
-              <DatePicker
+              <StyledDatepicker
                 selected={dates.from}
                 onChange={(newDate) => {
                   if (newDate) {
@@ -224,7 +224,7 @@ export function Header(): JSX.Element {
               />
             </div>
             <div className="max-h-1/2">
-              <DatePicker
+              <StyledDatepicker
                 selected={dates.to}
                 onChange={(newDate) => {
                   if (newDate) {
