@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { Image } from "@sonnenhof/components/image";
 import { Layout } from "@sonnenhof/components/layout";
 import { RoomDetails } from "@sonnenhof/components/room-details";
@@ -26,7 +27,10 @@ export default function Rooms(): JSX.Element {
     <Layout>
       <main>
         <div>
-          <Image name="rooms" className="bg-cover bg-no-repeat w-full" />
+          <Image
+            name="rooms"
+            className="bg-cover bg-no-repeat object-cover w-full min-h-screen center aspec-auto"
+          />
         </div>
         <Section
           title="Edelsteine im bayrischen Wald"
