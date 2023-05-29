@@ -110,6 +110,7 @@ export default function Home() {
             />
 
             <Section
+              applyMinHeight
               hint="Breakfast/Lunch & Fine dining"
               title="Plates"
               text="200"
