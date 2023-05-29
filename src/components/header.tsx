@@ -179,9 +179,11 @@ export function Header(): JSX.Element {
         >
           {router.route !== "/" ? (
             <Link
-              className={`cursor-pointer h-1/2 ${getThemeColor(
-                "primary"
-              )} p-3 md:p-5 grow md:grow-0`}
+              className={`cursor-pointer h-1/2 
+              ${getThemeColor("primary")}
+              ${getHoverThemeColor("primary")}
+              ${getVariantSize("small")}
+               p-3 md:p-5 grow md:grow-0 ml-4`}
               href={"/"}
             >
               <ArrowLeft />
@@ -298,11 +300,11 @@ export function Header(): JSX.Element {
           </MewsForm>
 
           <div
-            className={`cursor-pointer h-1/2 ${getThemeColor(
-              "primary"
-            )} ${getHoverThemeColor(
-              "primary"
-            )} flex-grow justify-end flex p-3 md:p-5 mr-4 md:grow-0`}
+            className={`cursor-pointer h-1/2 
+            ${getThemeColor("primary")} 
+            ${getHoverThemeColor("primary")} 
+            ${getVariantSize("small")}
+            flex-grow justify-end flex p-3 md:p-5 mr-4 md:grow-0`}
             onClick={() => {
               dialogRef.current?.showModal();
               document.body.style.overflow = "hidden";
