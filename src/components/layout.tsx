@@ -23,7 +23,7 @@ export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
           <span className="text-primary-600" />
           <span className="text-primary-500" />
           <span className="text-primary-400" />
-          <span className="text-primary-300" />
+          <span className="text-primary-200" />
           <span className="text-primary-200" />
           <span className="text-primary-100" />
           <span className="text-primary-50" />
@@ -39,7 +39,7 @@ export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
           <span className="bg-primary-600" />
           <span className="bg-primary-500" />
           <span className="bg-primary-400" />
-          <span className="bg-primary-300" />
+          <span className="bg-primary-200" />
           <span className="bg-primary-200" />
           <span className="bg-primary-100" />
           <span className="bg-primary-50" />

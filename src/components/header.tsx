@@ -34,12 +34,12 @@ const TextWithValue = React.forwardRef(
     return (
       <div
         onClick={() => onClick?.()}
-        className="flex gap-2 cursor-pointer hover:text-primary-300 group"
+        className="flex gap-2 cursor-pointer hover:text-primary-200 group"
       >
         <p
           className={`${getVariantSize("tiny")} ${getThemeColor(
             "primary"
-          )} group-hover:text-primary-300`}
+          )} group-hover:text-primary-200`}
         >
           {value as string}
         </p>
@@ -73,14 +73,14 @@ function PersonInput({
   const label = name === "mewsAdultCount" ? "Erwachsene" : "Kinder";
   return (
     <div
-      className="flex flex-row gap-4 items-center group hover:text-primary-300"
+      className="flex flex-row gap-4 items-center group hover:text-primary-200"
       onClick={(e) => e.stopPropagation()}
     >
       <label htmlFor={id}>
         <p
           className={`${getVariantSize("tiny")} ${getThemeColor(
             "primary"
-          )} group-hover:text-primary-300`}
+          )} group-hover:text-primary-200`}
         >
           {label}
         </p>
@@ -254,7 +254,7 @@ export function Header(): JSX.Element {
             </div>
             <div className="max-h-1/2 min-w-[270px] hidden xl:block">
               <div
-                className="gap-2 cursor-pointer border p-2 border-primary-500 hover:border-primary-300 text-primary-500 hover:text-primary-300 relative group whitespace-nowrap flex"
+                className="gap-2 cursor-pointer border p-2 border-primary-500 hover:border-primary-200 text-primary-500 hover:text-primary-200 relative group whitespace-nowrap flex"
                 onClick={() => setShowPersonInput((shown) => !shown)}
               >
                 <div className="grow">
@@ -264,7 +264,7 @@ export function Header(): JSX.Element {
                 {showPersonInput ? (
                   <div
                     ref={ref}
-                    className="absolute top-[50px] left-0 border border-primary-500 hover:border-primary-300 p-4 flex gap-4 flex-col bg-black"
+                    className="absolute top-[50px] left-0 border border-primary-500 hover:border-primary-200 p-4 flex gap-4 flex-col bg-black"
                   >
                     <PersonInput
                       name="mewsAdultCount"
