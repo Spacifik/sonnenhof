@@ -21,6 +21,7 @@ export function Layout({ children }: React.PropsWithChildren<{}>): JSX.Element {
         <span className="text-primary-200" />
         <span className="text-primary-100" />
         <span className="text-primary-50" />
+        <span className="group-hover/button:text-primary-50" />
 
         <span className="bg-gray-50" />
         <span className="bg-gray-100" />

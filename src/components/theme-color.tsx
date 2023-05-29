@@ -15,7 +15,7 @@ export function getHoverThemeColor(color: ThemeColor, bg = false): string {
   const prefix = bg ? "bg-" : "text-";
   switch (color) {
     case "primary":
-      return `hover:${prefix}primary-200 group-hover:${prefix}primary-200`;
+      return `hover:${prefix}primary-200 group-hover:${prefix}primary-200 group-hover/button:${prefix}primary-50`;
     case "dark":
       return `hover:${prefix}gray-200 group-hover:${prefix}gray-200`;
     case "light":
