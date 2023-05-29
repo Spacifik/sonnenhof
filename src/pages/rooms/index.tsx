@@ -25,44 +25,69 @@ export default function Rooms(): JSX.Element {
   const secondHalf = items.slice(halfLength);
   return (
     <Layout>
-      <main>
+      <main className="bg-black">
         <div>
           <Image
             name="rooms"
-            className="bg-cover bg-no-repeat object-cover w-full min-h-screen center aspec-auto"
+            className="bg-cover bg-no-repeat object-cover w-full min-h-screen center"
           />
         </div>
-        <Section
-          title="Edelsteine im bayrischen Wald"
-          text="Some text"
-          buttons={[]}
-        />
-        <Section title="Grundausstattung" buttons={[]}>
-          <Text variant="small-primary">
-            Unsere Zimmer und Suiten sind standardmäßig ausgestattet mit:
-          </Text>
-          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4">
-            <ul className="space-y-2">
-              {firstHalf.map((item, index) => (
-                <li key={index}>
-                  <Text variant="small-primary">{item.content}</Text>
-                </li>
-              ))}
-            </ul>
-            <ul className="space-y-2 mt-2 md:mt-0">
-              {secondHalf.map((item, index) => (
-                <li key={index}>
-                  <Text variant="small-primary">{item.content}</Text>
-                </li>
-              ))}
-            </ul>
+        <section className="flex flex-col gap-7 m-3 md:m-5 pt-3 2xl:pt-10 lg:m-10 xl:m-auto xl:max-w-[80vw] 2xl:max-w-[60vw]">
+          <div>
+            <h1>
+              <Text variant="huge-primary" bold>
+                Leben wie ein König
+              </Text>
+            </h1>
+            <h2>
+              <Text variant="big-primary">Mitten im bayrischen Wald</Text>
+            </h2>
           </div>
-        </Section>
-        <Section
-          title="Zimmerkategorien"
-          text="Sollten Sie unter Allergien leiden, bieten wir Ihnen gerne nach Verfügbarkeit ein Allergikerzimmer mit spezieller Ausstattung und auf Wunsch sogar mit Luftreinigungsgerät an – einfach bei der Hotelbuchung angeben."
-          buttons={[]}
-        />
+
+          <div className="flex flex-col gap-5">
+            <h3>
+              <Text variant="big-primary" bold>
+                Grundausstattung
+              </Text>
+            </h3>
+            <h4>
+              <Text variant="small-primary">
+                Unsere Zimmer und Suiten sind standardmäßig ausgestattet mit:
+              </Text>
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4">
+              <ul className="space-y-2">
+                {firstHalf.map((item, index) => (
+                  <li key={index}>
+                    <Text variant="small-primary">{item.content}</Text>
+                  </li>
+                ))}
+              </ul>
+              <ul className="space-y-2 mt-2 md:mt-0">
+                {secondHalf.map((item, index) => (
+                  <li key={index}>
+                    <Text variant="small-primary">{item.content}</Text>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-5">
+            <h3>
+              <Text variant="big-primary" bold>
+                Zimmerkategorien
+              </Text>
+            </h3>
+            <Text variant="small-primary">
+              Sollten Sie unter Allergien leiden, bieten wir Ihnen gerne nach
+              Verfügbarkeit ein Allergikerzimmer mit spezieller Ausstattung und
+              auf Wunsch sogar mit Luftreinigungsgerät an – einfach bei der
+              Hotelbuchung angeben.
+            </Text>
+          </div>
+        </section>
+
         <div className={`flex flex-col`}>
           <RoomDetails
             buttons={[
