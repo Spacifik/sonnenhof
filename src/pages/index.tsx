@@ -111,7 +111,7 @@ export default function Home() {
 
             <Section
               applyMinHeight
-              hint="Breakfast/Lunch & Fine dining"
+              hint="Brunch & dining"
               title="Plates"
               text="200"
               details="Exquisite Speisen, erlesene Weine, stilvolles Ambiente, raffinierte Küche. Unvergessliches Erlebnis und aufmerksames Personal."

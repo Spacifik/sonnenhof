@@ -237,9 +237,9 @@ export function Header(): JSX.Element {
                 }, [dates.from])()}
               />
             </div>
-            <div className="max-h-1/2 min-w-[270px]">
+            <div className="max-h-1/2 min-w-[270px] hidden xl:block">
               <div
-                className="gap-2 cursor-pointer border p-2 border-primary-regular text-primary-regular relative whitespace-nowrap hidden lg:flex hover:brightness-150"
+                className="gap-2 cursor-pointer border p-2 border-primary-regular text-primary-regular relative whitespace-nowrap flex hover:brightness-150"
                 onClick={() => setShowPersonInput((shown) => !shown)}
               >
                 <div className="grow">
