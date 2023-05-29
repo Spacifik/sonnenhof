@@ -35,7 +35,7 @@ export function Section({
       className={`
       grow relative md:basis-1/2 flex
       ${applyMinHeight ? "min-h-40vh md:min-h-60vh 2xl:min-h-40vh" : ""}
-      ${details ? "group" : ""}
+      ${details ? "group/section" : ""}
       ${background ? "bg-cover bg-no-repeat" : "bg-black"} 
       `}
       style={
@@ -50,9 +50,9 @@ export function Section({
         }
       }, [buttons, router])}
     >
-      <div className="w-full flex items-center justify-center group-hover:bg-black/50 transition-all">
+      <div className="w-full flex items-center justify-center group-hover/section:bg-black/50 transition-all">
         <div className="flex z-10 align-middle items-center justify-center max-w-[50%]">
-          <div className="opacity-100 group-hover:opacity-0 transition-all flex flex-col">
+          <div className="opacity-100 group-hover/section:opacity-0 transition-all flex flex-col">
             {hint && (
               <Text
                 variant={`tiniest-${textColorVariant}`}
@@ -82,7 +82,7 @@ export function Section({
           </div>
         </div>
         {details ? (
-          <div className="absolute inset-0 items-center justify-center max-w-[50%] m-auto opacity-0 group-hover:opacity-100 group-hover:flex flex-col">
+          <div className="absolute inset-0 items-center justify-center max-w-[50%] m-auto opacity-0 group-hover/section:opacity-100 group-hover/section:flex flex-col">
             <div className="m-auto gap-5 flex flex-col">
               {hint && (
                 <Text
