@@ -237,25 +237,30 @@ export function Header(): JSX.Element {
                 }, [dates.from])()}
               />
             </div>
-            <div className="max-h-1/2">
+            <div className="max-h-1/2 min-w-[270px]">
               <div
-                className="gap-2 cursor-pointer border p-2 border-primary-regular text-primary-regular relative whitespace-nowrap hidden lg:flex  hover:brightness-150"
+                className="gap-2 cursor-pointer border p-2 border-primary-regular text-primary-regular relative whitespace-nowrap hidden lg:flex hover:brightness-150"
                 onClick={() => setShowPersonInput((shown) => !shown)}
               >
-                <Text variant="tiny-primary">{guestLabel}</Text>
-                <input className="hidden" readOnly />
+                <div className="grow">
+                  <Text variant="tiny-primary">{guestLabel}</Text>
+                </div>
                 <User className="h-4 m-auto" />
                 {showPersonInput ? (
                   <div className="absolute top-[50px] left-0 border border-primary-regular p-4 flex gap-4 flex-col bg-black">
                     <PersonInput
                       name="mewsAdultCount"
                       value={adults}
-                      onChange={(newAdults) => setAdults(newAdults)}
+                      onChange={(newAdults) =>
+                        newAdults > 0 ? setAdults(newAdults) : undefined
+                      }
                     />
                     <PersonInput
                       name="mewsChildCount"
                       value={children}
-                      onChange={(newChildren) => setChildren(newChildren)}
+                      onChange={(newChildren) =>
+                        newChildren >= 0 ? setChildren(newChildren) : undefined
+                      }
                     />
                   </div>
                 ) : null}
