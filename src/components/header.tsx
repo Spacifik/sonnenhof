@@ -157,7 +157,7 @@ export function Header(): JSX.Element {
     <>
       <dialog
         ref={dialogRef}
-        className="w-full h-full bg-black/50 backdrop:bg-black/75 flex items-center"
+        className="w-full h-full bg-black/50 backdrop:bg-black/75 flex items-center z-[-1]"
         onClick={() => (dialogRef.current as any)?.close()}
       >
         <HamburgerOverlay />
