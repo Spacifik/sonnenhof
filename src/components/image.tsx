@@ -13,6 +13,8 @@ export interface ImageProps {
     | "activities"
     | "pool"
     | "rooms"
+    | "rooms-overview"
+    | "rooms-comfort-king"
     | "contact"
     | "wellness"
     | "career";
@@ -67,7 +69,11 @@ function getImageHashFor(name: ImageProps["name"]): string {
     case "pool":
       return "fcf44452-85d5-4626-488f-a062cfb92600";
     case "rooms":
-      return "d2e6641a-7b95-4bfe-78e1-26ed549eb500";
+      return "54bc294e-0b28-4a84-5008-824a4af03000";
+    case "rooms-overview":
+      return "200148e0-7f27-4359-3837-535eb26fc900";
+    case "rooms-comfort-king":
+      return "a9b9cf04-5ba4-4b3b-84ac-037ac1188000";
     case "contact":
       return "0972ead8-3b64-4fa7-7668-86cc3722b500";
     case "career":

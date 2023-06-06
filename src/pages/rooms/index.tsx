@@ -28,7 +28,7 @@ export default function Rooms(): JSX.Element {
       <main className="bg-black">
         <div>
           <Image
-            name="rooms"
+            name="rooms-overview"
             className="bg-cover bg-no-repeat object-cover w-full min-h-screen center"
           />
         </div>
@@ -97,7 +97,7 @@ export default function Rooms(): JSX.Element {
             summary="Comfort King - 22m²"
             details="Komfortables 22m² Nichtraucherzimmer mit Balkon und allergikerfreundlichem Holzboden"
             items={["22m²", "Begehbare Dusche", "Kühlschrank"]}
-            image="rooms"
+            image="rooms-comfort-king"
           />
 
           <RoomDetails
