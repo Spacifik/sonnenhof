@@ -37,6 +37,23 @@ export function MewsForm({
             value={to.toISOString().split("T")[0]}
             readOnly
           />
+          <input className="hidden" name="mewsRoute" value="rooms" readOnly />
+          <input
+            className="hidden"
+            type="number"
+            name="mewsAdultCount"
+            min={1}
+            value={2}
+            readOnly
+          />
+          <input
+            className="hidden"
+            type="number"
+            name="mewsChildCount"
+            min={0}
+            value={0}
+            readOnly
+          />
         </>
       ) : null}
       {children}

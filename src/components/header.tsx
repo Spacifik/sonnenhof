@@ -129,11 +129,9 @@ export function Header(): JSX.Element {
   // book. If they did, then the label was recomputed at least once
   // as such, the value will be truthy (> 0) and we can go to page 2
   // of the mews
-  const personInputDirty = React.useRef(-1);
   const guestLabel = React.useMemo(() => {
     const label =
       adults > 1 ? `${adults} Erwachsene` : `${adults} Erwachsene*r`;
-    personInputDirty.current++;
     if (children === 0) {
       return label;
     } else if (children === 1) {
@@ -205,12 +203,6 @@ export function Header(): JSX.Element {
 
           <div className="hidden md:flex grow" />
           <MewsForm className="hidden md:flex md:gap-3 justify-end items-center max-h-[200px]">
-            <input
-              className="hidden"
-              name="mewsRoute"
-              value={personInputDirty.current ? "rooms" : ""}
-              readOnly
-            />
             <div className="max-h-1/2">
               <StyledDatepicker
                 selected={dates.from}
