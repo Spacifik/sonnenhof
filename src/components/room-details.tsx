@@ -34,7 +34,14 @@ export function RoomDetails({
       className={`grow relative p-6 md:p-16 lg:px-60 md:basis-1/2 md:min-h-60vh bg-black marker:hidden `}
     >
       <MewsForm addDefaultDates>
-        <div className={`flex ${open ? `pb-3 md:pb-5 lg:pb-8` : ""}`}>
+        <div
+          className={`flex ${open ? `pb-3 md:pb-5 lg:pb-8` : ""}`}
+          onClick={() =>
+            setOpen((currentlyOpen) =>
+              currentlyOpen ? false || mediumOrBigger : true
+            )
+          }
+        >
           <Text light variant="big-primary">
             {summary}
           </Text>
@@ -42,19 +49,9 @@ export function RoomDetails({
             <>
               <span className="grow" />
               {open ? (
-                <Minus
-                  className="text-primary-500"
-                  onClick={() => {
-                    setOpen(() => false);
-                  }}
-                />
+                <Minus className="text-primary-500" />
               ) : (
-                <Plus
-                  className="text-primary-500"
-                  onClick={() => {
-                    setOpen(() => true || mediumOrBigger);
-                  }}
-                />
+                <Plus className="text-primary-500" />
               )}
             </>
           ) : null}
