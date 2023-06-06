@@ -22,11 +22,15 @@ export const footer: FooterProps = {
     },
     {
       label: "AGB",
-      href: "eula",
+      href: "https://www.michel-hotels.com/terms-and-conditions",
     },
     {
       label: "Impressum",
-      href: "imprint",
+      href: "https://www.michel-hotels.com/terms-of-use",
+    },
+    {
+      label: "Datenschutz",
+      href: "https://www.michel-hotels.com/privacy-policy",
     },
   ],
 };

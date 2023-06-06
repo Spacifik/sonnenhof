@@ -37,20 +37,55 @@ export function Footer({ phone, email, links }: FooterProps): JSX.Element {
       <div className="flex justify-around flex-col md:flex-row gap-3 md:gap-0">
         {links.map((link) =>
           link.href.startsWith(`https://`) ? (
-            <a key={link.label} href={link.href} className="cursor-pointer">
-              <Text variant="small-primary" uppercase mono>
-                {link.label}
-              </Text>
-            </a>
+            <ExternalLink key={link.label} {...link} />
           ) : (
-            <Link key={link.label} href={link.href} className="cursor-pointer">
-              <Text variant="small-primary" uppercase mono>
-                {link.label}
-              </Text>
-            </Link>
+            <InternalLink key={link.label} {...link} />
           )
         )}
       </div>
     </footer>
+  );
+}
+
+function ExternalLink({
+  label,
+  href,
+}: {
+  label: string;
+  href: string;
+}): JSX.Element {
+  function Label(): JSX.Element {
+    return (
+      <Text variant="small-primary" uppercase mono>
+        {label}
+      </Text>
+    );
+  }
+
+  return (
+    <>
+      <a className="cursor-pointer hidden md:block" href={href} target="_blank">
+        <Label />
+      </a>
+      <a className="cursor-pointer md:hidden" href={href}>
+        <Label />
+      </a>
+    </>
+  );
+}
+
+function InternalLink({
+  label,
+  href,
+}: {
+  label: string;
+  href: string;
+}): JSX.Element {
+  return (
+    <Link href={href} className="cursor-pointer">
+      <Text variant="small-primary" uppercase mono>
+        {label}
+      </Text>
+    </Link>
   );
 }
