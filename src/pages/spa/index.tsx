@@ -58,6 +58,66 @@ export default function Page(): JSX.Element {
             </PageSection>
           </div>
         </div>
+        <PageSection>
+          <Text variant="huge-primary" mono uppercase>
+            Öffnungszeiten
+          </Text>
+          <dl className="grid grid-cols-12 gap-2 md:block">
+            <dt className="md:pt-8 xl:pt-12 col-span-5">
+              <Text variant="medium-primary" bold>
+                Spa:
+              </Text>
+            </dt>
+            <dd className="inline-block md:pl-5 xl:pl-10  col-span-2">
+              <Text variant="medium-primary">6:30</Text>
+            </dd>
+            <dd className="inline-block md:pl-5 xl:pl-10  col-span-1">
+              <Text variant="medium-primary">-</Text>
+            </dd>
+            <dd className="inline-block md:pl-5 xl:pl-10  col-span-2">
+              <Text variant="medium-primary">01:00</Text>
+            </dd>
+            <dd className="inline-block md:pl-2 col-span-2">
+              <Text variant="medium-primary">Uhr</Text>
+            </dd>
+
+            <dt className="md:pt-8 xl:pt-12 col-span-5">
+              <Text variant="medium-primary" bold>
+                Rezeption:
+              </Text>
+            </dt>
+            <dd className="inline-block md:pl-5 xl:pl-10  col-span-2">
+              <Text variant="medium-primary">10:00</Text>
+            </dd>
+            <dd className="inline-block md:pl-5 xl:pl-10  col-span-1">
+              <Text variant="medium-primary">-</Text>
+            </dd>
+            <dd className="inline-block md:pl-5 xl:pl-10  col-span-2">
+              <Text variant="medium-primary">19:00</Text>
+            </dd>
+            <dd className="inline-block md:pl-2 col-span-2">
+              <Text variant="medium-primary">Uhr</Text>
+            </dd>
+
+            <dt className="md:pt-8 xl:pt-12 col-span-5">
+              <Text variant="medium-primary" bold>
+                Behandlungen:
+              </Text>
+            </dt>
+            <dd className="inline-block md:pl-5 xl:pl-10  col-span-2">
+              <Text variant="medium-primary">10:00</Text>
+            </dd>
+            <dd className="inline-block md:pl-5 xl:pl-10  col-span-1">
+              <Text variant="medium-primary">-</Text>
+            </dd>
+            <dd className="inline-block md:pl-5 xl:pl-10  col-span-2">
+              <Text variant="medium-primary">19:00</Text>
+            </dd>
+            <dd className="inline-block md:pl-2 col-span-2">
+              <Text variant="medium-primary">Uhr</Text>
+            </dd>
+          </dl>
+        </PageSection>
       </main>
     </Layout>
   );
