@@ -1,3 +1,4 @@
+import { Button } from "@sonnenhof/components/button";
 import { EmptyPage } from "@sonnenhof/components/empty-page";
 import { PageTopImage } from "@sonnenhof/components/image";
 import { Layout } from "@sonnenhof/components/layout";
@@ -11,18 +12,29 @@ export default function Page(): JSX.Element {
         <div>
           <PageTopImage name="spa-overview" />
         </div>
-        <div className="flex flex-col min-h-60vh gap-5 md:gap-8 lg:gap-12 bg-black p-3 md:p-5 lg:p-10">
-          <div className="flex flex-col gap-1">
-            <Text variant="tiny-primary" mono uppercase>
-              Wellness & Spa
-            </Text>
-            <Text variant="big-primary">Face | Body</Text>
-          </div>
-          <Text variant="small-primary">
-            Luxoriöser SPA Bereich mit Sauna, Eis-Lounge, Dampfbad und
-            Massagezentrum
+        <div className="flex flex-col min-h-60vh gap-5 md:gap-8 lg:gap-12 bg-black px-3 md:px-5 lg:px-10 py-20 md:py-32">
+          <Text variant="huge-primary" mono uppercase>
+            Wellness & Spa
           </Text>
-
+          <Text variant="small-primary">
+            Der Sonnenhof Spa ist ein echtes Hideaway mit urbanem Komfort. Vor
+            der atemberaubenden Kulisse des bayrischen Waldes wird Ihr
+            Aufenthalt zu einer erholsamen Wellnessauszeit für Sie und Ihren
+            Körper. Entdecken Sie die einzigartige Vielfalt entspannender
+            Treatments, wie unsere besondere Michelhotel Behandlung. Auch Gäste,
+            die nicht bei uns übernachten sind eingeladen, den Spa als Day Spa
+            zu nutzen. Und wenn Sie eine kleine Abwechslung beim Relaxen
+            brauchen, steht im Kühlschrank gutes, bayrisches Bier kalt – Cheers!
+          </Text>
+          <div className="pt-3">
+            <Button
+              label="Broschüre"
+              variant="tertiary"
+              onClick={() => alert("Broschüre nicht verfügbar")}
+            />
+          </div>
+        </div>
+        <div>
           <TextAsideMediumOrLarger right imageName="wellness">
             Unser luxuriöser Spa-Bereich erwartet Sie mit einer Vielzahl von
             erstklassigen Einrichtungen. Beginnen Sie Ihre Wellnessreise mit
