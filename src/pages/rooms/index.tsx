@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { Image } from "@sonnenhof/components/image";
+import { PageTopImage } from "@sonnenhof/components/image";
 import { Layout } from "@sonnenhof/components/layout";
 import { RoomDetails } from "@sonnenhof/components/room-details";
-import { Section } from "@sonnenhof/components/section";
 import { Text } from "@sonnenhof/components/text";
 
 export default function Rooms(): JSX.Element {
@@ -27,9 +26,8 @@ export default function Rooms(): JSX.Element {
     <Layout>
       <main className="bg-black">
         <div>
-          <Image
+          <PageTopImage
             name="rooms-overview"
-            className="bg-cover bg-no-repeat object-cover w-full min-h-screen max-h-[100svh] center"
           />
         </div>
         <section className="flex flex-col gap-7 md:gap-10 xl:gap-16 2xl:gap-20 m-3 md:m-5 pt-3 md:pt-5 lg:pt-10 2xl:pt-16 pb-3 2xl:pb-10 lg:m-10 xl:m-auto lg:max-w-[80vw] xl:max-w-[70vw] 2xl:max-w-[60vw]">

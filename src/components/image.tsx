@@ -29,6 +29,10 @@ export function Image({ name, className }: ImageProps): JSX.Element {
   return <img className={className} src={getImageSrc(name)} alt={name} />;
 }
 
+export function PageTopImage({ name, className }: ImageProps): JSX.Element {
+  return <Image name={name} className={(className ?? "").concat("bg-cover bg-no-repeat object-cover w-full min-h-screen max-h-[100svh] center")} />
+}
+
 export function BackgroundImage({
   name,
   className,
