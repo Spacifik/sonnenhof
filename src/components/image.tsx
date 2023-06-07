@@ -15,6 +15,7 @@ export interface ImageProps {
     | "pool"
     | "spa-overview"
     | "spa-icebath"
+    | "spa-dark-background"
     | "rooms"
     | "rooms-overview"
     | "rooms-comfort-king"
@@ -98,6 +99,8 @@ function getImageHashFor(name: ImageProps["name"]): string {
       return "b7acbcec-f9c1-4bad-b78c-39a72f39a900";
     case "spa-icebath":
       return "041405fa-ed42-4546-12d3-34911e86d600";
+      case "spa-dark-background":
+        return "1f81b917-e4af-41eb-2b42-9f882eee0e00";
     default:
       exhaustiveCheck(name);
       return "";

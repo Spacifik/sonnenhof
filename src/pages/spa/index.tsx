@@ -1,20 +1,19 @@
 import { Button } from "@sonnenhof/components/button";
-import { EmptyPage } from "@sonnenhof/components/empty-page";
-import { PageTopImage } from "@sonnenhof/components/image";
+import { PageTopImage, getImageSrc } from "@sonnenhof/components/image";
 import { Layout } from "@sonnenhof/components/layout";
+import { PageSection } from "@sonnenhof/components/page-section";
 import { Text } from "@sonnenhof/components/text";
-import { TextAsideMediumOrLarger } from "@sonnenhof/components/text-aside-medium-or-larger";
 
 export default function Page(): JSX.Element {
   return (
     <Layout>
-      <main>
+      <main className="bg-black">
         <div>
           <PageTopImage name="spa-overview" />
         </div>
-        <div className="flex flex-col min-h-60vh gap-5 md:gap-8 lg:gap-12 bg-black px-3 md:px-5 lg:px-10 py-20 md:py-32">
+        <PageSection>
           <Text variant="huge-primary" mono uppercase>
-            Wellness & Spa
+            Erhabenheit im bayrischen Wald
           </Text>
           <Text variant="small-primary">
             Der Sonnenhof Spa ist ein echtes Hideaway mit urbanem Komfort. Vor
@@ -28,52 +27,36 @@ export default function Page(): JSX.Element {
           </Text>
           <div className="pt-3">
             <Button
-              label="Broschüre"
+              label="Spa Broschüre"
               variant="tertiary"
               onClick={() => alert("Broschüre nicht verfügbar")}
             />
           </div>
-        </div>
-        <div>
-          <TextAsideMediumOrLarger right imageName="wellness">
-            Unser luxuriöser Spa-Bereich erwartet Sie mit einer Vielzahl von
-            erstklassigen Einrichtungen. Beginnen Sie Ihre Wellnessreise mit
-            einem Besuch unserer Sauna, wo Sie die wohltuende Wärme genießen und
-            Ihre Sinne beleben können. Nach einem erholsamen Saunagang können
-            Sie sich in unserer erfrischenden Eis-Lounge abkühlen und Ihre Haut
-            revitalisieren.
-          </TextAsideMediumOrLarger>
-
-          <Text variant="small-primary">
-            Im Dampfbad können Sie in eine Welt der Entspannung eintauchen und
-            Ihre Muskeln lockern. Die feucht-warme Luft wirkt sich wohltuend auf
-            Ihren Körper aus und hilft Ihnen, den Alltagsstress abzuschütteln.
-            Lassen Sie Ihre Sorgen einfach davonschmelzen und genießen Sie die
-            heilsame Wirkung des Dampfbads.
-          </Text>
-
-          <Text variant="small-primary">
-            Unser Massagezentrum bietet Ihnen eine Vielzahl von wohltuenden
-            Behandlungen, die von erfahrenen Therapeuten durchgeführt werden.
-            Von entspannenden Ganzkörpermassagen bis hin zu gezielten
-            Gesichtsanwendungen - hier steht Ihr Wohlbefinden im Mittelpunkt.
-            Spüren Sie, wie sich Ihre Verspannungen lösen und Ihr Geist zur Ruhe
-            kommt.
-          </Text>
-
-          <TextAsideMediumOrLarger imageName="wellness">
-            Ob Sie ein strahlendes Gesicht wünschen oder Ihrem Körper eine
-            Auszeit gönnen möchten, unser Wellness- und Spa-Bereich bietet Ihnen
-            die besten Voraussetzungen für Ihr Wohlbefinden. Tauchen Sie ein in
-            eine Welt der Entspannung und lassen Sie den Alltag hinter sich.
-          </TextAsideMediumOrLarger>
-
-          <Text variant="small-primary">
-            Gönnen Sie sich das Beste und erleben Sie unvergessliche Momente im
-            Wellness- und Spa-Bereich unseres Michelhotels im bayrischen Wald.
-            Hier finden Sie die perfekte Balance zwischen Erholung und Genuss,
-            während Sie von Kopf bis Fuß verwöhnt werden.
-          </Text>
+        </PageSection>
+        <div
+          className="h-full w-full bg-cover bg-center after:content-none after:h-full after:w-full after:absolute after:inset-0"
+          style={{
+            backgroundImage: `url(${getImageSrc("spa-dark-background")})`,
+          }}
+        >
+          <div className="bg-black/90 p-2 md:p-5 lg:p-10 xl:p-20">
+            <PageSection>
+              <Text variant="huge-primary" mono uppercase>
+                Spa
+              </Text>
+              <Text variant="small-primary">
+                Unser Spa ist ein Ort zum Entspannen und Regenerieren, mit
+                Hamam, Dampfbad sowie Whirlpool und Sauna mit Blick auf den
+                bayrischen Wald. Alle angebotenen Wellness Treatments werden
+                dank eines hervorragenden Spa Teams zu einem relaxenden Erlebnis
+                besonderer Art.
+              </Text>
+              <Text variant="small-primary">
+                Lassen Sie es sich und Ihren Lieben gut gehen, ob als Hotelgäste
+                oder als Day Spa Besucher.
+              </Text>
+            </PageSection>
+          </div>
         </div>
       </main>
     </Layout>
