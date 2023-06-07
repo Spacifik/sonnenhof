@@ -19,7 +19,7 @@ export default function Page(): JSX.Element {
             <Text variant="big-primary">Face | Body</Text>
           </div>
           <Text variant="small-primary">
-            Luxoriöser SPA Bereich mit Sauna, Eis-Lounge, Dampbad und
+            Luxoriöser SPA Bereich mit Sauna, Eis-Lounge, Dampfbad und
             Massagezentrum
           </Text>
 
