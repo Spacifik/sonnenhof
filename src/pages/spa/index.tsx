@@ -1,4 +1,5 @@
 import { EmptyPage } from "@sonnenhof/components/empty-page";
+import { PageTopImage } from "@sonnenhof/components/image";
 import { Layout } from "@sonnenhof/components/layout";
 import { Text } from "@sonnenhof/components/text";
 import { TextAsideMediumOrLarger } from "@sonnenhof/components/text-aside-medium-or-larger";
@@ -7,6 +8,9 @@ export default function Page(): JSX.Element {
   return (
     <Layout>
       <main>
+        <div>
+          <PageTopImage name="spa-overview" />
+        </div>
         <div className="flex flex-col min-h-60vh gap-5 md:gap-8 lg:gap-12 bg-black p-3 md:p-5 lg:p-10">
           <div className="flex flex-col gap-1">
             <Text variant="tiny-primary" mono uppercase>

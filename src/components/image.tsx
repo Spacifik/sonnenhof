@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { exhaustiveCheck } from "@sonnenhof/utils/exhaustive-check";
 
 /* eslint-disable @next/next/no-img-element */
@@ -12,6 +13,8 @@ export interface ImageProps {
     | "sport"
     | "activities"
     | "pool"
+    | "spa-overview"
+    | "spa-icebath"
     | "rooms"
     | "rooms-overview"
     | "rooms-comfort-king"
@@ -30,7 +33,14 @@ export function Image({ name, className }: ImageProps): JSX.Element {
 }
 
 export function PageTopImage({ name, className }: ImageProps): JSX.Element {
-  return <Image name={name} className={(className ?? "").concat("bg-cover bg-no-repeat object-cover w-full min-h-screen max-h-[100svh] center")} />
+  return (
+    <Image
+      name={name}
+      className={(className ?? "").concat(
+        "bg-cover bg-no-repeat object-cover w-full min-h-screen max-h-[100svh] center"
+      )}
+    />
+  );
 }
 
 export function BackgroundImage({
@@ -84,6 +94,10 @@ function getImageHashFor(name: ImageProps["name"]): string {
       return "9bc14109-f98f-455f-89d4-79aad5597200";
     case "wellness":
       return "90a31e90-e41c-4ceb-76a9-99a85cb76000";
+    case "spa-overview":
+      return "b7acbcec-f9c1-4bad-b78c-39a72f39a900";
+    case "spa-icebath":
+      return "041405fa-ed42-4546-12d3-34911e86d600";
     default:
       exhaustiveCheck(name);
       return "";
