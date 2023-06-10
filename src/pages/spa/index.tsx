@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { Button } from "@sonnenhof/components/button";
-import { PageTopImage, getImageSrc } from "@sonnenhof/components/image";
+import { Image, PageTopImage, getImageSrc } from "@sonnenhof/components/image";
 import { Layout } from "@sonnenhof/components/layout";
 import { PageSection } from "@sonnenhof/components/page-section";
 import { Text } from "@sonnenhof/components/text";
@@ -41,7 +42,7 @@ export default function Page(): JSX.Element {
             backgroundImage: `url(${getImageSrc("spa-dark-background")})`,
           }}
         >
-          <div className="bg-black/75 p-2 md:p-5 lg:p-10 xl:p-20">
+          <div className="bg-black/90 p-2 md:p-5 lg:p-10 xl:p-20">
             <PageSection>
               <Text variant="huge-primary" mono uppercase>
                 Spa
@@ -162,6 +163,19 @@ export default function Page(): JSX.Element {
             </div>
           </CustomPageSection>
         </PageSectionWrapper>
+
+        <div
+          className="h-full w-full bg-cover bg-center after:content-none after:h-full after:w-full after:absolute after:inset-0"
+          style={{
+            backgroundImage: `url(${getImageSrc("spa-dark-background")})`,
+          }}
+        >
+          <div className="bg-black/90 p-2 md:p-5 lg:p-10 xl:p-20">
+            <PageSection>
+              <Image name="spa-icebath" />
+            </PageSection>
+          </div>
+        </div>
       </main>
     </Layout>
   );
