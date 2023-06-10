@@ -152,7 +152,7 @@ export default function Page(): JSX.Element {
 
           <CustomPageSection>
             <CustomPageSectionHeader>Kontakt</CustomPageSectionHeader>
-            <div className="flex gap-2 flex-col">
+            <div className="flex gap-2 flex-col  mt-8 lg:mt-12">
               <a href={`tel:${footer.phone}`}>
                 <Text variant="small-primary">{footer.phone}</Text>
               </a>
@@ -171,7 +171,7 @@ function PageSectionWrapper({
   children,
 }: React.PropsWithChildren<{}>): JSX.Element {
   return (
-    <div className="flex flex-col lg:flex-row gap-3 lg:p-12 2xl:p-28">
+    <div className="flex flex-col lg:flex-row gap-3 mt-5 lg:mt-0 lg:p-12 2xl:p-28 mx-w-[2200px] m-auto">
       {children}
     </div>
   );
