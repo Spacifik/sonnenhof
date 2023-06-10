@@ -3,6 +3,8 @@ import { PageTopImage, getImageSrc } from "@sonnenhof/components/image";
 import { Layout } from "@sonnenhof/components/layout";
 import { PageSection } from "@sonnenhof/components/page-section";
 import { Text } from "@sonnenhof/components/text";
+import { footer } from "@sonnenhof/data/footer/footer";
+import { useIsMediumOrBigger } from "@sonnenhof/utils/use-is-medium-or-bigger";
 
 export default function Page(): JSX.Element {
   return (
@@ -39,7 +41,7 @@ export default function Page(): JSX.Element {
             backgroundImage: `url(${getImageSrc("spa-dark-background")})`,
           }}
         >
-          <div className="bg-black/90 p-2 md:p-5 lg:p-10 xl:p-20">
+          <div className="bg-black/75 p-2 md:p-5 lg:p-10 xl:p-20">
             <PageSection>
               <Text variant="huge-primary" mono uppercase>
                 Spa
@@ -58,67 +60,154 @@ export default function Page(): JSX.Element {
             </PageSection>
           </div>
         </div>
-        <PageSection>
-          <Text variant="huge-primary" mono uppercase>
-            Öffnungszeiten
-          </Text>
-          <dl className="grid grid-cols-12 gap-2 md:block">
-            <dt className="md:pt-8 xl:pt-12 col-span-5">
-              <Text variant="medium-primary" bold>
-                Spa:
-              </Text>
-            </dt>
-            <dd className="inline-block md:pl-5 xl:pl-10  col-span-2">
-              <Text variant="medium-primary">6:30</Text>
-            </dd>
-            <dd className="inline-block md:pl-5 xl:pl-10  col-span-1">
-              <Text variant="medium-primary">-</Text>
-            </dd>
-            <dd className="inline-block md:pl-5 xl:pl-10  col-span-2">
-              <Text variant="medium-primary">01:00</Text>
-            </dd>
-            <dd className="inline-block md:pl-2 col-span-2">
-              <Text variant="medium-primary">Uhr</Text>
-            </dd>
 
-            <dt className="md:pt-8 xl:pt-12 col-span-5">
-              <Text variant="medium-primary" bold>
-                Rezeption:
-              </Text>
-            </dt>
-            <dd className="inline-block md:pl-5 xl:pl-10  col-span-2">
-              <Text variant="medium-primary">10:00</Text>
-            </dd>
-            <dd className="inline-block md:pl-5 xl:pl-10  col-span-1">
-              <Text variant="medium-primary">-</Text>
-            </dd>
-            <dd className="inline-block md:pl-5 xl:pl-10  col-span-2">
-              <Text variant="medium-primary">19:00</Text>
-            </dd>
-            <dd className="inline-block md:pl-2 col-span-2">
-              <Text variant="medium-primary">Uhr</Text>
-            </dd>
+        <PageSectionWrapper>
+          <CustomPageSection>
+            <CustomPageSectionHeader>Öffnungszeiten</CustomPageSectionHeader>
+            <dl className="grid grid-cols-12 gap-2 lg:block max-w-[400px] xl:min-w-full mt-8 lg:mt-0">
+              <dt className="lg:pt-8 lg:pb-2 xl:pt-12 col-span-5">
+                <Text variant="medium-primary">Spa:</Text>
+              </dt>
+              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
+                <Text variant="medium-primary">6:30</Text>
+              </dd>
+              <dd className="inline-block lg:pl-3 text-center xl:pl-10  col-span-1">
+                <Text variant="medium-primary">-</Text>
+              </dd>
+              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
+                <Text variant="medium-primary">01:00</Text>
+              </dd>
+              <dd className="inline-block lg:pl-2 col-span-2">
+                <Text variant="medium-primary">Uhr</Text>
+              </dd>
 
-            <dt className="md:pt-8 xl:pt-12 col-span-5">
-              <Text variant="medium-primary" bold>
-                Behandlungen:
+              <dt className="lg:pt-8 lg:pb-2 xl:pt-12 col-span-5">
+                <Text variant="medium-primary">Rezeption:</Text>
+              </dt>
+              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
+                <Text variant="medium-primary">10:00</Text>
+              </dd>
+              <dd className="inline-block lg:pl-3 text-center xl:pl-10  col-span-1">
+                <Text variant="medium-primary">-</Text>
+              </dd>
+              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
+                <Text variant="medium-primary">19:00</Text>
+              </dd>
+              <dd className="inline-block lg:pl-2 col-span-2">
+                <Text variant="medium-primary">Uhr</Text>
+              </dd>
+
+              <dt className="lg:pt-8 lg:pb-2 xl:pt-12 col-span-5">
+                <Text variant="medium-primary">Behandlungen:</Text>
+              </dt>
+              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
+                <Text variant="medium-primary">10:00</Text>
+              </dd>
+              <dd className="inline-block lg:pl-3 text-center xl:pl-10  col-span-1">
+                <Text variant="medium-primary">-</Text>
+              </dd>
+              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
+                <Text variant="medium-primary">19:00</Text>
+              </dd>
+              <dd className="inline-block lg:pl-2 col-span-2">
+                <Text variant="medium-primary">Uhr</Text>
+              </dd>
+            </dl>
+          </CustomPageSection>
+
+          <CustomPageSection grow>
+            <CustomPageSectionHeader>Termine</CustomPageSectionHeader>
+            <dl className="grid grid-cols-12 gap-2 lg:block max-w-[400px] mt-8 lg:mt-0 xl:min-w-full">
+              <dt className="lg:pt-8 lg:pb-2 xl:pt-12 col-span-5">
+                <Text variant="medium-primary">Massagen:</Text>
+              </dt>
+              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
+                <Text variant="medium-primary">10:00</Text>
+              </dd>
+              <dd className="inline-block lg:pl-3 text-center xl:pl-10  col-span-1">
+                <Text variant="medium-primary">-</Text>
+              </dd>
+              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
+                <Text variant="medium-primary">19:00</Text>
+              </dd>
+              <dd className="inline-block lg:pl-2 col-span-2">
+                <Text variant="medium-primary">Uhr</Text>
+              </dd>
+            </dl>
+            <div className="py-6 lg:py-8">
+              <Text variant="small-primary" inline>
+                Wir empfehlen Ihnen, Ihre Behandlung mindestens
+              </Text>{" "}
+              <Text variant="small-primary" inline bold>
+                einen Tag vor Ihrem Besuch im Spa zu reservieren.
+              </Text>{" "}
+              <Text variant="small-primary" inline>
+                Sollten Sie Ihren Termin nicht wahrnehmen können, bitten wir Sie
+                um eine Absage 24 Stunden vorher, da wir Ihnen andernfalls die
+                Gesamtkosten in Rechnung stellen müssen.
               </Text>
-            </dt>
-            <dd className="inline-block md:pl-5 xl:pl-10  col-span-2">
-              <Text variant="medium-primary">10:00</Text>
-            </dd>
-            <dd className="inline-block md:pl-5 xl:pl-10  col-span-1">
-              <Text variant="medium-primary">-</Text>
-            </dd>
-            <dd className="inline-block md:pl-5 xl:pl-10  col-span-2">
-              <Text variant="medium-primary">19:00</Text>
-            </dd>
-            <dd className="inline-block md:pl-2 col-span-2">
-              <Text variant="medium-primary">Uhr</Text>
-            </dd>
-          </dl>
-        </PageSection>
+            </div>
+            <Button label="Jetzt buchen" variant="primary" submit />
+          </CustomPageSection>
+
+          <CustomPageSection>
+            <CustomPageSectionHeader>Kontakt</CustomPageSectionHeader>
+            <div className="flex gap-2 flex-col">
+              <a href={`tel:${footer.phone}`}>
+                <Text variant="small-primary">{footer.phone}</Text>
+              </a>
+              <a href={`mailto:${footer.email}`}>
+                <Text variant="small-primary">{footer.email}</Text>
+              </a>
+            </div>
+          </CustomPageSection>
+        </PageSectionWrapper>
       </main>
     </Layout>
+  );
+}
+
+function PageSectionWrapper({
+  children,
+}: React.PropsWithChildren<{}>): JSX.Element {
+  return (
+    <div className="flex flex-col lg:flex-row gap-3 lg:p-12 2xl:p-28">
+      {children}
+    </div>
+  );
+}
+
+function CustomPageSection({
+  grow,
+  children,
+}: React.PropsWithChildren<{ grow?: boolean }>): JSX.Element {
+  const isMediumOrBigger = useIsMediumOrBigger();
+  return isMediumOrBigger ? (
+    <div
+      className={`flex flex-col ${
+        grow ? "grow" : ""
+      } basis-[33.3333%] m-3 pt-3 md:pt-5 lg:pt-10 2xl:pt-16 pb-3 2xl:pb-8`}
+    >
+      {children}
+    </div>
+  ) : (
+    <PageSection>{children}</PageSection>
+  );
+}
+
+function CustomPageSectionHeader({
+  children,
+}: {
+  children: string;
+}): JSX.Element {
+  const isMediumOrBigger = useIsMediumOrBigger();
+  return isMediumOrBigger ? (
+    <Text variant="medium-primary" mono uppercase>
+      {children}
+    </Text>
+  ) : (
+    <Text variant="huge-primary" mono uppercase>
+      {children}
+    </Text>
   );
 }

@@ -38,7 +38,7 @@ export function Text({
       ${light ? "font-light" : ""}
       ${noWrap ? "whitespace-nowrap" : ""}
       ${addHover ? getHoverThemeColor(color) : ""}
-      ${inline ? "display-inline" : ""}
+      ${inline ? "inline" : ""}
       `}
     >
       {children}

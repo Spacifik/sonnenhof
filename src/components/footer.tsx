@@ -19,7 +19,7 @@ export function Footer({ phone, email, links }: FooterProps): JSX.Element {
     <footer className="font-mono w-full px-6 py-10 flex flex-col gap-10 bg-black min-h-15vh md:px-9 md:py-13 md:gap-16">
       <div>
         <div className="flex flex-row gap-3">
-          <Text variant="small-primary">Contact us</Text>
+          <Text variant="small-primary">Kontakt</Text>
           <a href={`tel:${phone}`}>
             <Text variant="small-primary">{phone}</Text>
           </a>
