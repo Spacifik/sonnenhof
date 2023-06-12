@@ -48,7 +48,7 @@ export default function Page(): JSX.Element {
                 Inspirationen
               </Text>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-14 3xl:gap-20">
                 <EventArticle>
                   <EventImage name="event1" />
                   <Text variant="big-primary" bold>
@@ -133,5 +133,7 @@ function EventArticle({ children }: React.PropsWithChildren<{}>): JSX.Element {
 }
 
 function EventImage({ name }: Pick<ImageProps, "name">): JSX.Element {
-  return <Image name={name} className="h-64 w-full object-cover" />;
+  return (
+    <Image name={name} className="h-64 lg:h-80 2xl:h-96 w-full object-cover" />
+  );
 }
