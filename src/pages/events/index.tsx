@@ -123,6 +123,21 @@ export default function Page(): JSX.Element {
             </PageSection>
           </PageSectionDimmedBackgroundWrapper>
         </PageSectionBackgroundImageWrapper>
+
+        <PageSection>
+          <Text variant="huge-primary" mono uppercase>
+            Ready, set, go!
+          </Text>
+          <Text variant="small-primary">
+            Ob Empfang, Meetings oder große Party – das Michelhotel Sonnenhof
+            bietet den idealen Rahmen für eine produktive Arbeitsatmosphäre oder
+            aber Tanzfläche für bis zu 200 Gäste.
+          </Text>
+          <Text variant="small-primary">
+            Unser Team berät und unterstützt Sie gerne bei Planung und
+            Durchführung Ihrer ganz individuellen Veranstaltung
+          </Text>
+        </PageSection>
       </main>
     </Layout>
   );
