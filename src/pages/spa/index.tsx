@@ -3,6 +3,8 @@ import { Button } from "@sonnenhof/components/button";
 import { Image, PageTopImage, getImageSrc } from "@sonnenhof/components/image";
 import { Layout } from "@sonnenhof/components/layout";
 import { PageSection } from "@sonnenhof/components/page-section";
+import { PageSectionBackgroundImageWrapper } from "@sonnenhof/components/page-section-background-image-wrapper";
+import { PageSectionDimmedBackgroundWrapper } from "@sonnenhof/components/page-section-dimmed-background-wrapper";
 import { Text } from "@sonnenhof/components/text";
 import { footer } from "@sonnenhof/data/footer/footer";
 import { useIsMediumOrBigger } from "@sonnenhof/utils/use-is-medium-or-bigger";
@@ -36,13 +38,8 @@ export default function Page(): JSX.Element {
             />
           </div>
         </PageSection>
-        <div
-          className="h-full w-full bg-cover bg-center after:content-none after:h-full after:w-full after:absolute after:inset-0"
-          style={{
-            backgroundImage: `url(${getImageSrc("spa-dark-background")})`,
-          }}
-        >
-          <div className="bg-black/90 p-2 md:p-5 lg:p-10 xl:p-20">
+        <PageSectionBackgroundImageWrapper>
+          <PageSectionDimmedBackgroundWrapper>
             <PageSection>
               <Text variant="huge-primary" mono uppercase>
                 Spa
@@ -59,8 +56,8 @@ export default function Page(): JSX.Element {
                 oder als Day Spa Besucher.
               </Text>
             </PageSection>
-          </div>
-        </div>
+          </PageSectionDimmedBackgroundWrapper>
+        </PageSectionBackgroundImageWrapper>
 
         <PageSectionWrapper>
           <CustomPageSection>
@@ -164,18 +161,13 @@ export default function Page(): JSX.Element {
           </CustomPageSection>
         </PageSectionWrapper>
 
-        <div
-          className="h-full w-full bg-cover bg-center after:content-none after:h-full after:w-full after:absolute after:inset-0"
-          style={{
-            backgroundImage: `url(${getImageSrc("spa-dark-background")})`,
-          }}
-        >
-          <div className="bg-black/90 p-2 md:p-5 lg:p-10 xl:p-20">
+        <PageSectionBackgroundImageWrapper>
+          <PageSectionDimmedBackgroundWrapper>
             <PageSection>
               <Image name="spa-icebath" />
             </PageSection>
-          </div>
-        </div>
+          </PageSectionDimmedBackgroundWrapper>
+        </PageSectionBackgroundImageWrapper>
 
         <PageSection>
           <Text variant="huge-primary" mono uppercase>

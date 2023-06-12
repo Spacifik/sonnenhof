@@ -5,6 +5,10 @@ import { exhaustiveCheck } from "@sonnenhof/utils/exhaustive-check";
 export interface ImageProps {
   name:
     | "events"
+    | "event-hybrid-meetings"
+    | "event-corporate"
+    | "event-press"
+    | "event-presentation"
     | "location"
     | "city"
     | "event1"
@@ -67,6 +71,14 @@ function getImageHashFor(name: ImageProps["name"]): string {
   switch (name) {
     case "events":
       return "97644631-2c0d-4d84-0376-a3ebfae9a200";
+    case "event-hybrid-meetings":
+      return "b4bd46d8-5106-4074-6fea-efce86b2c900";
+    case "event-corporate":
+      return "de946142-9835-46c4-af20-c58db2144d00";
+    case "event-press":
+      return "66fdff13-4748-4c72-e0fc-0c6e75812800";
+    case "event-presentation":
+      return "ec2f648e-bf8e-4074-be81-01a2fe1ac800";
     case "location":
       return "1be9506e-d7fb-42bf-8c7c-65f3fd8bc800";
     case "city":

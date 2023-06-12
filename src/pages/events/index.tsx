@@ -1,73 +1,109 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from "react";
-import { EmptyPage } from "@sonnenhof/components/empty-page";
-import { Image, ImageProps } from "@sonnenhof/components/image";
+import { Image, PageTopImage, getImageSrc } from "@sonnenhof/components/image";
 import { Layout } from "@sonnenhof/components/layout";
 import { Text } from "@sonnenhof/components/text";
-import { useIsMediumOrBigger } from "@sonnenhof/utils/use-is-medium-or-bigger";
-import { TextAsideMediumOrLarger } from "@sonnenhof/components/text-aside-medium-or-larger";
+import { PageSection } from "@sonnenhof/components/page-section";
+import { Button } from "@sonnenhof/components/button";
+import { PageSectionBackgroundImageWrapper } from "@sonnenhof/components/page-section-background-image-wrapper";
+import { PageSectionDimmedBackgroundWrapper } from "@sonnenhof/components/page-section-dimmed-background-wrapper";
 
 export default function Page(): JSX.Element {
   return (
     <Layout>
-      <main>
-        <div className="flex flex-col min-h-60vh gap-5 md:gap-8 lg:gap-12 bg-black p-3 md:p-5 lg:p-10">
-          <div className="flex flex-col gap-1">
-            <Text variant="tiny-primary" mono uppercase>
-              Events & Konferenzen
-            </Text>
-            <Text variant="big-primary">Business | Events</Text>
-          </div>
-          <Text variant="small-primary">
-            270m² Eventfläche mit modernster Technik
-          </Text>
-          <TextAsideMediumOrLarger right imageName="events">
-            Herzlich willkommen zu unseren Events und Konferenzen im bayrischen
-            Wald, in unserem exquisiten Edelhotel. Mit einer großzügigen
-            Eventfläche von 270m² und modernster Technik bieten wir Ihnen den
-            idealen Ort für Veranstaltungen aller Art.
-          </TextAsideMediumOrLarger>
-          <Text variant="small-primary">
-            Unser Hotel ist stolz darauf, eine perfekte Kulisse für Ihre
-            geschäftlichen oder privaten Anlässe zu bieten. Die Eventfläche
-            wurde mit viel Liebe zum Detail gestaltet und lässt keine Wünsche
-            offen. Mit modernster Technik ausgestattet, stehen Ihnen alle
-            Möglichkeiten für Präsentationen, Tagungen oder Feierlichkeiten zur
-            Verfügung. Wir stellen sicher, dass Sie über alle erforderlichen
-            Ressourcen verfügen, um Ihr Event reibungslos ablaufen zu lassen.
-          </Text>
-          <Text variant="small-primary">
-            Unsere erfahrenen Eventplaner stehen Ihnen zur Seite und helfen
-            Ihnen bei der individuellen Gestaltung Ihrer Veranstaltung. Von der
-            Auswahl des passenden Raumlayouts bis hin zur technischen
-            Unterstützung - wir sorgen dafür, dass Ihre Veranstaltung ein voller
-            Erfolg wird. Unser aufmerksames Personal kümmert sich um jeden
-            einzelnen Gast und sorgt für einen reibungslosen Ablauf.
-          </Text>
-
-          <TextAsideMediumOrLarger imageName="events">
-            Neben der erstklassigen Eventfläche bietet unser Edelhotel im
-            bayrischen Wald eine einzigartige Umgebung für Ihre Teilnehmer. Der
-            malerische bayrische Wald mit seinen majestätischen Bergen und
-            idyllischen Tälern schafft eine inspirierende Atmosphäre für Ihre
-            Veranstaltung. In den Pausen können Ihre Gäste die frische Luft
-            genießen und die natürliche Schönheit der Umgebung erkunden.
-          </TextAsideMediumOrLarger>
-          <Text variant="small-primary">
-            Nach einem erfolgreichen Tag voller Meetings und Konferenzen bietet
-            unser Hotel luxuriöse Zimmer und erstklassige Annehmlichkeiten für
-            Ihre Gäste. Entspannen Sie sich in unserem Wellnessbereich, genießen
-            Sie kulinarische Köstlichkeiten in unserem Restaurant und lassen Sie
-            den Tag in stilvollem Ambiente ausklingen.
-          </Text>
-          <Text variant="small-primary">
-            Ganz gleich, ob Sie eine Konferenz, ein Seminar oder eine festliche
-            Veranstaltung planen - unser Edelhotel im bayrischen Wald bietet
-            Ihnen die ideale Kombination aus professionellen Eventmöglichkeiten
-            und einer unvergleichlichen Umgebung. Lassen Sie uns gemeinsam Ihr
-            Event zu einem unvergesslichen Erlebnis machen.
-          </Text>
+      <main className="bg-black pb-6 md:pb-10 lg:pb-16">
+        <div>
+          <PageTopImage name="events" />
         </div>
+        <PageSection>
+          <Text variant="huge-primary" mono uppercase>
+            Work hard, play hard
+          </Text>
+          <Text variant="small-primary">
+            Ob kleine Zusammenkünfte, besondere Anlässe oder große
+            Veranstaltungen - das Team des Sonnenhofs kann alle Gimmicks
+            bereitstellen, die Ihr Event zu einem Gesamtkunstwerk machen. Sei es
+            modernste Veranstaltungstechnik, internationale DJ’s und Künstler,
+            Incentives, Hochzeiten oder Live-Cooking unter freiem Himmel - ein
+            Tag, Abend oder eine Nacht im Sonnenhof werden Ihre Gäste nie
+            vergessen. Hier wird ihr Event alles andere als gewöhnlich.
+          </Text>
+          <div className="pt-3">
+            <Button
+              label="Events Broschüre"
+              variant="tertiary"
+              onClick={() => alert("Broschüre nicht verfügbar")}
+            />
+          </div>
+        </PageSection>
+
+        <PageSectionBackgroundImageWrapper>
+          <PageSectionDimmedBackgroundWrapper>
+            <PageSection>
+              <Text variant="huge-primary" mono uppercase>
+                Inspirationen
+              </Text>
+
+              <article>
+                <Image name="event1" />
+                <Text variant="big-primary" bold>
+                  Hochzeitspaket
+                </Text>
+                <Text variant="small-primary">
+                  Mit eleganter Unterkunft, exquisitem Essen, Live-Cooking und
+                  maßgeschneiderten Dienstleistungen wird Ihr großer Tag absolut
+                  magisch.
+                </Text>
+              </article>
+
+              <article>
+                <Image name="event-hybrid-meetings" />
+                <Text variant="big-primary" bold>
+                  Hybride Meetings
+                </Text>
+                <Text variant="small-primary">
+                  Egal ob remote oder vor Ort - mit unserer modernsten Technik
+                  bieten wir ein nahtloses, produktives Meetingerlebnis
+                </Text>
+              </article>
+
+              <article>
+                <Image name="event-corporate" />
+                <Text variant="big-primary" bold>
+                  Corporate events
+                </Text>
+                <Text variant="small-primary">
+                  Wir sorgen dafür, das ihre Firmenveranstaltung einzigartig
+                  ist. Mit hervorragendem Service gestalten wir inspirierende
+                  Erlebnisse, die Ihren Geschäftszielen gerecht werden.
+                </Text>
+              </article>
+
+              <article>
+                <Image name="event-presentation" />
+                <Text variant="big-primary" bold>
+                  Präsentationen
+                </Text>
+                <Text variant="small-primary">
+                  Präsentieren Sie Ihren Kunden Ihr Angebot in eindrucksvollem
+                  Ambiente. Wir schaffen den perfekten Rahmen für Ihre
+                  Produktpräsentationen.
+                </Text>
+              </article>
+
+              <article>
+                <Image name="event-press" />
+                <Text variant="big-primary" bold>
+                  Pressekonferenzen
+                </Text>
+                <Text variant="small-primary">
+                  Unser Service bietet Ihnen die perfekte Bühne für wichtige
+                  Ankündigungen und Präsentationen, damit diese Ihre volle
+                  Wirkung entfalten können.
+                </Text>
+              </article>
+            </PageSection>
+          </PageSectionDimmedBackgroundWrapper>
+        </PageSectionBackgroundImageWrapper>
       </main>
     </Layout>
   );
