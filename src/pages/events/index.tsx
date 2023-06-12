@@ -1,5 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { Image, PageTopImage, getImageSrc } from "@sonnenhof/components/image";
+import {
+  Image,
+  ImageProps,
+  PageTopImage,
+  getImageSrc,
+} from "@sonnenhof/components/image";
 import { Layout } from "@sonnenhof/components/layout";
 import { Text } from "@sonnenhof/components/text";
 import { PageSection } from "@sonnenhof/components/page-section";
@@ -44,8 +49,8 @@ export default function Page(): JSX.Element {
               </Text>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <article>
-                  <Image name="event1" className="h-64 w-full object-cover" />
+                <EventArticle>
+                  <EventImage name="event1" />
                   <Text variant="big-primary" bold>
                     Hochzeitspaket
                   </Text>
@@ -54,13 +59,10 @@ export default function Page(): JSX.Element {
                     maßgeschneiderten Dienstleistungen wird Ihr großer Tag
                     absolut magisch.
                   </Text>
-                </article>
+                </EventArticle>
 
-                <article>
-                  <Image
-                    name="event-hybrid-meetings"
-                    className="h-64 w-full object-cover"
-                  />
+                <EventArticle>
+                  <EventImage name="event-hybrid-meetings" />
                   <Text variant="big-primary" bold>
                     Hybride Meetings
                   </Text>
@@ -68,13 +70,10 @@ export default function Page(): JSX.Element {
                     Egal ob remote oder vor Ort - mit unserer modernsten Technik
                     bieten wir ein nahtloses, produktives Meetingerlebnis
                   </Text>
-                </article>
+                </EventArticle>
 
-                <article>
-                  <Image
-                    name="event-corporate"
-                    className="h-64 w-full object-cover"
-                  />
+                <EventArticle>
+                  <EventImage name="event-corporate" />
                   <Text variant="big-primary" bold>
                     Corporate events
                   </Text>
@@ -83,13 +82,10 @@ export default function Page(): JSX.Element {
                     ist. Mit hervorragendem Service gestalten wir inspirierende
                     Erlebnisse, die Ihren Geschäftszielen gerecht werden.
                   </Text>
-                </article>
+                </EventArticle>
 
-                <article>
-                  <Image
-                    name="event-presentation"
-                    className="h-64 w-full object-cover"
-                  />
+                <EventArticle>
+                  <EventImage name="event-presentation" />
                   <Text variant="big-primary" bold>
                     Präsentationen
                   </Text>
@@ -98,13 +94,10 @@ export default function Page(): JSX.Element {
                     Ambiente. Wir schaffen den perfekten Rahmen für Ihre
                     Produktpräsentationen.
                   </Text>
-                </article>
+                </EventArticle>
 
-                <article>
-                  <Image
-                    name="event-press"
-                    className="h-64 w-full object-cover"
-                  />
+                <EventArticle>
+                  <EventImage name="event-press" />
                   <Text variant="big-primary" bold>
                     Pressekonferenzen
                   </Text>
@@ -113,7 +106,7 @@ export default function Page(): JSX.Element {
                     Ankündigungen und Präsentationen, damit diese Ihre volle
                     Wirkung entfalten können.
                   </Text>
-                </article>
+                </EventArticle>
               </div>
             </PageSection>
           </PageSectionDimmedBackgroundWrapper>
@@ -121,4 +114,12 @@ export default function Page(): JSX.Element {
       </main>
     </Layout>
   );
+}
+
+function EventArticle({ children }: React.PropsWithChildren<{}>): JSX.Element {
+  return <article>{children}</article>;
+}
+
+function EventImage({ name }: Pick<ImageProps, "name">): JSX.Element {
+  return <Image name={name} className="h-64 w-full object-cover" />;
 }
