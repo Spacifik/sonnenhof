@@ -144,7 +144,7 @@ export function Header(): JSX.Element {
   const headerRef = React.useRef<HTMLElement | null>(null);
   const [headerHeight, setHeaderHeight] = React.useState("");
   React.useEffect(() => {
-    if (headerRef.current !== null) {
+    if (typeof window !== "undefined" && headerRef.current !== null) {
       setHeaderHeight(
         () => window.getComputedStyle(headerRef.current as HTMLElement).height
       );

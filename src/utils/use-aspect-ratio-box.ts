@@ -14,19 +14,21 @@ export function useAspectRatioBox(): PaddingBottom {
   const [paddingBottom, setPaddingBottom] = React.useState("56.25%");
 
   React.useEffect(() => {
-    const calcPadding = () => {
-      const vh = Math.max(
-        document.documentElement.clientHeight || 0,
-        window.innerHeight || 0
-      );
-      const maxWidth = vh * 1; // 100vh
-      const aspectRatio = 9 / 16;
-      const width = Math.min(maxWidth / aspectRatio, window.innerWidth);
-      setPaddingBottom(`${width * aspectRatio}px`);
-    };
-    calcPadding();
-    window.addEventListener("resize", calcPadding);
-    return () => window.removeEventListener("resize", calcPadding);
+    if (typeof window !== "undefined") {
+      const calcPadding = () => {
+        const vh = Math.max(
+          document.documentElement.clientHeight || 0,
+          window.innerHeight || 0
+        );
+        const maxWidth = vh * 1; // 100vh
+        const aspectRatio = 9 / 16;
+        const width = Math.min(maxWidth / aspectRatio, window.innerWidth);
+        setPaddingBottom(`${width * aspectRatio}px`);
+      };
+      calcPadding();
+      window.addEventListener("resize", calcPadding);
+      return () => window.removeEventListener("resize", calcPadding);
+    }
   }, []);
   return paddingBottom;
 }
