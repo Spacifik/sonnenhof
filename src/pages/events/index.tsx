@@ -43,64 +43,66 @@ export default function Page(): JSX.Element {
                 Inspirationen
               </Text>
 
-              <article>
-                <Image name="event1" />
-                <Text variant="big-primary" bold>
-                  Hochzeitspaket
-                </Text>
-                <Text variant="small-primary">
-                  Mit eleganter Unterkunft, exquisitem Essen, Live-Cooking und
-                  maßgeschneiderten Dienstleistungen wird Ihr großer Tag absolut
-                  magisch.
-                </Text>
-              </article>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <article>
+                  <Image name="event1" />
+                  <Text variant="big-primary" bold>
+                    Hochzeitspaket
+                  </Text>
+                  <Text variant="small-primary">
+                    Mit eleganter Unterkunft, exquisitem Essen, Live-Cooking und
+                    maßgeschneiderten Dienstleistungen wird Ihr großer Tag
+                    absolut magisch.
+                  </Text>
+                </article>
 
-              <article>
-                <Image name="event-hybrid-meetings" />
-                <Text variant="big-primary" bold>
-                  Hybride Meetings
-                </Text>
-                <Text variant="small-primary">
-                  Egal ob remote oder vor Ort - mit unserer modernsten Technik
-                  bieten wir ein nahtloses, produktives Meetingerlebnis
-                </Text>
-              </article>
+                <article>
+                  <Image name="event-hybrid-meetings" />
+                  <Text variant="big-primary" bold>
+                    Hybride Meetings
+                  </Text>
+                  <Text variant="small-primary">
+                    Egal ob remote oder vor Ort - mit unserer modernsten Technik
+                    bieten wir ein nahtloses, produktives Meetingerlebnis
+                  </Text>
+                </article>
 
-              <article>
-                <Image name="event-corporate" />
-                <Text variant="big-primary" bold>
-                  Corporate events
-                </Text>
-                <Text variant="small-primary">
-                  Wir sorgen dafür, das ihre Firmenveranstaltung einzigartig
-                  ist. Mit hervorragendem Service gestalten wir inspirierende
-                  Erlebnisse, die Ihren Geschäftszielen gerecht werden.
-                </Text>
-              </article>
+                <article>
+                  <Image name="event-corporate" />
+                  <Text variant="big-primary" bold>
+                    Corporate events
+                  </Text>
+                  <Text variant="small-primary">
+                    Wir sorgen dafür, das ihre Firmenveranstaltung einzigartig
+                    ist. Mit hervorragendem Service gestalten wir inspirierende
+                    Erlebnisse, die Ihren Geschäftszielen gerecht werden.
+                  </Text>
+                </article>
 
-              <article>
-                <Image name="event-presentation" />
-                <Text variant="big-primary" bold>
-                  Präsentationen
-                </Text>
-                <Text variant="small-primary">
-                  Präsentieren Sie Ihren Kunden Ihr Angebot in eindrucksvollem
-                  Ambiente. Wir schaffen den perfekten Rahmen für Ihre
-                  Produktpräsentationen.
-                </Text>
-              </article>
+                <article>
+                  <Image name="event-presentation" />
+                  <Text variant="big-primary" bold>
+                    Präsentationen
+                  </Text>
+                  <Text variant="small-primary">
+                    Präsentieren Sie Ihren Kunden Ihr Angebot in eindrucksvollem
+                    Ambiente. Wir schaffen den perfekten Rahmen für Ihre
+                    Produktpräsentationen.
+                  </Text>
+                </article>
 
-              <article>
-                <Image name="event-press" />
-                <Text variant="big-primary" bold>
-                  Pressekonferenzen
-                </Text>
-                <Text variant="small-primary">
-                  Unser Service bietet Ihnen die perfekte Bühne für wichtige
-                  Ankündigungen und Präsentationen, damit diese Ihre volle
-                  Wirkung entfalten können.
-                </Text>
-              </article>
+                <article>
+                  <Image name="event-press" />
+                  <Text variant="big-primary" bold>
+                    Pressekonferenzen
+                  </Text>
+                  <Text variant="small-primary">
+                    Unser Service bietet Ihnen die perfekte Bühne für wichtige
+                    Ankündigungen und Präsentationen, damit diese Ihre volle
+                    Wirkung entfalten können.
+                  </Text>
+                </article>
+              </div>
             </PageSection>
           </PageSectionDimmedBackgroundWrapper>
         </PageSectionBackgroundImageWrapper>
