@@ -173,19 +173,22 @@ export default function Page(): JSX.Element {
           <div className="bg-black/90 p-2 md:p-5 lg:p-10 xl:p-20">
             <PageSection>
               <Image name="spa-icebath" />
-              <Text variant="huge-primary" mono uppercase>
-                Eisbad
-              </Text>
-              <Text variant="small-primary">
-                Die Sauna ist zu warm? Probieren Sie doch ein Eisbad aus! Es ist
-                erfrischend, belebend und optimal für Ihr Wohlbefinden. Genießen
-                Sie die Kühle, die Ihr Immunsystem stärkt, den Kreislauf anregt
-                und das Muskelwachstum fördert. Trauen Sie sich und erleben Sie
-                die belebende Kraft des Eises!
-              </Text>
             </PageSection>
           </div>
         </div>
+        
+        <PageSection>
+          <Text variant="huge-primary" mono uppercase>
+            Eisbad
+          </Text>
+          <Text variant="small-primary">
+            Die Sauna ist zu warm? Probieren Sie doch ein Eisbad aus! Es ist
+            erfrischend, belebend und optimal für Ihr Wohlbefinden. Genießen Sie
+            die Kühle, die Ihr Immunsystem stärkt, den Kreislauf anregt und das
+            Muskelwachstum fördert. Trauen Sie sich und erleben Sie die
+            belebende Kraft des Eises!
+          </Text>
+        </PageSection>
       </main>
     </Layout>
   );
