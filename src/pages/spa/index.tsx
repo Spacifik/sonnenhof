@@ -10,7 +10,7 @@ import { useIsMediumOrBigger } from "@sonnenhof/utils/use-is-medium-or-bigger";
 export default function Page(): JSX.Element {
   return (
     <Layout>
-      <main className="bg-black">
+      <main className="bg-black pb-6 md:pb-10 lg:pb-16">
         <div>
           <PageTopImage name="spa-overview" />
         </div>
@@ -176,7 +176,7 @@ export default function Page(): JSX.Element {
             </PageSection>
           </div>
         </div>
-        
+
         <PageSection>
           <Text variant="huge-primary" mono uppercase>
             Eisbad
