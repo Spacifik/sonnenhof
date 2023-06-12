@@ -7,6 +7,7 @@ export interface ImageProps {
   name:
     | "events"
     | "event-hybrid-meetings"
+    | "event-incentive"
     | "event-corporate"
     | "event-press"
     | "event-presentation"
@@ -78,6 +79,8 @@ function getImageHashFor(name: ImageProps["name"]): string {
       return "de946142-9835-46c4-af20-c58db2144d00";
     case "event-press":
       return "66fdff13-4748-4c72-e0fc-0c6e75812800";
+    case "event-incentive":
+      return "2cb3806e-7cc9-4a80-4d2b-c9314d2b6000";
     case "event-presentation":
       return "ec2f648e-bf8e-4074-be81-01a2fe1ac800";
     case "location":

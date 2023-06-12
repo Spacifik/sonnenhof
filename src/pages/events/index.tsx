@@ -107,6 +107,18 @@ export default function Page(): JSX.Element {
                     Wirkung entfalten können.
                   </Text>
                 </EventArticle>
+
+                <EventArticle>
+                  <EventImage name="event-incentive" />
+                  <Text variant="big-primary" bold>
+                    Incentives
+                  </Text>
+                  <Text variant="small-primary">
+                    Beeindrucken Sie mit einem Trip in den bayrischen Wald. Wir
+                    haben da auch schon ein paar Ideen und Vorschläge für Ihr
+                    Event.
+                  </Text>
+                </EventArticle>
               </div>
             </PageSection>
           </PageSectionDimmedBackgroundWrapper>
