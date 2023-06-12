@@ -45,7 +45,7 @@ export default function Page(): JSX.Element {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <article>
-                  <Image name="event1" />
+                  <Image name="event1" className="h-64 w-full object-cover" />
                   <Text variant="big-primary" bold>
                     Hochzeitspaket
                   </Text>
@@ -57,7 +57,10 @@ export default function Page(): JSX.Element {
                 </article>
 
                 <article>
-                  <Image name="event-hybrid-meetings" />
+                  <Image
+                    name="event-hybrid-meetings"
+                    className="h-64 w-full object-cover"
+                  />
                   <Text variant="big-primary" bold>
                     Hybride Meetings
                   </Text>
@@ -68,7 +71,10 @@ export default function Page(): JSX.Element {
                 </article>
 
                 <article>
-                  <Image name="event-corporate" />
+                  <Image
+                    name="event-corporate"
+                    className="h-64 w-full object-cover"
+                  />
                   <Text variant="big-primary" bold>
                     Corporate events
                   </Text>
@@ -80,7 +86,10 @@ export default function Page(): JSX.Element {
                 </article>
 
                 <article>
-                  <Image name="event-presentation" />
+                  <Image
+                    name="event-presentation"
+                    className="h-64 w-full object-cover"
+                  />
                   <Text variant="big-primary" bold>
                     Präsentationen
                   </Text>
@@ -92,7 +101,10 @@ export default function Page(): JSX.Element {
                 </article>
 
                 <article>
-                  <Image name="event-press" />
+                  <Image
+                    name="event-press"
+                    className="h-64 w-full object-cover"
+                  />
                   <Text variant="big-primary" bold>
                     Pressekonferenzen
                   </Text>

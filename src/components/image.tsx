@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { exhaustiveCheck } from "@sonnenhof/utils/exhaustive-check";
+import { useAspectRatioBox } from "@sonnenhof/utils/use-aspect-ratio-box";
 
 /* eslint-disable @next/next/no-img-element */
 export interface ImageProps {
