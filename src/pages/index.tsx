@@ -177,7 +177,7 @@ export default function Home() {
            3xl:gap-28
             `}
           >
-            <Link className="cursor-pointer grow " href={"/gallery"}>
+            <Link className="cursor-pointer grow " href={"/location"}>
               <BackgroundImage name="location">
                 <Text variant="medium-primary" mono uppercase addHover>
                   Standort
