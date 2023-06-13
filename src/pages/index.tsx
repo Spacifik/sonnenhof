@@ -167,48 +167,7 @@ export default function Home() {
               href="/city-cruise"
             />
           </div>
-          <div
-            className={`flex flex-col px-10 pb-5 gap-8  w-full h-auto 
-            md:flex-row md:px-16 md:pb-10  md:gap-12
          
-            lg:gap-16
-            xl:gap-20  xl:px-32  xl:pb-20
-           2xl:gap-24 2xl:px-40 2xl:pb-24
-           3xl:gap-28
-            `}
-          >
-            <Link className="cursor-pointer grow " href={"/location"}>
-              <BackgroundImage name="location">
-                <Text variant="medium-primary" mono uppercase addHover>
-                  Standort
-                </Text>
-              </BackgroundImage>
-            </Link>
-
-            <Link className="cursor-pointer grow" href={"/gallery"}>
-              <BackgroundImage name="gallery">
-                <Text variant="medium-primary" mono uppercase addHover>
-                  Gallerie
-                </Text>
-              </BackgroundImage>
-            </Link>
-
-            <Link className="cursor-pointer grow" href={"/career"}>
-              <BackgroundImage name="career">
-                <Text variant="medium-primary" mono uppercase addHover>
-                  Karriere
-                </Text>
-              </BackgroundImage>
-            </Link>
-
-            <Link className="cursor-pointer grow" href={"/contact"}>
-              <BackgroundImage name="contact">
-                <Text variant="medium-primary" mono uppercase addHover>
-                  Kontakt
-                </Text>
-              </BackgroundImage>
-            </Link>
-          </div>
         </main>
       </Layout>
     </>
