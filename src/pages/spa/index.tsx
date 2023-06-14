@@ -5,6 +5,11 @@ import { Layout } from "@sonnenhof/components/layout";
 import { PageSection } from "@sonnenhof/components/page-section";
 import { PageSectionBackgroundImageWrapper } from "@sonnenhof/components/page-section-background-image-wrapper";
 import { PageSectionDimmedBackgroundWrapper } from "@sonnenhof/components/page-section-dimmed-background-wrapper";
+import {
+  PageSectionThird,
+  PageSectionThirdHeader,
+  PageSectionThirdWrapper,
+} from "@sonnenhof/components/page-section-third";
 import { Text } from "@sonnenhof/components/text";
 import { footer } from "@sonnenhof/data/footer/footer";
 import { useIsMediumOrBigger } from "@sonnenhof/utils/use-is-medium-or-bigger";
@@ -59,9 +64,9 @@ export default function Page(): JSX.Element {
           </PageSectionDimmedBackgroundWrapper>
         </PageSectionBackgroundImageWrapper>
 
-        <PageSectionWrapper>
-          <CustomPageSection>
-            <CustomPageSectionHeader>Öffnungszeiten</CustomPageSectionHeader>
+        <PageSectionThirdWrapper>
+          <PageSectionThird>
+            <PageSectionThirdHeader>Öffnungszeiten</PageSectionThirdHeader>
             <dl className="grid grid-cols-12 gap-2 lg:block max-w-[400px] xl:min-w-full mt-8 lg:mt-0">
               <dt className="lg:pt-8 lg:pb-2 xl:pt-12 col-span-5">
                 <Text variant="medium-primary">Spa:</Text>
@@ -111,10 +116,10 @@ export default function Page(): JSX.Element {
                 <Text variant="medium-primary">Uhr</Text>
               </dd>
             </dl>
-          </CustomPageSection>
+          </PageSectionThird>
 
-          <CustomPageSection grow>
-            <CustomPageSectionHeader>Termine</CustomPageSectionHeader>
+          <PageSectionThird grow>
+            <PageSectionThirdHeader>Termine</PageSectionThirdHeader>
             <dl className="grid grid-cols-12 gap-2 lg:block max-w-[400px] mt-8 lg:mt-0 xl:min-w-full">
               <dt className="lg:pt-8 lg:pb-2 xl:pt-12 col-span-5">
                 <Text variant="medium-primary">Massagen:</Text>
@@ -146,10 +151,10 @@ export default function Page(): JSX.Element {
               </Text>
             </div>
             <Button label="Jetzt buchen" variant="primary" submit />
-          </CustomPageSection>
+          </PageSectionThird>
 
-          <CustomPageSection>
-            <CustomPageSectionHeader>Kontakt</CustomPageSectionHeader>
+          <PageSectionThird>
+            <PageSectionThirdHeader>Kontakt</PageSectionThirdHeader>
             <div className="flex gap-2 flex-col  mt-8 lg:mt-12">
               <a href={`tel:${footer.phone}`}>
                 <Text variant="small-primary">{footer.phone}</Text>
@@ -158,8 +163,8 @@ export default function Page(): JSX.Element {
                 <Text variant="small-primary">{footer.email}</Text>
               </a>
             </div>
-          </CustomPageSection>
-        </PageSectionWrapper>
+          </PageSectionThird>
+        </PageSectionThirdWrapper>
 
         <PageSectionBackgroundImageWrapper>
           <PageSectionDimmedBackgroundWrapper>
@@ -183,50 +188,5 @@ export default function Page(): JSX.Element {
         </PageSection>
       </main>
     </Layout>
-  );
-}
-
-function PageSectionWrapper({
-  children,
-}: React.PropsWithChildren<{}>): JSX.Element {
-  return (
-    <div className="flex flex-col lg:flex-row gap-3 mt-5 lg:mt-0 lg:p-12 2xl:p-28 mx-w-[2200px] m-auto">
-      {children}
-    </div>
-  );
-}
-
-function CustomPageSection({
-  grow,
-  children,
-}: React.PropsWithChildren<{ grow?: boolean }>): JSX.Element {
-  const isMediumOrBigger = useIsMediumOrBigger();
-  return isMediumOrBigger ? (
-    <div
-      className={`flex flex-col ${
-        grow ? "grow" : ""
-      } basis-[33.3333%] m-3 pt-3 md:pt-5 lg:pt-10 2xl:pt-16 pb-3 2xl:pb-8`}
-    >
-      {children}
-    </div>
-  ) : (
-    <PageSection>{children}</PageSection>
-  );
-}
-
-function CustomPageSectionHeader({
-  children,
-}: {
-  children: string;
-}): JSX.Element {
-  const isMediumOrBigger = useIsMediumOrBigger();
-  return isMediumOrBigger ? (
-    <Text variant="medium-primary" mono uppercase>
-      {children}
-    </Text>
-  ) : (
-    <Text variant="huge-primary" mono uppercase>
-      {children}
-    </Text>
   );
 }
