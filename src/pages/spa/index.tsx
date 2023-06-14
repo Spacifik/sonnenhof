@@ -2,6 +2,13 @@
 import { Button } from "@sonnenhof/components/button";
 import { Image, PageTopImage, getImageSrc } from "@sonnenhof/components/image";
 import { Layout } from "@sonnenhof/components/layout";
+import {
+  OpeningHoursHourLabel,
+  OpeningHoursLabel,
+  OpeningHoursList,
+  OpeningHoursTime,
+  OpeningHoursTimeSeparator,
+} from "@sonnenhof/components/opening-hours";
 import { PageSection } from "@sonnenhof/components/page-section";
 import { PageSectionBackgroundImageWrapper } from "@sonnenhof/components/page-section-background-image-wrapper";
 import { PageSectionDimmedBackgroundWrapper } from "@sonnenhof/components/page-section-dimmed-background-wrapper";
@@ -67,76 +74,36 @@ export default function Page(): JSX.Element {
         <PageSectionThirdWrapper>
           <PageSectionThird>
             <PageSectionThirdHeader>Öffnungszeiten</PageSectionThirdHeader>
-            <dl className="grid grid-cols-12 gap-2 lg:block max-w-[400px] xl:min-w-full mt-8 lg:mt-0">
-              <dt className="lg:pt-8 lg:pb-2 xl:pt-12 col-span-5">
-                <Text variant="medium-primary">Spa:</Text>
-              </dt>
-              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
-                <Text variant="medium-primary">6:30</Text>
-              </dd>
-              <dd className="inline-block lg:pl-3 text-center xl:pl-10  col-span-1">
-                <Text variant="medium-primary">-</Text>
-              </dd>
-              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
-                <Text variant="medium-primary">01:00</Text>
-              </dd>
-              <dd className="inline-block lg:pl-2 col-span-2">
-                <Text variant="medium-primary">Uhr</Text>
-              </dd>
+            <OpeningHoursList>
+              <OpeningHoursLabel>Spa:</OpeningHoursLabel>
+              <OpeningHoursTime>6:30</OpeningHoursTime>
+              <OpeningHoursTimeSeparator />
+              <OpeningHoursTime>01:00</OpeningHoursTime>
+              <OpeningHoursHourLabel />
 
-              <dt className="lg:pt-8 lg:pb-2 xl:pt-12 col-span-5">
-                <Text variant="medium-primary">Rezeption:</Text>
-              </dt>
-              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
-                <Text variant="medium-primary">10:00</Text>
-              </dd>
-              <dd className="inline-block lg:pl-3 text-center xl:pl-10  col-span-1">
-                <Text variant="medium-primary">-</Text>
-              </dd>
-              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
-                <Text variant="medium-primary">19:00</Text>
-              </dd>
-              <dd className="inline-block lg:pl-2 col-span-2">
-                <Text variant="medium-primary">Uhr</Text>
-              </dd>
+              <OpeningHoursLabel>Rezeption:</OpeningHoursLabel>
+              <OpeningHoursTime>10:00</OpeningHoursTime>
+              <OpeningHoursTimeSeparator />
+              <OpeningHoursTime>19:00</OpeningHoursTime>
+              <OpeningHoursHourLabel />
 
-              <dt className="lg:pt-8 lg:pb-2 xl:pt-12 col-span-5">
-                <Text variant="medium-primary">Behandlungen:</Text>
-              </dt>
-              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
-                <Text variant="medium-primary">10:00</Text>
-              </dd>
-              <dd className="inline-block lg:pl-3 text-center xl:pl-10  col-span-1">
-                <Text variant="medium-primary">-</Text>
-              </dd>
-              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
-                <Text variant="medium-primary">19:00</Text>
-              </dd>
-              <dd className="inline-block lg:pl-2 col-span-2">
-                <Text variant="medium-primary">Uhr</Text>
-              </dd>
-            </dl>
+              <OpeningHoursLabel>Behandlungen:</OpeningHoursLabel>
+              <OpeningHoursTime>10:00</OpeningHoursTime>
+              <OpeningHoursTimeSeparator />
+              <OpeningHoursTime>19:00</OpeningHoursTime>
+              <OpeningHoursHourLabel />
+            </OpeningHoursList>
           </PageSectionThird>
 
           <PageSectionThird grow>
             <PageSectionThirdHeader>Termine</PageSectionThirdHeader>
-            <dl className="grid grid-cols-12 gap-2 lg:block max-w-[400px] mt-8 lg:mt-0 xl:min-w-full">
-              <dt className="lg:pt-8 lg:pb-2 xl:pt-12 col-span-5">
-                <Text variant="medium-primary">Massagen:</Text>
-              </dt>
-              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
-                <Text variant="medium-primary">10:00</Text>
-              </dd>
-              <dd className="inline-block lg:pl-3 text-center xl:pl-10  col-span-1">
-                <Text variant="medium-primary">-</Text>
-              </dd>
-              <dd className="inline-block lg:pl-3 xl:pl-10  col-span-2">
-                <Text variant="medium-primary">19:00</Text>
-              </dd>
-              <dd className="inline-block lg:pl-2 col-span-2">
-                <Text variant="medium-primary">Uhr</Text>
-              </dd>
-            </dl>
+            <OpeningHoursList>
+              <OpeningHoursLabel>Massagen:</OpeningHoursLabel>
+              <OpeningHoursTime>10:00</OpeningHoursTime>
+              <OpeningHoursTimeSeparator />
+              <OpeningHoursTime>19:00</OpeningHoursTime>
+              <OpeningHoursHourLabel />
+            </OpeningHoursList>
             <div className="py-6 lg:py-8">
               <Text variant="small-primary" inline>
                 Wir empfehlen Ihnen, Ihre Behandlung mindestens
